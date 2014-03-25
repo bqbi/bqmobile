@@ -41,6 +41,9 @@
 
 @property(nonatomic, assign) NSObject<BQIpadLoginViewDelegate>* delegate;// 代理方法
 
+// 加载页面元素
+- (void)loadLoginView;
+
 // 设置主题样式
 - (void)setStyle:(NSString*)_style;
 
