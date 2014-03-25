@@ -1,0 +1,980 @@
+<Controls>
+	<Control Class="GlobalStyle">
+		<Property Name="NavBarBackColor" Type="Color" Value="#a3040b" />
+		<Property Name="TextColor" Type="Color" Value="#ffffff" />
+	</Control>
+
+    <Control Class="DirectoryTree">
+		<Property Name="PhoneTableViewSectionTextColor" Type="Color" Value="#ffffff" />
+		<Property Name="PhoneTableViewCellTextColor" Type="Color" Value="#ffffff" />
+        <Property Name="PhoneTableViewDetailTextColor" Type="Color" Value="#999999" />
+        <Property Name="PadTableViewSectionTextColor" Type="Color" Value="#ffffff" />
+		<Property Name="PadTableViewCellTextColor" Type="Color" Value="#999999" />
+        <Property Name="PadTableViewCellHeightTextColor" Type="Color" Value="#ffffff" />
+	</Control>
+    
+	<Control Class="LoginUI">
+		<Property Name="InputTextColor" Type="Color" Value="#414141" />
+		<Property Name="VersionTextColor" Type="Color" Value="#00ff0000" />
+		<Property Name="ButtonTextColor" Type="Color" Value="#ffffff" />
+	</Control>
+
+	<Control Class="UFMobileUIView">
+        <Property Name="Mode" Type="Enum">
+			<SELECT>
+				<OPTION value="1">Phone</OPTION>
+				<OPTION value="2">Pad_Horz</OPTION>
+				<OPTION value="3">Pad_Vert</OPTION>
+			</SELECT>
+		</Property>
+        <Property Name="Description" Type="String" />
+		<Property Name="BackColor" Type="Color" />
+		<Property Name="BackImage" Type="String" />
+		<Property Name="DefaultFont" Type="Font" />
+		<Property Name="Effect" Type="Enum" >
+			<SELECT>
+				<OPTION value="0">None</OPTION>
+				<OPTION value="1">Slide</OPTION>
+				<OPTION value="2">Fade</OPTION>
+				<OPTION value="3">Flip</OPTION>
+				<OPTION value="4">Page</OPTION>
+				<OPTION value="5">Ripple</OPTION>
+				<OPTION value="6">Cube</OPTION>
+			</SELECT>
+		</Property>
+		<Property Name="TopToolbar" Type="String" />
+		<Property Name="BottomToolbar" Type="String" />
+	</Control>
+
+	<Control Class="UFServerDataProvider">
+		<Property Name="Dataset" Type="String" />
+	</Control>
+
+	<Control Class="UFImage">
+		<Property Name="File" Type="String" />
+		<Property Name="ConditionFormats" Type="Array:Object" />
+		<Property Name="LinkTo" Type="String" />
+	</Control>
+
+	<Control Class="UFButton">
+		<Property Name="Text" Type="String" />
+		<Property Name="TextColor" Type="Color" Value="#ffffff" />
+		<Property Name="LinkTo" Type="String" />
+	</Control>
+
+	<Control Class="UFTextField">
+		<Property Name="Text" Type="String" />
+		<Property Name="TextColor" Type="Color" Value="#333333" />
+		<Property Name="NumberFormat" Type="String" />
+		<Property Name="BorderColor" Type="Color" Value="#666666" />
+		<Property Name="BackColor" Type="Color" />
+		<Property Name="BackImage" Type="String" Value="TextField.png" />
+		<Property Name="DataType" Type="Enum" value="1">
+			<SELECT>
+				<OPTION value="0">Default</OPTION>
+				<OPTION value="1">Only number</OPTION>
+				<OPTION value="2">Number And Char</OPTION>
+			</SELECT>
+		</Property>
+		<Property Name="Align" Type="Enum" >
+			<SELECT>
+				<OPTION value="0">Left</OPTION>
+				<OPTION value="1">Center</OPTION>
+				<OPTION value="2">Right</OPTION>
+			</SELECT>
+		</Property>
+		<Property Name="BindEnvVar" Type="String" />
+	</Control>
+
+	<Control Class="UFComboBox">
+		<Property Name="Multi-Select" Type="Boolean" value="0"/>
+		<Property Name="Text" Type="String" />
+		<Property Name="TextColor" Type="Color" Value="#333333" />
+		<Property Name="BorderColor" Type="Color" Value="#666666" />
+		<Property Name="BackColor" Type="Color" />
+		<Property Name="BackImage" Type="String" Value="TextField.png" />
+		<Property Name="Type" Type="Enum" >
+			<SELECT>
+				<OPTION value="0">Simple</OPTION>
+				<OPTION value="1">Dropdown</OPTION>
+				<OPTION value="2">Droplist</OPTION>
+			</SELECT>
+		</Property>
+		<Property Name="RenderType" Type="Enum" >
+			<SELECT>
+				<OPTION value="0">Text</OPTION>
+				<OPTION value="1">Image</OPTION>
+				<OPTION value="2">BarCode</OPTION>
+			</SELECT>
+		</Property>
+		<Property Name="Items" Type="String" />
+		<Property Name="BindEnvVar" Type="String" />
+		<Property Name="LinkTo" Type="String" />
+	</Control>
+
+	<Control Class="UFGauge">
+		<Property Name="Value" Type="Double" />
+		<Property Name="NumberFormat" Type="String" />
+		<Property Name="BindEnvVar" Type="String" />
+		<Property Name="LinkTo" Type="String" />
+		<Property Name="ScaleMin" Type="Double" />
+		<Property Name="ScaleMax" Type="Double" />
+		<Property Name="ScaleMajorNumber" Type="Integer" />
+		<Property Name="ScaleMinorNumber" Type="Integer" />
+		<Property Name="Sections" Type="Array:Object" Editor="PropertyPage">
+			<Format Color="#FF0000" Condition="[Value] &lt; 60" />
+			<Format Color="#00FF00" Condition="[Value] &gt;= 60 and [Value] &lt; 80" />
+			<Format Color="#0000FF" Condition="[Value] &gt; 80" />
+		</Property>
+	</Control>
+
+	<Control Class="UFLabel">
+		<Property Name="Text" Type="String" />
+		<Property Name="TextColor" Type="Color" Value="#414141" />
+		<Property Name="NumberFormat" Type="String" />
+		<Property Name="Font" Type="Font" />
+		<Property Name="BorderColor" Type="Color" />
+		<Property Name="BackColor" Type="Color" />
+		<Property Name="Align" Type="Enum" >
+			<SELECT>
+				<OPTION value="0">Left</OPTION>
+				<OPTION value="1">Center</OPTION>
+				<OPTION value="2">Right</OPTION>
+			</SELECT>
+		</Property>
+		<Property Name="LinkTo" Type="String" />
+		<Property Name="BindEnvVar" Type="String" />
+	</Control>
+
+	<Control Class="UFSwitch">
+		<Property Name="Value" Type="Boolean" />
+		<Property Name="BindEnvVar" Type="String" />
+	</Control>
+
+	<Control Class="UFDataGrid">
+		<Property Name="PositiveBarTextColor" Type="Color" Value="#ff0000" />
+		<Property Name="PositiveBarBackColor" Type="Color" Value="#ffff00" />
+		<Property Name="NegativeBarTextColor" Type="Color" Value="#ff0000" />
+		<Property Name="NegativeBarBackColor" Type="Color" Value="#ffff00" />
+		<Property Name="TitleTextColor" Type="Color" Value="#ffffff" />
+		<Property Name="CellTextColor" Type="Color" Value="#2c2c2c" />
+		<Property Name="DataSource" Type="String" />
+		<Property Name="Columns" Type="Array:Object" Editor="PropertyPage" />
+		<Property Name="ConditionFormats" Type="Array:Object" />
+		<Property Name="FixedColumnCount" Type="Integer" />
+		<Property Name="ShowTitle" Type="Boolean" />
+		<Property Name="TitleText" Type="String" />
+		<Property Name="LinkTo" Type="String" />
+		<Property Name="BindEnvVar" Type="String" />
+	</Control>
+
+	<Control Class="UFPieChart">
+		<Property Name="BaseTextColor" Type="Color" Value="#414141" />
+		<Property Name="BackColor" Type="Color" />
+		<Property Name="DataSource" Type="String" />
+		<Property Name="XAxis" Type="String" />
+		<Property Name="Series" Type="Array:Object" />
+		<Property Name="NumberFormat" Type="String" />
+		<Property Name="ShowPointer" Type="Enum" >
+			<SELECT>
+				<OPTION value="0">None</OPTION>
+				<OPTION value="1">Only Pointer</OPTION>
+				<OPTION value="2">Pointer and Base</OPTION>
+			</SELECT>
+		</Property>
+		<Property Name="BindEnvVar" Type="String" />
+		<Property Name="LinkTo" Type="String" />
+	</Control>
+
+    <Control Class="UFColumnChart">
+        <Property Name="Appearance" Type="Enum" Value="0">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Dark</OPTION>
+                <OPTION value="2">DarkFlat</OPTION>
+                <OPTION value="3">Chameleon</OPTION>
+                <OPTION value="4">Fog</OPTION>
+                <OPTION value="5">Nature</OPTION>
+			</SELECT>
+		</Property>
+        <Property Name="Palette" Type="Enum" Value="1">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Crystal</OPTION>
+                <OPTION value="2">Hay</OPTION>
+                <OPTION value="3">Apex</OPTION>
+                <OPTION value="4">Aspect</OPTION>
+                <OPTION value="5">BlackWhite</OPTION>
+                <OPTION value="6">Chameleon</OPTION>
+                <OPTION value="7">Flow</OPTION>
+                <OPTION value="8">Gray</OPTION>
+                <OPTION value="9">Metro</OPTION>
+                <OPTION value="10">Nature</OPTION>
+                <OPTION value="11">Origin</OPTION>
+			</SELECT>
+		</Property>  
+        <Property Name="UseAnimation" Type="Boolean" value="1"/>
+        <Property Name="EnableScrolling" Type="Boolean" value="1"/>
+        <Property Name="Rotated" Type="Boolean" value="0"/>
+        <Property Name="AxisXLabelAngle" Type="Double" value = "45.0"/>
+        <Property Name="AxisYLabelAngle" Type="Double" value = "0.0"/>
+		<Property Name="DataSource" Type="String" />
+		<Property Name="XAxis" Type="String" />
+		<Property Name="Series" Type="Array:Object" />
+		<Property Name="ShowLegend" Type="Enum" Value="2">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Left</OPTION>
+                <OPTION value="2">Top</OPTION>
+                <OPTION value="3">Right</OPTION>
+                <OPTION value="4">Bottom</OPTION>
+			</SELECT>
+		</Property>
+		<Property Name="BindEnvVar" Type="String" />
+		<Property Name="LinkTo" Type="String" />
+	</Control>
+    <Control Class="UFLineChart">
+        <Property Name="Appearance" Type="Enum" Value="0">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Dark</OPTION>
+                <OPTION value="2">DarkFlat</OPTION>
+                <OPTION value="3">Chameleon</OPTION>
+                <OPTION value="4">Fog</OPTION>
+                <OPTION value="5">Nature</OPTION>
+			</SELECT>
+		</Property>
+        <Property Name="Palette" Type="Enum" Value="1">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Crystal</OPTION>
+                <OPTION value="2">Hay</OPTION>
+                <OPTION value="3">Apex</OPTION>
+                <OPTION value="4">Aspect</OPTION>
+                <OPTION value="5">BlackWhite</OPTION>
+                <OPTION value="6">Chameleon</OPTION>
+                <OPTION value="7">Flow</OPTION>
+                <OPTION value="8">Gray</OPTION>
+                <OPTION value="9">Metro</OPTION>
+                <OPTION value="10">Nature</OPTION>
+                <OPTION value="11">Origin</OPTION>
+			</SELECT>
+		</Property>  
+        <Property Name="UseAnimation" Type="Boolean" value="1"/>
+        <Property Name="EnableScrolling" Type="Boolean" value="1"/>
+        <Property Name="Rotated" Type="Boolean" value="0"/>
+        <Property Name="AxisXLabelAngle" Type="Double" value = "45.0"/>
+        <Property Name="AxisYLabelAngle" Type="Double" value = "0.0"/>
+		<Property Name="DataSource" Type="String" />
+		<Property Name="XAxis" Type="String" />
+		<Property Name="Series" Type="Array:Object" />
+		<Property Name="ShowLegend" Type="Enum" Value="2">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Left</OPTION>
+                <OPTION value="2">Top</OPTION>
+                <OPTION value="3">Right</OPTION>
+                <OPTION value="4">Bottom</OPTION>
+			</SELECT>
+		</Property>
+		<Property Name="BindEnvVar" Type="String" />
+		<Property Name="LinkTo" Type="String" />
+	</Control>
+    
+    <Control Class="UFCombinationChart">
+        <Property Name="Appearance" Type="Enum" Value="0">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Dark</OPTION>
+                <OPTION value="2">DarkFlat</OPTION>
+                <OPTION value="3">Chameleon</OPTION>
+                <OPTION value="4">Fog</OPTION>
+                <OPTION value="5">Nature</OPTION>
+			</SELECT>
+		</Property>
+        <Property Name="Palette" Type="Enum" Value="1">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Crystal</OPTION>
+                <OPTION value="2">Hay</OPTION>
+                <OPTION value="3">Apex</OPTION>
+                <OPTION value="4">Aspect</OPTION>
+                <OPTION value="5">BlackWhite</OPTION>
+                <OPTION value="6">Chameleon</OPTION>
+                <OPTION value="7">Flow</OPTION>
+                <OPTION value="8">Gray</OPTION>
+                <OPTION value="9">Metro</OPTION>
+                <OPTION value="10">Nature</OPTION>
+                <OPTION value="11">Origin</OPTION>
+			</SELECT>
+		</Property>  
+        <Property Name="UseAnimation" Type="Boolean" value="1"/>
+        <Property Name="EnableScrolling" Type="Boolean" value="1"/>
+        <Property Name="AxisXLabelAngle" Type="Double" value = "45.0"/>
+        <Property Name="AxisYLabelAngle" Type="Double" value = "0.0"/>
+		<Property Name="DataSource" Type="String" />
+		<Property Name="XAxis" Type="String" />
+		<Property Name="Series" Type="Array:Object" />
+		<Property Name="ShowLegend" Type="Enum" Value="2">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Left</OPTION>
+                <OPTION value="2">Top</OPTION>
+                <OPTION value="3">Right</OPTION>
+                <OPTION value="4">Bottom</OPTION>
+			</SELECT>
+		</Property>
+		<Property Name="BindEnvVar" Type="String" />
+		<Property Name="LinkTo" Type="String" />
+	</Control>
+    <Control Class="UFPointChart">
+        <Property Name="Appearance" Type="Enum" Value="0">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Dark</OPTION>
+                <OPTION value="2">DarkFlat</OPTION>
+                <OPTION value="3">Chameleon</OPTION>
+                <OPTION value="4">Fog</OPTION>
+                <OPTION value="5">Nature</OPTION>
+			</SELECT>
+		</Property>
+        <Property Name="Palette" Type="Enum" Value="1">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Crystal</OPTION>
+                <OPTION value="2">Hay</OPTION>
+                <OPTION value="3">Apex</OPTION>
+                <OPTION value="4">Aspect</OPTION>
+                <OPTION value="5">BlackWhite</OPTION>
+                <OPTION value="6">Chameleon</OPTION>
+                <OPTION value="7">Flow</OPTION>
+                <OPTION value="8">Gray</OPTION>
+                <OPTION value="9">Metro</OPTION>
+                <OPTION value="10">Nature</OPTION>
+                <OPTION value="11">Origin</OPTION>
+			</SELECT>
+		</Property> 
+        <Property Name="UseAnimation" Type="Boolean" value="1"/>
+        <Property Name="EnableScrolling" Type="Boolean" value="1"/>
+        <Property Name="AxisXLabelAngle" Type="Double" value = "45.0"/>
+        <Property Name="AxisYLabelAngle" Type="Double" value = "0.0"/>
+		<Property Name="DataSource" Type="String" />
+		<Property Name="XAxis" Type="String" />
+		<Property Name="Series" Type="Array:Object" />
+		<Property Name="ShowLegend" Type="Enum" Value="2">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Left</OPTION>
+                <OPTION value="2">Top</OPTION>
+                <OPTION value="3">Right</OPTION>
+                <OPTION value="4">Bottom</OPTION>
+			</SELECT>
+		</Property>
+		<Property Name="BindEnvVar" Type="String" />
+		<Property Name="LinkTo" Type="String" />
+	</Control>
+    <Control Class="UFAreaChart">
+        <Property Name="Appearance" Type="Enum" Value="0">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Dark</OPTION>
+                <OPTION value="2">DarkFlat</OPTION>
+                <OPTION value="3">Chameleon</OPTION>
+                <OPTION value="4">Fog</OPTION>
+                <OPTION value="5">Nature</OPTION>
+			</SELECT>
+		</Property>
+        <Property Name="Palette" Type="Enum" Value="1">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Crystal</OPTION>
+                <OPTION value="2">Hay</OPTION>
+                <OPTION value="3">Apex</OPTION>
+                <OPTION value="4">Aspect</OPTION>
+                <OPTION value="5">BlackWhite</OPTION>
+                <OPTION value="6">Chameleon</OPTION>
+                <OPTION value="7">Flow</OPTION>
+                <OPTION value="8">Gray</OPTION>
+                <OPTION value="9">Metro</OPTION>
+                <OPTION value="10">Nature</OPTION>
+                <OPTION value="11">Origin</OPTION>
+			</SELECT>
+		</Property> 
+        <Property Name="EnableScrolling" Type="Boolean" value="1"/>
+        <Property Name="AxisXLabelAngle" Type="Double" value = "45.0"/>
+        <Property Name="AxisYLabelAngle" Type="Double" value = "0.0"/>
+		<Property Name="DataSource" Type="String" />
+		<Property Name="XAxis" Type="String" />
+		<Property Name="Series" Type="Array:Object" />
+		<Property Name="ShowLegend" Type="Enum" Value="2">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Left</OPTION>
+                <OPTION value="2">Top</OPTION>
+                <OPTION value="3">Right</OPTION>
+                <OPTION value="4">Bottom</OPTION>
+			</SELECT>
+		</Property>
+		<Property Name="BindEnvVar" Type="String" />
+		<Property Name="LinkTo" Type="String" />
+	</Control>
+    <Control Class="UFStackedBarChart">
+        <Property Name="Appearance" Type="Enum" Value="0">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Dark</OPTION>
+                <OPTION value="2">DarkFlat</OPTION>
+                <OPTION value="3">Chameleon</OPTION>
+                <OPTION value="4">Fog</OPTION>
+                <OPTION value="5">Nature</OPTION>
+			</SELECT>
+		</Property>
+        <Property Name="Palette" Type="Enum" Value="1">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Crystal</OPTION>
+                <OPTION value="2">Hay</OPTION>
+                <OPTION value="3">Apex</OPTION>
+                <OPTION value="4">Aspect</OPTION>
+                <OPTION value="5">BlackWhite</OPTION>
+                <OPTION value="6">Chameleon</OPTION>
+                <OPTION value="7">Flow</OPTION>
+                <OPTION value="8">Gray</OPTION>
+                <OPTION value="9">Metro</OPTION>
+                <OPTION value="10">Nature</OPTION>
+                <OPTION value="11">Origin</OPTION>
+			</SELECT>
+		</Property> 
+        <Property Name="UseAnimation" Type="Boolean" value="1"/>
+        <Property Name="EnableScrolling" Type="Boolean" value="1"/>
+        <Property Name="Rotated" Type="Boolean" value="0"/>
+        <Property Name="AxisXLabelAngle" Type="Double" value = "45.0"/>
+        <Property Name="AxisYLabelAngle" Type="Double" value = "0.0"/>
+		<Property Name="DataSource" Type="String" />
+		<Property Name="XAxis" Type="String" />
+		<Property Name="Series" Type="Array:Object" />
+		<Property Name="ShowLegend" Type="Enum" Value="2">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Left</OPTION>
+                <OPTION value="2">Top</OPTION>
+                <OPTION value="3">Right</OPTION>
+                <OPTION value="4">Bottom</OPTION>
+			</SELECT>
+		</Property>
+		<Property Name="BindEnvVar" Type="String" />
+		<Property Name="LinkTo" Type="String" />
+	</Control>
+    <Control Class="UFStackedAreaChart">
+        <Property Name="Appearance" Type="Enum" Value="0">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Dark</OPTION>
+                <OPTION value="2">DarkFlat</OPTION>
+                <OPTION value="3">Chameleon</OPTION>
+                <OPTION value="4">Fog</OPTION>
+                <OPTION value="5">Nature</OPTION>
+			</SELECT>
+		</Property>
+        <Property Name="Palette" Type="Enum" Value="1">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Crystal</OPTION>
+                <OPTION value="2">Hay</OPTION>
+                <OPTION value="3">Apex</OPTION>
+                <OPTION value="4">Aspect</OPTION>
+                <OPTION value="5">BlackWhite</OPTION>
+                <OPTION value="6">Chameleon</OPTION>
+                <OPTION value="7">Flow</OPTION>
+                <OPTION value="8">Gray</OPTION>
+                <OPTION value="9">Metro</OPTION>
+                <OPTION value="10">Nature</OPTION>
+                <OPTION value="11">Origin</OPTION>
+			</SELECT>
+		</Property> 
+        <Property Name="EnableScrolling" Type="Boolean" value="1"/>
+        <Property Name="AxisXLabelAngle" Type="Double" value = "45.0"/>
+        <Property Name="AxisYLabelAngle" Type="Double" value = "0.0"/>
+		<Property Name="DataSource" Type="String" />
+		<Property Name="XAxis" Type="String" />
+		<Property Name="Series" Type="Array:Object" />
+		<Property Name="ShowLegend" Type="Enum" Value="2">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Left</OPTION>
+                <OPTION value="2">Top</OPTION>
+                <OPTION value="3">Right</OPTION>
+                <OPTION value="4">Bottom</OPTION>
+			</SELECT>
+		</Property>
+		<Property Name="BindEnvVar" Type="String" />
+		<Property Name="LinkTo" Type="String" />
+	</Control>
+    <Control Class="UFBubbleChart">
+        <Property Name="Appearance" Type="Enum" Value="0">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Dark</OPTION>
+                <OPTION value="2">DarkFlat</OPTION>
+                <OPTION value="3">Chameleon</OPTION>
+                <OPTION value="4">Fog</OPTION>
+                <OPTION value="5">Nature</OPTION>
+			</SELECT>
+		</Property>
+        <Property Name="Palette" Type="Enum" Value="1">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Crystal</OPTION>
+                <OPTION value="2">Hay</OPTION>
+                <OPTION value="3">Apex</OPTION>
+                <OPTION value="4">Aspect</OPTION>
+                <OPTION value="5">BlackWhite</OPTION>
+                <OPTION value="6">Chameleon</OPTION>
+                <OPTION value="7">Flow</OPTION>
+                <OPTION value="8">Gray</OPTION>
+                <OPTION value="9">Metro</OPTION>
+                <OPTION value="10">Nature</OPTION>
+                <OPTION value="11">Origin</OPTION>
+			</SELECT>
+		</Property> 
+        <Property Name="UseAnimation" Type="Boolean" value="1"/>
+        <Property Name="EnableScrolling" Type="Boolean" value="1"/>
+        <Property Name="AxisXLabelAngle" Type="Double" value = "45.0"/>
+        <Property Name="AxisYLabelAngle" Type="Double" value = "0.0"/>
+		<Property Name="DataSource" Type="String" />
+		<Property Name="XAxis" Type="String" />
+		<Property Name="Series" Type="Array:Object" />
+		<Property Name="ShowLegend" Type="Enum" Value="2">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Left</OPTION>
+                <OPTION value="2">Top</OPTION>
+                <OPTION value="3">Right</OPTION>
+                <OPTION value="4">Bottom</OPTION>
+			</SELECT>
+		</Property>
+		<Property Name="BindEnvVar" Type="String" />
+		<Property Name="LinkTo" Type="String" />
+	</Control>
+    <Control Class="UFFunnelChart">
+        <Property Name="Appearance" Type="Enum" Value="0">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Dark</OPTION>
+                <OPTION value="2">DarkFlat</OPTION>
+                <OPTION value="3">Chameleon</OPTION>
+                <OPTION value="4">Fog</OPTION>
+                <OPTION value="5">Nature</OPTION>
+			</SELECT>
+		</Property>
+        <Property Name="Palette" Type="Enum" Value="1">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Crystal</OPTION>
+                <OPTION value="2">Hay</OPTION>
+                <OPTION value="3">Apex</OPTION>
+                <OPTION value="4">Aspect</OPTION>
+                <OPTION value="5">BlackWhite</OPTION>
+                <OPTION value="6">Chameleon</OPTION>
+                <OPTION value="7">Flow</OPTION>
+                <OPTION value="8">Gray</OPTION>
+                <OPTION value="9">Metro</OPTION>
+                <OPTION value="10">Nature</OPTION>
+                <OPTION value="11">Origin</OPTION>
+			</SELECT>
+		</Property> 
+		<Property Name="DataSource" Type="String" />
+		<Property Name="XAxis" Type="String" />
+		<Property Name="Series" Type="Array:Object" />
+		<Property Name="ShowLegend" Type="Enum" Value="2">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Left</OPTION>
+                <OPTION value="2">Top</OPTION>
+                <OPTION value="3">Right</OPTION>
+                <OPTION value="4">Bottom</OPTION>
+			</SELECT>
+		</Property>
+		<Property Name="BindEnvVar" Type="String" />
+		<Property Name="LinkTo" Type="String" />
+	</Control>
+    <Control Class="UFPyramidChart">
+        <Property Name="Appearance" Type="Enum" Value="0">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Dark</OPTION>
+                <OPTION value="2">DarkFlat</OPTION>
+                <OPTION value="3">Chameleon</OPTION>
+                <OPTION value="4">Fog</OPTION>
+                <OPTION value="5">Nature</OPTION>
+			</SELECT>
+		</Property>
+        <Property Name="Palette" Type="Enum" Value="1">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Crystal</OPTION>
+                <OPTION value="2">Hay</OPTION>
+                <OPTION value="3">Apex</OPTION>
+                <OPTION value="4">Aspect</OPTION>
+                <OPTION value="5">BlackWhite</OPTION>
+                <OPTION value="6">Chameleon</OPTION>
+                <OPTION value="7">Flow</OPTION>
+                <OPTION value="8">Gray</OPTION>
+                <OPTION value="9">Metro</OPTION>
+                <OPTION value="10">Nature</OPTION>
+                <OPTION value="11">Origin</OPTION>
+			</SELECT>
+		</Property> 
+		<Property Name="DataSource" Type="String" />
+		<Property Name="XAxis" Type="String" />
+		<Property Name="Series" Type="Array:Object" />
+		<Property Name="ShowLegend" Type="Enum" Value="2">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Left</OPTION>
+                <OPTION value="2">Top</OPTION>
+                <OPTION value="3">Right</OPTION>
+                <OPTION value="4">Bottom</OPTION>
+			</SELECT>
+		</Property>
+		<Property Name="BindEnvVar" Type="String" />
+		<Property Name="LinkTo" Type="String" />
+	</Control>
+    <Control Class="UFRadarPointChart">
+        <Property Name="Appearance" Type="Enum" Value="0">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Dark</OPTION>
+                <OPTION value="2">DarkFlat</OPTION>
+                <OPTION value="3">Chameleon</OPTION>
+                <OPTION value="4">Fog</OPTION>
+                <OPTION value="5">Nature</OPTION>
+			</SELECT>
+		</Property>
+        <Property Name="Palette" Type="Enum" Value="1">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Crystal</OPTION>
+                <OPTION value="2">Hay</OPTION>
+                <OPTION value="3">Apex</OPTION>
+                <OPTION value="4">Aspect</OPTION>
+                <OPTION value="5">BlackWhite</OPTION>
+                <OPTION value="6">Chameleon</OPTION>
+                <OPTION value="7">Flow</OPTION>
+                <OPTION value="8">Gray</OPTION>
+                <OPTION value="9">Metro</OPTION>
+                <OPTION value="10">Nature</OPTION>
+                <OPTION value="11">Origin</OPTION>
+			</SELECT>
+		</Property> 
+		<Property Name="DataSource" Type="String" />
+		<Property Name="XAxis" Type="String" />
+		<Property Name="Series" Type="Array:Object" />
+		<Property Name="ShowLegend" Type="Enum" Value="2">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Left</OPTION>
+                <OPTION value="2">Top</OPTION>
+                <OPTION value="3">Right</OPTION>
+                <OPTION value="4">Bottom</OPTION>
+			</SELECT>
+		</Property>
+		<Property Name="BindEnvVar" Type="String" />
+		<Property Name="LinkTo" Type="String" />
+	</Control>
+    <Control Class="UFRadarLineChart">
+        <Property Name="Appearance" Type="Enum" Value="0">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Dark</OPTION>
+                <OPTION value="2">DarkFlat</OPTION>
+                <OPTION value="3">Chameleon</OPTION>
+                <OPTION value="4">Fog</OPTION>
+                <OPTION value="5">Nature</OPTION>
+			</SELECT>
+		</Property>
+        <Property Name="Palette" Type="Enum" Value="1">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Crystal</OPTION>
+                <OPTION value="2">Hay</OPTION>
+                <OPTION value="3">Apex</OPTION>
+                <OPTION value="4">Aspect</OPTION>
+                <OPTION value="5">BlackWhite</OPTION>
+                <OPTION value="6">Chameleon</OPTION>
+                <OPTION value="7">Flow</OPTION>
+                <OPTION value="8">Gray</OPTION>
+                <OPTION value="9">Metro</OPTION>
+                <OPTION value="10">Nature</OPTION>
+                <OPTION value="11">Origin</OPTION>
+			</SELECT>
+		</Property> 
+		<Property Name="DataSource" Type="String" />
+		<Property Name="XAxis" Type="String" />
+		<Property Name="Series" Type="Array:Object" />
+		<Property Name="ShowLegend" Type="Enum" Value="2">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Left</OPTION>
+                <OPTION value="2">Top</OPTION>
+                <OPTION value="3">Right</OPTION>
+                <OPTION value="4">Bottom</OPTION>
+			</SELECT>
+		</Property>
+		<Property Name="BindEnvVar" Type="String" />
+		<Property Name="LinkTo" Type="String" />
+	</Control>
+    <Control Class="UFRadarAreaChart">
+        <Property Name="Appearance" Type="Enum" Value="0">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Dark</OPTION>
+                <OPTION value="2">DarkFlat</OPTION>
+                <OPTION value="3">Chameleon</OPTION>
+                <OPTION value="4">Fog</OPTION>
+                <OPTION value="5">Nature</OPTION>
+			</SELECT>
+		</Property>
+        <Property Name="Palette" Type="Enum" Value="1">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Crystal</OPTION>
+                <OPTION value="2">Hay</OPTION>
+                <OPTION value="3">Apex</OPTION>
+                <OPTION value="4">Aspect</OPTION>
+                <OPTION value="5">BlackWhite</OPTION>
+                <OPTION value="6">Chameleon</OPTION>
+                <OPTION value="7">Flow</OPTION>
+                <OPTION value="8">Gray</OPTION>
+                <OPTION value="9">Metro</OPTION>
+                <OPTION value="10">Nature</OPTION>
+                <OPTION value="11">Origin</OPTION>
+			</SELECT>
+		</Property> 
+		<Property Name="DataSource" Type="String" />
+		<Property Name="XAxis" Type="String" />
+		<Property Name="Series" Type="Array:Object" />
+		<Property Name="ShowLegend" Type="Enum" Value="2">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Left</OPTION>
+                <OPTION value="2">Top</OPTION>
+                <OPTION value="3">Right</OPTION>
+                <OPTION value="4">Bottom</OPTION>
+			</SELECT>
+		</Property>
+		<Property Name="BindEnvVar" Type="String" />
+		<Property Name="LinkTo" Type="String" />
+	</Control>
+
+	<Control Class="UFDatePicker">
+		<Property Name="Unit" Type="Enum">
+			<SELECT>
+				<OPTION value="0">Year</OPTION>
+				<OPTION value="1">Quater</OPTION>
+				<OPTION value="2">Month</OPTION>
+				<OPTION value="3">Week</OPTION>
+				<OPTION value="4">Day</OPTION>
+				<OPTION value="5">Customer</OPTION>
+			</SELECT>
+		</Property>
+		<Property Name="Text" Type="String" />
+		<Property Name="TextColor" Type="Color"/>
+		<Property Name="DataSource" Type="String" />
+		<Property Name="ShowFormat" Type="String" />
+		<Property Name="ShowUnit" Type="Enum" Value="2">
+			<SELECT>
+				<OPTION value="0">None</OPTION>
+				<OPTION value="1">Left</OPTION>
+				<OPTION value="2">Right</OPTION>
+			</SELECT>
+		</Property>
+		<Property Name="BindEnvVar" Type="String" />
+		<Property Name="BindBeginEnvVar" Type="String" />
+		<Property Name="BindEndEnvVar" Type="String" />
+		<Property Name="LinkTo" Type="String" />
+
+		<Property Name="FirstMonthOfYear" Type="Enum" Value="1">
+			<SELECT>
+				<OPTION value="1">January</OPTION>
+				<OPTION value="2">February</OPTION>
+				<OPTION value="3">March</OPTION>
+				<OPTION value="4">April</OPTION>
+				<OPTION value="5">May</OPTION>
+				<OPTION value="6">June</OPTION>
+				<OPTION value="7">July</OPTION>
+				<OPTION value="8">Aguest</OPTION>
+				<OPTION value="9">September</OPTION>
+				<OPTION value="10">October</OPTION>
+				<OPTION value="11">November</OPTION>
+				<OPTION value="12">Decmber</OPTION>
+			</SELECT>
+		</Property>
+		<Property Name="FirstDayOfMonth"  Type="Enum" Value="1">
+			<SELECT>
+				<OPTION value="1">1</OPTION>
+				<OPTION value="2">2</OPTION>
+				<OPTION value="3">3</OPTION>
+				<OPTION value="4">4</OPTION>
+				<OPTION value="5">5</OPTION>
+				<OPTION value="6">6</OPTION>
+				<OPTION value="7">7</OPTION>
+				<OPTION value="8">8</OPTION>
+				<OPTION value="9">9</OPTION>
+				<OPTION value="10">10</OPTION>
+				<OPTION value="11">11</OPTION>
+				<OPTION value="12">12</OPTION>
+				<OPTION value="13">13</OPTION>
+				<OPTION value="14">14</OPTION>
+				<OPTION value="15">15</OPTION>
+				<OPTION value="16">16</OPTION>
+				<OPTION value="17">17</OPTION>
+				<OPTION value="18">18</OPTION>
+				<OPTION value="19">19</OPTION>
+				<OPTION value="20">20</OPTION>
+				<OPTION value="21">21</OPTION>
+				<OPTION value="22">22</OPTION>
+				<OPTION value="23">23</OPTION>
+				<OPTION value="24">24</OPTION>
+				<OPTION value="25">25</OPTION>
+				<OPTION value="26">26</OPTION>
+				<OPTION value="27">27</OPTION>
+				<OPTION value="28">28</OPTION>
+				<OPTION value="29">29</OPTION>
+				<OPTION value="30">30</OPTION>
+				<OPTION value="31">31</OPTION>
+			</SELECT>
+		</Property>
+
+		<Property Name="FirstDayOfWeek"  Type="Enum" Value="1">
+			<SELECT>
+				<OPTION value="1">Monday</OPTION>
+				<OPTION value="2">Tuesday</OPTION>
+				<OPTION value="3">WenesDay</OPTION>
+				<OPTION value="4">ThurDay</OPTION>
+				<OPTION value="5">Friday</OPTION>
+				<OPTION value="6">Saturday</OPTION>
+				<OPTION value="7">Sunday</OPTION>
+			</SELECT>
+		</Property>
+		
+		<Property Name="DateTextColor"  Type="Color" Value="#414141" />
+	</Control>
+
+	<Control Class="UFSlideSheet">
+		<Property Name="ContentObjects" Type="String" />
+		<Property Name="CurrentPage" Type="Integer" />
+		<Property Name="BackColor" Type="Color" />
+		<Property Name="IndependentPages" Type="String" />
+		<Property Name="ShowPageIndicator" Type="Boolean" />
+		<Property Name="ShowToolbar" Type="Boolean" />
+		<Property Name="UpdateTitle" Type="Boolean" />
+        <Property Name="SlideMode" Type="Enum" > 
+			<SELECT>
+				<OPTION value="0">Vertical</OPTION>
+				<OPTION value="1">Horizontal</OPTION>
+				<OPTION value="2">Both</OPTION>
+			</SELECT>
+		</Property>
+	</Control>
+
+	<Control Class="UFToolbar">
+		<Property Name="TextColor" Type="Color" Value="#838383" />
+		<Property Name="HighlightTextColor" Type="Color" Value="#ffffff" />
+	</Control>
+    
+    <Control Class="UFBarChart">
+        <Property Name="Appearance" Type="Enum" Value="0">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Dark</OPTION>
+                <OPTION value="2">DarkFlat</OPTION>
+                <OPTION value="3">Chameleon</OPTION>
+                <OPTION value="4">Fog</OPTION>
+                <OPTION value="5">Nature</OPTION>
+			</SELECT>
+		</Property>
+        <Property Name="Palette" Type="Enum" Value="1">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Crystal</OPTION>
+                <OPTION value="2">Hay</OPTION>
+                <OPTION value="3">Apex</OPTION>
+                <OPTION value="4">Aspect</OPTION>
+                <OPTION value="5">BlackWhite</OPTION>
+                <OPTION value="6">Chameleon</OPTION>
+                <OPTION value="7">Flow</OPTION>
+                <OPTION value="8">Gray</OPTION>
+                <OPTION value="9">Metro</OPTION>
+                <OPTION value="10">Nature</OPTION>
+                <OPTION value="11">Origin</OPTION>
+			</SELECT>
+		</Property>  
+        <Property Name="UseAnimation" Type="Boolean" value="1"/>
+        <Property Name="EnableScrolling" Type="Boolean" value="1"/>
+        <Property Name="Rotated" Type="Boolean" value="0"/>
+        <Property Name="AxisXLabelAngle" Type="Double" value = "45.0"/>
+        <Property Name="AxisYLabelAngle" Type="Double" value = "0.0"/>
+		<Property Name="DataSource" Type="String" />
+		<Property Name="XAxis" Type="String" />
+		<Property Name="Series" Type="Array:Object" />
+		<Property Name="ShowLegend" Type="Enum" Value="2">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Left</OPTION>
+                <OPTION value="2">Top</OPTION>
+                <OPTION value="3">Right</OPTION>
+                <OPTION value="4">Bottom</OPTION>
+			</SELECT>
+		</Property>
+		<Property Name="BindEnvVar" Type="String" />
+		<Property Name="LinkTo" Type="String" />
+	</Control>
+    <Control Class="UFLineTwoChart">
+        <Property Name="Appearance" Type="Enum" Value="0">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Dark</OPTION>
+                <OPTION value="2">DarkFlat</OPTION>
+                <OPTION value="3">Chameleon</OPTION>
+                <OPTION value="4">Fog</OPTION>
+                <OPTION value="5">Nature</OPTION>
+			</SELECT>
+		</Property>
+        <Property Name="Palette" Type="Enum" Value="1">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Crystal</OPTION>
+                <OPTION value="2">Hay</OPTION>
+                <OPTION value="3">Apex</OPTION>
+                <OPTION value="4">Aspect</OPTION>
+                <OPTION value="5">BlackWhite</OPTION>
+                <OPTION value="6">Chameleon</OPTION>
+                <OPTION value="7">Flow</OPTION>
+                <OPTION value="8">Gray</OPTION>
+                <OPTION value="9">Metro</OPTION>
+                <OPTION value="10">Nature</OPTION>
+                <OPTION value="11">Origin</OPTION>
+			</SELECT>
+		</Property>  
+        <Property Name="UseAnimation" Type="Boolean" value="1"/>
+        <Property Name="EnableScrolling" Type="Boolean" value="1"/>
+        <Property Name="Rotated" Type="Boolean" value="0"/>
+        <Property Name="AxisXLabelAngle" Type="Double" value = "45.0"/>
+        <Property Name="AxisYLabelAngle" Type="Double" value = "0.0"/>
+		<Property Name="DataSource" Type="String" />
+		<Property Name="XAxis" Type="String" />
+		<Property Name="Series" Type="Array:Object" />
+		<Property Name="ShowLegend" Type="Enum" Value="2">
+			<SELECT>
+                <OPTION value="0">None</OPTION>
+                <OPTION value="1">Left</OPTION>
+                <OPTION value="2">Top</OPTION>
+                <OPTION value="3">Right</OPTION>
+                <OPTION value="4">Bottom</OPTION>
+			</SELECT>
+		</Property>
+		<Property Name="BindEnvVar" Type="String" />
+		<Property Name="LinkTo" Type="String" />
+	</Control>
+</Controls>
