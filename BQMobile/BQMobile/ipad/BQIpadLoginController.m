@@ -84,7 +84,7 @@
             
         case 3:
             DLog(@"退出......");
-            [BQContext clearTempDirectory];
+            [FSUtils clearTempDirectory];
             exit(0);
             break;
             
