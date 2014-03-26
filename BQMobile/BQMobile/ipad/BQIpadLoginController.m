@@ -101,10 +101,11 @@
 
 - (void)onIpadEditingDidBeginTextField:(NSInteger)index {
     DLog(@"begin :%d",index);
-}
+    }
 
 - (void)onIpadEditingDidEndTextField:(NSInteger)index {
     DLog(@"end :%d",index);
+    
 }
 
 @end

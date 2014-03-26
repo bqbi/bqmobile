@@ -140,8 +140,7 @@
 				042D213318E2CFC000E4354C /* MSViewControllerSlidingPanel.h */,
 				042D213418E2CFC000E4354C /* MSViewControllerSlidingPanel.m */,
 			);
-			name = Controls;
-			path = BQMobile/Controls;
+			path = Controls;
 			sourceTree = "<group>";
 		};
 		76234A6618C386BE00FE3894 /* include */ = {
@@ -211,7 +210,6 @@
 		76D99E6718B33643004A9055 = {
 			isa = PBXGroup;
 			children = (
-				042D213018E2CFC000E4354C /* Controls */,
 				76234A6618C386BE00FE3894 /* include */,
 				76D99E7918B33643004A9055 /* BQMobile */,
 				76D99E9218B33644004A9055 /* BQMobileTests */,
@@ -250,6 +248,7 @@
 		76D99E7918B33643004A9055 /* BQMobile */ = {
 			isa = PBXGroup;
 			children = (
+				042D213018E2CFC000E4354C /* Controls */,
 				76AC1E0D18C23B2A0063ED32 /* device */,
 				76AC1E0E18C23B2A0063ED32 /* ipad */,
 				76AC1E0F18C23B2A0063ED32 /* iphone */,
