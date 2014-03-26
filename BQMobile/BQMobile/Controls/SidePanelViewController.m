@@ -56,13 +56,13 @@ NSString    *g_LeftPanelTabelCellIdentifier = @"CellIdentifier";
     
     windowSize = [[UIScreen mainScreen] bounds].size;
     [self setView:[[UIView alloc] initWithFrame:CGRectMake(0, 0, windowSize.width, windowSize.height)]];
-    [self resetDefaultPanelForSide:MSSPSideDisplayedLeft andWidth:320];
+    [self resetDefaultPanelForSide:MSSPSideDisplayedLeft andWidth:280];
     
     if (self.delegate) {
         [self.delegate sectionsFromDatasourceModel:nil];
     }
     
-    tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, windowSize.width, windowSize.height)];
+    tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 20, windowSize.width, windowSize.height)];
     [tableView setDataSource:self];
     [tableView setDelegate:self];
     [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:g_LeftPanelTabelCellIdentifier];

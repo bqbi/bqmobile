@@ -8,6 +8,7 @@
 
 #import "BQIpadLoginController.h"
 #import "Common.h"
+#import "RootViewController.h"
 
 @implementation BQIpadLoginController
 
@@ -63,6 +64,8 @@
 }
 
 - (void)doLogin {
+    // 检验用户名密码等登录信息是否有效
+    [self.navigationController pushViewController:[[RootViewController alloc ]init] animated:YES];
     
 }
 
@@ -75,6 +78,7 @@
         case 1:
             DLog(@"登录......");
             [BQContext sharedContext].autoLogin = @"NO";
+            [self doLogin];
             break;
             
         case 2:
