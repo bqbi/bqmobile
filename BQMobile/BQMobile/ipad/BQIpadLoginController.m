@@ -8,6 +8,7 @@
 
 #import "BQIpadLoginController.h"
 #import "Common.h"
+#import "RootViewController.h"
 
 #import "BQCommonUI.h"
 
@@ -59,22 +60,8 @@
 }
 
 - (void)doLogin {
-//    int aa = [BQCommonUI askBoxWithButtons:@"地方多舒服舒服舒服" withButton0:@"取消" withButton1:@"按钮1" withButton2:@"按钮2" withButton3:@"按钮3"];
-//    DLog(@"--------%d", aa);
-    [BQCommonUI showLoadView];
-    
-    NSRunLoop* curRunLoop = [NSRunLoop currentRunLoop];
-    int index = 5;
-    while ([curRunLoop runMode:NSDefaultRunLoopMode beforeDate:[NSDate dateWithTimeIntervalSinceNow:1]] && index > 0) {
-        index--;
-        DLog(@"---------index----%d", index);
-    }
-    
-    
-    [BQCommonUI hideLoadView];
-    
-    
-    return;
+    // 检验用户名密码等登录信息是否有效
+    [self.navigationController pushViewController:[[RootViewController alloc ]init] animated:YES];
 }
 
 
@@ -112,10 +99,11 @@
 
 - (void)onIpadEditingDidBeginTextField:(NSInteger)index {
     DLog(@"begin :%d",index);
-}
+    }
 
 - (void)onIpadEditingDidEndTextField:(NSInteger)index {
     DLog(@"end :%d",index);
+    
 }
 
 @end
