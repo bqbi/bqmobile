@@ -612,10 +612,15 @@ typedef NS_ENUM(NSUInteger, MSSPPanTouchLocation)
     
     if ([self storyboard])
         [self setViewsFromStoryboard];
+
+    // 是否拥有顶部状态栏
+    if (self.hasStateBar) {
+        [self setStatusBarView:[[UIView alloc] initWithFrame:CGRectMake(0, 0, windowSize.width, 20)]];
+        [[self statusBarView] setBackgroundColor:[self centerViewStatusBarColor]];
+        [[self statusBarView] setAutoresizingMask:(UIViewAutoresizingFlexibleWidth)];
+        [[self view] addSubview:[self statusBarView]];
+    }
     
-    [self setStatusBarView:[[UIView alloc] initWithFrame:CGRectMake(0, 0, windowSize.width, 20)]];
-    [[self statusBarView] setBackgroundColor:[self centerViewStatusBarColor]];
-    [[self statusBarView] setAutoresizingMask:(UIViewAutoresizingFlexibleWidth)];
     
     [self setCenterView:[[MSSlidingPanelCenterView alloc] initWithFrame:CGRectMake(0, 0, windowSize.width, windowSize.height)]];
     [[self centerView] setSlidingPanelController:self];
@@ -626,7 +631,7 @@ typedef NS_ENUM(NSUInteger, MSSPPanTouchLocation)
     
     [self setView:[[UIView alloc] initWithFrame:CGRectMake(0, 0, windowSize.width, windowSize.height)]];
     [[self view] addSubview:[self centerView]];
-    [[self view] addSubview:[self statusBarView]];
+    
     [[self view] setAutoresizingMask:(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight)];
     
     [self setGestureRecognizers];
@@ -704,6 +709,7 @@ typedef NS_ENUM(NSUInteger, MSSPPanTouchLocation)
  */
 - (void)commonSettings
 {
+    _hasStateBar = NO;
     _centerViewController = nil;
     [self setCenterViewStatusBarColor:[UIColor clearColor]];
     

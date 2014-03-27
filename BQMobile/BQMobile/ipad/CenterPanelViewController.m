@@ -21,20 +21,12 @@
 /**
  *  The left button of the navigation bar.
  */
-@property (nonatomic, strong)   NavigationBarButton *menuButtonLeft;
+@property (nonatomic, strong)   NavigationBarButton *sideMenuButton;
+@property (nonatomic, strong)   NavigationBarButton *settingButton;
 
 @end
 
 @implementation CenterPanelViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void) loadView
 {
@@ -43,25 +35,31 @@
     [[self view] setBackgroundColor:[UIColor centerBackgroundColor]];
     //
     [self resetDefaultPanelValuesForSide:MSSPSideDisplayedLeft];
-    
-    [self setMenuButtonLeft:[NavigationBarButton buttonWithType:NavigationBarButtonTypeMenu]];
-    [[self menuButtonLeft] setTarget:[self slidingPanelController]];
+    // 侧边栏菜单按钮
+    [self setSideMenuButton:[NavigationBarButton buttonWithType:NavigationBarButtonTypeMenu]];
+    [[self sideMenuButton] setTarget:[self slidingPanelController]];
     
     if ([[self slidingPanelController] sideDisplayed] == MSSPSideDisplayedLeft)
-        [[self menuButtonLeft] setAction:@selector(closePanel)];
+        [[self sideMenuButton] setAction:@selector(closePanel)];
     else
-        [[self menuButtonLeft] setAction:@selector(openLeftPanel)];
+        [[self sideMenuButton] setAction:@selector(openLeftPanel)];
+    
+    // 导航栏右侧设置按钮
+    [self setSettingButton:[NavigationBarButton buttonWithType:NavigationBarButtonTypeMenu]];
+    [[self settingButton] setTarget:[self slidingPanelController]];
+    [[self settingButton] setAction:@selector(openSettingPanel)];
     
     //
     UINavigationItem *navigationBarItem = [[UINavigationItem alloc] initWithTitle:@"BI 首页"];
-    [navigationBarItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:[self menuButtonLeft]]];
+    [navigationBarItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:[self sideMenuButton]]];
+    [navigationBarItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:[self settingButton]]];
     
-    UINavigationBar *navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 20, windowSize.width, 44)];
+    UINavigationBar *navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, _hasStateBar? 20:0, windowSize.width, 44)];
     if ([navigationBar respondsToSelector:@selector(setBarTintColor:)]) {
         [navigationBar setBarTintColor:[UIColor brownColor]];
     }
     else{
-    [navigationBar setTintColor:[UIColor brownColor]];
+        [navigationBar setTintColor:[UIColor brownColor]];
     }
     [navigationBar pushNavigationItem:navigationBarItem animated:NO];
     [navigationBar setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
@@ -94,7 +92,7 @@
 - (void)slidingPanelController:(MSSlidingPanelController *)panelController hasOpenedSide:(MSSPSideDisplayed)side
 {
     if (side == MSSPSideDisplayedLeft)
-        [[self menuButtonLeft] setAction:@selector(closePanel)];
+        [[self sideMenuButton] setAction:@selector(closePanel)];
 }
 
 

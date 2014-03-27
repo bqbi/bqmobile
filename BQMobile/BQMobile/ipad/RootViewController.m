@@ -11,6 +11,7 @@
 #import "CenterPanelViewController.h"
 #import "LeftPanelViewModel.h"
 #import "Color.h"
+#import "SettingPanelViewController.h"
 
 @interface RootViewController ()
 
@@ -45,10 +46,11 @@
     leftPanelModel          = [[LeftPanelViewModel alloc] init];
     leftPanelViewController = [[LeftPanelViewController alloc] init];
     [leftPanelViewController setDelegate:leftPanelModel];
+    [leftPanelViewController setHasStateBar:self.hasStateBar];
     //
     
     centerPanelViewController = [[CenterPanelViewController alloc] init];
-    
+    [centerPanelViewController setHasStateBar:self.hasStateBar];
     [self setLeftPanelController:leftPanelViewController];
     [self setCenterViewController:centerPanelViewController];
     [self setLeftPanelStatusBarColor:[UIColor menuStatusBarColor]];
@@ -56,5 +58,18 @@
 
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+//    [self openLeftPanel];
+    
+}
+
+#pragma mark - navigation bar button click function implementation
+- (void) openSettingPanel
+{
+    DLog(@"设置...");
+    [self.navigationController pushViewController:[[SettingPanelViewController alloc] init] animated:YES];
+}
 
 @end

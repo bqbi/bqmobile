@@ -57,7 +57,7 @@
  */
 + (UIColor *)centerBackgroundColor
 {
-    return ([UIColor colorWithR255:102 G255:169 B255:250 A255:255]);
+    return [UIColor menuBackgroundColor];//([UIColor colorWithR255:102 G255:169 B255:250 A255:255]);
 }
 
 /**

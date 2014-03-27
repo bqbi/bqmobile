@@ -340,6 +340,9 @@ typedef NS_ENUM(NSUInteger, MSSPSideDisplayed)
  */
 @property (nonatomic, strong)           id <MSSlidingPanelControllerDelegate>   delegate;
 
+
+@property (nonatomic, assign)           BOOL                                    hasStateBar;
+
 #pragma mark Get information about panels
 /** @name Get information about panels */
 
