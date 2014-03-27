@@ -11,4 +11,5 @@
 
 @interface SidePanelViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic,retain) id<TableViewDataSourceDelegate> delegate;
+@property (nonatomic,assign) BOOL hasStateBar;
 @end

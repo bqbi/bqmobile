@@ -18,6 +18,7 @@
 		042D215718E3206200E4354C /* LeftPanelViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D215218E3206200E4354C /* LeftPanelViewModel.m */; };
 		042D215818E3206200E4354C /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D215418E3206200E4354C /* RootViewController.m */; };
 		042D215B18E320D800E4354C /* NavigationBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D215A18E320D800E4354C /* NavigationBarButton.m */; };
+		042D366418E3F55400E4354C /* SettingPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D366318E3F55400E4354C /* SettingPanelViewController.m */; };
 		7615ECB518B346FF00F1E344 /* libBQDashboard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7615ECB418B346FF00F1E344 /* libBQDashboard.a */; };
 		76234A6418C3851900FE3894 /* application.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 76234A6318C3851900FE3894 /* application.cfg */; };
 		76315D5718E0027A00199AFD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76315D5618E0027A00199AFD /* CFNetwork.framework */; };
@@ -82,15 +83,20 @@
 		042D215418E3206200E4354C /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		042D215918E320D800E4354C /* NavigationBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationBarButton.h; sourceTree = "<group>"; };
 		042D215A18E320D800E4354C /* NavigationBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationBarButton.m; sourceTree = "<group>"; };
+		042D361618E3BF9200E4354C /* BQContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQContext.h; sourceTree = "<group>"; };
+		042D361718E3BF9200E4354C /* BQCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQCore.h; sourceTree = "<group>"; };
+		042D361818E3BF9200E4354C /* BQServerAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQServerAccess.h; sourceTree = "<group>"; };
+		042D361918E3BF9200E4354C /* BQViewOperateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQViewOperateModel.h; sourceTree = "<group>"; };
+		042D361A18E3BF9200E4354C /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		042D361B18E3BF9200E4354C /* ElTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElTool.h; sourceTree = "<group>"; };
+		042D361C18E3BF9200E4354C /* FSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSUtils.h; sourceTree = "<group>"; };
+		042D361D18E3BF9200E4354C /* PropertyUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyUtils.h; sourceTree = "<group>"; };
+		042D361E18E3BF9200E4354C /* WebUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebUtils.h; sourceTree = "<group>"; };
+		042D362018E3BF9200E4354C /* BQDashboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQDashboard.h; sourceTree = "<group>"; };
+		042D366218E3F55400E4354C /* SettingPanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingPanelViewController.h; sourceTree = "<group>"; };
+		042D366318E3F55400E4354C /* SettingPanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingPanelViewController.m; sourceTree = "<group>"; };
 		7615ECB418B346FF00F1E344 /* libBQDashboard.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBQDashboard.a; path = "../Bin/BQMobile/Build/Products/Debug-iphoneos/libBQDashboard.a"; sourceTree = "<group>"; };
 		76234A6318C3851900FE3894 /* application.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = application.cfg; path = Bundles/application.cfg; sourceTree = SOURCE_ROOT; };
-		76234A6818C386BE00FE3894 /* BQContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQContext.h; sourceTree = "<group>"; };
-		76234A6918C386BE00FE3894 /* BQCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQCore.h; sourceTree = "<group>"; };
-		76234A6A18C386BE00FE3894 /* BQServerAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQServerAccess.h; sourceTree = "<group>"; };
-		76234A6B18C386BE00FE3894 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
-		76234A6C18C386BE00FE3894 /* FSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSUtils.h; sourceTree = "<group>"; };
-		76234A6D18C386BE00FE3894 /* PropertyUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyUtils.h; sourceTree = "<group>"; };
-		76234A6F18C386BE00FE3894 /* BQDashboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQDashboard.h; sourceTree = "<group>"; };
 		76315D5618E0027A00199AFD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		76315D5818E0028E00199AFD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		76315D5A18E0029A00199AFD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -182,33 +188,36 @@
 			path = Controls;
 			sourceTree = "<group>";
 		};
-		76234A6618C386BE00FE3894 /* include */ = {
+		042D361418E3BF9200E4354C /* include */ = {
 			isa = PBXGroup;
 			children = (
-				76234A6718C386BE00FE3894 /* BQCore */,
-				76234A6E18C386BE00FE3894 /* BQDashboard */,
+				042D361518E3BF9200E4354C /* BQCore */,
+				042D361F18E3BF9200E4354C /* BQDashboard */,
 			);
 			name = include;
-			path = "../Bin/BQMobile/Build/Products/Debug-iphoneos/include";
+			path = "../../Bin/BQMobile/Build/Products/Debug-iphoneos/include";
 			sourceTree = "<group>";
 		};
-		76234A6718C386BE00FE3894 /* BQCore */ = {
+		042D361518E3BF9200E4354C /* BQCore */ = {
 			isa = PBXGroup;
 			children = (
-				76234A6818C386BE00FE3894 /* BQContext.h */,
-				76234A6918C386BE00FE3894 /* BQCore.h */,
-				76234A6A18C386BE00FE3894 /* BQServerAccess.h */,
-				76234A6B18C386BE00FE3894 /* Common.h */,
-				76234A6C18C386BE00FE3894 /* FSUtils.h */,
-				76234A6D18C386BE00FE3894 /* PropertyUtils.h */,
+				042D361618E3BF9200E4354C /* BQContext.h */,
+				042D361718E3BF9200E4354C /* BQCore.h */,
+				042D361818E3BF9200E4354C /* BQServerAccess.h */,
+				042D361918E3BF9200E4354C /* BQViewOperateModel.h */,
+				042D361A18E3BF9200E4354C /* Common.h */,
+				042D361B18E3BF9200E4354C /* ElTool.h */,
+				042D361C18E3BF9200E4354C /* FSUtils.h */,
+				042D361D18E3BF9200E4354C /* PropertyUtils.h */,
+				042D361E18E3BF9200E4354C /* WebUtils.h */,
 			);
 			path = BQCore;
 			sourceTree = "<group>";
 		};
-		76234A6E18C386BE00FE3894 /* BQDashboard */ = {
+		042D361F18E3BF9200E4354C /* BQDashboard */ = {
 			isa = PBXGroup;
 			children = (
-				76234A6F18C386BE00FE3894 /* BQDashboard.h */,
+				042D362018E3BF9200E4354C /* BQDashboard.h */,
 			);
 			path = BQDashboard;
 			sourceTree = "<group>";
@@ -243,6 +252,8 @@
 				042D215218E3206200E4354C /* LeftPanelViewModel.m */,
 				042D215318E3206200E4354C /* RootViewController.h */,
 				042D215418E3206200E4354C /* RootViewController.m */,
+				042D366218E3F55400E4354C /* SettingPanelViewController.h */,
+				042D366318E3F55400E4354C /* SettingPanelViewController.m */,
 			);
 			path = ipad;
 			sourceTree = "<group>";
@@ -257,7 +268,6 @@
 		76D99E6718B33643004A9055 = {
 			isa = PBXGroup;
 			children = (
-				76234A6618C386BE00FE3894 /* include */,
 				76D99E7918B33643004A9055 /* BQMobile */,
 				76D99E9218B33644004A9055 /* BQMobileTests */,
 				76D99E7218B33643004A9055 /* Frameworks */,
@@ -295,6 +305,7 @@
 		76D99E7918B33643004A9055 /* BQMobile */ = {
 			isa = PBXGroup;
 			children = (
+				042D361418E3BF9200E4354C /* include */,
 				042D213018E2CFC000E4354C /* Controls */,
 				76AC1E0D18C23B2A0063ED32 /* device */,
 				76AC1E0E18C23B2A0063ED32 /* ipad */,
@@ -438,6 +449,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				042D366418E3F55400E4354C /* SettingPanelViewController.m in Sources */,
 				042D214918E31EC200E4354C /* TableViewSection.m in Sources */,
 				042D215718E3206200E4354C /* LeftPanelViewModel.m in Sources */,
 				042D214C18E31EEC00E4354C /* Color.m in Sources */,

@@ -31,6 +31,7 @@ typedef enum
 {
     NavigationBarButtonTypeCustom,
     NavigationBarButtonTypeMenu,
+    NavigationBarButtonTypeImage,
 }   NavigationBarButtonType;
 
 @interface NavigationBarButton : UIButton

@@ -10,5 +10,5 @@
 #import "MSSlidingPanelController.h"
 
 @interface CenterPanelViewController : UIViewController <MSSlidingPanelControllerDelegate>
-
+@property (nonatomic,assign) BOOL hasStateBar;
 @end
