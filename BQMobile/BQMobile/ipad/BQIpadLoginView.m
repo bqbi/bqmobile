@@ -32,25 +32,9 @@
 
 @synthesize delegate;
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
-    return self;
-}
-
-// 设置主题样式
-- (void)setStyle:(NSString*)_style {
-    // TODO
-
-    
-    [self setNeedsDisplay];
-}
 
 // 加载页面元素
-- (void)loadLoginView {
+- (void)loadRootView {
     DLog(@"加载页面元素")
     
     // 清空界面
@@ -95,27 +79,39 @@
     
     
     
+    UIImage* loginBtnImg = [FSUtils loadImage:@"Pad_Login_button.png"];
+    UIImage* offlineBtnImg = [FSUtils loadImage:@"Pad_Offline_button.png"];
+    UIImage* logoutBtnImg = [FSUtils loadImage:@"Pad_Logout_button.png"];
+    UIImage* unselectCheckBoxImg = [FSUtils loadImage:@"Pad_checkBox_unselect.png"];
+    UIImage* selectCheckBoxImg = [FSUtils loadImage:@"Pad_checkBox_select.png"];
+    
+    
     // 登录
     loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [loginButton addTarget:self action:@selector(OnClickButton:) forControlEvents:UIControlEventTouchUpInside];
+    [loginButton setBackgroundImage:loginBtnImg forState:UIControlStateNormal];
     loginButton.tag = 1;
     [self addSubview:loginButton];
     
     // 离线浏览
     offlineButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [offlineButton addTarget:self action:@selector(OnClickButton:) forControlEvents:UIControlEventTouchUpInside];
+    [offlineButton setBackgroundImage:offlineBtnImg forState:UIControlStateNormal];
     offlineButton.tag = 2;
     [self addSubview:offlineButton];
     
     // 退出
     quitButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [quitButton addTarget:self action:@selector(OnClickButton:) forControlEvents:UIControlEventTouchUpInside];
+    [quitButton setBackgroundImage:logoutBtnImg forState:UIControlStateNormal];
     quitButton.tag = 3;
     [self addSubview:quitButton];
     
     // 记住密码
     rememberCheckBox = [UIButton buttonWithType:UIButtonTypeCustom];
     [rememberCheckBox addTarget:self action:@selector(OnClickButton:) forControlEvents:UIControlEventTouchUpInside];
+    [rememberCheckBox setBackgroundImage:unselectCheckBoxImg forState:UIControlStateNormal];
+    [rememberCheckBox setBackgroundImage:selectCheckBoxImg forState:UIControlStateSelected];
     rememberCheckBox.tag = 4;
     [self addSubview:rememberCheckBox];
     
@@ -139,22 +135,6 @@
     }
 }
 
-- (void)adjustButtons {
-    UIImage* loginBtnImg = [FSUtils loadImage:@"Pad_Login_button.png"];
-    UIImage* offlineBtnImg = [FSUtils loadImage:@"Pad_Offline_button.png"];
-    UIImage* logoutBtnImg = [FSUtils loadImage:@"Pad_Logout_button.png"];
-    UIImage* unselectCheckBoxImg = [FSUtils loadImage:@"Pad_checkBox_unselect.png"];
-    UIImage* selectCheckBoxImg = [FSUtils loadImage:@"Pad_checkBox_select.png"];
-    
-    [loginButton setBackgroundImage:loginBtnImg forState:UIControlStateNormal];
-    [offlineButton setBackgroundImage:offlineBtnImg forState:UIControlStateNormal];
-    [quitButton setBackgroundImage:logoutBtnImg forState:UIControlStateNormal];
-    [rememberCheckBox setBackgroundImage:unselectCheckBoxImg forState:UIControlStateNormal];
-    [rememberCheckBox setBackgroundImage:selectCheckBoxImg forState:UIControlStateSelected];
-    
-    
-}
-
 // 调整组件位置-纵向
 - (void)adjustPositionWithPortrait {
 
@@ -169,8 +149,6 @@
     offlineButton.frame = CGRectMake(229+134+17, 596, 134, 59);
     quitButton.frame = CGRectMake(229+(134+17)*2, 596, 134, 59);
     rememberCheckBox.frame = CGRectMake(237, 563, 15, 17);
-    
-    [self adjustButtons];
     
 }
 
@@ -188,8 +166,6 @@
     offlineButton.frame = CGRectMake(359+134+18, 521, 134, 59);
     quitButton.frame = CGRectMake(359+(134+18)*2, 521, 134, 59);
     rememberCheckBox.frame = CGRectMake(367, 483, 15, 17);
-    
-    [self adjustButtons];
     
 }
 

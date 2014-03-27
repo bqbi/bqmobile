@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "BQCore.h"
+#import "BQView.h"
 
 // iPad登录视图的代理协议
 @protocol BQIpadLoginViewDelegate <NSObject>
@@ -21,7 +22,7 @@
 
 @end
 
-@interface BQIpadLoginView : UIView
+@interface BQIpadLoginView : BQView
 
 @property(nonatomic, retain) UIImageView* backImageView; // 背景
 
@@ -40,17 +41,5 @@
 @property(nonatomic, retain) UIImageView* serverUrlLogoImage; // 服务器地址图片
 
 @property(nonatomic, assign) NSObject<BQIpadLoginViewDelegate>* delegate;// 代理方法
-
-// 加载页面元素
-- (void)loadLoginView;
-
-// 设置主题样式
-- (void)setStyle:(NSString*)_style;
-
-// 调整组件位置-纵向
-- (void)adjustPositionWithPortrait;
-
-// 调整组件位置-横向
-- (void)adjustPositionWithLandscape;
 
 @end

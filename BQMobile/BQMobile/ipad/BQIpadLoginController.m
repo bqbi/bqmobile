@@ -9,13 +9,15 @@
 #import "BQIpadLoginController.h"
 #import "Common.h"
 
+#import "BQCommonUI.h"
+
 @implementation BQIpadLoginController
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    loginView = [[BQIpadLoginView alloc] initWithFrame:CGRectMake(0, 0, 768, 1024)];
+    loginView = [[BQIpadLoginView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.view addSubview:loginView];
     
 }
@@ -28,13 +30,9 @@
     loginView.delegate = self;
     
     // 3.加载页面元素
-    [loginView loadLoginView];
+    [loginView loadRootView];
     
-    // 4.设置样式
-    NSString* style = [BQContext getGlobalStyle];
-    [loginView setStyle:style];
-    
-    // 5.调整位置
+    // 4.调整位置
     [self adjustPosition];
     
 }
@@ -61,7 +59,22 @@
 }
 
 - (void)doLogin {
+//    int aa = [BQCommonUI askBoxWithButtons:@"地方多舒服舒服舒服" withButton0:@"取消" withButton1:@"按钮1" withButton2:@"按钮2" withButton3:@"按钮3"];
+//    DLog(@"--------%d", aa);
+    [BQCommonUI showLoadView];
     
+    NSRunLoop* curRunLoop = [NSRunLoop currentRunLoop];
+    int index = 5;
+    while ([curRunLoop runMode:NSDefaultRunLoopMode beforeDate:[NSDate dateWithTimeIntervalSinceNow:1]] && index > 0) {
+        index--;
+        DLog(@"---------index----%d", index);
+    }
+    
+    
+    [BQCommonUI hideLoadView];
+    
+    
+    return;
 }
 
 
@@ -72,7 +85,7 @@
     switch (index) {
         case 1:
             DLog(@"登录......");
-            [BQContext sharedContext].autoLogin = @"NO";
+            [self doLogin];
             break;
             
         case 2:
