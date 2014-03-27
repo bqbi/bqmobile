@@ -22,22 +22,20 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    // 隐藏导航栏
+    // 1.隐藏导航栏
     [self.navigationController setNavigationBarHidden:YES animated:NO];
     
-    // 设置view的代理
+    // 2.设置view的代理
     loginView.delegate = self;
-    loginView.userName.delegate = self;
-    loginView.password.delegate = self;
-    loginView.serverUrl.delegate = self;
     
-    // 设置样式
+    // 3.加载页面元素
+    [loginView loadLoginView];
+    
+    // 4.设置样式
     NSString* style = [BQContext getGlobalStyle];
     [loginView setStyle:style];
     
-    // 设置页面值
-    
-    // 调整位置
+    // 5.调整位置
     [self adjustPosition];
     
 }

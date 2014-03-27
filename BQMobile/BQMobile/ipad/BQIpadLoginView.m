@@ -43,13 +43,8 @@
 
 // 设置主题样式
 - (void)setStyle:(NSString*)_style {
-    // 清空界面
-    for (UIView* view in [self subviews]) {
-        [view removeFromSuperview];
-    }
-    
-    // 加载页面元素
-    [self loadLoginView];
+    // TODO
+
     
     [self setNeedsDisplay];
 }
@@ -58,7 +53,10 @@
 - (void)loadLoginView {
     DLog(@"加载页面元素")
     
-    // 版本号
+    // 清空界面
+    for (UIView* view in [self subviews]) {
+        [view removeFromSuperview];
+    }
     
     // 添加背景
     backImageView = [[UIImageView alloc] init];
