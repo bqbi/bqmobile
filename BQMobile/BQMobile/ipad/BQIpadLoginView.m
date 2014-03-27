@@ -69,6 +69,7 @@
     userName.placeholder = @"请输入用户名";
     userName.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     userName.textColor = [UIColor blackColor];
+    userName.clearButtonMode = UITextFieldViewModeWhileEditing;
     
     [userName addTarget:self action:@selector(OnEditingDidBeginTextField:) forControlEvents:UIControlEventEditingDidBegin];
     [userName addTarget:self action:@selector(OnEditingDidEndTextField:) forControlEvents:UIControlEventEditingDidEnd];
@@ -82,6 +83,7 @@
     password.placeholder = @"请输入密码";
     password.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     password.textColor = [UIColor blackColor];
+    password.clearButtonMode = UITextFieldViewModeWhileEditing;
     [self addSubview:password];
     
     // 服务地址
@@ -91,6 +93,8 @@
     serverUrl.placeholder = @"请输入服务地址";
     serverUrl.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     serverUrl.textColor = [UIColor blackColor];
+    serverUrl.clearButtonMode = UITextFieldViewModeWhileEditing;
+    
     [self addSubview:serverUrl];
     
     

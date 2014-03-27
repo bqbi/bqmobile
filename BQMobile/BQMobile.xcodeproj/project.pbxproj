@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042D213518E2CFC000E4354C /* MSSlidingPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D213218E2CFC000E4354C /* MSSlidingPanelController.m */; };
+		042D213618E2CFC000E4354C /* MSViewControllerSlidingPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D213418E2CFC000E4354C /* MSViewControllerSlidingPanel.m */; };
+		042D214218E31E3100E4354C /* SidePanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D214118E31E3100E4354C /* SidePanelViewController.m */; };
+		042D214818E31EC200E4354C /* TableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D214518E31EC200E4354C /* TableViewItem.m */; };
+		042D214918E31EC200E4354C /* TableViewSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D214718E31EC200E4354C /* TableViewSection.m */; };
+		042D214C18E31EEC00E4354C /* Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D214B18E31EEC00E4354C /* Color.m */; };
+		042D215518E3206200E4354C /* CenterPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D214E18E3206200E4354C /* CenterPanelViewController.m */; };
+		042D215618E3206200E4354C /* LeftPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D215018E3206200E4354C /* LeftPanelViewController.m */; };
+		042D215718E3206200E4354C /* LeftPanelViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D215218E3206200E4354C /* LeftPanelViewModel.m */; };
+		042D215818E3206200E4354C /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D215418E3206200E4354C /* RootViewController.m */; };
+		042D215B18E320D800E4354C /* NavigationBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D215A18E320D800E4354C /* NavigationBarButton.m */; };
 		7615ECB518B346FF00F1E344 /* libBQDashboard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7615ECB418B346FF00F1E344 /* libBQDashboard.a */; };
 		76234A6418C3851900FE3894 /* application.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 76234A6318C3851900FE3894 /* application.cfg */; };
 		76315D5718E0027A00199AFD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76315D5618E0027A00199AFD /* CFNetwork.framework */; };
@@ -48,6 +59,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		042D213118E2CFC000E4354C /* MSSlidingPanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSlidingPanelController.h; sourceTree = "<group>"; };
+		042D213218E2CFC000E4354C /* MSSlidingPanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSlidingPanelController.m; sourceTree = "<group>"; };
+		042D213318E2CFC000E4354C /* MSViewControllerSlidingPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSViewControllerSlidingPanel.h; sourceTree = "<group>"; };
+		042D213418E2CFC000E4354C /* MSViewControllerSlidingPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSViewControllerSlidingPanel.m; sourceTree = "<group>"; };
+		042D214018E31E3100E4354C /* SidePanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidePanelViewController.h; sourceTree = "<group>"; };
+		042D214118E31E3100E4354C /* SidePanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidePanelViewController.m; sourceTree = "<group>"; };
+		042D214318E31E6C00E4354C /* TableViewDataSourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewDataSourceDelegate.h; sourceTree = "<group>"; };
+		042D214418E31EC200E4354C /* TableViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewItem.h; sourceTree = "<group>"; };
+		042D214518E31EC200E4354C /* TableViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewItem.m; sourceTree = "<group>"; };
+		042D214618E31EC200E4354C /* TableViewSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewSection.h; sourceTree = "<group>"; };
+		042D214718E31EC200E4354C /* TableViewSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewSection.m; sourceTree = "<group>"; };
+		042D214A18E31EEC00E4354C /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
+		042D214B18E31EEC00E4354C /* Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Color.m; sourceTree = "<group>"; };
+		042D214D18E3206200E4354C /* CenterPanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterPanelViewController.h; sourceTree = "<group>"; };
+		042D214E18E3206200E4354C /* CenterPanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenterPanelViewController.m; sourceTree = "<group>"; };
+		042D214F18E3206200E4354C /* LeftPanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftPanelViewController.h; sourceTree = "<group>"; };
+		042D215018E3206200E4354C /* LeftPanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftPanelViewController.m; sourceTree = "<group>"; };
+		042D215118E3206200E4354C /* LeftPanelViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftPanelViewModel.h; sourceTree = "<group>"; };
+		042D215218E3206200E4354C /* LeftPanelViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftPanelViewModel.m; sourceTree = "<group>"; };
+		042D215318E3206200E4354C /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		042D215418E3206200E4354C /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		042D215918E320D800E4354C /* NavigationBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationBarButton.h; sourceTree = "<group>"; };
+		042D215A18E320D800E4354C /* NavigationBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationBarButton.m; sourceTree = "<group>"; };
 		7615ECB418B346FF00F1E344 /* libBQDashboard.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBQDashboard.a; path = "../Bin/BQMobile/Build/Products/Debug-iphoneos/libBQDashboard.a"; sourceTree = "<group>"; };
 		76234A6318C3851900FE3894 /* application.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = application.cfg; path = Bundles/application.cfg; sourceTree = SOURCE_ROOT; };
 		76234A6818C386BE00FE3894 /* BQContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQContext.h; sourceTree = "<group>"; };
@@ -126,6 +160,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		042D213018E2CFC000E4354C /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				042D214318E31E6C00E4354C /* TableViewDataSourceDelegate.h */,
+				042D214A18E31EEC00E4354C /* Color.h */,
+				042D214B18E31EEC00E4354C /* Color.m */,
+				042D214418E31EC200E4354C /* TableViewItem.h */,
+				042D214518E31EC200E4354C /* TableViewItem.m */,
+				042D214618E31EC200E4354C /* TableViewSection.h */,
+				042D214718E31EC200E4354C /* TableViewSection.m */,
+				042D215918E320D800E4354C /* NavigationBarButton.h */,
+				042D215A18E320D800E4354C /* NavigationBarButton.m */,
+				042D213118E2CFC000E4354C /* MSSlidingPanelController.h */,
+				042D213218E2CFC000E4354C /* MSSlidingPanelController.m */,
+				042D213318E2CFC000E4354C /* MSViewControllerSlidingPanel.h */,
+				042D213418E2CFC000E4354C /* MSViewControllerSlidingPanel.m */,
+				042D214018E31E3100E4354C /* SidePanelViewController.h */,
+				042D214118E31E3100E4354C /* SidePanelViewController.m */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
 		76234A6618C386BE00FE3894 /* include */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +235,14 @@
 				76AC1E1118C23B8A0063ED32 /* BQIpadLoginController.m */,
 				76AC1E1318C23CCB0063ED32 /* BQIpadLoginView.h */,
 				76AC1E1418C23CCB0063ED32 /* BQIpadLoginView.m */,
+				042D214D18E3206200E4354C /* CenterPanelViewController.h */,
+				042D214E18E3206200E4354C /* CenterPanelViewController.m */,
+				042D214F18E3206200E4354C /* LeftPanelViewController.h */,
+				042D215018E3206200E4354C /* LeftPanelViewController.m */,
+				042D215118E3206200E4354C /* LeftPanelViewModel.h */,
+				042D215218E3206200E4354C /* LeftPanelViewModel.m */,
+				042D215318E3206200E4354C /* RootViewController.h */,
+				042D215418E3206200E4354C /* RootViewController.m */,
 			);
 			path = ipad;
 			sourceTree = "<group>";
@@ -231,6 +295,7 @@
 		76D99E7918B33643004A9055 /* BQMobile */ = {
 			isa = PBXGroup;
 			children = (
+				042D213018E2CFC000E4354C /* Controls */,
 				76AC1E0D18C23B2A0063ED32 /* device */,
 				76AC1E0E18C23B2A0063ED32 /* ipad */,
 				76AC1E0F18C23B2A0063ED32 /* iphone */,
@@ -373,13 +438,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				042D214918E31EC200E4354C /* TableViewSection.m in Sources */,
+				042D215718E3206200E4354C /* LeftPanelViewModel.m in Sources */,
+				042D214C18E31EEC00E4354C /* Color.m in Sources */,
+				042D214218E31E3100E4354C /* SidePanelViewController.m in Sources */,
 				76B0E30618C2F24400C5C219 /* BQNavigationController.m in Sources */,
 				76AC1E2218C279980063ED32 /* BQLoginController.m in Sources */,
 				76AC1E1218C23B8A0063ED32 /* BQIpadLoginController.m in Sources */,
+				042D214818E31EC200E4354C /* TableViewItem.m in Sources */,
+				042D213518E2CFC000E4354C /* MSSlidingPanelController.m in Sources */,
 				76AC1E1518C23CCB0063ED32 /* BQIpadLoginView.m in Sources */,
 				76B07C3F18D92C30000FA58B /* BQCommonUI.m in Sources */,
 				76B07C4218D93EA4000FA58B /* BQLoadView.m in Sources */,
+				042D215518E3206200E4354C /* CenterPanelViewController.m in Sources */,
 				76D99E8018B33643004A9055 /* main.m in Sources */,
+				042D215818E3206200E4354C /* RootViewController.m in Sources */,
+				042D215B18E320D800E4354C /* NavigationBarButton.m in Sources */,
+				042D213618E2CFC000E4354C /* MSViewControllerSlidingPanel.m in Sources */,
+				042D215618E3206200E4354C /* LeftPanelViewController.m in Sources */,
 				76D99E8418B33643004A9055 /* BQAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
