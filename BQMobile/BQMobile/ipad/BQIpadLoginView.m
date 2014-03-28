@@ -35,7 +35,7 @@
 
 // 加载页面元素
 - (void)loadRootView {
-    DLog(@"加载页面元素")
+    DLog(@"加载登录页面元素")
     
     // 清空界面
     for (UIView* view in [self subviews]) {
