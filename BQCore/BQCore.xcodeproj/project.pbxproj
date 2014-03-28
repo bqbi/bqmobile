@@ -55,8 +55,6 @@
 		76641F9718B592500015B93B /* BQCore.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 7676D8E618B4A94E0089548A /* BQCore.h */; };
 		76641F9818B592580015B93B /* Common.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 7615ECBD18B3474800F1E344 /* Common.h */; };
 		7676D8EA18B4AA070089548A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7676D8E918B4AA070089548A /* UIKit.framework */; };
-		76A7339A18E4579900DB6F8A /* MSSlidingPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A7339718E4579900DB6F8A /* MSSlidingPanelController.m */; };
-		76A7339B18E4579900DB6F8A /* MSViewControllerSlidingPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A7339918E4579900DB6F8A /* MSViewControllerSlidingPanel.m */; };
 		76AC1E1818C243CF0063ED32 /* BQContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 76AC1E1718C243CF0063ED32 /* BQContext.m */; };
 		76AC1E1918C243E40063ED32 /* BQContext.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 76AC1E1618C243CF0063ED32 /* BQContext.h */; };
 		76AC1E1F18C268190063ED32 /* FSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 76AC1E1E18C268190063ED32 /* FSUtils.m */; };
@@ -174,10 +172,6 @@
 		76315D6818E033A300199AFD /* BQServerAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQServerAccess.m; sourceTree = "<group>"; };
 		7676D8E618B4A94E0089548A /* BQCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQCore.h; sourceTree = "<group>"; };
 		7676D8E918B4AA070089548A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		76A7339618E4579900DB6F8A /* MSSlidingPanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSSlidingPanelController.h; sourceTree = "<group>"; };
-		76A7339718E4579900DB6F8A /* MSSlidingPanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSlidingPanelController.m; sourceTree = "<group>"; };
-		76A7339818E4579900DB6F8A /* MSViewControllerSlidingPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSViewControllerSlidingPanel.h; sourceTree = "<group>"; };
-		76A7339918E4579900DB6F8A /* MSViewControllerSlidingPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSViewControllerSlidingPanel.m; sourceTree = "<group>"; };
 		76AC1E1618C243CF0063ED32 /* BQContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQContext.h; sourceTree = "<group>"; };
 		76AC1E1718C243CF0063ED32 /* BQContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQContext.m; sourceTree = "<group>"; };
 		76AC1E1D18C268190063ED32 /* FSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSUtils.h; sourceTree = "<group>"; };
@@ -251,7 +245,6 @@
 		7615EC9018B346C800F1E344 /* BQCore */ = {
 			isa = PBXGroup;
 			children = (
-				76A7339518E4579900DB6F8A /* Controls */,
 				76315D6018E024EB00199AFD /* Model */,
 				76315CFB18E0019F00199AFD /* Http */,
 				7615ECB618B3474800F1E344 /* Charts */,
@@ -454,17 +447,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		76A7339518E4579900DB6F8A /* Controls */ = {
-			isa = PBXGroup;
-			children = (
-				76A7339618E4579900DB6F8A /* MSSlidingPanelController.h */,
-				76A7339718E4579900DB6F8A /* MSSlidingPanelController.m */,
-				76A7339818E4579900DB6F8A /* MSViewControllerSlidingPanel.h */,
-				76A7339918E4579900DB6F8A /* MSViewControllerSlidingPanel.m */,
-			);
-			path = Controls;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -577,7 +559,6 @@
 				76315D3B18E0019F00199AFD /* ASIWebPageRequest.m in Sources */,
 				76315D3D18E0019F00199AFD /* ASICloudFilesContainer.m in Sources */,
 				76315D4118E0019F00199AFD /* ASICloudFilesObjectRequest.m in Sources */,
-				76A7339B18E4579900DB6F8A /* MSViewControllerSlidingPanel.m in Sources */,
 				76315D4818E0019F00199AFD /* ASIS3Request.m in Sources */,
 				76315D4318E0019F00199AFD /* Reachability.m in Sources */,
 				7615ECAB18B346C800F1E344 /* BQCoreTests.m in Sources */,
@@ -587,7 +568,6 @@
 				76315D4618E0019F00199AFD /* ASIS3BucketRequest.m in Sources */,
 				76315D4518E0019F00199AFD /* ASIS3BucketObject.m in Sources */,
 				76315D3618E0019F00199AFD /* ASIDownloadCache.m in Sources */,
-				76A7339A18E4579900DB6F8A /* MSSlidingPanelController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
