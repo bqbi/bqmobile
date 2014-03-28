@@ -5,15 +5,12 @@
 //  Created by 潘 巍 on 14-3-2.
 //  Copyright (c) 2014年 yonyou. All rights reserved.
 //
-#import "BQCore.h"
 #import "FSUtils.h"
 
-// 根据名称获取资源的正确路径，e.g. resourcePath(@"Gauge_back")
-//
-#define resourcePath(name)		[NSString stringWithFormat:@"UFExpress.bundle/%@", name]
+#import "Common.h"
+#import "BQContext.h"
 
 @implementation FSUtils
-
 
 //  获得文档路径
 + (NSString*) getDocPath {
@@ -32,6 +29,10 @@
 
 + (NSString*) getResourcePath:(NSString*)relativePath {
     return [NSString stringWithFormat:@"%@/%@", [self getResourcePath], relativePath];
+}
+
++ (NSString*) getResourcePath:(NSString*)bundleName withRelativePath:(NSString*)relativePath {
+    return [NSString stringWithFormat:@"%@/%@.bundle/%@", [self getResourcePath], bundleName, relativePath];
 }
 
 /*
@@ -133,11 +134,6 @@
             NSString* path = [NSString stringWithFormat:@"Style.bundle/%@/%@",style, name];
             image = [UIImage imageNamed:path];
         }
-    }
-    
-    if (image == nil) {
-        // 再取基础库图像
-        image = [UIImage imageNamed:resourcePath(name)];
     }
     
     return image;

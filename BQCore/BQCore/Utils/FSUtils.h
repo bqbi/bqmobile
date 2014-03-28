@@ -19,6 +19,7 @@
 //  获得资源路径
 + (NSString*) getResourcePath;
 + (NSString*) getResourcePath:(NSString*)relativePath;
++ (NSString*) getResourcePath:(NSString*)bundleName withRelativePath:(NSString*)relativePath;
 
 /*
  *  获得临时文件路径

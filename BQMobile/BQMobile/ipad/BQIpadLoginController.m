@@ -11,7 +11,9 @@
 #import "BQIpadHomeViewController.h"
 #import "BQAnalysisTopicController.h"
 #import "BQCommonUI.h"
+@interface BQIpadLoginController()
 
+@end
 @implementation BQIpadLoginController
 
 
