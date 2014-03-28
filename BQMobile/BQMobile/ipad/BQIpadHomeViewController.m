@@ -8,11 +8,10 @@
 
 #import "BQIpadHomeViewController.h"
 #import "BQLeftPanelViewController.h"
-#import "BQMainPanelViewController.h"
+#import "BQNavigationViewController.h"
 #import "LeftPanelViewModel.h"
 #import "Color.h"
-#import "SettingPanelViewController.h"
-
+#import "BQContentViewController.h"
 
 @interface BQIpadHomeViewController ()
 
@@ -42,18 +41,19 @@
 {
     LeftPanelViewModel *leftPanelModel;
     BQLeftPanelViewController *leftPanelViewController;
-    BQMainPanelViewController *centerPanelViewController;
+    BQNavigationViewController *navigationViewController;
     
     leftPanelModel          = [[LeftPanelViewModel alloc] init];
     leftPanelViewController = [[BQLeftPanelViewController alloc] init];
     [leftPanelViewController setDelegate:leftPanelModel];
+    [leftPanelViewController setHasStateBar:self.hasStateBar];
 
     
-    centerPanelViewController = [[BQMainPanelViewController alloc] init];
-    [centerPanelViewController setHasStateBar:self.hasStateBar];
+    navigationViewController = [[BQNavigationViewController alloc] initWithRootViewController:[[BQContentViewController alloc] init]];
+    [navigationViewController setHasStateBar:self.hasStateBar];
 
     [self setLeftPanelController:leftPanelViewController];
-    [self setCenterViewController:centerPanelViewController];
+    [self setCenterViewController:navigationViewController];
     [self setLeftPanelStatusBarColor:[UIColor menuStatusBarColor]];
     
 
@@ -61,12 +61,7 @@
 
 
 
-#pragma mark - navigation bar button click function implementation
-- (void) openSettingPanel
-{
-    DLog(@"设置...");
-    [self.navigationController pushViewController:[[SettingPanelViewController alloc] init] animated:YES];
-}
+
 
 
 @end
