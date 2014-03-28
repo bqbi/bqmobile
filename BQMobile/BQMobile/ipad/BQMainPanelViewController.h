@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MSSlidingPanelController.h"
 
-@interface CenterPanelViewController : UIViewController <MSSlidingPanelControllerDelegate>
+@interface BQMainPanelViewController : UIViewController <MSSlidingPanelControllerDelegate>
 
 @property (nonatomic,assign) BOOL hasStateBar;
 

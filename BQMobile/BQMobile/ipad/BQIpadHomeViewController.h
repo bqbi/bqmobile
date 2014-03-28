@@ -8,7 +8,7 @@
 
 #import "MSSlidingPanelController.h"
 
-@interface RootViewController : MSSlidingPanelController
+@interface BQIpadHomeViewController : MSSlidingPanelController
 
 - (void) loadControllers;
 @end

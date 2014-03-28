@@ -6,21 +6,19 @@
 //  Copyright (c) 2014年 QZ. All rights reserved.
 //
 
-#import "RootViewController.h"
-#import "LeftPanelViewController.h"
-#import "CenterPanelViewController.h"
+#import "BQIpadHomeViewController.h"
+#import "BQLeftPanelViewController.h"
+#import "BQMainPanelViewController.h"
 #import "LeftPanelViewModel.h"
 #import "Color.h"
-<<<<<<< HEAD
 #import "SettingPanelViewController.h"
-=======
->>>>>>> FETCH_HEAD
 
-@interface RootViewController ()
+
+@interface BQIpadHomeViewController ()
 
 @end
 
-@implementation RootViewController
+@implementation BQIpadHomeViewController
 
 - (id) init
 {
@@ -43,24 +41,17 @@
 - (void) loadControllers
 {
     LeftPanelViewModel *leftPanelModel;
-    LeftPanelViewController *leftPanelViewController;
-    CenterPanelViewController *centerPanelViewController;
+    BQLeftPanelViewController *leftPanelViewController;
+    BQMainPanelViewController *centerPanelViewController;
     
     leftPanelModel          = [[LeftPanelViewModel alloc] init];
-    leftPanelViewController = [[LeftPanelViewController alloc] init];
+    leftPanelViewController = [[BQLeftPanelViewController alloc] init];
     [leftPanelViewController setDelegate:leftPanelModel];
-<<<<<<< HEAD
-    [leftPanelViewController setHasStateBar:self.hasStateBar];
-    //
+
     
-    centerPanelViewController = [[CenterPanelViewController alloc] init];
+    centerPanelViewController = [[BQMainPanelViewController alloc] init];
     [centerPanelViewController setHasStateBar:self.hasStateBar];
-=======
-    //
-    
-    centerPanelViewController = [[CenterPanelViewController alloc] init];
-    
->>>>>>> FETCH_HEAD
+
     [self setLeftPanelController:leftPanelViewController];
     [self setCenterViewController:centerPanelViewController];
     [self setLeftPanelStatusBarColor:[UIColor menuStatusBarColor]];
@@ -68,13 +59,7 @@
 
 }
 
-<<<<<<< HEAD
-- (void) viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-//    [self openLeftPanel];
-    
-}
+
 
 #pragma mark - navigation bar button click function implementation
 - (void) openSettingPanel
@@ -82,7 +67,6 @@
     DLog(@"设置...");
     [self.navigationController pushViewController:[[SettingPanelViewController alloc] init] animated:YES];
 }
-=======
->>>>>>> FETCH_HEAD
+
 
 @end

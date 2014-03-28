@@ -6,13 +6,13 @@
 //  Copyright (c) 2014年 QZ. All rights reserved.
 //
 
-#import "CenterPanelViewController.h"
+#import "BQMainPanelViewController.h"
 #import "NavigationBarButton.h"
 #import "MSViewControllerSlidingPanel.h"
 #import "Color.h"
-#import "LeftPanelViewController.h"
+#import "BQLeftPanelViewController.h"
 
-@interface CenterPanelViewController ()
+@interface BQMainPanelViewController ()
 
 
 #pragma mark Menu buttons
@@ -28,7 +28,7 @@
 
 @end
 
-@implementation CenterPanelViewController
+@implementation BQMainPanelViewController
 
 
 - (void) loadView

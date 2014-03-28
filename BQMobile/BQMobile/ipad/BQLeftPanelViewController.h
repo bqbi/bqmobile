@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SidePanelViewController.h"
-@interface LeftPanelViewController : SidePanelViewController
+@interface BQLeftPanelViewController : SidePanelViewController
 
 
 
