@@ -6,10 +6,10 @@
 //  Copyright (c) 2014年 QZ. All rights reserved.
 //
 
-#import "LeftPanelViewModel.h"
+#import "BQLeftSidePanelViewModel.h"
 
 
-@implementation LeftPanelViewModel
+@implementation BQLeftSidePanelViewModel
 
 - (void) sectionsFromDatasourceModel:(id)model
 {

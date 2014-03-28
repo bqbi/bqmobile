@@ -6,15 +6,15 @@
 //  Copyright (c) 2014年 QZ. All rights reserved.
 //
 
-#import "BQLeftPanelViewController.h"
+#import "BQLeftSidePanelViewController.h"
 
 
-@interface BQLeftPanelViewController () 
+@interface BQLeftSidePanelViewController () 
 
 
 @end
 
-@implementation BQLeftPanelViewController
+@implementation BQLeftSidePanelViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

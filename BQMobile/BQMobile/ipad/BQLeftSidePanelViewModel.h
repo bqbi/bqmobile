@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "TableViewDataSourceDelegate.h"
-@interface LeftPanelViewModel : NSObject<TableViewDataSourceDelegate>
+@interface BQLeftSidePanelViewModel : NSObject<TableViewDataSourceDelegate>
 @property (nonatomic, strong)   NSArray *sections;
 @end

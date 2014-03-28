@@ -10,7 +10,7 @@
 #import "NavigationBarButton.h"
 #import "MSViewControllerSlidingPanel.h"
 #import "Color.h"
-#import "BQLeftPanelViewController.h"
+#import "BQLeftSidePanelViewController.h"
 
 @interface BQNavigationViewController ()
 

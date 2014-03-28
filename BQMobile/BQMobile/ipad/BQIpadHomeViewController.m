@@ -7,9 +7,9 @@
 //
 
 #import "BQIpadHomeViewController.h"
-#import "BQLeftPanelViewController.h"
+#import "BQLeftSidePanelViewController.h"
 #import "BQNavigationViewController.h"
-#import "LeftPanelViewModel.h"
+#import "BQLeftSidePanelViewModel.h"
 #import "Color.h"
 #import "BQContentViewController.h"
 
@@ -39,12 +39,12 @@
 
 - (void) loadControllers
 {
-    LeftPanelViewModel *leftPanelModel;
-    BQLeftPanelViewController *leftPanelViewController;
+    BQLeftSidePanelViewModel *leftPanelModel;
+    BQLeftSidePanelViewController *leftPanelViewController;
     BQNavigationViewController *navigationViewController;
     
-    leftPanelModel          = [[LeftPanelViewModel alloc] init];
-    leftPanelViewController = [[BQLeftPanelViewController alloc] init];
+    leftPanelModel          = [[BQLeftSidePanelViewModel alloc] init];
+    leftPanelViewController = [[BQLeftSidePanelViewController alloc] init];
     [leftPanelViewController setDelegate:leftPanelModel];
     [leftPanelViewController setHasStateBar:self.hasStateBar];
 
