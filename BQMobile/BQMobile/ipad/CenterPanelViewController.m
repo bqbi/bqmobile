@@ -21,12 +21,15 @@
 /**
  *  The left button of the navigation bar.
  */
+
 @property (nonatomic, strong)   NavigationBarButton *sideMenuButton;
 @property (nonatomic, strong)   NavigationBarButton *settingButton;
+
 
 @end
 
 @implementation CenterPanelViewController
+
 
 - (void) loadView
 {
@@ -35,6 +38,7 @@
     [[self view] setBackgroundColor:[UIColor centerBackgroundColor]];
     //
     [self resetDefaultPanelValuesForSide:MSSPSideDisplayedLeft];
+
     // 侧边栏菜单按钮
     [self setSideMenuButton:[NavigationBarButton buttonWithType:NavigationBarButtonTypeMenu]];
     [[self sideMenuButton] setTarget:[self slidingPanelController]];
@@ -55,11 +59,13 @@
     [navigationBarItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:[self settingButton]]];
     
     UINavigationBar *navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, _hasStateBar? 20:0, windowSize.width, 44)];
+
     if ([navigationBar respondsToSelector:@selector(setBarTintColor:)]) {
         [navigationBar setBarTintColor:[UIColor brownColor]];
     }
     else{
         [navigationBar setTintColor:[UIColor brownColor]];
+
     }
     [navigationBar pushNavigationItem:navigationBarItem animated:NO];
     [navigationBar setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
@@ -93,6 +99,7 @@
 {
     if (side == MSSPSideDisplayedLeft)
         [[self sideMenuButton] setAction:@selector(closePanel)];
+
 }
 
 

@@ -11,7 +11,10 @@
 #import "CenterPanelViewController.h"
 #import "LeftPanelViewModel.h"
 #import "Color.h"
+<<<<<<< HEAD
 #import "SettingPanelViewController.h"
+=======
+>>>>>>> FETCH_HEAD
 
 @interface RootViewController ()
 
@@ -46,11 +49,18 @@
     leftPanelModel          = [[LeftPanelViewModel alloc] init];
     leftPanelViewController = [[LeftPanelViewController alloc] init];
     [leftPanelViewController setDelegate:leftPanelModel];
+<<<<<<< HEAD
     [leftPanelViewController setHasStateBar:self.hasStateBar];
     //
     
     centerPanelViewController = [[CenterPanelViewController alloc] init];
     [centerPanelViewController setHasStateBar:self.hasStateBar];
+=======
+    //
+    
+    centerPanelViewController = [[CenterPanelViewController alloc] init];
+    
+>>>>>>> FETCH_HEAD
     [self setLeftPanelController:leftPanelViewController];
     [self setCenterViewController:centerPanelViewController];
     [self setLeftPanelStatusBarColor:[UIColor menuStatusBarColor]];
@@ -58,6 +68,7 @@
 
 }
 
+<<<<<<< HEAD
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -71,5 +82,7 @@
     DLog(@"设置...");
     [self.navigationController pushViewController:[[SettingPanelViewController alloc] init] animated:YES];
 }
+=======
+>>>>>>> FETCH_HEAD
 
 @end

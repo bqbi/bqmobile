@@ -9,6 +9,8 @@
 #import "BQIpadLoginController.h"
 #import "Common.h"
 #import "RootViewController.h"
+#import "BQAnalysisTopicController.h"
+#import "BQCommonUI.h"
 
 @implementation BQIpadLoginController
 
@@ -16,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    loginView = [[BQIpadLoginView alloc] initWithFrame:CGRectMake(0, 0, 768, 1024)];
+    loginView = [[BQIpadLoginView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.view addSubview:loginView];
     
 }
@@ -29,13 +31,9 @@
     loginView.delegate = self;
     
     // 3.加载页面元素
-    [loginView loadLoginView];
+    [loginView loadRootView];
     
-    // 4.设置样式
-    NSString* style = [BQContext getGlobalStyle];
-    [loginView setStyle:style];
-    
-    // 5.调整位置
+    // 4.调整位置
     [self adjustPosition];
     
 }
@@ -64,7 +62,13 @@
 - (void)doLogin {
     // 检验用户名密码等登录信息是否有效
     [self.navigationController pushViewController:[[RootViewController alloc ]init] animated:YES];
-    
+
+}
+
+- (void)doOfflineLogin {
+    // 检验用户名密码等登录信息是否有效
+    [self.navigationController pushViewController:[[BQAnalysisTopicController alloc ]init] animated:YES];
+>>>>>>> FETCH_HEAD
 }
 
 
@@ -76,12 +80,13 @@
         case 1:
             DLog(@"登录......");
             [BQContext sharedContext].autoLogin = @"NO";
+
             [self doLogin];
             break;
             
         case 2:
             DLog(@"离线浏览......");
-
+            [self doOfflineLogin];
             break;
             
         case 3:

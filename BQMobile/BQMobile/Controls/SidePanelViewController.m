@@ -62,7 +62,9 @@ NSString    *g_LeftPanelTabelCellIdentifier = @"CellIdentifier";
         [self.delegate sectionsFromDatasourceModel:nil];
     }
     
+
     tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, _hasStateBar? 20:0, windowSize.width, windowSize.height)];
+
     [tableView setDataSource:self];
     [tableView setDelegate:self];
     [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:g_LeftPanelTabelCellIdentifier];

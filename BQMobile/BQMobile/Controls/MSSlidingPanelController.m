@@ -631,7 +631,7 @@ typedef NS_ENUM(NSUInteger, MSSPPanTouchLocation)
     
     [self setView:[[UIView alloc] initWithFrame:CGRectMake(0, 0, windowSize.width, windowSize.height)]];
     [[self view] addSubview:[self centerView]];
-    
+
     [[self view] setAutoresizingMask:(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight)];
     
     [self setGestureRecognizers];
@@ -710,6 +710,7 @@ typedef NS_ENUM(NSUInteger, MSSPPanTouchLocation)
 - (void)commonSettings
 {
     _hasStateBar = NO;
+
     _centerViewController = nil;
     [self setCenterViewStatusBarColor:[UIColor clearColor]];
     

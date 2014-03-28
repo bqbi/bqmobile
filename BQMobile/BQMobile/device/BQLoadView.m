@@ -13,8 +13,12 @@
 
 @synthesize indicatorView;
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)init {
+    self = [self initWithFrame:[[UIScreen mainScreen] bounds]];
+    return self;
+}
+
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor blackColor];
@@ -33,8 +37,8 @@
 }
 
 - (void)changeLocation {
-    CGFloat width = 30.0f;
-    self.indicatorView.frame = CGRectMake((self.frame.size.width-width)/2, 20, width, width);
+    CGFloat width = 70.0f;
+    self.indicatorView.frame = CGRectMake((self.frame.size.width-width)/2, (self.frame.size.height-width)/2, width, width);
 }
 
 - (void)showLoadView {
