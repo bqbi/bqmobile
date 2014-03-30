@@ -8,29 +8,104 @@
 
 #import "BQAnalysisTopicController.h"
 
+#import "BQComponentView.h"
+
+
+@interface BQAnalysisTopicController ()
+
+@property (nonatomic, strong) UIScrollView* contentView;
+
+- (void)loadComponentViews;
+
+@end
+
+
 @implementation BQAnalysisTopicController
+
+- (id)initWithTemplate:(NSString*)templatePath {
+    if (self = [super init]) {
+        self.templatePath = templatePath;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    atView = [[BQAnalysisTopicView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    [self.view addSubview:atView];
+    self.contentView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+    self.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
     
+    [self.view addSubview:self.contentView];
+    
+    // 加载组件集合
+    [self loadComponentViews];
+    
+}
+
+- (void)loadComponentViews {
+    // 清空界面
+    for (UIView* view in [self.contentView subviews]) {
+        [view removeFromSuperview];
+    }
+    
+    self.componentViews = [NSMutableArray array];
+    
+    // 解析xml，创建组件视图集合
+    // TODO
+    
+    
+    // 将组件加入到contentView中
+    int i = 0;
+    for (UIView* view in self.componentViews) {
+        [self.contentView addSubview:view];
+        // delegate
+        [view setUserInteractionEnabled:YES];
+        [view setTag:i];
+        i++;
+        
+        UITapGestureRecognizer* tapped = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(componentTouchUp:)];
+        tapped.numberOfTapsRequired = 1;
+        [view addGestureRecognizer:tapped];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     // 1.隐藏导航栏
     [self.navigationController setNavigationBarHidden:YES animated:NO];
     
-    // 2.设置view的代理
-//    atView.delegate = self;
-    
-    // 3.加载页面元素
-    [atView loadRootView];
-    
-    // 4.调整位置
-//    [self adjustPosition];
+    // 2.调整位置
+    [self adjustPosition];
     
 }
+
+- (void)componentTouchUp:(id)sender {
+    UITapGestureRecognizer* gesture = (UITapGestureRecognizer*)sender;
+    DLog(@"Taped Compoment tag is %d", gesture.view.tag);
+    
+    BQComponentView* view = [self.componentViews objectAtIndex:gesture.view.tag];
+    [view onTouchUp];
+}
+
+- (void)adjustPosition {
+    DLog(@"显示页面方向为%@",(UIInterfaceOrientationIsPortrait(self.interfaceOrientation))?@"竖屏":@"横屏");
+    self.orientation = self.interfaceOrientation;
+    if (UIInterfaceOrientationIsPortrait(self.orientation)) {
+        // TODO
+    } else {
+    
+    }
+}
+
+- (BOOL)shouldAutorotate {
+    if (self.orientation != self.interfaceOrientation) {
+        [self adjustPosition];
+    }
+    return YES;
+}
+
+- (NSUInteger)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskAll;
+}
+
 
 @end

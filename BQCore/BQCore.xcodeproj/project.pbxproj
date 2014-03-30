@@ -90,6 +90,10 @@
 		76AC1E1918C243E40063ED32 /* BQContext.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 76AC1E1618C243CF0063ED32 /* BQContext.h */; };
 		76AC1E1F18C268190063ED32 /* FSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 76AC1E1E18C268190063ED32 /* FSUtils.m */; };
 		76AC1E2418C27CBB0063ED32 /* FSUtils.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 76AC1E1D18C268190063ED32 /* FSUtils.h */; };
+		76F284D118E6765B00976CF6 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76F284D018E6765B00976CF6 /* JavaScriptCore.framework */; };
+		76F284DB18E70DAC00976CF6 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F284DA18E70DAC00976CF6 /* GDataXMLNode.m */; };
+		76F284DC18E792EC00976CF6 /* GDataXMLNode.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 76F284D918E70DAC00976CF6 /* GDataXMLNode.h */; };
+		76F284EA18E7970E00976CF6 /* XMLUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F284E918E7970E00976CF6 /* XMLUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +113,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				76F284DC18E792EC00976CF6 /* GDataXMLNode.h in Copy Files */,
 				76315D6A18E039DE00199AFD /* BQServerAccess.h in Copy Files */,
 				76315D6B18E039DE00199AFD /* BQViewOperateModel.h in Copy Files */,
 				76315D6C18E039DE00199AFD /* WebUtils.h in Copy Files */,
@@ -262,6 +267,11 @@
 		76AC1E1718C243CF0063ED32 /* BQContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQContext.m; sourceTree = "<group>"; };
 		76AC1E1D18C268190063ED32 /* FSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSUtils.h; sourceTree = "<group>"; };
 		76AC1E1E18C268190063ED32 /* FSUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSUtils.m; sourceTree = "<group>"; };
+		76F284D018E6765B00976CF6 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		76F284D918E70DAC00976CF6 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		76F284DA18E70DAC00976CF6 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
+		76F284E818E7970E00976CF6 /* XMLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLUtils.h; sourceTree = "<group>"; };
+		76F284E918E7970E00976CF6 /* XMLUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +281,7 @@
 			files = (
 				76315D5518E0025400199AFD /* libxml2.dylib in Frameworks */,
 				76315D5318E0023300199AFD /* libz.dylib in Frameworks */,
+				76F284D118E6765B00976CF6 /* JavaScriptCore.framework in Frameworks */,
 				76315D4D18E001DE00199AFD /* MobileCoreServices.framework in Frameworks */,
 				76315D4B18E001C600199AFD /* SystemConfiguration.framework in Frameworks */,
 				76315CFA18DFDE1C00199AFD /* CFNetwork.framework in Frameworks */,
@@ -382,6 +393,7 @@
 		7615EC8D18B346C800F1E344 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				76F284D018E6765B00976CF6 /* JavaScriptCore.framework */,
 				76315D5418E0025400199AFD /* libxml2.dylib */,
 				76315D5218E0023300199AFD /* libz.dylib */,
 				76315D5018E001FF00199AFD /* libz.1.2.5.dylib */,
@@ -399,6 +411,7 @@
 		7615EC9018B346C800F1E344 /* BQCore */ = {
 			isa = PBXGroup;
 			children = (
+				76F284D818E70DAC00976CF6 /* XML */,
 				042D35F118E3AFDC00E4354C /* EL */,
 				042D35B618E3AEF200E4354C /* PCRE */,
 				76315D6018E024EB00199AFD /* Model */,
@@ -491,6 +504,8 @@
 				76234A6118C3747F00FE3894 /* PropertyUtils.m */,
 				76315D6418E032A800199AFD /* WebUtils.h */,
 				76315D6518E032A800199AFD /* WebUtils.m */,
+				76F284E818E7970E00976CF6 /* XMLUtils.h */,
+				76F284E918E7970E00976CF6 /* XMLUtils.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -603,6 +618,16 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		76F284D818E70DAC00976CF6 /* XML */ = {
+			isa = PBXGroup;
+			children = (
+				76F284D918E70DAC00976CF6 /* GDataXMLNode.h */,
+				76F284DA18E70DAC00976CF6 /* GDataXMLNode.m */,
+			);
+			name = XML;
+			path = BQCore/XML;
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -704,6 +729,7 @@
 				042D35ED18E3AEF200E4354C /* pcre_valid_utf8.c in Sources */,
 				042D35DF18E3AEF200E4354C /* pcre_fullinfo.c in Sources */,
 				042D35D918E3AEF200E4354C /* pcre_byte_order.c in Sources */,
+				76F284EA18E7970E00976CF6 /* XMLUtils.m in Sources */,
 				042D35E918E3AEF200E4354C /* pcre_string_utils.c in Sources */,
 				042D35DA18E3AEF200E4354C /* pcre_chartables.c in Sources */,
 				042D35EA18E3AEF200E4354C /* pcre_study.c in Sources */,
@@ -730,6 +756,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76315D3418E0019F00199AFD /* ASIDataCompressor.m in Sources */,
+				76F284DB18E70DAC00976CF6 /* GDataXMLNode.m in Sources */,
 				7615ECC118B3474800F1E344 /* Common.m in Sources */,
 				76315D4718E0019F00199AFD /* ASIS3ObjectRequest.m in Sources */,
 				76315D3818E0019F00199AFD /* ASIHTTPRequest.m in Sources */,
@@ -857,6 +884,11 @@
 				DSTROOT = /tmp/BQCore.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BQCore/BQCore-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/include/libxml2,
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/mac/Desktop/workspaces/bqmobile/BQCore/BQCore/code/ios/el/Build/Products/Release-iphonesimulator",
@@ -886,6 +918,11 @@
 				DSTROOT = /tmp/BQCore.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BQCore/BQCore-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/include/libxml2,
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/mac/Desktop/workspaces/bqmobile/BQCore/BQCore/code/ios/el/Build/Products/Release-iphonesimulator",

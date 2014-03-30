@@ -7,11 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BQAnalysisTopicView.h"
 
-@interface BQAnalysisTopicController : UIViewController {
-    
-    BQAnalysisTopicView* atView; //登录首页
-}
+@interface BQAnalysisTopicController : UIViewController
+
+// 模板路径
+@property (nonatomic, strong) NSString* templatePath;
+
+// 组件视图集合
+@property (nonatomic, strong) NSMutableArray* componentViews;
+
+// 当前方向
+@property (nonatomic) UIInterfaceOrientation orientation;
+
+// 通过模板路径初始化
+- (id)initWithTemplate:(NSString*)templatePath;
+
+// 加载组件集合
+- (void)loadComponentViews;
 
 @end
