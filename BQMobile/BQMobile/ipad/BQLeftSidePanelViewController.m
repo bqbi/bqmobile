@@ -50,6 +50,15 @@
  */
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    TableViewSection    *section;
+    
+    section = [self.delegate sectionAtIndex:[indexPath section]];
+    
+   
+    [section selectItemAtIndex:[indexPath row]];
+        
+      
+
     return indexPath;
 }
 

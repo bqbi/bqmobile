@@ -56,7 +56,7 @@ NSString    *g_LeftPanelTabelCellIdentifier = @"CellIdentifier";
     
     windowSize = [[UIScreen mainScreen] bounds].size;
     [self setView:[[UIView alloc] initWithFrame:CGRectMake(0, 0, windowSize.width, windowSize.height)]];
-    [self resetDefaultPanelForSide:MSSPSideDisplayedLeft andWidth:280];
+//    [self resetDefaultPanelForSide:MSSPSideDisplayedLeft andWidth:280];
     
     if (self.delegate) {
         [self.delegate sectionsFromDatasourceModel:nil];

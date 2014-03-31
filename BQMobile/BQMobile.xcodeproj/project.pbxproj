@@ -23,6 +23,7 @@
 		043B781318E5691C0024E51B /* BQTopicNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043B781218E5691C0024E51B /* BQTopicNavigationViewController.m */; };
 		043B781618E56C4D0024E51B /* BQEventDispatchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 043B781518E56C4D0024E51B /* BQEventDispatchManager.m */; };
 		043B781918E8EE7F0024E51B /* BQFunctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043B781818E8EE7F0024E51B /* BQFunctionViewController.m */; };
+		04D67B4318E903B40052CA60 /* BQCommonPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D67B4218E903B40052CA60 /* BQCommonPanelViewController.m */; };
 		7615ECB518B346FF00F1E344 /* libBQDashboard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7615ECB418B346FF00F1E344 /* libBQDashboard.a */; };
 		76234A6418C3851900FE3894 /* application.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 76234A6318C3851900FE3894 /* application.cfg */; };
 		76315D5718E0027A00199AFD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76315D5618E0027A00199AFD /* CFNetwork.framework */; };
@@ -105,6 +106,8 @@
 		043B781518E56C4D0024E51B /* BQEventDispatchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQEventDispatchManager.m; sourceTree = "<group>"; };
 		043B781718E8EE7E0024E51B /* BQFunctionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQFunctionViewController.h; sourceTree = "<group>"; };
 		043B781818E8EE7F0024E51B /* BQFunctionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQFunctionViewController.m; sourceTree = "<group>"; };
+		04D67B4118E903B40052CA60 /* BQCommonPanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQCommonPanelViewController.h; sourceTree = "<group>"; };
+		04D67B4218E903B40052CA60 /* BQCommonPanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQCommonPanelViewController.m; sourceTree = "<group>"; };
 		7615ECB418B346FF00F1E344 /* libBQDashboard.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBQDashboard.a; path = "../Bin/BQMobile/Build/Products/Debug-iphoneos/libBQDashboard.a"; sourceTree = "<group>"; };
 		76234A6318C3851900FE3894 /* application.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = application.cfg; path = Bundles/application.cfg; sourceTree = SOURCE_ROOT; };
 		76315D5618E0027A00199AFD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -289,6 +292,8 @@
 				043B781518E56C4D0024E51B /* BQEventDispatchManager.m */,
 				043B781718E8EE7E0024E51B /* BQFunctionViewController.h */,
 				043B781818E8EE7F0024E51B /* BQFunctionViewController.m */,
+				04D67B4118E903B40052CA60 /* BQCommonPanelViewController.h */,
+				04D67B4218E903B40052CA60 /* BQCommonPanelViewController.m */,
 			);
 			path = ipad;
 			sourceTree = "<group>";
@@ -543,6 +548,7 @@
 				042D213618E2CFC000E4354C /* MSViewControllerSlidingPanel.m in Sources */,
 				76A7339E18E45B4A00DB6F8A /* BQAnalysisTopicController.m in Sources */,
 				043B781018E54D1E0024E51B /* BQContentViewController.m in Sources */,
+				04D67B4318E903B40052CA60 /* BQCommonPanelViewController.m in Sources */,
 				042D215618E3206200E4354C /* BQLeftSidePanelViewController.m in Sources */,
 				76D99E8418B33643004A9055 /* BQAppDelegate.m in Sources */,
 				76FDF71F18E40A58004598D3 /* BQView.m in Sources */,

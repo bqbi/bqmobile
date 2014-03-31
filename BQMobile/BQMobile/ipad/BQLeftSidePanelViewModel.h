@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "TableViewDataSourceDelegate.h"
+#import "BQContentViewController.h"
 @interface BQLeftSidePanelViewModel : NSObject<TableViewDataSourceDelegate>
 @property (nonatomic, strong)   NSArray *sections;
+@property (nonatomic,strong) id<BQLeftSidePanelFunctionDelegate> delegate;
 @end

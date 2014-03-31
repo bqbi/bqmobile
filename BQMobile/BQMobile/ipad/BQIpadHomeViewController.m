@@ -48,8 +48,11 @@
     [leftPanelViewController setDelegate:leftPanelModel];
     [leftPanelViewController setHasStateBar:self.hasStateBar];
 
+    //
+    BQContentViewController *contentViewController = [[BQContentViewController alloc] init];
+    [leftPanelModel setDelegate:contentViewController];
     
-    navigationViewController = [[BQNavigationViewController alloc] initWithRootViewController:[[BQContentViewController alloc] init]];
+    navigationViewController = [[BQNavigationViewController alloc] initWithRootViewController:contentViewController];
     [navigationViewController setHasStateBar:self.hasStateBar];
 
     [self setLeftPanelController:leftPanelViewController];

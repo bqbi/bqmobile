@@ -14,8 +14,10 @@
 #import "BQLeftSidePanelViewController.h"
 #import "BQSettingPanelViewController.h"
 #import "BQTopicNavigationViewController.h"
+#import "BQFunctionViewController.h"
+#import "BQCommonPanelViewController.h"
 
-@interface BQContentViewController ()
+@interface BQContentViewController ()<BQLeftSidePanelFunctionDelegate>
 /**
  *  The left button of the navigation bar.
  */
@@ -110,6 +112,30 @@
 {
     DLog(@"设置...");
     [self.navigationController pushViewController:[[BQSettingPanelViewController alloc] init] animated:YES];
+}
+
+#pragma mark - left side panel selected item event.
+- (void) openPanelViewController:(BQEventSelectedMode) eventSelectedMode
+{
+    [self.navigationController popToRootViewControllerAnimated:NO];
+    switch (eventSelectedMode) {
+        case BQEventSelectedModeRecent:
+            [self.navigationController pushViewController:[[BQCommonPanelViewController alloc] init] animated:YES];
+            break;
+            
+        case BQEventSelectedModeInBox:
+            [self.navigationController pushViewController:[[BQCommonPanelViewController alloc] init] animated:YES];
+
+            break;
+            
+        case BQEventSelectedModeCollection:
+            [self.navigationController pushViewController:[[BQCommonPanelViewController alloc] init] animated:YES];
+
+            break;
+            
+        default:
+            break;
+    }
 }
 
 

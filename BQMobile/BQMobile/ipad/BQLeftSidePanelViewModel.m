@@ -8,6 +8,10 @@
 
 #import "BQLeftSidePanelViewModel.h"
 
+@interface BQLeftSidePanelViewModel()
+
+
+@end
 
 @implementation BQLeftSidePanelViewModel
 
@@ -22,18 +26,21 @@
     [itemRecentView setActionWhenSelected:^(void)
      {
          NSLog(@"(最近访问) :%s", __FUNCTION__);
+         [self.delegate openPanelViewController:BQEventSelectedModeRecent];
      }];
     
     itemInBoxView = [TableViewItem tableViewItemCheckableWithName:@"收件箱"];
     [itemInBoxView setActionWhenSelected:^(void)
      {
          NSLog(@"(收件箱) :%s", __FUNCTION__);
+         [self.delegate openPanelViewController:BQEventSelectedModeInBox];
      }];
     
     itemCollectionView = [TableViewItem tableViewItemCheckableWithName:@"收藏夹"];
     [itemCollectionView setActionWhenSelected:^(void)
      {
          NSLog(@"(收藏夹) :%s", __FUNCTION__);
+         [self.delegate openPanelViewController:BQEventSelectedModeCollection];
      }];
     
     
