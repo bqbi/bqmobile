@@ -16,14 +16,6 @@
 
 @implementation BQLeftSidePanelViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-       
-    }
-    return self;
-}
 
 #pragma mark View life cycle
 /** @name View life cycle */

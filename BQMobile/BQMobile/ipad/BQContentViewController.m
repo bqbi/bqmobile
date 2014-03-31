@@ -10,8 +10,10 @@
 #import "BQContentViewController.h"
 #import "NavigationBarButton.h"
 #import "MSViewControllerSlidingPanel.h"
+//
 #import "BQLeftSidePanelViewController.h"
 #import "BQSettingPanelViewController.h"
+#import "BQTopicNavigationViewController.h"
 
 @interface BQContentViewController ()
 /**
@@ -93,6 +95,13 @@
         [[self slidingPanelController] setLeftPanelStatusBarDisplayedSmoothly:NO];
         [[self slidingPanelController] setRightPanelStatusBarDisplayedSmoothly:NO];
     }
+}
+
+#pragma mark - switch page action implementation
+- (void) openTopicNavigationPanel
+{
+    DLog(@"主题导航...");
+    [self.navigationController pushViewController:[[BQTopicNavigationViewController alloc] init] animated:YES];
 }
 
 #pragma mark - action implementations

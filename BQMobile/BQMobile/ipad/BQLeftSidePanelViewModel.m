@@ -18,7 +18,6 @@
     TableViewItem       *itemCollectionView;
    
     TableViewSection    *sysSection;
-    
     itemRecentView = [TableViewItem tableViewItemCheckableWithName:@"最近访问"];
     [itemRecentView setActionWhenSelected:^(void)
      {
@@ -46,7 +45,7 @@
                   itemCollectionView,
                nil];
     
-    [self setSections: @[sysSection,sysSection]];
+    [self setSections: @[sysSection]];
 
 }
 
