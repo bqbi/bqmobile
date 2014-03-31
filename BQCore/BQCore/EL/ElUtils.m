@@ -6,12 +6,12 @@
 //  Copyright (c) 2014年 QZ. All rights reserved.
 //
 
-#import "ElTool.h"
+#import "ElUtils.h"
 #import "klel.h"
 
 @implementation ExpressionResult
 @end
-@implementation ElTool
+@implementation ElUtils
 
 + (ExpressionResult*) El :(NSString*) expression
 {

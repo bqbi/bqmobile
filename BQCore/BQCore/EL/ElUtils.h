@@ -14,6 +14,6 @@
 
 @end
 
-@interface ElTool : NSObject
+@interface ElUtils : NSObject
 + (ExpressionResult*) El :(NSString*) expression ;
 @end
