@@ -55,6 +55,7 @@
 		76D99E9918B33644004A9055 /* BQMobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76D99E9818B33644004A9055 /* BQMobileTests.m */; };
 		76D99F1018B33757004A9055 /* libBQCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D99F0F18B33757004A9055 /* libBQCore.a */; };
 		76F284CF18E666BF00976CF6 /* BQComponentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F284CE18E666BF00976CF6 /* BQComponentView.m */; };
+		76F284ED18E7F67400976CF6 /* BQTemplateResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F284EC18E7F67400976CF6 /* BQTemplateResolver.m */; };
 		76FDF71918E3C0DF004598D3 /* BQAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76FDF71818E3C0DF004598D3 /* BQAlertView.m */; };
 		76FDF71F18E40A58004598D3 /* BQView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76FDF71E18E40A58004598D3 /* BQView.m */; };
 /* End PBXBuildFile section */
@@ -126,6 +127,7 @@
 		76B07C3E18D92C30000FA58B /* BQCommonUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQCommonUI.m; sourceTree = "<group>"; };
 		76B07C4018D93EA4000FA58B /* BQLoadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQLoadView.h; sourceTree = "<group>"; };
 		76B07C4118D93EA4000FA58B /* BQLoadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQLoadView.m; sourceTree = "<group>"; };
+		76B0D95F18E847A400D43C45 /* XMLUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMLUtils.h; sourceTree = "<group>"; };
 		76B0E2FA18C2DEAA00C5C219 /* Style.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Style.bundle; path = Bundles/Style.bundle; sourceTree = SOURCE_ROOT; };
 		76B0E2FB18C2DEAA00C5C219 /* UFExpress.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = UFExpress.bundle; path = Bundles/UFExpress.bundle; sourceTree = SOURCE_ROOT; };
 		76B0E30418C2F24400C5C219 /* BQNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQNavigationController.h; sourceTree = "<group>"; };
@@ -159,6 +161,8 @@
 		76F284E518E7954F00976CF6 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
 		76F284E618E7954F00976CF6 /* PropertyUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyUtils.h; sourceTree = "<group>"; };
 		76F284E718E7954F00976CF6 /* WebUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebUtils.h; sourceTree = "<group>"; };
+		76F284EB18E7F67400976CF6 /* BQTemplateResolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQTemplateResolver.h; sourceTree = "<group>"; };
+		76F284EC18E7F67400976CF6 /* BQTemplateResolver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQTemplateResolver.m; sourceTree = "<group>"; };
 		76FDF71718E3C0DF004598D3 /* BQAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQAlertView.h; sourceTree = "<group>"; };
 		76FDF71818E3C0DF004598D3 /* BQAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQAlertView.m; sourceTree = "<group>"; };
 		76FDF71D18E40A58004598D3 /* BQView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQView.h; sourceTree = "<group>"; };
@@ -388,6 +392,8 @@
 			children = (
 				76F284CD18E666BF00976CF6 /* BQComponentView.h */,
 				76F284CE18E666BF00976CF6 /* BQComponentView.m */,
+				76F284EB18E7F67400976CF6 /* BQTemplateResolver.h */,
+				76F284EC18E7F67400976CF6 /* BQTemplateResolver.m */,
 			);
 			name = components;
 			path = BQMobile/components;
@@ -406,6 +412,7 @@
 				76F284E518E7954F00976CF6 /* GDataXMLNode.h */,
 				76F284E618E7954F00976CF6 /* PropertyUtils.h */,
 				76F284E718E7954F00976CF6 /* WebUtils.h */,
+				76B0D95F18E847A400D43C45 /* XMLUtils.h */,
 			);
 			path = BQCore;
 			sourceTree = "<group>";
@@ -516,6 +523,7 @@
 				042D215718E3206200E4354C /* BQLeftSidePanelViewModel.m in Sources */,
 				042D214C18E31EEC00E4354C /* Color.m in Sources */,
 				76A733A118E4622A00DB6F8A /* BQAnalysisTopicView.m in Sources */,
+				76F284ED18E7F67400976CF6 /* BQTemplateResolver.m in Sources */,
 				76F284CF18E666BF00976CF6 /* BQComponentView.m in Sources */,
 				042D214218E31E3100E4354C /* SidePanelViewController.m in Sources */,
 				76B0E30618C2F24400C5C219 /* BQNavigationController.m in Sources */,

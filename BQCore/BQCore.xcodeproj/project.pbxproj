@@ -90,6 +90,7 @@
 		76AC1E1918C243E40063ED32 /* BQContext.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 76AC1E1618C243CF0063ED32 /* BQContext.h */; };
 		76AC1E1F18C268190063ED32 /* FSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 76AC1E1E18C268190063ED32 /* FSUtils.m */; };
 		76AC1E2418C27CBB0063ED32 /* FSUtils.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 76AC1E1D18C268190063ED32 /* FSUtils.h */; };
+		76B0D95E18E8473300D43C45 /* XMLUtils.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 76F284E818E7970E00976CF6 /* XMLUtils.h */; };
 		76F284D118E6765B00976CF6 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76F284D018E6765B00976CF6 /* JavaScriptCore.framework */; };
 		76F284DB18E70DAC00976CF6 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F284DA18E70DAC00976CF6 /* GDataXMLNode.m */; };
 		76F284DC18E792EC00976CF6 /* GDataXMLNode.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 76F284D918E70DAC00976CF6 /* GDataXMLNode.h */; };
@@ -113,6 +114,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				76B0D95E18E8473300D43C45 /* XMLUtils.h in Copy Files */,
 				76F284DC18E792EC00976CF6 /* GDataXMLNode.h in Copy Files */,
 				76315D6A18E039DE00199AFD /* BQServerAccess.h in Copy Files */,
 				76315D6B18E039DE00199AFD /* BQViewOperateModel.h in Copy Files */,
