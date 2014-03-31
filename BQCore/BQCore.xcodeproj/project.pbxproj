@@ -38,6 +38,7 @@
 		042D361118E3AFDC00E4354C /* typecheck.c in Sources */ = {isa = PBXBuildFile; fileRef = 042D360618E3AFDC00E4354C /* typecheck.c */; };
 		042D361218E3AFDC00E4354C /* ElTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D360918E3AFDC00E4354C /* ElTool.m */; };
 		042D361318E3BEBB00E4354C /* ElTool.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 042D360818E3AFDC00E4354C /* ElTool.h */; };
+		048AC37818E8F59C00820A42 /* XMLUtils.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 76F284E818E7970E00976CF6 /* XMLUtils.h */; };
 		7615EC8F18B346C800F1E344 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7615EC8E18B346C800F1E344 /* Foundation.framework */; };
 		7615EC9D18B346C800F1E344 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7615EC9C18B346C800F1E344 /* XCTest.framework */; };
 		7615EC9E18B346C800F1E344 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7615EC8E18B346C800F1E344 /* Foundation.framework */; };
@@ -113,6 +114,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				048AC37818E8F59C00820A42 /* XMLUtils.h in Copy Files */,
 				76F284DC18E792EC00976CF6 /* GDataXMLNode.h in Copy Files */,
 				76315D6A18E039DE00199AFD /* BQServerAccess.h in Copy Files */,
 				76315D6B18E039DE00199AFD /* BQViewOperateModel.h in Copy Files */,
