@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BQIpadHomeContentController.h"
+#import "BQIpadHomeController.h"
 /*
  * 侧边栏数据加载以及事件绑定数据处理模型
  */

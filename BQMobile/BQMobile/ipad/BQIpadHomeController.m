@@ -6,8 +6,8 @@
 //  Copyright (c) 2014年 yonyou. All rights reserved.
 //
 #import "Color.h"
-#import "BQIpadHomeContentController.h"
-#import "BQIpadHomeContentController.h"
+#import "BQIpadHomeController.h"
+#import "BQIpadHomeController.h"
 #import "NavigationBarButton.h"
 #import "MSViewControllerSlidingPanel.h"
 //
@@ -17,7 +17,7 @@
 #import "BQIpadFunctionController.h"
 #import "BQIpadCommonPanelController.h"
 
-@interface BQIpadHomeContentController ()<BQLeftSidePanelFunctionDelegate>
+@interface BQIpadHomeController ()<BQLeftSidePanelFunctionDelegate>
 /**
  *  The left button of the navigation bar.
  */
@@ -26,7 +26,7 @@
 @property (nonatomic, strong)   NavigationBarButton *settingButton;
 @end
 
-@implementation BQIpadHomeContentController
+@implementation BQIpadHomeController
 
 - (void) loadView
 {

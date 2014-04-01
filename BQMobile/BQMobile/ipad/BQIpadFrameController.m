@@ -11,7 +11,7 @@
 #import "BQIpadLeftSideMenuController.h"
 #import "BQIpadLeftSideMenuModel.h"
 #import "BQTableViewDataSource.h"
-#import "BQIpadHomeContentController.h"
+#import "BQIpadHomeController.h"
 
 @interface BQIpadFrameController ()
 
@@ -49,7 +49,7 @@
     
     
     //
-    BQIpadHomeContentController *contentViewController = [[BQIpadHomeContentController alloc] init];
+    BQIpadHomeController *contentViewController = [[BQIpadHomeController alloc] init];
     //
     leftPanelModel = [[BQIpadLeftSideMenuModel alloc] initWithFuncDelegate:contentViewController];
 
