@@ -12,8 +12,8 @@
 #import "MSViewControllerSlidingPanel.h"
 //
 #import "BQIpadNaviLeftSidePanelController.h"
-#import "BQIpadSettingPanelController.h"
-#import "BQIpadTopicNaviController.h"
+#import "BQIpadSystemSettingController.h"
+#import "BQIpadAnalysisTopicController.h"
 #import "BQIpadFunctionController.h"
 #import "BQIpadCommonPanelController.h"
 
@@ -103,7 +103,7 @@
 - (void) openTopicNavigationPanel
 {
     DLog(@"主题导航...");
-    [self.navigationController pushViewController:[[BQIpadTopicNaviController alloc] init] animated:YES];
+    [self.navigationController pushViewController:[[BQIpadAnalysisTopicController alloc] init] animated:YES];
 }
 
 #pragma mark - action implementations
@@ -111,7 +111,7 @@
 - (void) openSettingPanel
 {
     DLog(@"设置...");
-    [self.navigationController pushViewController:[[BQIpadSettingPanelController alloc] init] animated:YES];
+    [self.navigationController pushViewController:[[BQIpadSystemSettingController alloc] init] animated:YES];
 }
 
 #pragma mark - left side panel selected item event.

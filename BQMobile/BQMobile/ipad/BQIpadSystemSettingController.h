@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BQIpadSettingPanelController : UIViewController
+@interface BQIpadSystemSettingController : UIViewController
 
 @end
