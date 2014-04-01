@@ -6,11 +6,11 @@
 //  Copyright (c) 2014年 yonyou. All rights reserved.
 //
 
-#import "BQAnalysisTopicView.h"
+#import "BQIpadAnalysisTopicView.h"
 
 #import "FSUtils.h"
 
-@implementation BQAnalysisTopicView
+@implementation BQIpadAnalysisTopicView
 
 @synthesize pie;
 

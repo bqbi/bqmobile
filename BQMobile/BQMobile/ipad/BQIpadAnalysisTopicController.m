@@ -6,12 +6,12 @@
 //  Copyright (c) 2014年 yonyou. All rights reserved.
 //
 
-#import "BQAnalysisTopicController.h"
+#import "BQIpadAnalysisTopicController.h"
 
 #import "BQComponentView.h"
 
 
-@interface BQAnalysisTopicController ()
+@interface BQIpadAnalysisTopicController ()
 
 @property (nonatomic, strong) UIScrollView* contentView;
 
@@ -20,7 +20,7 @@
 @end
 
 
-@implementation BQAnalysisTopicController
+@implementation BQIpadAnalysisTopicController
 
 - (id)initWithTemplate:(NSString*)templatePath {
     if (self = [super init]) {

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BQAnalysisTopicController : UIViewController
+@interface BQIpadAnalysisTopicController : UIViewController
 
 // 模板路径
 @property (nonatomic, strong) NSString* templatePath;

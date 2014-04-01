@@ -9,7 +9,7 @@
 #import "BQIpadLoginController.h"
 #import "Common.h"
 #import "BQIpadHomeController.h"
-#import "BQAnalysisTopicController.h"
+#import "BQIpadAnalysisTopicController.h"
 #import "BQCommonUI.h"
 
 @interface BQIpadLoginController()
@@ -70,7 +70,7 @@
 
 - (void)doOfflineLogin {
     // 检验用户名密码等登录信息是否有效
-    [self.navigationController pushViewController:[[BQAnalysisTopicController alloc ]init] animated:YES];
+    [self.navigationController pushViewController:[[BQIpadAnalysisTopicController alloc ]init] animated:YES];
 
 }
 

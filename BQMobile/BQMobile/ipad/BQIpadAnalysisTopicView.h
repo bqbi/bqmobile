@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 #import "BQView.h"
 
-@interface BQAnalysisTopicView : BQView
+@interface BQIpadAnalysisTopicView : BQView
 
 @property(nonatomic,retain) UIWebView* pie;
 
