@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BQFunctionViewController : UIViewController
+/*
+ *
+ * IPad版本的功能导航页面控制器，主要用来处理具体主题的功能展现
+ *
+ */
+@interface BQIpadFunctionController : UIViewController
 
 @end

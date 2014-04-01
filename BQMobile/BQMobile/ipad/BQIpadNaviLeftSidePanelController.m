@@ -6,15 +6,15 @@
 //  Copyright (c) 2014年 QZ. All rights reserved.
 //
 
-#import "BQLeftSidePanelViewController.h"
+#import "BQIpadNaviLeftSidePanelController.h"
 
 
-@interface BQLeftSidePanelViewController () 
+@interface BQIpadNaviLeftSidePanelController () 
 
 
 @end
 
-@implementation BQLeftSidePanelViewController
+@implementation BQIpadNaviLeftSidePanelController
 
 
 #pragma mark View life cycle
@@ -50,6 +50,15 @@
  */
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    TableViewSection    *section;
+    
+    section = [self.delegate sectionAtIndex:[indexPath section]];
+    
+   
+    [section selectItemAtIndex:[indexPath row]];
+        
+      
+
     return indexPath;
 }
 

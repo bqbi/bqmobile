@@ -6,11 +6,18 @@
 //  Copyright (c) 2014年 QZ. All rights reserved.
 //
 
-#import "BQLeftSidePanelViewModel.h"
+#import "BQIpadLeftSidePanelModel.h"
+
+@interface BQIpadLeftSidePanelModel()
 
 
-@implementation BQLeftSidePanelViewModel
+@end
 
+@implementation BQIpadLeftSidePanelModel
+
+/*
+ * 从某一数据模型读取数据，并封装为section表格块
+ */
 - (void) sectionsFromDatasourceModel:(id)model
 {
     TableViewItem       *itemRecentView;
@@ -22,18 +29,21 @@
     [itemRecentView setActionWhenSelected:^(void)
      {
          NSLog(@"(最近访问) :%s", __FUNCTION__);
+         [self.delegate openPanelViewController:BQEventSelectedModeRecent];
      }];
     
     itemInBoxView = [TableViewItem tableViewItemCheckableWithName:@"收件箱"];
     [itemInBoxView setActionWhenSelected:^(void)
      {
          NSLog(@"(收件箱) :%s", __FUNCTION__);
+         [self.delegate openPanelViewController:BQEventSelectedModeInBox];
      }];
     
     itemCollectionView = [TableViewItem tableViewItemCheckableWithName:@"收藏夹"];
     [itemCollectionView setActionWhenSelected:^(void)
      {
          NSLog(@"(收藏夹) :%s", __FUNCTION__);
+         [self.delegate openPanelViewController:BQEventSelectedModeCollection];
      }];
     
     

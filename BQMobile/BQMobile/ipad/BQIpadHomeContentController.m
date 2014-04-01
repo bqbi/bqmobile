@@ -6,16 +6,18 @@
 //  Copyright (c) 2014年 yonyou. All rights reserved.
 //
 #import "Color.h"
-#import "BQContentViewController.h"
-#import "BQContentViewController.h"
+#import "BQIpadHomeContentController.h"
+#import "BQIpadHomeContentController.h"
 #import "NavigationBarButton.h"
 #import "MSViewControllerSlidingPanel.h"
 //
-#import "BQLeftSidePanelViewController.h"
-#import "BQSettingPanelViewController.h"
-#import "BQTopicNavigationViewController.h"
+#import "BQIpadNaviLeftSidePanelController.h"
+#import "BQIpadSettingPanelController.h"
+#import "BQIpadTopicNaviController.h"
+#import "BQIpadFunctionController.h"
+#import "BQIpadCommonPanelController.h"
 
-@interface BQContentViewController ()
+@interface BQIpadHomeContentController ()<BQLeftSidePanelFunctionDelegate>
 /**
  *  The left button of the navigation bar.
  */
@@ -24,7 +26,7 @@
 @property (nonatomic, strong)   NavigationBarButton *settingButton;
 @end
 
-@implementation BQContentViewController
+@implementation BQIpadHomeContentController
 
 - (void) loadView
 {
@@ -101,7 +103,7 @@
 - (void) openTopicNavigationPanel
 {
     DLog(@"主题导航...");
-    [self.navigationController pushViewController:[[BQTopicNavigationViewController alloc] init] animated:YES];
+    [self.navigationController pushViewController:[[BQIpadTopicNaviController alloc] init] animated:YES];
 }
 
 #pragma mark - action implementations
@@ -109,7 +111,31 @@
 - (void) openSettingPanel
 {
     DLog(@"设置...");
-    [self.navigationController pushViewController:[[BQSettingPanelViewController alloc] init] animated:YES];
+    [self.navigationController pushViewController:[[BQIpadSettingPanelController alloc] init] animated:YES];
+}
+
+#pragma mark - left side panel selected item event.
+- (void) openPanelViewController:(BQEventSelectedMode) eventSelectedMode
+{
+    [self.navigationController popToRootViewControllerAnimated:NO];
+    switch (eventSelectedMode) {
+        case BQEventSelectedModeRecent:
+            [self.navigationController pushViewController:[[BQIpadCommonPanelController alloc] init] animated:YES];
+            break;
+            
+        case BQEventSelectedModeInBox:
+            [self.navigationController pushViewController:[[BQIpadCommonPanelController alloc] init] animated:YES];
+
+            break;
+            
+        case BQEventSelectedModeCollection:
+            [self.navigationController pushViewController:[[BQIpadCommonPanelController alloc] init] animated:YES];
+
+            break;
+            
+        default:
+            break;
+    }
 }
 
 

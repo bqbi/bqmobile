@@ -8,7 +8,7 @@
 
 #import "BQIpadLoginController.h"
 #import "Common.h"
-#import "BQIpadHomeViewController.h"
+#import "BQIpadHomeController.h"
 #import "BQAnalysisTopicController.h"
 #import "BQCommonUI.h"
 
@@ -64,7 +64,7 @@
 
 - (void)doLogin {
     // 检验用户名密码等登录信息是否有效
-    [self.navigationController pushViewController:[[BQIpadHomeViewController alloc ]init] animated:YES];
+    [self.navigationController pushViewController:[[BQIpadHomeController alloc ]init] animated:YES];
 
 }
 
