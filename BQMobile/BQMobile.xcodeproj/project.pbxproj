@@ -25,6 +25,7 @@
 		043B781918E8EE7F0024E51B /* BQFunctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043B781818E8EE7F0024E51B /* BQFunctionViewController.m */; };
 		7606CEE418E90B150087EC33 /* BQComponentFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7606CEE318E90B150087EC33 /* BQComponentFactory.m */; };
 		7606CEE818E918BF0087EC33 /* Component.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7606CEE718E918BF0087EC33 /* Component.bundle */; };
+		7606CEEB18E965680087EC33 /* BQUIButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7606CEEA18E965680087EC33 /* BQUIButtonView.m */; };
 		7615ECB518B346FF00F1E344 /* libBQDashboard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7615ECB418B346FF00F1E344 /* libBQDashboard.a */; };
 		76234A6418C3851900FE3894 /* application.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 76234A6318C3851900FE3894 /* application.cfg */; };
 		76315D5718E0027A00199AFD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76315D5618E0027A00199AFD /* CFNetwork.framework */; };
@@ -109,6 +110,8 @@
 		7606CEE218E90B150087EC33 /* BQComponentFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQComponentFactory.h; sourceTree = "<group>"; };
 		7606CEE318E90B150087EC33 /* BQComponentFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQComponentFactory.m; sourceTree = "<group>"; };
 		7606CEE718E918BF0087EC33 /* Component.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Component.bundle; path = Bundles/Component.bundle; sourceTree = SOURCE_ROOT; };
+		7606CEE918E965680087EC33 /* BQUIButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQUIButtonView.h; sourceTree = "<group>"; };
+		7606CEEA18E965680087EC33 /* BQUIButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQUIButtonView.m; sourceTree = "<group>"; };
 		7615ECB418B346FF00F1E344 /* libBQDashboard.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBQDashboard.a; path = "../Bin/BQMobile/Build/Products/Debug-iphoneos/libBQDashboard.a"; sourceTree = "<group>"; };
 		76234A6318C3851900FE3894 /* application.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = application.cfg; path = Bundles/application.cfg; sourceTree = SOURCE_ROOT; };
 		76315D5618E0027A00199AFD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -399,6 +402,8 @@
 				76F284EC18E7F67400976CF6 /* BQTemplateResolver.m */,
 				7606CEE218E90B150087EC33 /* BQComponentFactory.h */,
 				7606CEE318E90B150087EC33 /* BQComponentFactory.m */,
+				7606CEE918E965680087EC33 /* BQUIButtonView.h */,
+				7606CEEA18E965680087EC33 /* BQUIButtonView.m */,
 			);
 			name = components;
 			path = BQMobile/components;
@@ -541,6 +546,7 @@
 				042D213518E2CFC000E4354C /* MSSlidingPanelController.m in Sources */,
 				76AC1E1518C23CCB0063ED32 /* BQIpadLoginView.m in Sources */,
 				76B07C3F18D92C30000FA58B /* BQCommonUI.m in Sources */,
+				7606CEEB18E965680087EC33 /* BQUIButtonView.m in Sources */,
 				76B07C4218D93EA4000FA58B /* BQLoadView.m in Sources */,
 				042D215518E3206200E4354C /* BQNavigationViewController.m in Sources */,
 				76D99E8018B33643004A9055 /* main.m in Sources */,
