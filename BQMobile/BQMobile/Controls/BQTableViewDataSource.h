@@ -1,26 +1,22 @@
 //
-//  TableViewDataSourceDelegate.h
-//  LeftDragPanelDemo
+//  BQTableViewDataSource.h
+//  BQMobile
 //
 //  Created by mac on 2014-02-26.
-//  Copyright (c) 2014年 QZ. All rights reserved.
+//  Copyright (c) 2014年 yonyou. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "TableViewItem.h"
-#import "TableViewSection.h"
+#import "BQDelegateFamily.h"
 
-@protocol TableViewDataSourceDelegate <NSObject>
 
-@optional
-/**
- *  parse the tabelview data from the model .
- *
- *  @param the model of dataset or datasource.
- *
- *  @return void.
- */
-- (void) sectionsFromDatasourceModel:(id) model;
+@interface BQTableViewDataSource : NSObject<UITableViewDataSource>
+
+// 初始化数据源（根据数据模型）
+- (id) initWithDataModel:(id)model andDelegate:(id<BQTableViewDataSourceDelegate>) delg;
+
+- (NSString*) tableCellIdentifier;
+
 /**
  *  Return the sections .
  *
@@ -50,5 +46,4 @@
  *  @return The section.
  */
 - (TableViewSection *)sectionAtIndex:(NSInteger)index;
-
 @end

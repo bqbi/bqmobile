@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		042D213518E2CFC000E4354C /* MSSlidingPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D213218E2CFC000E4354C /* MSSlidingPanelController.m */; };
 		042D213618E2CFC000E4354C /* MSViewControllerSlidingPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D213418E2CFC000E4354C /* MSViewControllerSlidingPanel.m */; };
-		042D214218E31E3100E4354C /* SidePanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D214118E31E3100E4354C /* SidePanelViewController.m */; };
+		042D214218E31E3100E4354C /* BQTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D214118E31E3100E4354C /* BQTableViewController.m */; };
 		042D214818E31EC200E4354C /* TableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D214518E31EC200E4354C /* TableViewItem.m */; };
 		042D214918E31EC200E4354C /* TableViewSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D214718E31EC200E4354C /* TableViewSection.m */; };
 		042D214C18E31EEC00E4354C /* Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D214B18E31EEC00E4354C /* Color.m */; };
 		042D215B18E320D800E4354C /* NavigationBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D215A18E320D800E4354C /* NavigationBarButton.m */; };
 		04952E4118EA8B180068436C /* BQIpadSystemSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04952E4018EA8B180068436C /* BQIpadSystemSettingView.m */; };
+		04952E4718EA99F80068436C /* BQTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 04952E4618EA99F80068436C /* BQTableViewDataSource.m */; };
 		7606CEE418E90B150087EC33 /* BQComponentFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7606CEE318E90B150087EC33 /* BQComponentFactory.m */; };
 		7606CEE818E918BF0087EC33 /* Component.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7606CEE718E918BF0087EC33 /* Component.bundle */; };
 		7606CEEB18E965680087EC33 /* BQUIButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7606CEEA18E965680087EC33 /* BQUIButtonView.m */; };
@@ -25,11 +26,11 @@
 		762D153718EA597100A00570 /* BQIpadCommonPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 762D152218EA597100A00570 /* BQIpadCommonPanelController.m */; };
 		762D153818EA597100A00570 /* BQIpadFunctionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 762D152418EA597100A00570 /* BQIpadFunctionController.m */; };
 		762D153918EA597100A00570 /* BQIpadHomeContentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 762D152618EA597100A00570 /* BQIpadHomeContentController.m */; };
-		762D153A18EA597100A00570 /* BQIpadHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 762D152818EA597100A00570 /* BQIpadHomeController.m */; };
-		762D153B18EA597100A00570 /* BQIpadLeftSidePanelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 762D152A18EA597100A00570 /* BQIpadLeftSidePanelModel.m */; };
+		762D153A18EA597100A00570 /* BQIpadFrameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 762D152818EA597100A00570 /* BQIpadFrameController.m */; };
+		762D153B18EA597100A00570 /* BQIpadLeftSideMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 762D152A18EA597100A00570 /* BQIpadLeftSideMenuModel.m */; };
 		762D153C18EA597100A00570 /* BQIpadLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 762D152C18EA597100A00570 /* BQIpadLoginController.m */; };
 		762D153D18EA597100A00570 /* BQIpadLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 762D152E18EA597100A00570 /* BQIpadLoginView.m */; };
-		762D153E18EA597100A00570 /* BQIpadNaviLeftSidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 762D153018EA597100A00570 /* BQIpadNaviLeftSidePanelController.m */; };
+		762D153E18EA597100A00570 /* BQIpadLeftSideMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 762D153018EA597100A00570 /* BQIpadLeftSideMenuController.m */; };
 		762D153F18EA597100A00570 /* BQIpadSystemSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 762D153218EA597100A00570 /* BQIpadSystemSettingController.m */; };
 		76315D5718E0027A00199AFD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76315D5618E0027A00199AFD /* CFNetwork.framework */; };
 		76315D5918E0028E00199AFD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76315D5818E0028E00199AFD /* MobileCoreServices.framework */; };
@@ -76,9 +77,9 @@
 		042D213218E2CFC000E4354C /* MSSlidingPanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSlidingPanelController.m; sourceTree = "<group>"; };
 		042D213318E2CFC000E4354C /* MSViewControllerSlidingPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSViewControllerSlidingPanel.h; sourceTree = "<group>"; };
 		042D213418E2CFC000E4354C /* MSViewControllerSlidingPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSViewControllerSlidingPanel.m; sourceTree = "<group>"; };
-		042D214018E31E3100E4354C /* SidePanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidePanelViewController.h; sourceTree = "<group>"; };
-		042D214118E31E3100E4354C /* SidePanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidePanelViewController.m; sourceTree = "<group>"; };
-		042D214318E31E6C00E4354C /* TableViewDataSourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewDataSourceDelegate.h; sourceTree = "<group>"; };
+		042D214018E31E3100E4354C /* BQTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQTableViewController.h; sourceTree = "<group>"; };
+		042D214118E31E3100E4354C /* BQTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQTableViewController.m; sourceTree = "<group>"; };
+		042D214318E31E6C00E4354C /* BQDelegateFamily.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQDelegateFamily.h; sourceTree = "<group>"; };
 		042D214418E31EC200E4354C /* TableViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewItem.h; sourceTree = "<group>"; };
 		042D214518E31EC200E4354C /* TableViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewItem.m; sourceTree = "<group>"; };
 		042D214618E31EC200E4354C /* TableViewSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewSection.h; sourceTree = "<group>"; };
@@ -90,6 +91,8 @@
 		042D362018E3BF9200E4354C /* BQDashboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQDashboard.h; sourceTree = "<group>"; };
 		04952E3F18EA8B180068436C /* BQIpadSystemSettingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQIpadSystemSettingView.h; sourceTree = "<group>"; };
 		04952E4018EA8B180068436C /* BQIpadSystemSettingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQIpadSystemSettingView.m; sourceTree = "<group>"; };
+		04952E4518EA99F80068436C /* BQTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQTableViewDataSource.h; sourceTree = "<group>"; };
+		04952E4618EA99F80068436C /* BQTableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQTableViewDataSource.m; sourceTree = "<group>"; };
 		7606CEE218E90B150087EC33 /* BQComponentFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQComponentFactory.h; sourceTree = "<group>"; };
 		7606CEE318E90B150087EC33 /* BQComponentFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQComponentFactory.m; sourceTree = "<group>"; };
 		7606CEE718E918BF0087EC33 /* Component.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Component.bundle; path = Bundles/Component.bundle; sourceTree = SOURCE_ROOT; };
@@ -107,16 +110,16 @@
 		762D152418EA597100A00570 /* BQIpadFunctionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQIpadFunctionController.m; sourceTree = "<group>"; };
 		762D152518EA597100A00570 /* BQIpadHomeContentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQIpadHomeContentController.h; sourceTree = "<group>"; };
 		762D152618EA597100A00570 /* BQIpadHomeContentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQIpadHomeContentController.m; sourceTree = "<group>"; };
-		762D152718EA597100A00570 /* BQIpadHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQIpadHomeController.h; sourceTree = "<group>"; };
-		762D152818EA597100A00570 /* BQIpadHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQIpadHomeController.m; sourceTree = "<group>"; };
-		762D152918EA597100A00570 /* BQIpadLeftSidePanelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQIpadLeftSidePanelModel.h; sourceTree = "<group>"; };
-		762D152A18EA597100A00570 /* BQIpadLeftSidePanelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQIpadLeftSidePanelModel.m; sourceTree = "<group>"; };
+		762D152718EA597100A00570 /* BQIpadFrameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQIpadFrameController.h; sourceTree = "<group>"; };
+		762D152818EA597100A00570 /* BQIpadFrameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQIpadFrameController.m; sourceTree = "<group>"; };
+		762D152918EA597100A00570 /* BQIpadLeftSideMenuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQIpadLeftSideMenuModel.h; sourceTree = "<group>"; };
+		762D152A18EA597100A00570 /* BQIpadLeftSideMenuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQIpadLeftSideMenuModel.m; sourceTree = "<group>"; };
 		762D152B18EA597100A00570 /* BQIpadLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQIpadLoginController.h; sourceTree = "<group>"; };
 		762D152C18EA597100A00570 /* BQIpadLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQIpadLoginController.m; sourceTree = "<group>"; };
 		762D152D18EA597100A00570 /* BQIpadLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQIpadLoginView.h; sourceTree = "<group>"; };
 		762D152E18EA597100A00570 /* BQIpadLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQIpadLoginView.m; sourceTree = "<group>"; };
-		762D152F18EA597100A00570 /* BQIpadNaviLeftSidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQIpadNaviLeftSidePanelController.h; sourceTree = "<group>"; };
-		762D153018EA597100A00570 /* BQIpadNaviLeftSidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQIpadNaviLeftSidePanelController.m; sourceTree = "<group>"; };
+		762D152F18EA597100A00570 /* BQIpadLeftSideMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQIpadLeftSideMenuController.h; sourceTree = "<group>"; };
+		762D153018EA597100A00570 /* BQIpadLeftSideMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQIpadLeftSideMenuController.m; sourceTree = "<group>"; };
 		762D153118EA597100A00570 /* BQIpadSystemSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQIpadSystemSettingController.h; sourceTree = "<group>"; };
 		762D153218EA597100A00570 /* BQIpadSystemSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQIpadSystemSettingController.m; sourceTree = "<group>"; };
 		76315D5618E0027A00199AFD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -218,9 +221,11 @@
 				042D213218E2CFC000E4354C /* MSSlidingPanelController.m */,
 				042D213318E2CFC000E4354C /* MSViewControllerSlidingPanel.h */,
 				042D213418E2CFC000E4354C /* MSViewControllerSlidingPanel.m */,
-				042D214018E31E3100E4354C /* SidePanelViewController.h */,
-				042D214118E31E3100E4354C /* SidePanelViewController.m */,
-				042D214318E31E6C00E4354C /* TableViewDataSourceDelegate.h */,
+				042D214018E31E3100E4354C /* BQTableViewController.h */,
+				042D214118E31E3100E4354C /* BQTableViewController.m */,
+				04952E4518EA99F80068436C /* BQTableViewDataSource.h */,
+				04952E4618EA99F80068436C /* BQTableViewDataSource.m */,
+				042D214318E31E6C00E4354C /* BQDelegateFamily.h */,
 			);
 			name = controls;
 			path = Controls;
@@ -276,16 +281,16 @@
 				762D152418EA597100A00570 /* BQIpadFunctionController.m */,
 				762D152518EA597100A00570 /* BQIpadHomeContentController.h */,
 				762D152618EA597100A00570 /* BQIpadHomeContentController.m */,
-				762D152718EA597100A00570 /* BQIpadHomeController.h */,
-				762D152818EA597100A00570 /* BQIpadHomeController.m */,
-				762D152918EA597100A00570 /* BQIpadLeftSidePanelModel.h */,
-				762D152A18EA597100A00570 /* BQIpadLeftSidePanelModel.m */,
+				762D152718EA597100A00570 /* BQIpadFrameController.h */,
+				762D152818EA597100A00570 /* BQIpadFrameController.m */,
 				762D152B18EA597100A00570 /* BQIpadLoginController.h */,
 				762D152C18EA597100A00570 /* BQIpadLoginController.m */,
 				762D152D18EA597100A00570 /* BQIpadLoginView.h */,
 				762D152E18EA597100A00570 /* BQIpadLoginView.m */,
-				762D152F18EA597100A00570 /* BQIpadNaviLeftSidePanelController.h */,
-				762D153018EA597100A00570 /* BQIpadNaviLeftSidePanelController.m */,
+				762D152918EA597100A00570 /* BQIpadLeftSideMenuModel.h */,
+				762D152A18EA597100A00570 /* BQIpadLeftSideMenuModel.m */,
+				762D152F18EA597100A00570 /* BQIpadLeftSideMenuController.h */,
+				762D153018EA597100A00570 /* BQIpadLeftSideMenuController.m */,
 				762D153118EA597100A00570 /* BQIpadSystemSettingController.h */,
 				762D153218EA597100A00570 /* BQIpadSystemSettingController.m */,
 				04952E3F18EA8B180068436C /* BQIpadSystemSettingView.h */,
@@ -527,7 +532,7 @@
 				76F284ED18E7F67400976CF6 /* BQTemplateResolver.m in Sources */,
 				04952E4118EA8B180068436C /* BQIpadSystemSettingView.m in Sources */,
 				76F284CF18E666BF00976CF6 /* BQComponentView.m in Sources */,
-				042D214218E31E3100E4354C /* SidePanelViewController.m in Sources */,
+				042D214218E31E3100E4354C /* BQTableViewController.m in Sources */,
 				76B0E30618C2F24400C5C219 /* BQNavigationController.m in Sources */,
 				76AC1E2218C279980063ED32 /* BQLoginController.m in Sources */,
 				7606CEE418E90B150087EC33 /* BQComponentFactory.m in Sources */,
@@ -536,21 +541,22 @@
 				76FDF71918E3C0DF004598D3 /* BQAlertView.m in Sources */,
 				762D153818EA597100A00570 /* BQIpadFunctionController.m in Sources */,
 				042D214818E31EC200E4354C /* TableViewItem.m in Sources */,
-				762D153E18EA597100A00570 /* BQIpadNaviLeftSidePanelController.m in Sources */,
+				762D153E18EA597100A00570 /* BQIpadLeftSideMenuController.m in Sources */,
 				042D213518E2CFC000E4354C /* MSSlidingPanelController.m in Sources */,
 				76B07C3F18D92C30000FA58B /* BQCommonUI.m in Sources */,
 				7606CEEB18E965680087EC33 /* BQUIButtonView.m in Sources */,
 				76B07C4218D93EA4000FA58B /* BQLoadView.m in Sources */,
+				04952E4718EA99F80068436C /* BQTableViewDataSource.m in Sources */,
 				762D153518EA597100A00570 /* BQIpadAnalysisTopicController.m in Sources */,
 				762D153918EA597100A00570 /* BQIpadHomeContentController.m in Sources */,
 				76D99E8018B33643004A9055 /* main.m in Sources */,
 				042D215B18E320D800E4354C /* NavigationBarButton.m in Sources */,
-				762D153A18EA597100A00570 /* BQIpadHomeController.m in Sources */,
+				762D153A18EA597100A00570 /* BQIpadFrameController.m in Sources */,
 				762D153D18EA597100A00570 /* BQIpadLoginView.m in Sources */,
 				762D153C18EA597100A00570 /* BQIpadLoginController.m in Sources */,
 				042D213618E2CFC000E4354C /* MSViewControllerSlidingPanel.m in Sources */,
 				76D99E8418B33643004A9055 /* BQAppDelegate.m in Sources */,
-				762D153B18EA597100A00570 /* BQIpadLeftSidePanelModel.m in Sources */,
+				762D153B18EA597100A00570 /* BQIpadLeftSideMenuModel.m in Sources */,
 				762D153718EA597100A00570 /* BQIpadCommonPanelController.m in Sources */,
 				76FDF71F18E40A58004598D3 /* BQView.m in Sources */,
 			);

@@ -6,19 +6,33 @@
 //  Copyright (c) 2014年 QZ. All rights reserved.
 //
 
-#import "BQIpadLeftSidePanelModel.h"
+#import "BQIpadLeftSideMenuModel.h"
+#import "TableViewItem.h"
+#import "TableViewSection.h"
 
-@interface BQIpadLeftSidePanelModel()
+@interface BQIpadLeftSideMenuModel()
 
-
+// 功能代理
+@property (nonatomic,assign) id<BQLeftSidePanelFunctionDelegate> delegate;
 @end
 
-@implementation BQIpadLeftSidePanelModel
+@implementation BQIpadLeftSideMenuModel
+
+
+
+- (id) initWithFuncDelegate:(id<BQLeftSidePanelFunctionDelegate>) delg
+{
+    self = [super init];
+    if (self) {
+        self.delegate = delg;
+    }
+    return  self;
+}
 
 /*
  * 从某一数据模型读取数据，并封装为section表格块
  */
-- (void) sectionsFromDatasourceModel:(id)model
+- (NSArray*) sectionsFromDatasourceModel:(id)model
 {
     TableViewItem       *itemRecentView;
     TableViewItem       *itemInBoxView;
@@ -55,60 +69,9 @@
                   itemCollectionView,
                nil];
     
-    [self setSections: @[sysSection]];
+    return @[sysSection];
 
 }
 
-/**
- *  Return the sections .
- *
- *  @param none.
- *
- *  @return The sections.
- */
-- (NSArray*) sections
-{
-    return _sections;
-}
-
-#pragma mark Getting table view sections and items
-/** @name Getting table view sections and items */
-
-/**
- *  Return the item at the index path.
- *
- *  @param indexPath The index path.
- *
- *  @return The item.
- */
-- (TableViewItem *)itemAtIndexPath:(NSIndexPath *)indexPath
-{
-    TableViewSection    *section;
-    
-    if ([indexPath section] >= [[self sections] count])
-        return (nil);
-    
-    section = [[self sections] objectAtIndex:[indexPath section]];
-    
-    if ([indexPath row] >= [section numberOfItems])
-        return nil;
-    
-    return ([section itemAtIndex:[indexPath row]]);
-}
-
-/**
- *  Return the section at the index.
- *
- *  @param index The index.
- *
- *  @return The section.
- */
-- (TableViewSection *)sectionAtIndex:(NSInteger)index
-{
-    if (index >= [[self sections] count])
-        return (nil);
-    
-    return ([[self sections] objectAtIndex:index]);
-}
 
 @end

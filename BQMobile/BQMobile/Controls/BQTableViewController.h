@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TableViewDataSourceDelegate.h"
+#import "BQTableViewDataSource.h"
 
-@interface SidePanelViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic,retain) id<TableViewDataSourceDelegate> delegate;
+@interface BQTableViewController : UIViewController<UITableViewDelegate>
 
 @property (nonatomic,assign) BOOL hasStateBar;
+
+- (id) initWithDataSource:(BQTableViewDataSource *)ds;
 
 @end

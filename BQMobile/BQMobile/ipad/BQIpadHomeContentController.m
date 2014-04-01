@@ -11,7 +11,7 @@
 #import "NavigationBarButton.h"
 #import "MSViewControllerSlidingPanel.h"
 //
-#import "BQIpadNaviLeftSidePanelController.h"
+#import "BQIpadLeftSideMenuController.h"
 #import "BQIpadSystemSettingController.h"
 #import "BQIpadAnalysisTopicController.h"
 #import "BQIpadFunctionController.h"

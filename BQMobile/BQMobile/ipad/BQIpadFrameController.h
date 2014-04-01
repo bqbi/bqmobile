@@ -13,7 +13,7 @@
  * Ipad 版本主分栏控制器，负责分栏结构的框架显示
  *
  */
-@interface BQIpadHomeController : MSSlidingPanelController
+@interface BQIpadFrameController : MSSlidingPanelController
 
 - (void) loadControllers;
 @end

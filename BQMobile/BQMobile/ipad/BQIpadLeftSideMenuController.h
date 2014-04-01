@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SidePanelViewController.h"
+#import "BQTableViewController.h"
 
 /*
  *
@@ -15,7 +15,7 @@
  *
  *
  */
-@interface BQIpadNaviLeftSidePanelController : SidePanelViewController
+@interface BQIpadLeftSideMenuController : BQTableViewController
 
 @end
 

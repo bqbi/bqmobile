@@ -6,17 +6,18 @@
 //  Copyright (c) 2014年 QZ. All rights reserved.
 //
 
-#import "BQIpadHomeController.h"
-#import "BQIpadNaviLeftSidePanelController.h"
-#import "BQIpadLeftSidePanelModel.h"
 #import "Color.h"
+#import "BQIpadFrameController.h"
+#import "BQIpadLeftSideMenuController.h"
+#import "BQIpadLeftSideMenuModel.h"
+#import "BQTableViewDataSource.h"
 #import "BQIpadHomeContentController.h"
 
-@interface BQIpadHomeController ()
+@interface BQIpadFrameController ()
 
 @end
 
-@implementation BQIpadHomeController
+@implementation BQIpadFrameController
 
 - (id) init
 {
@@ -41,19 +42,24 @@
  */
 - (void) loadControllers
 {
-    BQIpadLeftSidePanelModel            *leftPanelModel;
-    BQIpadNaviLeftSidePanelController   *leftPanelViewController;
+    BQIpadLeftSideMenuModel             *leftPanelModel;
+    BQTableViewDataSource               *bqDataSource;
+    BQIpadLeftSideMenuController        *leftPanelViewController;
     UINavigationController              *navigationViewController;
     
-    leftPanelModel          = [[BQIpadLeftSidePanelModel alloc] init];
-    leftPanelViewController = [[BQIpadNaviLeftSidePanelController alloc] init];
-    [leftPanelViewController setDelegate:leftPanelModel];
-    [leftPanelViewController setHasStateBar:self.hasStateBar];
-
+    
     //
     BQIpadHomeContentController *contentViewController = [[BQIpadHomeContentController alloc] init];
-    [leftPanelModel setDelegate:contentViewController];
+    //
+    leftPanelModel = [[BQIpadLeftSideMenuModel alloc] initWithFuncDelegate:contentViewController];
+
     
+    //
+    bqDataSource            = [[BQTableViewDataSource alloc] initWithDataModel:nil andDelegate:leftPanelModel];
+    leftPanelViewController = [[BQIpadLeftSideMenuController alloc] initWithDataSource:bqDataSource];
+    leftPanelViewController.hasStateBar = self.hasStateBar;
+    
+    //
     navigationViewController = [[UINavigationController alloc] initWithRootViewController:contentViewController];
     [self setLeftPanelController:leftPanelViewController];
     [self setCenterViewController:navigationViewController];
