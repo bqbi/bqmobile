@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BQTopicNavigationViewController : UIViewController
+/*
+ *
+ * IPad版本的主题导航页面控制器，主要利用表格化显示主题项目
+ *
+ */
+@interface BQIpadTopicNaviController : UIViewController
 
 @end

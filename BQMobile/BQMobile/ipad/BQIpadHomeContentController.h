@@ -10,7 +10,7 @@
 #import "MSSlidingPanelController.h"
 
 /**
- *  These options are used to set the gestures to open a panel.
+ *  These options are used to 一些通用事件枚举.
  */
 typedef NS_ENUM(NSUInteger, BQEventSelectedMode)
 {
@@ -20,12 +20,12 @@ typedef NS_ENUM(NSUInteger, BQEventSelectedMode)
     BQEventSelectedModeRecent         =   0,
     
     /**
-     *  侧边栏-最近打开-功能选择.
+     *  侧边栏-收件箱-功能选择.
      */
     BQEventSelectedModeInBox          =   1,
     
     /**
-     *  The user can slide the nav bar of the central view.
+     *  侧边栏-收藏夹-功能选择.
      */
     BQEventSelectedModeCollection     =   2,
     
@@ -38,6 +38,6 @@ typedef NS_ENUM(NSUInteger, BQEventSelectedMode)
 
 @end
 
-@interface BQContentViewController : UIViewController<MSSlidingPanelControllerDelegate, BQLeftSidePanelFunctionDelegate>
+@interface BQIpadHomeContentController : UIViewController<MSSlidingPanelControllerDelegate, BQLeftSidePanelFunctionDelegate>
 
 @end

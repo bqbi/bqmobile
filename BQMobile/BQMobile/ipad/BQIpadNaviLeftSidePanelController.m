@@ -6,15 +6,15 @@
 //  Copyright (c) 2014年 QZ. All rights reserved.
 //
 
-#import "BQLeftSidePanelViewController.h"
+#import "BQIpadNaviLeftSidePanelController.h"
 
 
-@interface BQLeftSidePanelViewController () 
+@interface BQIpadNaviLeftSidePanelController () 
 
 
 @end
 
-@implementation BQLeftSidePanelViewController
+@implementation BQIpadNaviLeftSidePanelController
 
 
 #pragma mark View life cycle

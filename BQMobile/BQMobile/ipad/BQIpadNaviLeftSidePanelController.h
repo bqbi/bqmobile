@@ -8,9 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "SidePanelViewController.h"
-@interface BQLeftSidePanelViewController : SidePanelViewController
 
-
+/*
+ *
+ * Ipad 版本侧边栏导航控制器，主要负责侧边栏内容的展示，以及一些事件的触发
+ *
+ *
+ */
+@interface BQIpadNaviLeftSidePanelController : SidePanelViewController
 
 @end
 

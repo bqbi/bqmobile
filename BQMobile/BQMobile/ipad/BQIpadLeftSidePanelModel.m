@@ -6,15 +6,18 @@
 //  Copyright (c) 2014年 QZ. All rights reserved.
 //
 
-#import "BQLeftSidePanelViewModel.h"
+#import "BQIpadLeftSidePanelModel.h"
 
-@interface BQLeftSidePanelViewModel()
+@interface BQIpadLeftSidePanelModel()
 
 
 @end
 
-@implementation BQLeftSidePanelViewModel
+@implementation BQIpadLeftSidePanelModel
 
+/*
+ * 从某一数据模型读取数据，并封装为section表格块
+ */
 - (void) sectionsFromDatasourceModel:(id)model
 {
     TableViewItem       *itemRecentView;

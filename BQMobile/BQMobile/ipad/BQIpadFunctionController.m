@@ -1,18 +1,18 @@
 //
-//  BQCommonPanelViewController.m
+//  BQFunctionViewController.m
 //  BQMobile
 //
 //  Created by mac on 2014-02-26.
 //  Copyright (c) 2014年 yonyou. All rights reserved.
 //
 
-#import "BQCommonPanelViewController.h"
+#import "BQIpadFunctionController.h"
 
-@interface BQCommonPanelViewController ()
+@interface BQIpadFunctionController ()
 
 @end
 
-@implementation BQCommonPanelViewController
+@implementation BQIpadFunctionController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

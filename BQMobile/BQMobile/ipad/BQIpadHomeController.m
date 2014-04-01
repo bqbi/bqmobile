@@ -6,18 +6,17 @@
 //  Copyright (c) 2014年 QZ. All rights reserved.
 //
 
-#import "BQIpadHomeViewController.h"
-#import "BQLeftSidePanelViewController.h"
-#import "BQNavigationViewController.h"
-#import "BQLeftSidePanelViewModel.h"
+#import "BQIpadHomeController.h"
+#import "BQIpadNaviLeftSidePanelController.h"
+#import "BQIpadLeftSidePanelModel.h"
 #import "Color.h"
-#import "BQContentViewController.h"
+#import "BQIpadHomeContentController.h"
 
-@interface BQIpadHomeViewController ()
+@interface BQIpadHomeController ()
 
 @end
 
-@implementation BQIpadHomeViewController
+@implementation BQIpadHomeController
 
 - (id) init
 {
@@ -37,24 +36,25 @@
     return self;
 }
 
+/*
+ * 加载侧边栏以及主导航控制器
+ */
 - (void) loadControllers
 {
-    BQLeftSidePanelViewModel *leftPanelModel;
-    BQLeftSidePanelViewController *leftPanelViewController;
-    BQNavigationViewController *navigationViewController;
+    BQIpadLeftSidePanelModel            *leftPanelModel;
+    BQIpadNaviLeftSidePanelController   *leftPanelViewController;
+    UINavigationController              *navigationViewController;
     
-    leftPanelModel          = [[BQLeftSidePanelViewModel alloc] init];
-    leftPanelViewController = [[BQLeftSidePanelViewController alloc] init];
+    leftPanelModel          = [[BQIpadLeftSidePanelModel alloc] init];
+    leftPanelViewController = [[BQIpadNaviLeftSidePanelController alloc] init];
     [leftPanelViewController setDelegate:leftPanelModel];
     [leftPanelViewController setHasStateBar:self.hasStateBar];
 
     //
-    BQContentViewController *contentViewController = [[BQContentViewController alloc] init];
+    BQIpadHomeContentController *contentViewController = [[BQIpadHomeContentController alloc] init];
     [leftPanelModel setDelegate:contentViewController];
     
-    navigationViewController = [[BQNavigationViewController alloc] initWithRootViewController:contentViewController];
-    [navigationViewController setHasStateBar:self.hasStateBar];
-
+    navigationViewController = [[UINavigationController alloc] initWithRootViewController:contentViewController];
     [self setLeftPanelController:leftPanelViewController];
     [self setCenterViewController:navigationViewController];
     [self setLeftPanelStatusBarColor:[UIColor menuStatusBarColor]];
