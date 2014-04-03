@@ -52,6 +52,7 @@
 		76B0E2FD18C2DEAA00C5C219 /* UFExpress.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 76B0E2FB18C2DEAA00C5C219 /* UFExpress.bundle */; };
 		76B0E30618C2F24400C5C219 /* BQNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B0E30518C2F24400C5C219 /* BQNavigationController.m */; };
 		76B0F8FB18EE16FF001FB42D /* NavigationBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B0F8FA18EE16FF001FB42D /* NavigationBarButton.m */; };
+		76B0F8FD18EE1DE3001FB42D /* Demo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 76B0F8FC18EE1DE3001FB42D /* Demo.bundle */; };
 		76D99E7418B33643004A9055 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D99E7318B33643004A9055 /* Foundation.framework */; };
 		76D99E7618B33643004A9055 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D99E7518B33643004A9055 /* CoreGraphics.framework */; };
 		76D99E7818B33643004A9055 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D99E7718B33643004A9055 /* UIKit.framework */; };
@@ -165,6 +166,7 @@
 		76B0E30518C2F24400C5C219 /* BQNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQNavigationController.m; sourceTree = "<group>"; };
 		76B0F8F918EE16FF001FB42D /* NavigationBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationBarButton.h; sourceTree = "<group>"; };
 		76B0F8FA18EE16FF001FB42D /* NavigationBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationBarButton.m; sourceTree = "<group>"; };
+		76B0F8FC18EE1DE3001FB42D /* Demo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Demo.bundle; path = Bundles/Demo.bundle; sourceTree = SOURCE_ROOT; };
 		76D99E7018B33643004A9055 /* BQMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BQMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76D99E7318B33643004A9055 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		76D99E7518B33643004A9055 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -422,6 +424,7 @@
 		76D99E7A18B33643004A9055 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				76B0F8FC18EE1DE3001FB42D /* Demo.bundle */,
 				7606CEE718E918BF0087EC33 /* Component.bundle */,
 				76B0E2FA18C2DEAA00C5C219 /* Style.bundle */,
 				76B0E2FB18C2DEAA00C5C219 /* UFExpress.bundle */,
@@ -565,6 +568,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76D99E7E18B33643004A9055 /* InfoPlist.strings in Resources */,
+				76B0F8FD18EE1DE3001FB42D /* Demo.bundle in Resources */,
 				7606CEE818E918BF0087EC33 /* Component.bundle in Resources */,
 				76B0E2FD18C2DEAA00C5C219 /* UFExpress.bundle in Resources */,
 				76D99E8618B33643004A9055 /* Images.xcassets in Resources */,

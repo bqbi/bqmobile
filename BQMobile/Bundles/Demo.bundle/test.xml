@@ -1,0 +1,26 @@
+<bq:composition>
+    
+	<bq:gridLayout column="3" row="5" itemWidth="25%,25%,50%" itemHeight="" itemMargin="5">
+		<bq:gridLayoutItem>
+			<bq:labelObject buddy="desc" text="选择省份" />
+		</bq:gridLayoutItem>
+        
+		<bq:gridLayoutItem colspan="2">
+			<bq:inputText id="desc" name="desc" type="text" validate="required:true" value="" />
+		</bq:gridLayoutItem>
+        
+		<bq:gridLayoutItem colspan="3">
+			<bq:chart />
+		</bq:gridLayoutItem>
+        
+		<bq:gridLayoutItem colspan="2">
+			<bq:chart />
+		</bq:gridLayoutItem>
+        
+		<bq:gridLayoutItem>
+			<bq:chart />
+		</bq:gridLayoutItem>
+        
+	</bq:gridLayout>
+    
+</bq:composition>
