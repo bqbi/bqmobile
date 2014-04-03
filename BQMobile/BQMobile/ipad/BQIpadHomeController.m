@@ -33,25 +33,19 @@
     CGSize windowSize = [[UIScreen mainScreen] bounds].size;
     [self setView:[[UIView alloc] initWithFrame:CGRectMake(0, 0, windowSize.width, windowSize.height)]];
     [[self view] setBackgroundColor:[UIColor centerBackgroundColor]];
-    //
     [self resetDefaultPanelValuesForSide:MSSPSideDisplayedLeft];
 
     // 侧边栏菜单按钮
     [self setSideMenuButton:[NavigationBarButton buttonWithType:NavigationBarButtonTypeMenu]];
-    [[self sideMenuButton] setTarget:[self slidingPanelController]];
-
-    if ([[self slidingPanelController] sideDisplayed] == MSSPSideDisplayedLeft)
-        [[self sideMenuButton] setAction:@selector(closePanel)];
-    else
-        [[self sideMenuButton] setAction:@selector(openLeftPanel)];
+    [[self sideMenuButton] setTarget:self];
+    [[self sideMenuButton] setAction:@selector(openMenuPanel)];
 
     // 导航栏右侧设置按钮
     [self setSettingButton:[NavigationBarButton buttonWithType:NavigationBarButtonTypeMenu]];
-    [[self settingButton] setTarget:self ];
+    [[self settingButton] setTarget:self];
     [[self settingButton] setAction:@selector(openSettingPanel)];
 
     //
-    
     self.navigationItem.title = @"BI 首页";
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:[self sideMenuButton]];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:[self settingButton]];
@@ -105,6 +99,19 @@
     DLog(@"主题导航...");
     [self.navigationController pushViewController:[[BQIpadAnalysisTopicController alloc] init] animated:YES];
 }
+
+#pragma mark - action implementations
+#pragma mark - navigation bar button click function implementation
+- (void) openMenuPanel
+{
+    DLog(@"菜单...");
+    if ([[self slidingPanelController] sideDisplayed] == MSSPSideDisplayedLeft) {
+        [[self slidingPanelController] closePanel];
+    } else {
+        [[self slidingPanelController] openLeftPanel];
+    }
+}
+
 
 #pragma mark - action implementations
 #pragma mark - navigation bar button click function implementation

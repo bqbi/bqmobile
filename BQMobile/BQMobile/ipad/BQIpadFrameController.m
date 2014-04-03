@@ -47,23 +47,19 @@
     BQIpadLeftSideMenuController        *leftPanelViewController;
     UINavigationController              *navigationViewController;
     
-    
-    //
+    // 创建主导航控制器
     BQIpadHomeController *contentViewController = [[BQIpadHomeController alloc] init];
-    //
-    leftPanelModel = [[BQIpadLeftSideMenuModel alloc] initWithFuncDelegate:contentViewController];
-
-    
-    //
-    bqDataSource            = [[BQTableViewDataSource alloc] initWithDataModel:nil andDelegate:leftPanelModel];
-    leftPanelViewController = [[BQIpadLeftSideMenuController alloc] initWithDataSource:bqDataSource];
-    leftPanelViewController.hasStateBar = self.hasStateBar;
-    
-    //
     navigationViewController = [[UINavigationController alloc] initWithRootViewController:contentViewController];
-    [self setLeftPanelController:leftPanelViewController];
     [self setCenterViewController:navigationViewController];
     [self setLeftPanelStatusBarColor:[UIColor menuStatusBarColor]];
+    
+    
+    // 创建左部工具栏
+    leftPanelModel = [[BQIpadLeftSideMenuModel alloc] initWithFuncDelegate:contentViewController];
+    bqDataSource = [[BQTableViewDataSource alloc] initWithDataModel:nil andDelegate:leftPanelModel];
+    leftPanelViewController = [[BQIpadLeftSideMenuController alloc] initWithDataSource:bqDataSource];
+    leftPanelViewController.hasStateBar = self.hasStateBar;
+    [self setLeftPanelController:leftPanelViewController];
     
 
 }
