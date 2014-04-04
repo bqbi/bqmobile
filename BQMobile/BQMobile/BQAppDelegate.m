@@ -11,6 +11,7 @@
 
 #import "BQIpadLoginController.h"
 #import "BQNavigationController.h"
+#import "BQSplashWindowController.h"
 
 @implementation BQAppDelegate
 
@@ -20,7 +21,6 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
 
-    // BOOL isPad = [Common deviceIsIpad];
     if(isPad)
     {
         self.loginController = [[BQIpadLoginController alloc] initWithNibName:nil bundle:nil];
@@ -28,15 +28,26 @@
     }
     else
     {
+        self.navigationController = [[BQNavigationController alloc] initWithRootViewController:[[UIViewController alloc] init]];
+
         NSLog(@" is pad %@", @"NO");
     }
     
-    self.window.rootViewController = self.navigationController;
+    self.window.rootViewController = [[BQSplashWindowController alloc] init];// self.navigationController;
     
-    [self.window addSubview:self.navigationController.view];
+    [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(switchRootViewController:) userInfo:self.navigationController repeats:NO];
+    
+    
     [self.window makeKeyAndVisible];
     
     return YES;
+}
+
+- (void) switchRootViewController:(NSTimer*) timer
+{
+//    UIViewController *rootViewController = (UIViewController*)timer.userInfo;
+    self.window.rootViewController = self.navigationController;
+    [self.window addSubview:self.navigationController.view];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

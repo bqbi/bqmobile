@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0401B31218EE486200049C05 /* BQSplashWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0401B31118EE486200049C05 /* BQSplashWindowController.m */; };
 		042D214218E31E3100E4354C /* BQTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D214118E31E3100E4354C /* BQTableViewController.m */; };
 		042D214818E31EC200E4354C /* TableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D214518E31EC200E4354C /* TableViewItem.m */; };
 		042D214918E31EC200E4354C /* TableViewSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D214718E31EC200E4354C /* TableViewSection.m */; };
@@ -83,6 +84,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0401B31018EE486200049C05 /* BQSplashWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQSplashWindowController.h; sourceTree = "<group>"; };
+		0401B31118EE486200049C05 /* BQSplashWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQSplashWindowController.m; sourceTree = "<group>"; };
 		042D214018E31E3100E4354C /* BQTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQTableViewController.h; sourceTree = "<group>"; };
 		042D214118E31E3100E4354C /* BQTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQTableViewController.m; sourceTree = "<group>"; };
 		042D214318E31E6C00E4354C /* BQDelegateFamily.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQDelegateFamily.h; sourceTree = "<group>"; };
@@ -298,6 +301,8 @@
 				76FDF71818E3C0DF004598D3 /* BQAlertView.m */,
 				76FDF71D18E40A58004598D3 /* BQView.h */,
 				76FDF71E18E40A58004598D3 /* BQView.m */,
+				0401B31018EE486200049C05 /* BQSplashWindowController.h */,
+				0401B31118EE486200049C05 /* BQSplashWindowController.m */,
 			);
 			path = device;
 			sourceTree = "<group>";
@@ -613,6 +618,7 @@
 				04952E6518EAB5DE0068436C /* BQIphoneSystemSettingView.m in Sources */,
 				042D214818E31EC200E4354C /* TableViewItem.m in Sources */,
 				762D153E18EA597100A00570 /* BQIpadLeftSideMenuController.m in Sources */,
+				0401B31218EE486200049C05 /* BQSplashWindowController.m in Sources */,
 				76B07C3F18D92C30000FA58B /* BQCommonUI.m in Sources */,
 				04952E5F18EAB52B0068436C /* BQIphoneAnalysisTopicView.m in Sources */,
 				7633250E18ED00ED00EC5C1B /* MSViewControllerSlidingPanel.m in Sources */,
