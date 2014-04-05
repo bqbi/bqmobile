@@ -11,9 +11,9 @@
 #import "BQCore.h"
 #import "BQComponentPlugin.h"
 
-#define XML_FILE_FLY_COMPONENTS @"META-INF/bq-m-composition.xml"
-#define XML_FILE_FLY_COMPONENTS_ENTITY_PREFIX @"META-INF/entities"
-#define XML_FILE_FLY_COMPONENTS_ATTRIBUTE_PREFIX @"META-INF/entities/attributes"
+#define XML_FILE_BQ_COMPONENTS @"META-INF/bq-m-composition.xml"
+#define XML_FILE_BQ_COMPONENTS_ENTITY_PREFIX @"META-INF/entities"
+#define XML_FILE_BQ_COMPONENTS_ATTRIBUTE_PREFIX @"META-INF/entities/attributes"
 
 @implementation BQComponentFactory
 
@@ -70,15 +70,17 @@ static BQComponentFactory* _sharedComponents = nil;
     
     BQComponentPlugin* plugin = [[BQComponentPlugin alloc] initWithNode:component];
     
-    NSLog(plugin.name);
+    if (plugin.name) {
+        [plugins setObject:plugin forKey:[plugin.name lowercaseString]];
+    }
 }
 
 - (GDataXMLDocument*) getComponentSettingDocument {
-    return [XMLUtils loadXMLFile:resourceBundleAndRelative(@"Component",XML_FILE_FLY_COMPONENTS)];
+    return [XMLUtils loadXMLFile:resourceBundleAndRelative(@"Component",XML_FILE_BQ_COMPONENTS)];
 }
 
 - (GDataXMLDocument*) getComponentDocument:(NSString*)fileName {
-    NSString* relpath = [NSString stringWithFormat:@"%@/%@",XML_FILE_FLY_COMPONENTS_ENTITY_PREFIX,fileName];
+    NSString* relpath = [NSString stringWithFormat:@"%@/%@",XML_FILE_BQ_COMPONENTS_ENTITY_PREFIX,fileName];
     
     BQFileReader* reader = [[BQFileReader alloc]initWithFilePath:resourceBundleAndRelative(@"Component",relpath)];
     NSString* line = nil;
@@ -100,7 +102,7 @@ static BQComponentFactory* _sharedComponents = nil;
 }
 
 - (NSString*) getComponentPart:(NSString*)fileName {
-    NSString* relpath = [NSString stringWithFormat:@"%@/%@%@",XML_FILE_FLY_COMPONENTS_ATTRIBUTE_PREFIX,fileName,@".xml"];
+    NSString* relpath = [NSString stringWithFormat:@"%@/%@%@",XML_FILE_BQ_COMPONENTS_ATTRIBUTE_PREFIX,fileName,@".xml"];
     return [FSUtils readFile:resourceBundleAndRelative(@"Component",relpath)];
 }
 
