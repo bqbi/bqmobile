@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components>
+	<!-- base -->
+	<component>bq-m-base-composition.xml</component>
+    
+    <!-- buttons -->
+	<component>bq-m-pushbutton.xml</component>
+	<component>bq-m-linkbutton.xml</component>
+    
+    <!-- input widgets -->
+	<component>bq-m-inputtext.xml</component>
+    
+    <!-- display widgets -->
+	<component>bq-m-labelobject.xml</component>
+	<component>bq-m-image.xml</component>
+
+</components>

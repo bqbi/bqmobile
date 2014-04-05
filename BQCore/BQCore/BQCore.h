@@ -13,6 +13,7 @@
 #import "FSUtils.h"
 #import "PropertyUtils.h"
 #import "WebUtils.h"
+#import "XMLUtils.h"
 
 #import "BQServerAccess.h"
 #import "BQViewOperateModel.h"

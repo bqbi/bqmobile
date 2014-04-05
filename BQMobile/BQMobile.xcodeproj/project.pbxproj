@@ -25,7 +25,6 @@
 		04952E6518EAB5DE0068436C /* BQIphoneSystemSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04952E6418EAB5DE0068436C /* BQIphoneSystemSettingView.m */; };
 		7606CEE418E90B150087EC33 /* BQComponentFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7606CEE318E90B150087EC33 /* BQComponentFactory.m */; };
 		7606CEE818E918BF0087EC33 /* Component.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7606CEE718E918BF0087EC33 /* Component.bundle */; };
-		7606CEEB18E965680087EC33 /* BQUIButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7606CEEA18E965680087EC33 /* BQUIButtonView.m */; };
 		7615ECB518B346FF00F1E344 /* libBQDashboard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7615ECB418B346FF00F1E344 /* libBQDashboard.a */; };
 		76234A6418C3851900FE3894 /* application.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 76234A6318C3851900FE3894 /* application.cfg */; };
 		762D153518EA597100A00570 /* BQIpadAnalysisTopicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 762D151E18EA597100A00570 /* BQIpadAnalysisTopicController.m */; };
@@ -42,10 +41,10 @@
 		76315D5718E0027A00199AFD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76315D5618E0027A00199AFD /* CFNetwork.framework */; };
 		76315D5918E0028E00199AFD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76315D5818E0028E00199AFD /* MobileCoreServices.framework */; };
 		76315D5B18E0029A00199AFD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76315D5A18E0029A00199AFD /* SystemConfiguration.framework */; };
-		76315D5D18E002AD00199AFD /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 76315D5C18E002AD00199AFD /* libxml2.dylib */; };
 		76315D5F18E002B700199AFD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 76315D5E18E002B700199AFD /* libz.dylib */; };
 		7633250D18ED00ED00EC5C1B /* MSSlidingPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7633250A18ED00ED00EC5C1B /* MSSlidingPanelController.m */; };
 		7633250E18ED00ED00EC5C1B /* MSViewControllerSlidingPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7633250C18ED00ED00EC5C1B /* MSViewControllerSlidingPanel.m */; };
+		768DD41218F038A900A8AE61 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 76315D5C18E002AD00199AFD /* libxml2.dylib */; };
 		76AC1E2218C279980063ED32 /* BQLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76AC1E2118C279980063ED32 /* BQLoginController.m */; };
 		76B07C3F18D92C30000FA58B /* BQCommonUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B07C3E18D92C30000FA58B /* BQCommonUI.m */; };
 		76B07C4218D93EA4000FA58B /* BQLoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B07C4118D93EA4000FA58B /* BQLoadView.m */; };
@@ -54,6 +53,7 @@
 		76B0E30618C2F24400C5C219 /* BQNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B0E30518C2F24400C5C219 /* BQNavigationController.m */; };
 		76B0F8FB18EE16FF001FB42D /* NavigationBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B0F8FA18EE16FF001FB42D /* NavigationBarButton.m */; };
 		76B0F8FD18EE1DE3001FB42D /* Demo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 76B0F8FC18EE1DE3001FB42D /* Demo.bundle */; };
+		76CD375018EF82AE0028F425 /* BQComponentPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CD374F18EF82AE0028F425 /* BQComponentPlugin.m */; };
 		76D99E7418B33643004A9055 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D99E7318B33643004A9055 /* Foundation.framework */; };
 		76D99E7618B33643004A9055 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D99E7518B33643004A9055 /* CoreGraphics.framework */; };
 		76D99E7818B33643004A9055 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D99E7718B33643004A9055 /* UIKit.framework */; };
@@ -121,8 +121,6 @@
 		7606CEE218E90B150087EC33 /* BQComponentFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQComponentFactory.h; sourceTree = "<group>"; };
 		7606CEE318E90B150087EC33 /* BQComponentFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQComponentFactory.m; sourceTree = "<group>"; };
 		7606CEE718E918BF0087EC33 /* Component.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Component.bundle; path = Bundles/Component.bundle; sourceTree = SOURCE_ROOT; };
-		7606CEE918E965680087EC33 /* BQUIButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQUIButtonView.h; sourceTree = "<group>"; };
-		7606CEEA18E965680087EC33 /* BQUIButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQUIButtonView.m; sourceTree = "<group>"; };
 		7615ECB418B346FF00F1E344 /* libBQDashboard.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBQDashboard.a; path = "../Bin/BQMobile/Build/Products/Debug-iphoneos/libBQDashboard.a"; sourceTree = "<group>"; };
 		76234A6318C3851900FE3894 /* application.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = application.cfg; path = Bundles/application.cfg; sourceTree = SOURCE_ROOT; };
 		762D151D18EA597100A00570 /* BQIpadAnalysisTopicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQIpadAnalysisTopicController.h; sourceTree = "<group>"; };
@@ -170,6 +168,8 @@
 		76B0F8F918EE16FF001FB42D /* NavigationBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationBarButton.h; sourceTree = "<group>"; };
 		76B0F8FA18EE16FF001FB42D /* NavigationBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationBarButton.m; sourceTree = "<group>"; };
 		76B0F8FC18EE1DE3001FB42D /* Demo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Demo.bundle; path = Bundles/Demo.bundle; sourceTree = SOURCE_ROOT; };
+		76CD374E18EF82AE0028F425 /* BQComponentPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQComponentPlugin.h; sourceTree = "<group>"; };
+		76CD374F18EF82AE0028F425 /* BQComponentPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQComponentPlugin.m; sourceTree = "<group>"; };
 		76D99E7018B33643004A9055 /* BQMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BQMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76D99E7318B33643004A9055 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		76D99E7518B33643004A9055 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -194,7 +194,6 @@
 		76F284E018E7954E00976CF6 /* BQServerAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQServerAccess.h; sourceTree = "<group>"; };
 		76F284E118E7954E00976CF6 /* BQViewOperateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQViewOperateModel.h; sourceTree = "<group>"; };
 		76F284E218E7954E00976CF6 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
-		76F284E318E7954E00976CF6 /* ElTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElTool.h; sourceTree = "<group>"; };
 		76F284E418E7954E00976CF6 /* FSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSUtils.h; sourceTree = "<group>"; };
 		76F284E518E7954F00976CF6 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
 		76F284E618E7954F00976CF6 /* PropertyUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyUtils.h; sourceTree = "<group>"; };
@@ -212,8 +211,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				768DD41218F038A900A8AE61 /* libxml2.dylib in Frameworks */,
 				76315D5F18E002B700199AFD /* libz.dylib in Frameworks */,
-				76315D5D18E002AD00199AFD /* libxml2.dylib in Frameworks */,
 				7615ECB518B346FF00F1E344 /* libBQDashboard.a in Frameworks */,
 				76D99F1018B33757004A9055 /* libBQCore.a in Frameworks */,
 				76315D5718E0027A00199AFD /* CFNetwork.framework in Frameworks */,
@@ -471,8 +470,8 @@
 				76F284EC18E7F67400976CF6 /* BQTemplateResolver.m */,
 				7606CEE218E90B150087EC33 /* BQComponentFactory.h */,
 				7606CEE318E90B150087EC33 /* BQComponentFactory.m */,
-				7606CEE918E965680087EC33 /* BQUIButtonView.h */,
-				7606CEEA18E965680087EC33 /* BQUIButtonView.m */,
+				76CD374E18EF82AE0028F425 /* BQComponentPlugin.h */,
+				76CD374F18EF82AE0028F425 /* BQComponentPlugin.m */,
 			);
 			name = components;
 			path = BQMobile/components;
@@ -486,7 +485,6 @@
 				76F284E018E7954E00976CF6 /* BQServerAccess.h */,
 				76F284E118E7954E00976CF6 /* BQViewOperateModel.h */,
 				76F284E218E7954E00976CF6 /* Common.h */,
-				76F284E318E7954E00976CF6 /* ElTool.h */,
 				76F284E418E7954E00976CF6 /* FSUtils.h */,
 				76F284E518E7954F00976CF6 /* GDataXMLNode.h */,
 				76F284E618E7954F00976CF6 /* PropertyUtils.h */,
@@ -622,13 +620,13 @@
 				76B07C3F18D92C30000FA58B /* BQCommonUI.m in Sources */,
 				04952E5F18EAB52B0068436C /* BQIphoneAnalysisTopicView.m in Sources */,
 				7633250E18ED00ED00EC5C1B /* MSViewControllerSlidingPanel.m in Sources */,
-				7606CEEB18E965680087EC33 /* BQUIButtonView.m in Sources */,
 				76B07C4218D93EA4000FA58B /* BQLoadView.m in Sources */,
 				04952E4718EA99F80068436C /* BQTableViewDataSource.m in Sources */,
 				04952E5018EAB2A90068436C /* BQIphoneLoginController.m in Sources */,
 				762D153518EA597100A00570 /* BQIpadAnalysisTopicController.m in Sources */,
 				762D153918EA597100A00570 /* BQIpadHomeController.m in Sources */,
 				76D99E8018B33643004A9055 /* main.m in Sources */,
+				76CD375018EF82AE0028F425 /* BQComponentPlugin.m in Sources */,
 				04952E5918EAB4360068436C /* BQIphoneLeftSizeMenuController.m in Sources */,
 				762D153A18EA597100A00570 /* BQIpadFrameController.m in Sources */,
 				762D153D18EA597100A00570 /* BQIpadLoginView.m in Sources */,
@@ -767,7 +765,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					/usr/include/libxml2,
+					"${SDK_DIR}/usr/include/libxml2",
 				);
 				INFOPLIST_FILE = "BQMobile/BQMobile-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
@@ -775,6 +773,7 @@
 					"/Users/panbasten/Desktop/WorkSpace/a/Bin/BQMobile/Build/Products/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -791,7 +790,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					/usr/include/libxml2,
+					"${SDK_DIR}/usr/include/libxml2",
 				);
 				INFOPLIST_FILE = "BQMobile/BQMobile-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
@@ -799,6 +798,7 @@
 					"/Users/panbasten/Desktop/WorkSpace/a/Bin/BQMobile/Build/Products/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -892,7 +892,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					/usr/include/libxml2,
+					"${SDK_DIR}/usr/include/libxml2",
 				);
 				INFOPLIST_FILE = "BQMobile/BQMobile-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
@@ -900,6 +900,7 @@
 					"/Users/panbasten/Desktop/WorkSpace/a/Bin/BQMobile/Build/Products/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Distribution;

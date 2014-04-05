@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component id="bq:LabelObject">
+	<classname>BQCOMLabelObjectResolver</classname>
+	<category>Display</category>
+	
+	<attributes>
+		&bq-m-attribute-object-name
+		&bq-m-attribute-enabled
+		
+		&bq-m-attribute-buddy
+	</attributes>
+	
+</component>

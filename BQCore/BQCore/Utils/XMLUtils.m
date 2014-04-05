@@ -99,6 +99,30 @@
 }
 
 /*
+ *  通过标签名称，获得唯一命名子节点的集合
+ *  @param node
+ *  @param tagName
+ *
+ */
++ (GDataXMLElement*)getSubNode:(GDataXMLElement*)node withTagName:(NSString*)tagName {
+    if (!node) {
+        return nil;
+    }
+    
+    NSArray* children = [node children];
+    GDataXMLElement* childNode;
+    
+    for (int i = 0; i < [children count]; i++) {
+        childNode = [children objectAtIndex:i];
+        if ([[childNode name] isEqualToString:tagName]) {
+            return childNode;
+        }
+    }
+    
+    return nil;
+}
+
+/*
  *  通过标签名称，获得命名子节点的集合
  *  @param node
  *  @param tagName

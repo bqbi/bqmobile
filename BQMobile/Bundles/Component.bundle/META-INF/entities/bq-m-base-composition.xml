@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component id="bq:Composition">
+	<classname>BQCOMCompositionResolver</classname>
+	<category>Base</category>
+	<ignoreInDesigner>true</ignoreInDesigner>
+	<container>true</container>
+</component>

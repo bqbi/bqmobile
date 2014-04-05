@@ -8,6 +8,8 @@
 
 #import "BQIpadAnalysisTopicController.h"
 
+#import "BQCore.h"
+#import "BQComponentFactory.h"
 #import "BQComponentView.h"
 
 
@@ -52,6 +54,7 @@
     
     // 解析xml，创建组件视图集合
     // TODO
+    [BQComponentFactory sharedComponents];
     
     
     // 将组件加入到contentView中

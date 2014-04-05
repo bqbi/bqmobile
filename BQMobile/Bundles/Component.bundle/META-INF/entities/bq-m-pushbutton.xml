@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component id="bq:PushButton">
+	<classname>BQCOMPushButtonResolver</classname>
+	<category>Buttons</category>
+	
+	<attributes>
+		&bq-m-attribute-object-name
+		&bq-m-attribute-enabled
+	</attributes>
+</component>

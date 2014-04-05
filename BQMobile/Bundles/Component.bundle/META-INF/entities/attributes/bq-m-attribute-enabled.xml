@@ -1,0 +1,5 @@
+<attribute>
+	<name>enabled</name>
+	<required>false</required>
+	<type>Boolean</type>
+</attribute>

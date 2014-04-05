@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component id="bq:InputText">
+	<classname>BQCOMInputTextResolver</classname>
+	<category>Input</category>
+	
+	<attributes>
+		&bq-m-attribute-object-name
+		&bq-m-attribute-enabled
+	</attributes>
+	
+</component>

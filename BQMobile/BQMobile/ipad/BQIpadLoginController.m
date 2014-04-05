@@ -7,7 +7,7 @@
 //
 
 #import "BQIpadLoginController.h"
-#import "Common.h"
+#import "BQCore.h"
 #import "BQIpadFrameController.h"
 #import "BQIpadAnalysisTopicController.h"
 #import "BQCommonUI.h"

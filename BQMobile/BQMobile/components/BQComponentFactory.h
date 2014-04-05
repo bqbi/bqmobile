@@ -10,4 +10,9 @@
 
 @interface BQComponentFactory : NSObject
 
+// 组件插件集合
+@property (nonatomic, readonly) NSDictionary* plugins;
+
++ (BQComponentFactory*) sharedComponents;
+
 @end

@@ -77,7 +77,6 @@
 		76315D4B18E001C600199AFD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76315D4A18E001C600199AFD /* SystemConfiguration.framework */; };
 		76315D4D18E001DE00199AFD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76315D4C18E001DE00199AFD /* MobileCoreServices.framework */; };
 		76315D5318E0023300199AFD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 76315D5218E0023300199AFD /* libz.dylib */; };
-		76315D5518E0025400199AFD /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 76315D5418E0025400199AFD /* libxml2.dylib */; };
 		76315D6318E024EB00199AFD /* BQViewOperateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 76315D6218E024EB00199AFD /* BQViewOperateModel.m */; };
 		76315D6618E032A800199AFD /* WebUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 76315D6518E032A800199AFD /* WebUtils.m */; };
 		76315D6918E033A300199AFD /* BQServerAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = 76315D6818E033A300199AFD /* BQServerAccess.m */; };
@@ -87,6 +86,9 @@
 		76641F9718B592500015B93B /* BQCore.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 7676D8E618B4A94E0089548A /* BQCore.h */; };
 		76641F9818B592580015B93B /* Common.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 7615ECBD18B3474800F1E344 /* Common.h */; };
 		7676D8EA18B4AA070089548A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7676D8E918B4AA070089548A /* UIKit.framework */; };
+		768DD41118F00F9800A8AE61 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 76315D5418E0025400199AFD /* libxml2.dylib */; };
+		768DD41318F03A2400A8AE61 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F284DA18E70DAC00976CF6 /* GDataXMLNode.m */; };
+		768DD41418F03A3400A8AE61 /* BQViewOperateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 76315D6218E024EB00199AFD /* BQViewOperateModel.m */; };
 		76AC1E1818C243CF0063ED32 /* BQContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 76AC1E1718C243CF0063ED32 /* BQContext.m */; };
 		76AC1E1918C243E40063ED32 /* BQContext.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 76AC1E1618C243CF0063ED32 /* BQContext.h */; };
 		76AC1E1F18C268190063ED32 /* FSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 76AC1E1E18C268190063ED32 /* FSUtils.m */; };
@@ -281,7 +283,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76315D5518E0025400199AFD /* libxml2.dylib in Frameworks */,
+				768DD41118F00F9800A8AE61 /* libxml2.dylib in Frameworks */,
 				76315D5318E0023300199AFD /* libz.dylib in Frameworks */,
 				76F284D118E6765B00976CF6 /* JavaScriptCore.framework in Frameworks */,
 				76315D4D18E001DE00199AFD /* MobileCoreServices.framework in Frameworks */,
@@ -713,6 +715,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				768DD41418F03A3400A8AE61 /* BQViewOperateModel.m in Sources */,
+				768DD41318F03A2400A8AE61 /* GDataXMLNode.m in Sources */,
 				76315D6618E032A800199AFD /* WebUtils.m in Sources */,
 				042D360A18E3AFDC00E4354C /* api.c in Sources */,
 				042D361018E3AFDC00E4354C /* tokenizer.c in Sources */,
@@ -889,7 +893,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					/usr/include/libxml2,
+					"${SDK_DIR}/usr/include/libxml2",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -902,7 +906,6 @@
 					"/Users/mac/Desktop/workspaces/bqmobile/BQCore/BQCore/code/ios/MyTestDemo/Build/Products/Release-iphonesimulator",
 					"/Users/mac/Desktop/workspaces/bqmobile/BQCore/BQCore/code/ios/pcre/Build/Products/Release-iphonesimulator",
 					/Users/mac/Desktop/workspaces/bqmobile/BQCore/BQCore/code/kel/lib,
-					"/Users/mac/Desktop/workspaces/bqmobile/BQCore/BQCore/code/kel副本/lib",
 					/Users/mac/Desktop/workspaces/bqmobile/BQCore/BQCore/code/libel/Build/Products/Release,
 					"/Users/mac/Desktop/workspaces/bqmobile/BQCore/BQCore/code/libupnp-1.6.19/ixml/.libs",
 					"/Users/mac/Desktop/workspaces/bqmobile/BQCore/BQCore/code/libupnp-1.6.19/threadutil/.libs",
@@ -923,7 +926,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					/usr/include/libxml2,
+					"${SDK_DIR}/usr/include/libxml2",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -936,7 +939,6 @@
 					"/Users/mac/Desktop/workspaces/bqmobile/BQCore/BQCore/code/ios/MyTestDemo/Build/Products/Release-iphonesimulator",
 					"/Users/mac/Desktop/workspaces/bqmobile/BQCore/BQCore/code/ios/pcre/Build/Products/Release-iphonesimulator",
 					/Users/mac/Desktop/workspaces/bqmobile/BQCore/BQCore/code/kel/lib,
-					"/Users/mac/Desktop/workspaces/bqmobile/BQCore/BQCore/code/kel副本/lib",
 					/Users/mac/Desktop/workspaces/bqmobile/BQCore/BQCore/code/libel/Build/Products/Release,
 					"/Users/mac/Desktop/workspaces/bqmobile/BQCore/BQCore/code/libupnp-1.6.19/ixml/.libs",
 					"/Users/mac/Desktop/workspaces/bqmobile/BQCore/BQCore/code/libupnp-1.6.19/threadutil/.libs",

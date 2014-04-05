@@ -1,0 +1,5 @@
+<attribute>
+	<name>objectName</name>
+	<required>false</required>
+	<type>String</type>
+</attribute>

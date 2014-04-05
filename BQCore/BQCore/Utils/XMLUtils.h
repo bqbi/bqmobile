@@ -44,6 +44,14 @@
 + (int)countNodes:(GDataXMLElement*)node withTagName:(NSString*)tagName;
 
 /*
+ *  通过标签名称，获得唯一命名子节点的集合
+ *  @param node
+ *  @param tagName
+ *
+ */
++ (GDataXMLElement*)getSubNode:(GDataXMLElement*)node withTagName:(NSString*)tagName;
+
+/*
  *  通过标签名称，获得命名子节点的集合
  *  @param node
  *  @param tagName
