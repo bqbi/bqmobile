@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class GDataXMLElement;
+
 @interface BQComponentPlugin : NSObject
 
 @property (nonatomic, readonly) NSString* name;
@@ -25,6 +27,6 @@
 @property (nonatomic, readonly) NSArray* signals;
 @property (nonatomic, readonly) NSArray* slots;
 
-
+- (id) initWithNode:(GDataXMLElement*) node;
 
 @end

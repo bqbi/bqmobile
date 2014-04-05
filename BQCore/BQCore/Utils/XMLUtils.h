@@ -19,6 +19,12 @@
 + (GDataXMLDocument*)loadXMLFile:(NSString*)xmlPath;
 
 /*
+ *  通过xml文件字符串加载XML对象
+ *  @param xmlString
+ */
++ (GDataXMLDocument*)loadXMLString:(NSString *)xmlString;
+
+/*
  *  通过标签名称，获得命名子节点的字符值
  *  @param node
  *  @param tagName

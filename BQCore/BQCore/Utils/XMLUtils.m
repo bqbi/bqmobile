@@ -16,6 +16,14 @@
  */
 + (GDataXMLDocument*)loadXMLFile:(NSString*)xmlPath {
     NSString* xmlString = [NSString stringWithContentsOfFile:xmlPath encoding:NSUTF8StringEncoding error:nil];
+    return [self loadXMLString:xmlString];
+}
+
+/*
+ *  通过xml文件字符串加载XML对象
+ *  @param xmlString
+ */
++ (GDataXMLDocument*)loadXMLString:(NSString *)xmlString {
     GDataXMLDocument* xmlDoc = [[GDataXMLDocument alloc] initWithXMLString:xmlString options:0 error:nil];
     return xmlDoc;
 }

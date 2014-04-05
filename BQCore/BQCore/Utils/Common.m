@@ -92,6 +92,79 @@
 }
 
 /*
+ *  判断是否一个字符被认为是空白
+ *  本系统中认为空格、制表符、换行、回车都认为是空白
+ *  c - 字符
+ */
++ (BOOL) isSpace:(char)c {
+    return c == ' ' || c == '\t' || c == '\r' || c == '\n';
+}
+
+/*
+ *  去除字符串左部的空白
+ *  string - 字符串
+ *
+ */
++ (NSString*) ltrim:(NSString*)string {
+    if (string == nil) {
+        return nil;
+    }
+    
+    NSInteger max = [string length] - 1;
+    NSInteger min = 0;
+    
+    while (min <= max && [self isSpace:[string characterAtIndex:min]]) {
+        min++;
+    }
+    
+    return [string substringWithRange:NSMakeRange(min, (max - min + 1))];
+}
+
+/*
+ *  去除字符串右部的空白
+ *  string - 字符串
+ *
+ */
++ (NSString*) rtrim:(NSString*)string {
+    if (string == nil) {
+        return nil;
+    }
+    
+    NSInteger max = [string length] - 1;
+    NSInteger min = 0;
+    
+    while (max >= 0 && [self isSpace:[string characterAtIndex:max]]) {
+        max--;
+    }
+    
+    return [string substringWithRange:NSMakeRange(min, (max - min + 1))];
+}
+
+/*
+ *  去除字符串左右的空白
+ *  string - 字符串
+ *
+ */
++ (NSString*) trim:(NSString*)string {
+    if (string == nil) {
+        return nil;
+    }
+    
+    NSInteger max = [string length] - 1;
+    NSInteger min = 0;
+    
+    while (min <= max && [self isSpace:[string characterAtIndex:min]]) {
+        min++;
+    }
+    
+    while (max >= 0 && [self isSpace:[string characterAtIndex:max]]) {
+        max--;
+    }
+    
+    return [string substringWithRange:NSMakeRange(min, (max - min + 1))];
+}
+
+/*
  *  去除空格
  *  string - 字符串
  */

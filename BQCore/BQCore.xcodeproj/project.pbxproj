@@ -89,6 +89,8 @@
 		768DD41118F00F9800A8AE61 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 76315D5418E0025400199AFD /* libxml2.dylib */; };
 		768DD41318F03A2400A8AE61 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F284DA18E70DAC00976CF6 /* GDataXMLNode.m */; };
 		768DD41418F03A3400A8AE61 /* BQViewOperateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 76315D6218E024EB00199AFD /* BQViewOperateModel.m */; };
+		7694D65018F0516E00195CEC /* BQFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7694D64F18F0516E00195CEC /* BQFileReader.m */; };
+		7694D65118F0541B00195CEC /* BQFileReader.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 7694D64E18F0516E00195CEC /* BQFileReader.h */; };
 		76AC1E1818C243CF0063ED32 /* BQContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 76AC1E1718C243CF0063ED32 /* BQContext.m */; };
 		76AC1E1918C243E40063ED32 /* BQContext.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 76AC1E1618C243CF0063ED32 /* BQContext.h */; };
 		76AC1E1F18C268190063ED32 /* FSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 76AC1E1E18C268190063ED32 /* FSUtils.m */; };
@@ -116,6 +118,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				7694D65118F0541B00195CEC /* BQFileReader.h in Copy Files */,
 				048AC37818E8F59C00820A42 /* XMLUtils.h in Copy Files */,
 				76F284DC18E792EC00976CF6 /* GDataXMLNode.h in Copy Files */,
 				76315D6A18E039DE00199AFD /* BQServerAccess.h in Copy Files */,
@@ -267,6 +270,8 @@
 		76315D6818E033A300199AFD /* BQServerAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQServerAccess.m; sourceTree = "<group>"; };
 		7676D8E618B4A94E0089548A /* BQCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQCore.h; sourceTree = "<group>"; };
 		7676D8E918B4AA070089548A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7694D64E18F0516E00195CEC /* BQFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQFileReader.h; sourceTree = "<group>"; };
+		7694D64F18F0516E00195CEC /* BQFileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQFileReader.m; sourceTree = "<group>"; };
 		76AC1E1618C243CF0063ED32 /* BQContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQContext.h; sourceTree = "<group>"; };
 		76AC1E1718C243CF0063ED32 /* BQContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQContext.m; sourceTree = "<group>"; };
 		76AC1E1D18C268190063ED32 /* FSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSUtils.h; sourceTree = "<group>"; };
@@ -415,6 +420,7 @@
 		7615EC9018B346C800F1E344 /* BQCore */ = {
 			isa = PBXGroup;
 			children = (
+				7694D64D18F0513C00195CEC /* FS */,
 				76F284D818E70DAC00976CF6 /* XML */,
 				042D35F118E3AFDC00E4354C /* EL */,
 				042D35B618E3AEF200E4354C /* PCRE */,
@@ -622,6 +628,16 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		7694D64D18F0513C00195CEC /* FS */ = {
+			isa = PBXGroup;
+			children = (
+				7694D64E18F0516E00195CEC /* BQFileReader.h */,
+				7694D64F18F0516E00195CEC /* BQFileReader.m */,
+			);
+			name = FS;
+			path = BQCore/FS;
+			sourceTree = SOURCE_ROOT;
+		};
 		76F284D818E70DAC00976CF6 /* XML */ = {
 			isa = PBXGroup;
 			children = (
@@ -738,6 +754,7 @@
 				76F284EA18E7970E00976CF6 /* XMLUtils.m in Sources */,
 				042D35E918E3AEF200E4354C /* pcre_string_utils.c in Sources */,
 				042D35DA18E3AEF200E4354C /* pcre_chartables.c in Sources */,
+				7694D65018F0516E00195CEC /* BQFileReader.m in Sources */,
 				042D35EA18E3AEF200E4354C /* pcre_study.c in Sources */,
 				042D360F18E3AFDC00E4354C /* parser.c in Sources */,
 				042D35E518E3AEF200E4354C /* pcre_newline.c in Sources */,

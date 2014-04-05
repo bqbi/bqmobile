@@ -8,6 +8,9 @@
 
 #import "BQComponentPlugin.h"
 
+#import "GDataXMLNode.h"
+#import "XMLUtils.h"
+
 @implementation BQComponentPlugin
 
 @synthesize name;
@@ -33,6 +36,16 @@
         attributesMap = [[NSMutableDictionary alloc] init];
         signals = [[NSMutableArray alloc] init];
         slots = [[NSMutableArray alloc] init];
+    }
+    
+    return self;
+}
+
+- (id) initWithNode:(GDataXMLElement*) node {
+    if (self = [self init]) {
+        if (node) {
+            name = [XMLUtils getAttributeValue:node withAttributeName:@"id"];
+        }
     }
     
     return self;

@@ -15,6 +15,8 @@
 #import "WebUtils.h"
 #import "XMLUtils.h"
 
+#import "BQFileReader.h"
+
 #import "BQServerAccess.h"
 #import "BQViewOperateModel.h"
 

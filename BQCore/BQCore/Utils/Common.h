@@ -51,6 +51,34 @@
 + (BOOL) isStringEmpty:(NSString*)string;
 
 /*
+ *  判断是否一个字符被认为是空白
+ *  本系统中认为空格、制表符、换行、回车都认为是空白
+ *  c - 字符
+ */
++ (BOOL) isSpace:(char)c;
+
+/*
+ *  去除字符串左部的空白
+ *  string - 字符串
+ *
+ */
++ (NSString*) ltrim:(NSString*)string;
+
+/*
+ *  去除字符串右部的空白
+ *  string - 字符串
+ *
+ */
++ (NSString*) rtrim:(NSString*)string;
+
+/*
+ *  去除字符串左右的空白
+ *  string - 字符串
+ *
+ */
++ (NSString*) trim:(NSString*)string;
+
+/*
  *  去除空格
  *  string - 字符串
  */

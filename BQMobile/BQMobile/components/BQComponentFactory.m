@@ -12,8 +12,8 @@
 #import "BQComponentPlugin.h"
 
 #define XML_FILE_FLY_COMPONENTS @"META-INF/bq-m-composition.xml"
-#define XML_FILE_FLY_COMPONENTS_ENTITY_PREFIX @"META-INF/entities/"
-#define XML_FILE_FLY_COMPONENTS_ATTRIBUTE_PREFIX @"META-INF/entities/attributes/"
+#define XML_FILE_FLY_COMPONENTS_ENTITY_PREFIX @"META-INF/entities"
+#define XML_FILE_FLY_COMPONENTS_ATTRIBUTE_PREFIX @"META-INF/entities/attributes"
 
 @implementation BQComponentFactory
 
@@ -68,8 +68,9 @@ static BQComponentFactory* _sharedComponents = nil;
     GDataXMLDocument* document = [self getComponentDocument:componentFileName];
     GDataXMLElement* component = [document rootElement];
     
-    BQComponentPlugin* plugin = [[BQComponentPlugin alloc] init];
+    BQComponentPlugin* plugin = [[BQComponentPlugin alloc] initWithNode:component];
     
+    NSLog(plugin.name);
 }
 
 - (GDataXMLDocument*) getComponentSettingDocument {
@@ -78,7 +79,29 @@ static BQComponentFactory* _sharedComponents = nil;
 
 - (GDataXMLDocument*) getComponentDocument:(NSString*)fileName {
     NSString* relpath = [NSString stringWithFormat:@"%@/%@",XML_FILE_FLY_COMPONENTS_ENTITY_PREFIX,fileName];
-    return [XMLUtils loadXMLFile:resourceBundleAndRelative(@"Component",relpath)];
+    
+    BQFileReader* reader = [[BQFileReader alloc]initWithFilePath:resourceBundleAndRelative(@"Component",relpath)];
+    NSString* line = nil;
+    NSMutableArray* arr = [[NSMutableArray alloc]init];
+    while ((line = [reader readLine])) {
+        line = [Common trim:line];
+        
+        if (line == nil) {
+            continue;
+        }
+        
+        if ([line hasPrefix:@"&"]) {
+            line = [self getComponentPart:[line substringFromIndex:1]];
+        }
+        [arr addObject:line];
+    }
+    
+    return [XMLUtils loadXMLString:[arr componentsJoinedByString:@""]];
+}
+
+- (NSString*) getComponentPart:(NSString*)fileName {
+    NSString* relpath = [NSString stringWithFormat:@"%@/%@%@",XML_FILE_FLY_COMPONENTS_ATTRIBUTE_PREFIX,fileName,@".xml"];
+    return [FSUtils readFile:resourceBundleAndRelative(@"Component",relpath)];
 }
 
 @end
