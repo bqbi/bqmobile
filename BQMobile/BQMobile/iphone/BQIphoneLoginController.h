@@ -7,7 +7,11 @@
 //
 
 #import "BQLoginController.h"
-
-@interface BQIphoneLoginController : BQLoginController<UIAlertViewDelegate,UIActionSheetDelegate,UITextFieldDelegate>
-
+#import "BQIphoneLoginView.h"
+@interface BQIphoneLoginController : BQLoginController<UIAlertViewDelegate,UIActionSheetDelegate,UITextFieldDelegate,BQIphoneLoginViewDelegate> {
+    
+    BQIphoneLoginView* loginView; //登录首页
+    
+    UIInterfaceOrientation orientation; // 当前屏幕位置
+}
 @end

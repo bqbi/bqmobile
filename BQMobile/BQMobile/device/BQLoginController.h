@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BQLayoutSetting.h"
 
 @interface BQLoginController : UIViewController
 

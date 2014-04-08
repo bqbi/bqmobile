@@ -12,6 +12,8 @@
 		042D214818E31EC200E4354C /* TableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D214518E31EC200E4354C /* TableViewItem.m */; };
 		042D214918E31EC200E4354C /* TableViewSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D214718E31EC200E4354C /* TableViewSection.m */; };
 		042D214C18E31EEC00E4354C /* Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D214B18E31EEC00E4354C /* Color.m */; };
+		043DF85818F38DA200297627 /* BQButtonSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 043DF85718F38DA200297627 /* BQButtonSwitch.m */; };
+		043DF85D18F3CF1D00297627 /* BQImageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 043DF85C18F3CF1D00297627 /* BQImageTextView.m */; };
 		04952E4118EA8B180068436C /* BQIpadSystemSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04952E4018EA8B180068436C /* BQIpadSystemSettingView.m */; };
 		04952E4718EA99F80068436C /* BQTableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 04952E4618EA99F80068436C /* BQTableViewDataSource.m */; };
 		04952E4D18EAB2460068436C /* BQIphoneLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04952E4C18EAB2460068436C /* BQIphoneLoginView.m */; };
@@ -96,6 +98,11 @@
 		042D214A18E31EEC00E4354C /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
 		042D214B18E31EEC00E4354C /* Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Color.m; sourceTree = "<group>"; };
 		042D362018E3BF9200E4354C /* BQDashboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQDashboard.h; sourceTree = "<group>"; };
+		043DF85618F38DA200297627 /* BQButtonSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQButtonSwitch.h; sourceTree = "<group>"; };
+		043DF85718F38DA200297627 /* BQButtonSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQButtonSwitch.m; sourceTree = "<group>"; };
+		043DF85A18F39F5800297627 /* BQLayoutSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQLayoutSetting.h; sourceTree = "<group>"; };
+		043DF85B18F3CF1D00297627 /* BQImageTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQImageTextView.h; sourceTree = "<group>"; };
+		043DF85C18F3CF1D00297627 /* BQImageTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQImageTextView.m; sourceTree = "<group>"; };
 		04952E3F18EA8B180068436C /* BQIpadSystemSettingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQIpadSystemSettingView.h; sourceTree = "<group>"; };
 		04952E4018EA8B180068436C /* BQIpadSystemSettingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQIpadSystemSettingView.m; sourceTree = "<group>"; };
 		04952E4518EA99F80068436C /* BQTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQTableViewDataSource.h; sourceTree = "<group>"; };
@@ -288,6 +295,8 @@
 		76AC1E0D18C23B2A0063ED32 /* device */ = {
 			isa = PBXGroup;
 			children = (
+				043DF85618F38DA200297627 /* BQButtonSwitch.h */,
+				043DF85718F38DA200297627 /* BQButtonSwitch.m */,
 				76AC1E2018C279980063ED32 /* BQLoginController.h */,
 				76AC1E2118C279980063ED32 /* BQLoginController.m */,
 				76B0E30418C2F24400C5C219 /* BQNavigationController.h */,
@@ -302,6 +311,9 @@
 				76FDF71E18E40A58004598D3 /* BQView.m */,
 				0401B31018EE486200049C05 /* BQSplashWindowController.h */,
 				0401B31118EE486200049C05 /* BQSplashWindowController.m */,
+				043DF85A18F39F5800297627 /* BQLayoutSetting.h */,
+				043DF85B18F3CF1D00297627 /* BQImageTextView.h */,
+				043DF85C18F3CF1D00297627 /* BQImageTextView.m */,
 			);
 			path = device;
 			sourceTree = "<group>";
@@ -615,6 +627,7 @@
 				04952E5618EAB3A40068436C /* BQIphoneHomeController.m in Sources */,
 				04952E6518EAB5DE0068436C /* BQIphoneSystemSettingView.m in Sources */,
 				042D214818E31EC200E4354C /* TableViewItem.m in Sources */,
+				043DF85818F38DA200297627 /* BQButtonSwitch.m in Sources */,
 				762D153E18EA597100A00570 /* BQIpadLeftSideMenuController.m in Sources */,
 				0401B31218EE486200049C05 /* BQSplashWindowController.m in Sources */,
 				76B07C3F18D92C30000FA58B /* BQCommonUI.m in Sources */,
@@ -636,6 +649,7 @@
 				762D153B18EA597100A00570 /* BQIpadLeftSideMenuModel.m in Sources */,
 				762D153718EA597100A00570 /* BQIpadCommonPanelController.m in Sources */,
 				76FDF71F18E40A58004598D3 /* BQView.m in Sources */,
+				043DF85D18F3CF1D00297627 /* BQImageTextView.m in Sources */,
 				04952E4D18EAB2460068436C /* BQIphoneLoginView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

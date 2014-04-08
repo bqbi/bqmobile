@@ -12,6 +12,7 @@
 #import "BQIpadLoginController.h"
 #import "BQNavigationController.h"
 #import "BQSplashWindowController.h"
+#import "BQIphoneLoginController.h"
 
 @implementation BQAppDelegate
 
@@ -25,10 +26,12 @@
     {
         self.loginController = [[BQIpadLoginController alloc] initWithNibName:nil bundle:nil];
         self.navigationController = [[BQNavigationController alloc] initWithRootViewController:self.loginController];
+        NSLog(@" is pad %@", @"YES");
     }
     else
     {
-        self.navigationController = [[BQNavigationController alloc] initWithRootViewController:[[UIViewController alloc] init]];
+        self.loginController = [[BQIphoneLoginController alloc] initWithNibName:nil bundle:nil];
+        self.navigationController = [[BQNavigationController alloc] initWithRootViewController:self.loginController];
 
         NSLog(@" is pad %@", @"NO");
     }
