@@ -92,7 +92,7 @@
 
 - (void) onClickButton:(UIControl*)button
 {
-    
+    [self.delegate onIphonePressedButton:button.tag];
 }
 
 

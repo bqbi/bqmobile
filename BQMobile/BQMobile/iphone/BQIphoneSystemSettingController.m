@@ -26,13 +26,46 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	// 定义导航栏信息
+    self.navigationItem.title = @"设置";
+    
+    // 创建View
+    _settingView = [[BQIphoneSystemSettingView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
+    [self.view addSubview:_settingView];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillAppear:(BOOL)animated {
+    
+    // 1.设置view的代理
+//    settingView.delegate = self;
+    
+    // 2.加载页面元素
+    [_settingView loadRootView];
+    
+    // 3.调整位置
+    [self adjustPosition];
+    
+}
+
+- (void)adjustPosition {
+    DLog(@"显示页面方向为%@",(UIInterfaceOrientationIsPortrait(self.interfaceOrientation))?@"竖屏":@"横屏");
+//    orientation = self.interfaceOrientation;
+//    if (UIInterfaceOrientationIsPortrait(orientation)) {
+//        [settingView adjustPositionWithPortrait];
+//    } else {
+//        [settingView adjustPositionWithLandscape];
+//    }
+}
+
+- (BOOL)shouldAutorotate {
+    if (orientation != self.interfaceOrientation) {
+        [self adjustPosition];
+    }
+    return YES;
+}
+
+- (NSUInteger)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskAll;
 }
 
 @end

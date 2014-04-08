@@ -19,13 +19,38 @@
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
+// 加载页面元素
+- (void)loadRootView {
+    DLog(@"加载登录页面元素")
+    
+    // 清空界面
+    for (UIView* view in [self subviews]) {
+        [view removeFromSuperview];
+    }
+    
+    //
+    UITableView *tableView = [[UITableView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame] style:UITableViewStylePlain];
+    tableView.dataSource = self.delegateDataSource;
+    tableView.delegate   = self.delegateTableView;
+    [self addSubview:tableView];
+    
 }
-*/
+
+
+- (void) onClickButton:(UIControl*)button
+{
+//    [self.delegate onIphonePressedButton:button.tag];
+}
+
+
+// 调整组件位置-纵向
+- (void)adjustPositionWithPortrait {
+}
+
+// 调整组件位置-横向
+- (void)adjustPositionWithLandscape {
+    
+}
+
 
 @end

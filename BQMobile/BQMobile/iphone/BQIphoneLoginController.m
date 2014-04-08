@@ -8,6 +8,7 @@
 
 #import "BQIphoneLoginController.h"
 #import "BQCore.h"
+#import "BQIphoneSystemSettingController.h"
 
 @interface BQIphoneLoginController ()
 
@@ -30,7 +31,7 @@
     [super loadView];
     // 导航栏设置
     self.navigationItem.title = @"用户登录";
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:nil];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(onIphonePressedSetting)];
     
     
     loginView = [[BQIphoneLoginView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
@@ -126,6 +127,11 @@
             break;
     }
     
+}
+
+- (void) onIphonePressedSetting
+{
+    [self.navigationController pushViewController:[[BQIphoneSystemSettingController alloc] init] animated:YES];
 }
 
 - (void)onIphoneEditingDidBeginTextField:(NSInteger)index {
