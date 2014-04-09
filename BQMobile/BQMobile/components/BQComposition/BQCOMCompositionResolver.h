@@ -10,6 +10,6 @@
 
 #import "BQComponentResolver.h"
 
-@interface BQCOMCompositionResolver : NSObject
+@interface BQCOMCompositionResolver : BQComponentResolver
 
 @end

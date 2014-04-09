@@ -12,6 +12,6 @@
 
 @interface BQComponentResolver : NSObject
 
-+ (id) createComponentView:(GDataXMLElement*)el;
++ (id) createComponentView:(GDataXMLElement*)el withParentView:(UIView*)parentView;
 
 @end

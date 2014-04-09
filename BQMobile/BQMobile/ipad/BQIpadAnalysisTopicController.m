@@ -12,6 +12,8 @@
 #import "BQComponentFactory.h"
 #import "BQComponentView.h"
 
+#import "BQCOMCompositionResolver.h"
+
 
 @interface BQIpadAnalysisTopicController ()
 
@@ -34,10 +36,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // TODO
     self.contentView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     self.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
     
     [self.view addSubview:self.contentView];
+    
+    
+    
+    
+    
+    
+    [BQCOMCompositionResolver createComponentView:nil withParentView:self.view];
     
     // 加载组件集合
     [self loadComponentViews];

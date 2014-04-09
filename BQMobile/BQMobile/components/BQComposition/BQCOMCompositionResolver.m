@@ -10,6 +10,16 @@
 
 @implementation BQCOMCompositionResolver
 
++ (id) createComponentView:(GDataXMLElement*)el withParentView:(UIView*)parentView {
+    UIScrollView* view = [[UIScrollView alloc] initWithFrame:parentView.bounds];
+    
+    view.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
+    
+    [parentView addSubview:parentView];
+    
+    return view;
+}
+
 
 
 @end
