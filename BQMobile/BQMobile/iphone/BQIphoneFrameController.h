@@ -9,5 +9,5 @@
 #import "MSSlidingPanelController.h"
 
 @interface BQIphoneFrameController : MSSlidingPanelController
-
+- (void) loadControllers;
 @end

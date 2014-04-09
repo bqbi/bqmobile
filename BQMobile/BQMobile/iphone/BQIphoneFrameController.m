@@ -41,25 +41,25 @@
  */
 - (void) loadControllers
 {
-    BQIphoneLeftSideMenuModel             *leftPanelModel;
-    BQTableViewDataSource               *bqDataSource;
-    BQIphoneLeftSideMenuController        *leftPanelViewController;
-    UINavigationController              *navigationViewController;
-    
-    // 创建主导航控制器
-    BQIphoneHomeController *contentViewController = [[BQIphoneHomeController alloc] init];
-    navigationViewController = [[UINavigationController alloc] initWithRootViewController:contentViewController];
-    [self setCenterViewController:navigationViewController];
-    [self setLeftPanelStatusBarColor:[UIColor whiteColor]];
-    
-    
-    // 创建左部工具栏
-    leftPanelModel = [[BQIpadLeftSideMenuModel alloc] initWithFuncDelegate:contentViewController];
-    bqDataSource = [[BQTableViewDataSource alloc] initWithDataModel:nil andDelegate:leftPanelModel];
-    leftPanelViewController = [[BQIpadLeftSideMenuController alloc] initWithDataSource:bqDataSource];
-    leftPanelViewController.hasStateBar = self.hasStateBar;
-    [self setLeftPanelController:leftPanelViewController];
-    
+//    BQIphoneLeftSideMenuModel             *leftPanelModel;
+//    BQTableViewDataSource               *bqDataSource;
+//    BQIphoneLeftSideMenuController        *leftPanelViewController;
+//    UINavigationController              *navigationViewController;
+//    
+//    // 创建主导航控制器
+//    BQIphoneHomeController *contentViewController = [[BQIphoneHomeController alloc] init];
+//    navigationViewController = [[UINavigationController alloc] initWithRootViewController:contentViewController];
+//    [self setCenterViewController:navigationViewController];
+//    [self setLeftPanelStatusBarColor:[UIColor whiteColor]];
+//    
+//    
+//    // 创建左部工具栏
+//    leftPanelModel = [[BQIpadLeftSideMenuModel alloc] initWithFuncDelegate:contentViewController];
+//    bqDataSource = [[BQTableViewDataSource alloc] initWithDataModel:nil andDelegate:leftPanelModel];
+//    leftPanelViewController = [[BQIpadLeftSideMenuController alloc] initWithDataSource:bqDataSource];
+//    leftPanelViewController.hasStateBar = self.hasStateBar;
+//    [self setLeftPanelController:leftPanelViewController];
+//    
     
 }
 
