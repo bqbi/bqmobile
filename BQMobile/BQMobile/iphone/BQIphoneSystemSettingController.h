@@ -10,9 +10,7 @@
 #import "BQIphoneSystemSettingView.h"
 
 @interface BQIphoneSystemSettingController : UIViewController
-{
-    UIInterfaceOrientation orientation; // 当前屏幕位置
-}
+
 @property (nonatomic,retain) BQIphoneSystemSettingView* settingView;
 
 @end

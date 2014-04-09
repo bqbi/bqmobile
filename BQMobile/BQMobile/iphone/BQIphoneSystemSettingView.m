@@ -7,14 +7,23 @@
 //
 
 #import "BQIphoneSystemSettingView.h"
+#import "BQIphoneSystemSettingDataSource.h"
+
+@interface BQIphoneSystemSettingView()
+@property(nonatomic, retain) id<UITableViewDataSource> delegateDataSource;
+@property (nonatomic, retain) id<UITableViewDelegate> delegateTableView;
+
+@end
 
 @implementation BQIphoneSystemSettingView
 
-- (id)initWithFrame:(CGRect)frame
+
+- (id) initWithFrame:(CGRect)frame andDatasource:(id<UITableViewDataSource>) ds andTableViewDelegate:(id<UITableViewDelegate>)viewDelegate
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+        _delegateDataSource = ds;
+        _delegateTableView = viewDelegate;
     }
     return self;
 }
@@ -23,34 +32,28 @@
 - (void)loadRootView {
     DLog(@"加载登录页面元素")
     
-    // 清空界面
-    for (UIView* view in [self subviews]) {
-        [view removeFromSuperview];
-    }
-    
     //
     UITableView *tableView = [[UITableView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame] style:UITableViewStylePlain];
-    tableView.dataSource = self.delegateDataSource;
-    tableView.delegate   = self.delegateTableView;
+    tableView.dataSource = _delegateDataSource;
+    tableView.delegate   = _delegateTableView;
+    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier: tableCellIdentifier];
+//    [tableView setTableFooterView:[[UIView alloc] init]];
+    [tableView setBackgroundColor:[UIColor whiteColor]];
+    [tableView setSeparatorColor:[UIColor orangeColor]];
+
     [self addSubview:tableView];
     
 }
 
-
-- (void) onClickButton:(UIControl*)button
-{
-//    [self.delegate onIphonePressedButton:button.tag];
-}
-
-
-// 调整组件位置-纵向
-- (void)adjustPositionWithPortrait {
-}
-
-// 调整组件位置-横向
-- (void)adjustPositionWithLandscape {
-    
-}
+//
+//// 调整组件位置-纵向
+//- (void)adjustPositionWithPortrait {
+//}
+//
+//// 调整组件位置-横向
+//- (void)adjustPositionWithLandscape {
+//    
+//}
 
 
 @end

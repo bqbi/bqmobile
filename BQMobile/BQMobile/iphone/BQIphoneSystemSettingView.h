@@ -11,6 +11,6 @@
 
 @interface BQIphoneSystemSettingView : BQView
 
-@property(nonatomic, assign) id<UITableViewDataSource> delegateDataSource;
-@property (nonatomic, assign) id<UITableViewDelegate> delegateTableView;
+
+- (id) initWithFrame:(CGRect)frame andDatasource:(id<UITableViewDataSource>) ds andTableViewDelegate:(id<UITableViewDelegate>)viewDelegate;
 @end

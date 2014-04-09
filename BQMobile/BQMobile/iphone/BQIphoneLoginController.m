@@ -9,6 +9,7 @@
 #import "BQIphoneLoginController.h"
 #import "BQCore.h"
 #import "BQIphoneSystemSettingController.h"
+#import "BQIphoneFrameController.h"
 
 @interface BQIphoneLoginController ()
 
@@ -84,13 +85,7 @@
 
 - (void)doLogin {
     // 检验用户名密码等登录信息是否有效
-//    [self.navigationController pushViewController:[[BQIphoneFrameController alloc ]init] animated:YES];
-    
-}
-
-- (void)doOfflineLogin {
-    // 检验用户名密码等登录信息是否有效
-//    [self.navigationController pushViewController:[[BQIpadAnalysisTopicController alloc ]init] animated:YES];
+    [self.navigationController pushViewController:[[BQIphoneFrameController alloc ]init] animated:YES];
     
 }
 
@@ -108,18 +103,8 @@
             break;
             
         case 2:
-            DLog(@"离线浏览......");
-            [self doOfflineLogin];
-            break;
-            
-        case 3:
-            DLog(@"退出......");
-            [FSUtils clearTempDirectory];
-            exit(0);
-            break;
-            
-        case 4:
-            DLog(@"记住密码......");
+            DLog(@"设置自动登录......");
+            [BQContext sharedContext].autoLogin = @"YES";
             loginView.rememberCheckBox.on = !loginView.rememberCheckBox.on;
             break;
             
