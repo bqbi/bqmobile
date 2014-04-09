@@ -1,6 +1,6 @@
 <bq:composition>
     
-	<bq:gridLayout column="3" row="5" itemWidth="25%,25%,50%" itemHeight="" itemMargin="5">
+	<bq:gridLayout column="3" row="5" itemColumn="25%,25%,50%" itemHeight="" itemMargin="5">
 		<bq:gridLayoutItem>
 			<bq:labelObject buddy="desc" text="选择省份" />
 		</bq:gridLayoutItem>
