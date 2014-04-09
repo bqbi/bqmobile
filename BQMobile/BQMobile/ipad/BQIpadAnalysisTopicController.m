@@ -57,6 +57,8 @@
     [BQComponentFactory sharedComponents];
     
     
+    
+    
     // 将组件加入到contentView中
     int i = 0;
     for (UIView* view in self.componentViews) {
