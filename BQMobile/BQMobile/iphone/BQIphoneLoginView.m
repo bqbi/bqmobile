@@ -68,7 +68,7 @@
     
     // 登录
     _loginButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    [_loginButton setTitle:@"登录" forState:UIControlStateNormal];
+    [_loginButton setTitle:@"登  录" forState:UIControlStateNormal];
     [_loginButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [_loginButton addTarget:self action:@selector(onClickButton:) forControlEvents:UIControlEventTouchUpInside];
     _loginButton.tag = 1;

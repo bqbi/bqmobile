@@ -13,6 +13,7 @@
 #import "BQNavigationController.h"
 #import "BQSplashWindowController.h"
 #import "BQIphoneLoginController.h"
+#import "BQIphoneLoadingController.h"
 
 @implementation BQAppDelegate
 
@@ -38,7 +39,7 @@
     
     self.window.rootViewController = [[BQSplashWindowController alloc] init];// self.navigationController;
     
-    [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(switchRootViewController:) userInfo:self.navigationController repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(switchToLoadingController:) userInfo:self.navigationController repeats:NO];
     
     
     [self.window makeKeyAndVisible];
@@ -46,10 +47,20 @@
     return YES;
 }
 
-- (void) switchRootViewController:(NSTimer*) timer
+- (void) switchToLoadingController:(NSTimer*)timer
 {
-//    UIViewController *rootViewController = (UIViewController*)timer.userInfo;
+    // 加载loading
+    self.window.rootViewController = [[BQIphoneLoadingController alloc] init];
+    // 加载loading
+    [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(switchToRootController:) userInfo:self.navigationController repeats:NO];
+    
+}
+
+- (void) switchToRootController:(NSTimer*) timer
+{
+    // 加载闪屏
     self.window.rootViewController = self.navigationController;
+    // 加载root
     [self.window addSubview:self.navigationController.view];
 }
 
