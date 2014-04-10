@@ -13,9 +13,6 @@
 
 @end
 
-@interface BQIphoneSettingItem : UIView
-@property (nonatomic,retain) id<BQControlCommandDelegate> delegate;
-@end
 
 static NSString* tableCellIdentifier = @"BQTableCellIdentifier";
 @interface BQIphoneSystemSettingDataSource : NSObject<UITableViewDataSource>

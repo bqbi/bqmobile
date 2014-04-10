@@ -26,6 +26,7 @@
 		04952E5F18EAB52B0068436C /* BQIphoneAnalysisTopicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04952E5E18EAB52B0068436C /* BQIphoneAnalysisTopicView.m */; };
 		04952E6218EAB5BC0068436C /* BQIphoneSystemSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04952E6118EAB5BC0068436C /* BQIphoneSystemSettingController.m */; };
 		04952E6518EAB5DE0068436C /* BQIphoneSystemSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04952E6418EAB5DE0068436C /* BQIphoneSystemSettingView.m */; };
+		04B39B3C18F58072002C3934 /* BQIphoneSystemSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B39B3B18F58072002C3934 /* BQIphoneSystemSettingItem.m */; };
 		7606CEE418E90B150087EC33 /* BQComponentFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7606CEE318E90B150087EC33 /* BQComponentFactory.m */; };
 		7606CEE818E918BF0087EC33 /* Component.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7606CEE718E918BF0087EC33 /* Component.bundle */; };
 		7615ECB518B346FF00F1E344 /* libBQDashboard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7615ECB418B346FF00F1E344 /* libBQDashboard.a */; };
@@ -130,6 +131,8 @@
 		04952E6118EAB5BC0068436C /* BQIphoneSystemSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQIphoneSystemSettingController.m; sourceTree = "<group>"; };
 		04952E6318EAB5DE0068436C /* BQIphoneSystemSettingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQIphoneSystemSettingView.h; sourceTree = "<group>"; };
 		04952E6418EAB5DE0068436C /* BQIphoneSystemSettingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQIphoneSystemSettingView.m; sourceTree = "<group>"; };
+		04B39B3A18F58072002C3934 /* BQIphoneSystemSettingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQIphoneSystemSettingItem.h; sourceTree = "<group>"; };
+		04B39B3B18F58072002C3934 /* BQIphoneSystemSettingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQIphoneSystemSettingItem.m; sourceTree = "<group>"; };
 		7606CEE218E90B150087EC33 /* BQComponentFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQComponentFactory.h; sourceTree = "<group>"; };
 		7606CEE318E90B150087EC33 /* BQComponentFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQComponentFactory.m; sourceTree = "<group>"; };
 		7606CEE718E918BF0087EC33 /* Component.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Component.bundle; path = Bundles/Component.bundle; sourceTree = SOURCE_ROOT; };
@@ -423,6 +426,8 @@
 		76AC1E0F18C23B2A0063ED32 /* iphone */ = {
 			isa = PBXGroup;
 			children = (
+				04B39B3A18F58072002C3934 /* BQIphoneSystemSettingItem.h */,
+				04B39B3B18F58072002C3934 /* BQIphoneSystemSettingItem.m */,
 				04952E4B18EAB2460068436C /* BQIphoneLoginView.h */,
 				04952E4C18EAB2460068436C /* BQIphoneLoginView.m */,
 				04952E4E18EAB2A90068436C /* BQIphoneLoginController.h */,
@@ -698,6 +703,7 @@
 				04952E5318EAB3410068436C /* BQIphoneFrameController.m in Sources */,
 				04952E5C18EAB50B0068436C /* BQIphoneAnalysisTopicController.m in Sources */,
 				762D153818EA597100A00570 /* BQIpadFunctionController.m in Sources */,
+				04B39B3C18F58072002C3934 /* BQIphoneSystemSettingItem.m in Sources */,
 				04952E5618EAB3A40068436C /* BQIphoneHomeController.m in Sources */,
 				04952E6518EAB5DE0068436C /* BQIphoneSystemSettingView.m in Sources */,
 				042D214818E31EC200E4354C /* TableViewItem.m in Sources */,

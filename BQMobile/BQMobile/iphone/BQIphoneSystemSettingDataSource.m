@@ -8,37 +8,11 @@
 
 #import "BQIphoneSystemSettingDataSource.h"
 #import "BQLayoutSetting.h"
-
-@implementation BQIphoneSettingItem
-
-- (id) initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        //
-        [self loadContents];
-    }
-    return  self;
-}
-
-- (void) loadContents
-{
-    CGRect rect = self.frame;
-    UILabel * title = [[UILabel alloc] initWithFrame:CGRectMake(Layout_LeftOffset, 0, rect.size.width*2/3.0, rect.size.height)];
-    title.textAlignment = NSTextAlignmentLeft;
-    title.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0];
-    [self addSubview:title];
-    UISwitch * switchctrl = [[UISwitch alloc] initWithFrame:CGRectMake(rect.size.width - 80, Layout_SpltLineWidth_4, 0, 0)];
-    switchctrl.onTintColor = [UIColor blueColor];
-    switchctrl.on = YES;
-    [self addSubview:switchctrl];
-}
-
-@end
+#import "BQIphoneSystemSettingItem.h"
 
 @interface BQIphoneSystemSettingDataSource ()
 
-@property (nonatomic, retain) NSArray * items;
+@property (nonatomic, retain) NSMutableArray  * items;
 
 @end
 
@@ -49,6 +23,7 @@
     self = [super init];
     if (self) {
         //
+        
         [self loadContents];
     }
     
@@ -57,7 +32,27 @@
 
 - (void) loadContents
 {
-    _items = [[NSArray alloc] initWithObjects:@"最近打开",@"最近打开",@"最近打开",@"最近打开",@"最近打开",@"最近打开", nil];
+    _items = [[NSMutableArray alloc] init];
+    // 系统设置项
+
+    [_items addObject:[self createItemWithTitle:@"最近打开" andSwitchOn:YES]];
+
+    [_items addObject:[self createItemWithTitle:@"我得关注" andSwitchOn:YES]];
+    
+    [_items addObject:[self createItemWithTitle:@"服务器设置" andSwitchOn:YES]];
+    
+}
+
+- (BQIphoneSystemSettingItem*) createItemWithTitle:(NSString*)title andSwitchOn:(BOOL)on
+{
+    UILabel * title0 = [[UILabel alloc] init];
+    title0.text = title;
+    UISwitch * button0 = [[UISwitch alloc] init];
+    button0.on = on;
+    BQIphoneSystemSettingItem* item0 = [[BQIphoneSystemSettingItem alloc] initWithFrame:CGRectMake(0, 0, 0, 0) andLeftView:title0 andRightView:button0];
+    
+    return item0;
+ 
 }
 
 - (id) indexOfItemName:(NSInteger)index
@@ -90,12 +85,14 @@
 		cell = [[UITableViewCell alloc] initWithStyle:style reuseIdentifier:tableCellIdentifier];
     
     
-	cell.textLabel.text = [_items objectAtIndex:indexPath.row];
+//	cell.textLabel.text = ;
     
     [cell setBackgroundColor:[UIColor whiteColor]];
     [[cell textLabel] setTextColor:[UIColor blackColor]];
 
-    [cell addSubview:[[UISwitch alloc] initWithFrame:CGRectMake([cell frame].size.width-80, 4, 30, 28)]];
+    BQIphoneSystemSettingItem * item = [_items objectAtIndex:indexPath.row];
+    item.frame = cell.frame;
+    [cell addSubview:item];
     //[cell setSelectedBackgroundView:[[UIView alloc] initWithFrame:CGRectMake([cell frame].size.width-60, 0, [cell frame].size.width, [cell frame].size.height)]];
  
     [[cell selectedBackgroundView] setBackgroundColor:[UIColor whiteColor]];
