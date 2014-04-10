@@ -27,6 +27,7 @@
 		04952E6218EAB5BC0068436C /* BQIphoneSystemSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04952E6118EAB5BC0068436C /* BQIphoneSystemSettingController.m */; };
 		04952E6518EAB5DE0068436C /* BQIphoneSystemSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04952E6418EAB5DE0068436C /* BQIphoneSystemSettingView.m */; };
 		04B39B3C18F58072002C3934 /* BQIphoneSystemSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B39B3B18F58072002C3934 /* BQIphoneSystemSettingItem.m */; };
+		04B39B3F18F66FB2002C3934 /* IphoneResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04B39B3E18F66FB2002C3934 /* IphoneResource.bundle */; };
 		7606CEE418E90B150087EC33 /* BQComponentFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7606CEE318E90B150087EC33 /* BQComponentFactory.m */; };
 		7606CEE818E918BF0087EC33 /* Component.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7606CEE718E918BF0087EC33 /* Component.bundle */; };
 		7615ECB518B346FF00F1E344 /* libBQDashboard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7615ECB418B346FF00F1E344 /* libBQDashboard.a */; };
@@ -90,8 +91,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0401B31018EE486200049C05 /* BQSplashWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQSplashWindowController.h; sourceTree = "<group>"; };
-		0401B31118EE486200049C05 /* BQSplashWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQSplashWindowController.m; sourceTree = "<group>"; };
+		0401B31018EE486200049C05 /* BQSplashWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BQSplashWindowController.h; path = ../device/BQSplashWindowController.h; sourceTree = "<group>"; };
+		0401B31118EE486200049C05 /* BQSplashWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BQSplashWindowController.m; path = ../device/BQSplashWindowController.m; sourceTree = "<group>"; };
 		042D214018E31E3100E4354C /* BQTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQTableViewController.h; sourceTree = "<group>"; };
 		042D214118E31E3100E4354C /* BQTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQTableViewController.m; sourceTree = "<group>"; };
 		042D214318E31E6C00E4354C /* BQDelegateFamily.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQDelegateFamily.h; sourceTree = "<group>"; };
@@ -133,6 +134,7 @@
 		04952E6418EAB5DE0068436C /* BQIphoneSystemSettingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQIphoneSystemSettingView.m; sourceTree = "<group>"; };
 		04B39B3A18F58072002C3934 /* BQIphoneSystemSettingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQIphoneSystemSettingItem.h; sourceTree = "<group>"; };
 		04B39B3B18F58072002C3934 /* BQIphoneSystemSettingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQIphoneSystemSettingItem.m; sourceTree = "<group>"; };
+		04B39B3E18F66FB2002C3934 /* IphoneResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = IphoneResource.bundle; path = Bundles/IphoneResource.bundle; sourceTree = SOURCE_ROOT; };
 		7606CEE218E90B150087EC33 /* BQComponentFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQComponentFactory.h; sourceTree = "<group>"; };
 		7606CEE318E90B150087EC33 /* BQComponentFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQComponentFactory.m; sourceTree = "<group>"; };
 		7606CEE718E918BF0087EC33 /* Component.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Component.bundle; path = Bundles/Component.bundle; sourceTree = SOURCE_ROOT; };
@@ -383,8 +385,6 @@
 				76FDF71818E3C0DF004598D3 /* BQAlertView.m */,
 				76FDF71D18E40A58004598D3 /* BQView.h */,
 				76FDF71E18E40A58004598D3 /* BQView.m */,
-				0401B31018EE486200049C05 /* BQSplashWindowController.h */,
-				0401B31118EE486200049C05 /* BQSplashWindowController.m */,
 				043DF85A18F39F5800297627 /* BQLayoutSetting.h */,
 				043DF85B18F3CF1D00297627 /* BQImageTextView.h */,
 				043DF85C18F3CF1D00297627 /* BQImageTextView.m */,
@@ -426,8 +426,8 @@
 		76AC1E0F18C23B2A0063ED32 /* iphone */ = {
 			isa = PBXGroup;
 			children = (
-				04B39B3A18F58072002C3934 /* BQIphoneSystemSettingItem.h */,
-				04B39B3B18F58072002C3934 /* BQIphoneSystemSettingItem.m */,
+				0401B31018EE486200049C05 /* BQSplashWindowController.h */,
+				0401B31118EE486200049C05 /* BQSplashWindowController.m */,
 				04952E4B18EAB2460068436C /* BQIphoneLoginView.h */,
 				04952E4C18EAB2460068436C /* BQIphoneLoginView.m */,
 				04952E4E18EAB2A90068436C /* BQIphoneLoginController.h */,
@@ -442,6 +442,8 @@
 				04952E5B18EAB50B0068436C /* BQIphoneAnalysisTopicController.m */,
 				04952E5D18EAB52B0068436C /* BQIphoneAnalysisTopicView.h */,
 				04952E5E18EAB52B0068436C /* BQIphoneAnalysisTopicView.m */,
+				04B39B3A18F58072002C3934 /* BQIphoneSystemSettingItem.h */,
+				04B39B3B18F58072002C3934 /* BQIphoneSystemSettingItem.m */,
 				04952E6018EAB5BC0068436C /* BQIphoneSystemSettingController.h */,
 				04952E6118EAB5BC0068436C /* BQIphoneSystemSettingController.m */,
 				04952E6318EAB5DE0068436C /* BQIphoneSystemSettingView.h */,
@@ -509,6 +511,7 @@
 		76D99E7A18B33643004A9055 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				04B39B3E18F66FB2002C3934 /* IphoneResource.bundle */,
 				76B0F8FC18EE1DE3001FB42D /* Demo.bundle */,
 				7606CEE718E918BF0087EC33 /* Component.bundle */,
 				76B0E2FA18C2DEAA00C5C219 /* Style.bundle */,
@@ -658,6 +661,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04B39B3F18F66FB2002C3934 /* IphoneResource.bundle in Resources */,
 				76D99E7E18B33643004A9055 /* InfoPlist.strings in Resources */,
 				76B0F8FD18EE1DE3001FB42D /* Demo.bundle in Resources */,
 				7606CEE818E918BF0087EC33 /* Component.bundle in Resources */,

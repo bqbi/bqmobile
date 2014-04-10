@@ -35,12 +35,19 @@
     _items = [[NSMutableArray alloc] init];
     // 系统设置项
 
-    [_items addObject:[self createItemWithTitle:@"最近打开" andSwitchOn:YES]];
+    [_items addObject:[self createItemWithTitle:@"消息推送" andSwitchOn:YES]];
 
-    [_items addObject:[self createItemWithTitle:@"我得关注" andSwitchOn:YES]];
+    [_items addObject:[self createItemWithTitle:@"自动登录" andSwitchOn:YES]];
     
-    [_items addObject:[self createItemWithTitle:@"服务器设置" andSwitchOn:YES]];
+    [_items addObject:[self createItemWithTitle:@"服务器设置"]];
+
+    [_items addObject:[self createItemWithTitle:@"清除缓存"]];
+
+    [_items addObject:[self createItemWithTitle:@"显示演示" andSwitchOn:YES]];
+
+    [_items addObject:[self createItemWithTitle:@"更新时间"]];
     
+    [_items addObject:[self createItemWithTitle:@"选择皮肤"]];
 }
 
 - (BQIphoneSystemSettingItem*) createItemWithTitle:(NSString*)title andSwitchOn:(BOOL)on
@@ -54,6 +61,18 @@
     return item0;
  
 }
+
+- (BQIphoneSystemSettingItem*) createItemWithTitle:(NSString*)title
+{
+    UILabel * title0 = [[UILabel alloc] init];
+    title0.text = title;
+       BQIphoneSystemSettingItem* item0 = [[BQIphoneSystemSettingItem alloc] initWithFrame:CGRectMake(0, 0, 0, 0) andLeftView:title0 andRightView:nil];
+    
+    return item0;
+    
+}
+
+
 
 - (id) indexOfItemName:(NSInteger)index
 {
