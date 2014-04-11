@@ -7,7 +7,8 @@
 //
 #import <Foundation/Foundation.h>
 #import "BQIphoneHomeController.h"
+#import "BQTableViewController.h"
 
-@interface BQIphoneLeftSizeMenuController : NSObject<BQTableViewDataSourceDelegate>
+@interface BQIphoneLeftSizeMenuController : BQTableViewController
 
 @end

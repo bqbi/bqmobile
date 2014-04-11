@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BQTableViewDataSource.h"
+#import "BQTableViewDataModel.h"
 
 @interface BQTableViewController : UIViewController<UITableViewDelegate>
 
 @property (nonatomic,assign) BOOL hasStateBar;
 
-- (id) initWithDataSource:(BQTableViewDataSource *)ds;
+- (id) initWithDataSource:(BQTableViewDataModel *)ds;
 
 @end

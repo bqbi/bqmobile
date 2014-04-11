@@ -10,7 +10,7 @@
 #import "BQIpadFrameController.h"
 #import "BQIpadLeftSideMenuController.h"
 #import "BQIpadLeftSideMenuModel.h"
-#import "BQTableViewDataSource.h"
+#import "BQTableViewDataModel.h"
 #import "BQIpadHomeController.h"
 
 @interface BQIpadFrameController ()
@@ -43,7 +43,7 @@
 - (void) loadControllers
 {
     BQIpadLeftSideMenuModel             *leftPanelModel;
-    BQTableViewDataSource               *bqDataSource;
+    BQTableViewDataModel               *bqDataSource;
     BQIpadLeftSideMenuController        *leftPanelViewController;
     UINavigationController              *navigationViewController;
     
@@ -56,7 +56,7 @@
     
     // 创建左部工具栏
     leftPanelModel = [[BQIpadLeftSideMenuModel alloc] initWithFuncDelegate:contentViewController];
-    bqDataSource = [[BQTableViewDataSource alloc] initWithDataModel:nil andDelegate:leftPanelModel];
+    bqDataSource = [[BQTableViewDataModel alloc] initWithDataModel:nil andDelegate:leftPanelModel];
     leftPanelViewController = [[BQIpadLeftSideMenuController alloc] initWithDataSource:bqDataSource];
     leftPanelViewController.hasStateBar = self.hasStateBar;
     [self setLeftPanelController:leftPanelViewController];

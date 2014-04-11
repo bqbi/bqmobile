@@ -16,7 +16,7 @@
 
 @interface BQTableViewController ()
 
-@property (nonatomic,retain) BQTableViewDataSource * dataSource;
+@property (nonatomic,retain) BQTableViewDataModel * dataSource;
 #pragma mark Tool
 /** @name Tool */
 
@@ -39,7 +39,7 @@
     return self;
 }
 
-- (id) initWithDataSource:(BQTableViewDataSource *)ds
+- (id) initWithDataSource:(BQTableViewDataModel *)ds
 {
     self = [super init];
     if (self)

@@ -8,9 +8,10 @@
 
 #import "BQIphoneFrameController.h"
 #import "BQIphoneHomeController.h"
-#import "BQTableViewDataSource.h"
+#import "BQTableViewDataModel.h"
 #import "BQIphoneLeftSizeMenuController.h"
-
+#import "BQIphoneMenuDataSource.h"
+#import "BQIphoneLeftSizeMenuController.h"
 
 @interface BQIphoneFrameController ()
 
@@ -41,25 +42,24 @@
  */
 - (void) loadControllers
 {
-//    BQIphoneLeftSideMenuModel             *leftPanelModel;
-//    BQTableViewDataSource               *bqDataSource;
-//    BQIphoneLeftSideMenuController        *leftPanelViewController;
-//    UINavigationController              *navigationViewController;
-//    
-//    // 创建主导航控制器
-//    BQIphoneHomeController *contentViewController = [[BQIphoneHomeController alloc] init];
-//    navigationViewController = [[UINavigationController alloc] initWithRootViewController:contentViewController];
-//    [self setCenterViewController:navigationViewController];
-//    [self setLeftPanelStatusBarColor:[UIColor whiteColor]];
-//    
-//    
-//    // 创建左部工具栏
-//    leftPanelModel = [[BQIpadLeftSideMenuModel alloc] initWithFuncDelegate:contentViewController];
-//    bqDataSource = [[BQTableViewDataSource alloc] initWithDataModel:nil andDelegate:leftPanelModel];
-//    leftPanelViewController = [[BQIpadLeftSideMenuController alloc] initWithDataSource:bqDataSource];
-//    leftPanelViewController.hasStateBar = self.hasStateBar;
-//    [self setLeftPanelController:leftPanelViewController];
-//    
+    BQTableViewDataModel               *bqDataSource;
+    BQIphoneLeftSizeMenuController        *menuController;
+    UINavigationController              *navigationViewController;
+    
+    // 创建主导航控制器
+    BQIphoneHomeController *contentViewController = [[BQIphoneHomeController alloc] init];
+    navigationViewController = [[UINavigationController alloc] initWithRootViewController:contentViewController];
+    [self setCenterViewController:navigationViewController];
+    [self setLeftPanelStatusBarColor:[UIColor whiteColor]];
+    
+    
+    // 创建左部工具栏
+    // 通过一个数据源解析和数据源，来构建出侧边栏目录数据模型对象
+    bqDataSource = [[BQTableViewDataModel alloc] initWithDataModel:nil andDelegate:[[BQIphoneMenuDataSource alloc] initWithFuncDelegate:contentViewController]];
+    menuController = [[BQIphoneLeftSizeMenuController alloc] initWithDataSource:bqDataSource];
+    menuController.hasStateBar = self.hasStateBar;
+    [self setLeftPanelController:menuController];
+    
     
 }
 
