@@ -36,10 +36,10 @@
     }
     
     // 添加背景
-//    _backImageView = [[UIImageView alloc] init];
-//    [self addSubview:_backImageView];
+    UIImageView * bkImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"IphoneResource.bundle/sys-skin/loading/loading-background"]];
+    [self addSubview:bkImageView];
     // 用户图片
-    _userImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@""]];
+    _userImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"IphoneResource.bundle/sys-skin/loading/loading-background"]];
     [self addSubview:_userImage];
     // 用户名
     _userName = [[UITextField alloc] init];
@@ -53,7 +53,7 @@
     [self addSubview:_userName];
     
     // 用户图片
-    _passwordImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@""]];
+    _passwordImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"IphoneResource.bundle/sys-skin/loading/loading-background"]];
     [self addSubview:_passwordImage];
     // 密码
     _password = [[UITextField alloc] init];
@@ -100,7 +100,7 @@
 - (void)adjustPositionWithPortrait {
     CGRect rect = [[UIScreen mainScreen] applicationFrame];
     
-    int nPos = Layout_SpltLineWidth_2;
+    int nPos = Layout_SpltLineWidth_12 + 44;
     _userImage.frame = CGRectMake(Layout_LeftOffset, nPos, Layout_Control_Height, Layout_Control_Height);
     _userName.frame = CGRectMake(Layout_LeftOffset+Layout_Control_Height+Layout_SpltLineWidth_2, nPos, rect.size.width-Layout_LeftOffset-Layout_RightOffset, Layout_Control_Height);
     

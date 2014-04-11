@@ -22,14 +22,27 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    CGRect rect  = self.navigationBar.frame;
+    // 加载背景图片
+    UIImage * alphaImage = [UIImage imageNamed:@"IphoneResource.bundle/sys-skin/alpha.jpg"];
+    [self.navigationBar setBackgroundImage:alphaImage forBarMetrics:UIBarMetricsDefault];
+    self.navigationBar.translucent = YES;
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackTranslucent];
+    UIImage * bkImage = [UIImage imageNamed:@"IphoneResource.bundle/sys-skin/navigation/navi-background"];
+    UIImageView * bkImageView = [[UIImageView alloc] initWithImage:bkImage];
+    bkImageView.frame = CGRectMake(rect.origin.x, rect.size.height-bkImage.size.height/2, bkImage.size.width, bkImage.size.height/2);
+    [self.navigationBar addSubview:bkImageView];
+    //
+    [self.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                             [UIColor colorWithRed:0 green:0.0 blue:0.0 alpha:1],UITextAttributeTextColor,
+                             [UIColor colorWithRed:0 green:0.7 blue:0.8 alpha:1], UITextAttributeTextShadowColor,
+                             [NSValue valueWithUIOffset:UIOffsetMake(0, 0)], UITextAttributeTextShadowOffset,
+                             [UIFont fontWithName:@"Arial-Bold" size:0.0], UITextAttributeFont,
+                             nil]];
+
+
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 -(BOOL)shouldAutorotate
 {

@@ -32,9 +32,18 @@
     [super loadView];
     // 导航栏设置
     self.navigationItem.title = @"用户登录";
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(onIphonePressedSetting)];
+    // 设置按钮
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(onIphonePressedSetting)];
+    UIImage * settingImage = [UIImage imageNamed:@"IphoneResource.bundle/sys-skin/navigationbar/navi-setting"];
     
+    UIButton * settingButton = [[UIButton alloc] init];
+    [settingButton setBackgroundImage:settingImage forState:UIControlStateNormal];
+    settingButton.frame = CGRectMake(-10, 0, settingImage.size.width, settingImage.size.height);
+    [settingButton addTarget:self action:@selector(onIphonePressedSetting) forControlEvents:UIControlEventTouchUpInside];
     
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:settingButton];
+    
+    // 加载登陆页面
     loginView = [[BQIphoneLoginView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
     [self.view addSubview:loginView];
 

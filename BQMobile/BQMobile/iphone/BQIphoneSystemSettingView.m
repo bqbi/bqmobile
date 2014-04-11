@@ -31,9 +31,15 @@
 // 加载页面元素
 - (void)loadRootView {
     DLog(@"加载登录页面元素")
+    // 屏幕大小
+    CGRect rect = [[UIScreen mainScreen] applicationFrame];
+    
+    // 背景图片
+    UIImageView * bkImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"IphoneResource.bundle/sys-skin/loading/loading-background"]];
+    [self addSubview:bkImageView];
     
     //
-    UITableView *tableView = [[UITableView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame] style:UITableViewStylePlain];
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(rect.origin.x, rect.origin.y + 44, rect.size.width, rect.size.height) style:UITableViewStylePlain];
     tableView.dataSource = _delegateDataSource;
     tableView.delegate   = _delegateTableView;
     [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier: tableCellIdentifier];
