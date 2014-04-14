@@ -9,9 +9,9 @@
 #import "BQIphoneFrameController.h"
 #import "BQIphoneHomeController.h"
 #import "BQTableViewDataModel.h"
-#import "BQIphoneLeftSizeMenuController.h"
+#import "BQIphoneMenuController.h"
 #import "BQIphoneMenuDataSource.h"
-#import "BQIphoneLeftSizeMenuController.h"
+#import "BQIphoneMenuController.h"
 #import "BQNavigationController.h"
 
 @interface BQIphoneFrameController ()
@@ -44,7 +44,7 @@
 - (void) loadControllers
 {
     BQTableViewDataModel               *bqDataSource;
-    BQIphoneLeftSizeMenuController        *menuController;
+    BQIphoneMenuController        *menuController;
     // 创建主导航控制器
     BQIphoneHomeController *contentViewController = [[BQIphoneHomeController alloc] init];
     [self setCenterViewController:[[BQNavigationController alloc] initWithRootViewController:contentViewController]];
@@ -54,7 +54,7 @@
     // 创建左部工具栏
     // 通过一个数据源解析和数据源，来构建出侧边栏目录数据模型对象
     bqDataSource = [[BQTableViewDataModel alloc] initWithDataModel:nil andDelegate:[[BQIphoneMenuDataSource alloc] initWithFuncDelegate:contentViewController]];
-    menuController = [[BQIphoneLeftSizeMenuController alloc] initWithDataSource:bqDataSource];
+    menuController = [[BQIphoneMenuController alloc] initWithDataSource:bqDataSource];
     menuController.hasStateBar = self.hasStateBar;
     [self setLeftPanelController:menuController];
     

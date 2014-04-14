@@ -24,7 +24,7 @@
 		04952E5018EAB2A90068436C /* BQIphoneLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04952E4F18EAB2A90068436C /* BQIphoneLoginController.m */; };
 		04952E5318EAB3410068436C /* BQIphoneFrameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04952E5218EAB3410068436C /* BQIphoneFrameController.m */; };
 		04952E5618EAB3A40068436C /* BQIphoneHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04952E5518EAB3A40068436C /* BQIphoneHomeController.m */; };
-		04952E5918EAB4360068436C /* BQIphoneLeftSizeMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04952E5818EAB4360068436C /* BQIphoneLeftSizeMenuController.m */; };
+		04952E5918EAB4360068436C /* BQIphoneMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04952E5818EAB4360068436C /* BQIphoneMenuController.m */; };
 		04952E5C18EAB50B0068436C /* BQIphoneAnalysisTopicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04952E5B18EAB50B0068436C /* BQIphoneAnalysisTopicController.m */; };
 		04952E5F18EAB52B0068436C /* BQIphoneAnalysisTopicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04952E5E18EAB52B0068436C /* BQIphoneAnalysisTopicView.m */; };
 		04952E6218EAB5BC0068436C /* BQIphoneSystemSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04952E6118EAB5BC0068436C /* BQIphoneSystemSettingController.m */; };
@@ -131,8 +131,8 @@
 		04952E5218EAB3410068436C /* BQIphoneFrameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQIphoneFrameController.m; sourceTree = "<group>"; };
 		04952E5418EAB3A40068436C /* BQIphoneHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQIphoneHomeController.h; sourceTree = "<group>"; };
 		04952E5518EAB3A40068436C /* BQIphoneHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQIphoneHomeController.m; sourceTree = "<group>"; };
-		04952E5718EAB4360068436C /* BQIphoneLeftSizeMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQIphoneLeftSizeMenuController.h; sourceTree = "<group>"; };
-		04952E5818EAB4360068436C /* BQIphoneLeftSizeMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQIphoneLeftSizeMenuController.m; sourceTree = "<group>"; };
+		04952E5718EAB4360068436C /* BQIphoneMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQIphoneMenuController.h; sourceTree = "<group>"; };
+		04952E5818EAB4360068436C /* BQIphoneMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQIphoneMenuController.m; sourceTree = "<group>"; };
 		04952E5A18EAB50B0068436C /* BQIphoneAnalysisTopicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQIphoneAnalysisTopicController.h; sourceTree = "<group>"; };
 		04952E5B18EAB50B0068436C /* BQIphoneAnalysisTopicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQIphoneAnalysisTopicController.m; sourceTree = "<group>"; };
 		04952E5D18EAB52B0068436C /* BQIphoneAnalysisTopicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQIphoneAnalysisTopicView.h; sourceTree = "<group>"; };
@@ -449,8 +449,8 @@
 				04952E5218EAB3410068436C /* BQIphoneFrameController.m */,
 				04952E5418EAB3A40068436C /* BQIphoneHomeController.h */,
 				04952E5518EAB3A40068436C /* BQIphoneHomeController.m */,
-				04952E5718EAB4360068436C /* BQIphoneLeftSizeMenuController.h */,
-				04952E5818EAB4360068436C /* BQIphoneLeftSizeMenuController.m */,
+				04952E5718EAB4360068436C /* BQIphoneMenuController.h */,
+				04952E5818EAB4360068436C /* BQIphoneMenuController.m */,
 				045B373318F7BE6800640C92 /* BQIphoneMenuDataSource.h */,
 				045B373418F7BE6800640C92 /* BQIphoneMenuDataSource.m */,
 				04952E5A18EAB50B0068436C /* BQIphoneAnalysisTopicController.h */,
@@ -741,7 +741,7 @@
 				762D153918EA597100A00570 /* BQIpadHomeController.m in Sources */,
 				76D99E8018B33643004A9055 /* main.m in Sources */,
 				76CD375018EF82AE0028F425 /* BQComponentPlugin.m in Sources */,
-				04952E5918EAB4360068436C /* BQIphoneLeftSizeMenuController.m in Sources */,
+				04952E5918EAB4360068436C /* BQIphoneMenuController.m in Sources */,
 				762D153A18EA597100A00570 /* BQIpadFrameController.m in Sources */,
 				762D153D18EA597100A00570 /* BQIpadLoginView.m in Sources */,
 				762D153C18EA597100A00570 /* BQIpadLoginController.m in Sources */,
