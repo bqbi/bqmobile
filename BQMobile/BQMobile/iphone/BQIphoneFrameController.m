@@ -12,6 +12,7 @@
 #import "BQIphoneLeftSizeMenuController.h"
 #import "BQIphoneMenuDataSource.h"
 #import "BQIphoneLeftSizeMenuController.h"
+#import "BQNavigationController.h"
 
 @interface BQIphoneFrameController ()
 
@@ -44,12 +45,9 @@
 {
     BQTableViewDataModel               *bqDataSource;
     BQIphoneLeftSizeMenuController        *menuController;
-//    UINavigationController              *navigationViewController;
-    
     // 创建主导航控制器
     BQIphoneHomeController *contentViewController = [[BQIphoneHomeController alloc] init];
-//    navigationViewController = [[UINavigationController alloc] initWithRootViewController:contentViewController];
-    [self setCenterViewController:contentViewController];
+    [self setCenterViewController:[[BQNavigationController alloc] initWithRootViewController:contentViewController]];
     [self setLeftPanelStatusBarColor:[UIColor whiteColor]];
     
     
@@ -68,7 +66,7 @@
 {
     [super viewDidLoad];
     // 隐藏导航栏
-//    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
 }
 
 

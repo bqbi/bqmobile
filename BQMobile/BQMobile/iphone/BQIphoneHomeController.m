@@ -46,6 +46,7 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:[self sideMenuButton]];
 //    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:[self deleteButton]];
     
+    self.navigationItem.backBarButtonItem = nil;
     
 }
 

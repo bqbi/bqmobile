@@ -7,6 +7,7 @@
 //
 
 #import "BQNavigationController.h"
+#import "BQMobileResource.h"
 
 @implementation BQNavigationController
 
@@ -24,14 +25,10 @@
     [super viewDidLoad];
     CGRect rect  = self.navigationBar.frame;
     // 加载背景图片
-    UIImage * alphaImage = [UIImage imageNamed:@"IphoneResource.bundle/sys-skin/alpha.jpg"];
+    UIImage * alphaImage = [[BQMobileResource sharedManager].navibarBackgroundImage resizableImageWithCapInsets:UIEdgeInsetsMake(rect.origin.y, rect.origin.x, rect.origin.y+rect.size.height, rect.origin.x+rect.size.width)];
     [self.navigationBar setBackgroundImage:alphaImage forBarMetrics:UIBarMetricsDefault];
     self.navigationBar.translucent = YES;
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackTranslucent];
-    UIImage * bkImage = [UIImage imageNamed:@"IphoneResource.bundle/sys-skin/navigationbar/navi-background"];
-    UIImageView * bkImageView = [[UIImageView alloc] initWithImage:bkImage];
-    bkImageView.frame = CGRectMake(rect.origin.x, rect.size.height-bkImage.size.height/2, bkImage.size.width, bkImage.size.height/2);
-    [self.navigationBar addSubview:bkImageView];
     //
     [self.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                              [UIColor colorWithRed:0 green:0.0 blue:0.0 alpha:1],UITextAttributeTextColor,

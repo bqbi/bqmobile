@@ -71,8 +71,8 @@ static BQMobileResource * gBQMobileResource = nil;
      *
      */
     // 背景
-    _navibarBackgroundImage = [self imageFromResource:@"navigationbar/navi-Footer-bottom@2x"];
-    
+    _navibarBackgroundImage = [self imageFromResource:@"navigationbar/navi-background@2x"];
+    _navibarBackgroundImage = [self reSizeImage:_navibarBackgroundImage toSize:CGSizeMake(_navibarBackgroundImage.size.width/2, _navibarBackgroundImage.size.height/2)];
     /*
      * 侧边栏目录资源
      *
@@ -80,5 +80,20 @@ static BQMobileResource * gBQMobileResource = nil;
     _leftMenuBackgroundImage= [self imageFromResource:@"leftmenu-page/leftmenu-background"];
 
 }
+
+- (UIImage *)reSizeImage:(UIImage *)image toSize:(CGSize)reSize
+
+{
+    UIGraphicsBeginImageContext(CGSizeMake(reSize.width, reSize.height));
+    [image drawInRect:CGRectMake(0, 0, reSize.width, reSize.height)];
+    UIImage *reSizeImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return reSizeImage;
+    
+}
+
+
+
 
 @end
