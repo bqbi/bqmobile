@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "BQLayoutSetting.h"
 
-@interface BQView : UIView
+@protocol IBQView <NSObject>
+
+@optional
 
 // 加载页面元素
 - (void)loadRootView;
@@ -19,5 +21,9 @@
 
 // 调整组件位置-横向
 - (void)adjustPositionWithLandscape;
+
+@end
+@interface BQView : UIView<IBQView>
+
 
 @end

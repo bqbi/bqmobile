@@ -93,7 +93,6 @@ typedef enum {
 @implementation BQButtonSwitch
 
 #pragma mark - Initializers
-
 - (void)encodeWithCoder:(NSCoder *)aCoder {
     [super encodeWithCoder: aCoder];
     

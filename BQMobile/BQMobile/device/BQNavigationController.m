@@ -28,7 +28,7 @@
     [self.navigationBar setBackgroundImage:alphaImage forBarMetrics:UIBarMetricsDefault];
     self.navigationBar.translucent = YES;
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackTranslucent];
-    UIImage * bkImage = [UIImage imageNamed:@"IphoneResource.bundle/sys-skin/navigation/navi-background"];
+    UIImage * bkImage = [UIImage imageNamed:@"IphoneResource.bundle/sys-skin/navigationbar/navi-background"];
     UIImageView * bkImageView = [[UIImageView alloc] initWithImage:bkImage];
     bkImageView.frame = CGRectMake(rect.origin.x, rect.size.height-bkImage.size.height/2, bkImage.size.width, bkImage.size.height/2);
     [self.navigationBar addSubview:bkImageView];

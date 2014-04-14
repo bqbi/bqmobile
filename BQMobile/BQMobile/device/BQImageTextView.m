@@ -20,6 +20,7 @@
     return self;
 }
 
+
 - (id) initWithFrame:(CGRect)frame andHeaderImage:(UIImage*)image
 {
     self = [self initWithFrame:frame];

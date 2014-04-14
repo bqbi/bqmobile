@@ -8,6 +8,7 @@
 
 #import "BQIphoneLoginView.h"
 #import "BQCore.h"
+#import "BQMobileResource.h"
 
 
 // ipad字号大小
@@ -36,40 +37,41 @@
     }
     
     // 添加背景
-    UIImageView * bkImageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"IphoneResource.bundle/sys-skin/loading/loading-background"]];
+    UIImageView * bkImageView = [[UIImageView alloc]initWithImage:[BQMobileResource sharedManager].loginBackgroundImage];
     [self addSubview:bkImageView];
     // 用户图片
-    _userImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"IphoneResource.bundle/sys-skin/loading/loading-background"]];
+    _userImage = [[UIImageView alloc] initWithImage:[BQMobileResource sharedManager].loginUserImage];
     [self addSubview:_userImage];
     // 用户名
     _userName = [[UITextField alloc] init];
-    _userName.backgroundColor = [UIColor clearColor];
     _userName.font = Iphone_TextFont;
     _userName.placeholder = @"请输入用户名";
     _userName.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     _userName.textColor = [UIColor blackColor];
     _userName.clearButtonMode = UITextFieldViewModeWhileEditing;
+    _userName.borderStyle = UITextBorderStyleNone;
     //
     [self addSubview:_userName];
     
     // 用户图片
-    _passwordImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"IphoneResource.bundle/sys-skin/loading/loading-background"]];
+    _passwordImage = [[UIImageView alloc] initWithImage:[BQMobileResource sharedManager].loginPasswordImage];
     [self addSubview:_passwordImage];
     // 密码
     _password = [[UITextField alloc] init];
-    _password.backgroundColor = [UIColor clearColor];
+    _password.backgroundColor = [UIColor colorWithPatternImage:[BQMobileResource sharedManager].loginPasswordImage];
     _password.font = Iphone_TextFont;
     _password.placeholder = @"请输入密码";
     _password.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     _password.textColor = [UIColor blackColor];
     _password.clearButtonMode = UITextFieldViewModeWhileEditing;
+    _password.borderStyle = UITextBorderStyleNone;
     [self addSubview:_password];
     
     
     // 登录
-    _loginButton = [UIButton buttonWithType:UIButtonTypeSystem];
-    [_loginButton setTitle:@"登  录" forState:UIControlStateNormal];
-    [_loginButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    _loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_loginButton setImage:[BQMobileResource sharedManager].loginButtonColdImage forState:UIControlStateNormal];
+    [_loginButton setImage:[BQMobileResource sharedManager].loginButtonHotImage forState:UIControlStateSelected];
     [_loginButton addTarget:self action:@selector(onClickButton:) forControlEvents:UIControlEventTouchUpInside];
     _loginButton.tag = 1;
     [self addSubview:_loginButton];
@@ -101,12 +103,12 @@
     CGRect rect = [[UIScreen mainScreen] applicationFrame];
     
     int nPos = Layout_SpltLineWidth_12 + 44;
-    _userImage.frame = CGRectMake(Layout_LeftOffset, nPos, Layout_Control_Height, Layout_Control_Height);
-    _userName.frame = CGRectMake(Layout_LeftOffset+Layout_Control_Height+Layout_SpltLineWidth_2, nPos, rect.size.width-Layout_LeftOffset-Layout_RightOffset, Layout_Control_Height);
+    _userImage.frame = CGRectMake(Layout_LeftOffset, nPos, rect.size.width-Layout_LeftOffset-Layout_RightOffset, Layout_Control_Height);
+    _userName.frame = CGRectMake(Layout_LeftOffset+Layout_Control_Height+Layout_SpltLineWidth_2, nPos+8, rect.size.width-Layout_LeftOffset-Layout_RightOffset, Layout_Control_Height);
     
     nPos += Layout_Control_Height + Layout_SpltLineWidth_2;
-    _passwordImage.frame = CGRectMake(Layout_LeftOffset, nPos, Layout_Control_Height, Layout_Control_Height);
-    _password.frame = CGRectMake(Layout_LeftOffset+Layout_SpltLineWidth_2+Layout_Control_Height, nPos, rect.size.width-Layout_LeftOffset-Layout_RightOffset, Layout_Control_Height);
+    _passwordImage.frame = CGRectMake(Layout_LeftOffset, nPos, rect.size.width-Layout_LeftOffset-Layout_RightOffset, Layout_Control_Height);
+    _password.frame = CGRectMake(Layout_LeftOffset+Layout_SpltLineWidth_2+Layout_Control_Height, nPos+8, rect.size.width-Layout_LeftOffset-Layout_RightOffset, Layout_Control_Height);
     
     nPos += Layout_Control_Height + Layout_SpltLineWidth_12;
     _rememberLabel.frame = CGRectMake(rect.size.width-Layout_RightOffset-46 - 70, nPos-4, 64, 38);

@@ -10,4 +10,10 @@
 
 @implementation BQComponentResolver
 
++ (id) createComponentView:(GDataXMLElement*)el withParentView:(UIView*)parentView
+{
+    assert(false);
+    DLog(@"需要实现");
+    return nil;
+}
 @end

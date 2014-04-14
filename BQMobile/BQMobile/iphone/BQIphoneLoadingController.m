@@ -7,6 +7,7 @@
 //
 
 #import "BQIphoneLoadingController.h"
+#import "BQMobileResource.h"
 
 @interface BQIphoneLoadingController ()
 
@@ -28,8 +29,8 @@
     [super viewDidLoad];
     CGRect rect = [[UIScreen mainScreen] applicationFrame];
     // 加载背景图片
-    UIImage * bkImage = [UIImage imageNamed:@"IphoneResource.bundle/sys-skin/loading/loading-background"];
-    UIImageView * bkImagView = [[UIImageView alloc] initWithImage:bkImage];
+//    UIImage * bkImage = [UIImage imageNamed:@"IphoneResource.bundle/sys-skin/loading-page/loading-background"];
+    UIImageView * bkImagView = [[UIImageView alloc] initWithImage:[BQMobileResource sharedManager].loadingBackgroundImage];
     bkImagView.frame = rect;
     [self.view addSubview:bkImagView];
     // 增加中心图标
@@ -42,7 +43,7 @@
     centerImage.textColor = [UIColor redColor];
     [self.view addSubview:centerImage];
     // 增加底部logo
-    UIImage * bottomImage = [UIImage imageNamed:@"IphoneResource.bundle/sys-skin/loading/loading-logo-bottom"];
+    UIImage * bottomImage = [BQMobileResource sharedManager].loadingFooterLogoImage; //[UIImage imageNamed:@"IphoneResource.bundle/sys-skin/loading-page/loading-logo-bottom"];
     UIImageView * bottomImageView = [[UIImageView alloc] initWithImage:bottomImage];
     bottomImageView.frame = CGRectMake((rect.size.width - bottomImage.size.width/2)/2.0, rect.size.height-bottomImage.size.height-4, bottomImage.size.width/2, bottomImage.size.height/2);
     [self.view addSubview:bottomImageView];

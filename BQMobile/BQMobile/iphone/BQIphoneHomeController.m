@@ -17,7 +17,7 @@
  */
 
 @property (nonatomic, strong)   NavigationBarButton *sideMenuButton;
-@property (nonatomic, strong)   NavigationBarButton *deleteButton;
+
 @end
 
 
@@ -36,14 +36,15 @@
     [[self sideMenuButton] setAction:@selector(openMenuPanel)];
     
     // 导航栏右侧设置按钮
-    [self setDeleteButton:[NavigationBarButton buttonWithType:NavigationBarButtonTypeMenu]];
-    [[self deleteButton] setTarget:self];
-    [[self deleteButton] setAction:@selector(onDeleteContent)];
-    
+//    UIButton * deleteButton = [[UIButton alloc] init];
+//    [self setDeleteButton:[NavigationBarButton buttonWithType:NavigationBarButtonTypeMenu]];
+//    [[self deleteButton] setTarget:self];
+//    [[self deleteButton] setAction:@selector(onDeleteContent)];
+//    
     //
     self.navigationItem.title = @"BI 首页";
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:[self sideMenuButton]];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:[self deleteButton]];
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:[self deleteButton]];
     
     
 }

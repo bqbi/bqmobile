@@ -35,7 +35,7 @@
     CGRect rect = [[UIScreen mainScreen] applicationFrame];
     
     // 背景图片
-    UIImageView * bkImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"IphoneResource.bundle/sys-skin/loading/loading-background"]];
+    UIImageView * bkImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"IphoneResource.bundle/sys-skin/loading-page/loading-background"]];
     [self addSubview:bkImageView];
     
     //

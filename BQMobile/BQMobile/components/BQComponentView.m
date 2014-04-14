@@ -19,5 +19,11 @@
     return self;
 }
 
+// 单击操作
+- (void)onTouchUp
+{
+    assert(false);
+    DLog(@"需要覆盖");
+}
 
 @end
