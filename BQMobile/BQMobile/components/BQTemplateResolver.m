@@ -12,13 +12,14 @@
 #import "XMLUtils.h"
 #import "BQComponentFactory.h"
 #import "BQComponentPlugin.h"
+#import "BQComponent.h"
 
 #define COMPONENT_TYPE_BQ_PREFIX @"bq:"
 
 @implementation BQTemplateResolver
 
-+ (BQComponentView*) resolverNode:(BQComponentPlugin*)plugin withNode:(GDataXMLNode*)node withRelativePath:(NSString*)relPath {
-    BQComponentView* view = nil; // TODO
++ (BQComponent*) resolverNode:(BQComponentPlugin*)plugin withNode:(GDataXMLNode*)node withRelativePath:(NSString*)relPath {
+    BQComponent* view = nil; // TODO
     
     
     
@@ -27,7 +28,7 @@
         
         if (subNodes && [subNodes count] > 0) {
             GDataXMLNode* subNode;
-            BQComponentView* subView;
+            BQComponent* subView;
             for (int i = 0; i < [subNodes count]; i++) {
                 subNode = [subNodes objectAtIndex:i];
                 subView = [self resolver:subNode withRelativePath:relPath];
@@ -39,12 +40,12 @@
     return view;
 }
 
-+ (BQComponentView*)resolver:(GDataXMLNode*)node withRelativePath:(NSString*)relPath {
++ (BQComponent*)resolver:(GDataXMLNode*)node withRelativePath:(NSString*)relPath {
     NSString* nodeName = [node name];
     
     BQComponentFactory* factory = [BQComponentFactory sharedComponents];
     
-    BQComponentView* view = nil;
+    BQComponent* view = nil;
     
     if (nodeName) {
         // 判断是否以bq命名空间空间开头

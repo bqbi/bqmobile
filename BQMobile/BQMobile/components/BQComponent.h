@@ -13,10 +13,11 @@
 @interface BQComponent : NSObject
 
 @property (nonatomic, strong) UIView* contentView;
+@property (nonatomic, strong) NSMutableArray* subViews;
 
 // 通过节点创建组件
 - (id)initWithNode:(GDataXMLNode*)node;
 
-- (void)
+- (void)addSubview:(UIView*)subView;
 
 @end

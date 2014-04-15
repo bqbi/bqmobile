@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @class GDataXMLNode;
-@class BQComponentView;
+@class BQComponent;
 
 @interface BQTemplateResolver : NSObject
 
-+ (BQComponentView*)resolver:(GDataXMLNode*)node withRelativePath:(NSString*)relPath;
++ (BQComponent*)resolver:(GDataXMLNode*)node withRelativePath:(NSString*)relPath;
 
 @end

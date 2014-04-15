@@ -11,5 +11,22 @@
 @implementation BQComponent
 
 @synthesize contentView;
+@synthesize subViews;
+
+- (id)initWithNode:(GDataXMLNode*)node {
+    if (self = [self init]) {
+        subViews = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
+- (void)addSubview:(BQComponent*)subView {
+    
+    [self.subViews addObject:subViews];
+    
+    if (contentView) {
+        [contentView addSubview:subView.contentView];
+    }
+}
 
 @end

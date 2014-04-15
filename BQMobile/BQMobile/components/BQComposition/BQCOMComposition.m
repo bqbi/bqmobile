@@ -12,7 +12,7 @@
 
 - (id)initWithNode:(GDataXMLNode*)node {
     
-    if (self = [self init]) {
+    if (self = [super initWithNode:node]) {
         self.contentView = [[UIScrollView alloc] init];
         self.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
     }

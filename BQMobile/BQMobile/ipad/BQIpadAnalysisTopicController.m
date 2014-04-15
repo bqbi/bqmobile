@@ -10,9 +10,7 @@
 
 #import "BQCore.h"
 #import "BQComponentFactory.h"
-#import "BQComponentView.h"
-
-#import "BQCOMCompositionResolver.h"
+#import "BQComponent.h"
 
 
 @interface BQIpadAnalysisTopicController ()
@@ -40,22 +38,15 @@
 }
 
 - (void)loadComponentViews {
-    // 清空界面
-    if (self.rootView) {
-        for (UIView* view in [self.rootView subviews]) {
-            [view removeFromSuperview];
-        }
-    }
-    
     // 获得XML
     NSString* filePath = resourceBundleAndRelative(@"Demo", @"test.xml");
     GDataXMLDocument* doc = [XMLUtils loadXMLFile:filePath];
     
     // 解析xml，创建组件视图集合
     
-    self.rootView = [factory createComponent:[doc rootElement] withRelativePath:filePath];
-    
-    [self.view addSubview:self.rootView];
+//    self.rootView = [factory createComponent:[doc rootElement] withRelativePath:filePath];
+//    
+//    [self.view addSubview:self.rootView];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

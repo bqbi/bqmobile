@@ -10,8 +10,6 @@
 
 #import "GDataXMLNode.h"
 
-#import "BQCOMCompositionResolver.h"
-
 @interface BQComponentFactory : NSObject
 
 // 组件插件集合

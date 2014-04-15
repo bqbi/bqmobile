@@ -8,14 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@class BQComponentView;
+@class BQComponent;
 
 @interface BQIpadAnalysisTopicController : UIViewController
 
 // 模板路径
 @property (nonatomic, strong) NSString* templatePath;
 
-@property (nonatomic, strong) BQComponentView* rootView;
+@property (nonatomic, strong) BQComponent* rootView;
 
 // 当前方向
 @property (nonatomic) UIInterfaceOrientation orientation;

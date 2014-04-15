@@ -12,8 +12,6 @@
 #import "XMLUtils.h"
 #import "BQCore.h"
 
-#import "BQComponentView.h"
-
 @implementation BQComponentPlugin
 
 @synthesize name;
