@@ -20,4 +20,10 @@
     return self;
 }
 
+- (void)rerender:(CGRect)frame {
+    self.contentView.frame = frame;
+    
+    // 渲染子组件 TODO
+}
+
 @end

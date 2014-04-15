@@ -41,7 +41,6 @@
 		762C6D2018FD14CC006DCA09 /* BQComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 762C6D1F18FD14CC006DCA09 /* BQComponent.m */; };
 		762C6D2318FD1551006DCA09 /* BQCOMComposition.m in Sources */ = {isa = PBXBuildFile; fileRef = 762C6D2218FD1551006DCA09 /* BQCOMComposition.m */; };
 		762D153518EA597100A00570 /* BQIpadAnalysisTopicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 762D151E18EA597100A00570 /* BQIpadAnalysisTopicController.m */; };
-		762D153618EA597100A00570 /* BQIpadAnalysisTopicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 762D152018EA597100A00570 /* BQIpadAnalysisTopicView.m */; };
 		762D153718EA597100A00570 /* BQIpadCommonPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 762D152218EA597100A00570 /* BQIpadCommonPanelController.m */; };
 		762D153818EA597100A00570 /* BQIpadFunctionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 762D152418EA597100A00570 /* BQIpadFunctionController.m */; };
 		762D153918EA597100A00570 /* BQIpadHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 762D152618EA597100A00570 /* BQIpadHomeController.m */; };
@@ -174,8 +173,6 @@
 		762C6D2218FD1551006DCA09 /* BQCOMComposition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQCOMComposition.m; sourceTree = "<group>"; };
 		762D151D18EA597100A00570 /* BQIpadAnalysisTopicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQIpadAnalysisTopicController.h; sourceTree = "<group>"; };
 		762D151E18EA597100A00570 /* BQIpadAnalysisTopicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQIpadAnalysisTopicController.m; sourceTree = "<group>"; };
-		762D151F18EA597100A00570 /* BQIpadAnalysisTopicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQIpadAnalysisTopicView.h; sourceTree = "<group>"; };
-		762D152018EA597100A00570 /* BQIpadAnalysisTopicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQIpadAnalysisTopicView.m; sourceTree = "<group>"; };
 		762D152118EA597100A00570 /* BQIpadCommonPanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQIpadCommonPanelController.h; sourceTree = "<group>"; };
 		762D152218EA597100A00570 /* BQIpadCommonPanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQIpadCommonPanelController.m; sourceTree = "<group>"; };
 		762D152318EA597100A00570 /* BQIpadFunctionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQIpadFunctionController.h; sourceTree = "<group>"; };
@@ -447,8 +444,6 @@
 				762D153018EA597100A00570 /* BQIpadLeftSideMenuController.m */,
 				762D151D18EA597100A00570 /* BQIpadAnalysisTopicController.h */,
 				762D151E18EA597100A00570 /* BQIpadAnalysisTopicController.m */,
-				762D151F18EA597100A00570 /* BQIpadAnalysisTopicView.h */,
-				762D152018EA597100A00570 /* BQIpadAnalysisTopicView.m */,
 				762D152118EA597100A00570 /* BQIpadCommonPanelController.h */,
 				762D152218EA597100A00570 /* BQIpadCommonPanelController.m */,
 				762D152318EA597100A00570 /* BQIpadFunctionController.h */,
@@ -727,7 +722,6 @@
 				76AC1E2218C279980063ED32 /* BQLoginController.m in Sources */,
 				7606CEE418E90B150087EC33 /* BQComponentFactory.m in Sources */,
 				762D153F18EA597100A00570 /* BQIpadSystemSettingController.m in Sources */,
-				762D153618EA597100A00570 /* BQIpadAnalysisTopicView.m in Sources */,
 				04952E6218EAB5BC0068436C /* BQIphoneSystemSettingController.m in Sources */,
 				76FDF71918E3C0DF004598D3 /* BQAlertView.m in Sources */,
 				04952E5318EAB3410068436C /* BQIphoneFrameController.m in Sources */,
@@ -896,10 +890,7 @@
 					"${SDK_DIR}/usr/include/libxml2",
 				);
 				INFOPLIST_FILE = "BQMobile/BQMobile-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/panbasten/Desktop/WorkSpace/a/Bin/BQMobile/Build/Products/Debug-iphoneos",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
@@ -921,10 +912,7 @@
 					"${SDK_DIR}/usr/include/libxml2",
 				);
 				INFOPLIST_FILE = "BQMobile/BQMobile-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/panbasten/Desktop/WorkSpace/a/Bin/BQMobile/Build/Products/Debug-iphoneos",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;
@@ -1020,10 +1008,7 @@
 					"${SDK_DIR}/usr/include/libxml2",
 				);
 				INFOPLIST_FILE = "BQMobile/BQMobile-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/Users/panbasten/Desktop/WorkSpace/a/Bin/BQMobile/Build/Products/Debug-iphoneos",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 				WRAPPER_EXTENSION = app;

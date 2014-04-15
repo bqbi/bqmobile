@@ -10,6 +10,7 @@
 
 #import "GDataXMLNode.h"
 
+
 @interface BQComponent : NSObject
 
 @property (nonatomic, strong) UIView* contentView;
@@ -18,6 +19,10 @@
 // 通过节点创建组件
 - (id)initWithNode:(GDataXMLNode*)node;
 
-- (void)addSubview:(UIView*)subView;
+// 添加子节点
+- (void)addSubview:(BQComponent*)subView;
+
+// 重新渲染，包括调整位置
+- (void)rerender:(CGRect)frame;
 
 @end

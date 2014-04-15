@@ -11,7 +11,7 @@
 @implementation BQAlertView
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    _selectedButton = buttonIndex;
+    _selectedButton = (int)buttonIndex;
 }
 
 - (int)showModal {

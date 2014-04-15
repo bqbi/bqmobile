@@ -29,4 +29,10 @@
     }
 }
 
+- (void)rerender:(CGRect)frame {
+    if (contentView) {
+        contentView.frame = frame;
+    }
+}
+
 @end
