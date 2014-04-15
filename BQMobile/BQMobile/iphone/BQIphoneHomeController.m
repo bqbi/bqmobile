@@ -80,7 +80,6 @@
     if (side == MSSPSideDisplayedLeft)
     {
         [_sideMenuButton addTarget:self action:@selector(closePanel) forControlEvents:UIControlEventTouchUpInside];
-//        [[self sideMenuButton] setAction:@selector(closePanel)];
     }
     
 }
@@ -89,7 +88,7 @@
 {
     if (side == MSSPSideDisplayedLeft)
     {
-        [[self slidingPanelController] setLeftPanelMaximumWidth:260];
+        [[self slidingPanelController] setLeftPanelMaximumWidth:200];
         [[self slidingPanelController] setLeftPanelOpenGestureMode:MSSPOpenGestureModeAll];
         [[self slidingPanelController] setLeftPanelCloseGestureMode:MSSPCloseGestureModeAll];
         [[self slidingPanelController] setLeftPanelCenterViewInteractionMode:MSSPCenterViewInteractionNavBar];
@@ -112,7 +111,6 @@
 #pragma mark - navigation bar button click function implementation
 - (void) openMenuPanel
 {
-    DLog(@"菜单...");
     if ([[self slidingPanelController] sideDisplayed] == MSSPSideDisplayedLeft) {
         [[self slidingPanelController] closePanel];
     } else {

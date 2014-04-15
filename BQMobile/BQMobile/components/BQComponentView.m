@@ -10,6 +10,15 @@
 
 @implementation BQComponentView
 
+- (id)initWithNode:(GDataXMLNode*)node
+{
+    self = [super init];
+    if (self) {
+        // TODO: 
+    }
+    return self;
+}
+
 // 单击操作
 - (void)onTouchUp
 {
