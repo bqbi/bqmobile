@@ -23,23 +23,28 @@
         [view removeFromSuperview];
     }
     
+    //    NSString* bundlePath = resourceBundle(@"Chart.bundle/");
+    //    [NSString stringWithFormat:@"%@.bundle",filePath];
+    //    NSString* bundlePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Chart.bundle"];
+    
+    
+    //    pie = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 800, 600)];
+    //
+    //    [self addSubview:pie];
+    //
+    //
+    //    pie.scalesPageToFit=YES;
+    //    [pie loadHTMLString:htmlString baseURL:[NSURL fileURLWithPath:bundlePath]];
+    
+    //    NSURL* url = [NSURL fileURLWithPath:filePath];
+    //    NSURLRequest* request = [NSURLRequest requestWithURL:url];
+    //    pie.scalesPageToFit=YES;
+    //    [pie loadRequest:request];
+    
     // 添加背景
-    NSString* filePath = resourceBundleAndRelative(@"Chart", @"1.html");
-    NSString* bundlePath = resourceBundle(@"Chart.bundle/");
-    [NSString stringWithFormat:@"%@.bundle",filePath];
-//    NSString* bundlePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Chart.bundle"];
-    pie = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, 800, 600)];
-    
-    [self addSubview:pie];
-    
-    NSString* htmlString = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
-    pie.scalesPageToFit=YES;
-    [pie loadHTMLString:htmlString baseURL:[NSURL fileURLWithPath:bundlePath]];
-    
-//    NSURL* url = [NSURL fileURLWithPath:filePath];
-//    NSURLRequest* request = [NSURLRequest requestWithURL:url];
-//    pie.scalesPageToFit=YES;
-//    [pie loadRequest:request];
+    NSString* filePath = resourceBundleAndRelative(@"Demo", @"test.xml");
+    NSString* xmlString = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+    NSLog(xmlString);
     
     
 }

@@ -17,10 +17,6 @@
 
 @interface BQIpadAnalysisTopicController ()
 
-@property (nonatomic, strong) UIScrollView* contentView;
-
-- (void)loadComponentViews;
-
 @end
 
 
@@ -36,17 +32,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // TODO
-    self.contentView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
-    self.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
-    
-    [self.view addSubview:self.contentView];
-    
-    
-    
-    
-    
-    
     [BQCOMCompositionResolver createComponentView:nil withParentView:self.view];
     
     // 加载组件集合
@@ -56,32 +41,21 @@
 
 - (void)loadComponentViews {
     // 清空界面
-    for (UIView* view in [self.contentView subviews]) {
-        [view removeFromSuperview];
+    if (self.rootView) {
+        for (UIView* view in [self.rootView subviews]) {
+            [view removeFromSuperview];
+        }
     }
     
-    self.componentViews = [NSMutableArray array];
+    // 获得XML
+    NSString* filePath = resourceBundleAndRelative(@"Demo", @"test.xml");
+    GDataXMLDocument* doc = [XMLUtils loadXMLFile:filePath];
     
     // 解析xml，创建组件视图集合
-    // TODO
-    [BQComponentFactory sharedComponents];
+    BQComponentFactory* factory = [BQComponentFactory sharedComponents];
+    self.rootView = [factory createComponent:[doc rootElement] withRelativePath:filePath];
     
-    
-    
-    
-    // 将组件加入到contentView中
-    int i = 0;
-    for (UIView* view in self.componentViews) {
-        [self.contentView addSubview:view];
-        // delegate
-        [view setUserInteractionEnabled:YES];
-        [view setTag:i];
-        i++;
-        
-        UITapGestureRecognizer* tapped = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(componentTouchUp:)];
-        tapped.numberOfTapsRequired = 1;
-        [view addGestureRecognizer:tapped];
-    }
+    [self.view addSubview:self.rootView];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -91,14 +65,6 @@
     // 2.调整位置
     [self adjustPosition];
     
-}
-
-- (void)componentTouchUp:(id)sender {
-    UITapGestureRecognizer* gesture = (UITapGestureRecognizer*)sender;
-    DLog(@"Taped Compoment tag is %d", gesture.view.tag);
-    
-    BQComponentView* view = [self.componentViews objectAtIndex:gesture.view.tag];
-    [view onTouchUp];
 }
 
 - (void)adjustPosition {

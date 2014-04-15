@@ -5,12 +5,11 @@
 //  Created by 潘 巍 on 14-3-29.
 //  Copyright (c) 2014年 yonyou. All rights reserved.
 //
+#import "GDataXMLNode.h"
 
-#import "BQView.h"
+@interface BQComponentView : UIView
 
-@interface BQComponentView : BQView
-
-// 单击操作
-- (void)onTouchUp;
+// 通过节点创建组件
+- (id)initWithNode:(GDataXMLNode*)node;
 
 @end

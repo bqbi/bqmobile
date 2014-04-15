@@ -10,15 +10,6 @@
 
 @implementation BQComponentView
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
-    return self;
-}
-
 // 单击操作
 - (void)onTouchUp
 {

@@ -15,7 +15,7 @@
     
     view.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
     
-    [parentView addSubview:parentView];
+    [parentView addSubview:view];
     
     return view;
 }

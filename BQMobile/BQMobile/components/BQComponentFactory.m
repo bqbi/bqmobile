@@ -15,6 +15,8 @@
 #define XML_FILE_BQ_COMPONENTS_ENTITY_PREFIX @"META-INF/entities"
 #define XML_FILE_BQ_COMPONENTS_ATTRIBUTE_PREFIX @"META-INF/entities/attributes"
 
+#define COMPONENT_TYPE_BQ_PREFIX @"bq:"
+
 @implementation BQComponentFactory
 
 @synthesize plugins;
@@ -104,6 +106,22 @@ static BQComponentFactory* _sharedComponents = nil;
 - (NSString*) getComponentPart:(NSString*)fileName {
     NSString* relpath = [NSString stringWithFormat:@"%@/%@%@",XML_FILE_BQ_COMPONENTS_ATTRIBUTE_PREFIX,fileName,@".xml"];
     return [FSUtils readFile:resourceBundleAndRelative(@"Component",relpath)];
+}
+
+- (BQComponentView*) createComponent:(GDataXMLNode*)node withRelativePath:(NSString*)relPath {
+    
+    NSString* nodeName = [node name];
+    
+    if (nodeName) {
+        // 判断是否以bq命名空间空间开头
+        if ([nodeName hasPrefix:COMPONENT_TYPE_BQ_PREFIX]) {
+            BQComponentPlugin* plugin = [self.plugins objectForKey:[nodeName lowercaseString]];
+            NSLog(plugin.name);
+        }
+    }
+    
+    
+    return nil;
 }
 
 @end
