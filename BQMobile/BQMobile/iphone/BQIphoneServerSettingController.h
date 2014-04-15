@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BQIphoneServerSettingView.h"
 
-@interface BQIphoneServerSettingController : UIViewController
+@interface BQIphoneServerSettingController : UIViewController <ServerInfoSaveButtonDelegate>
 
 @end

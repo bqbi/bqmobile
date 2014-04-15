@@ -57,6 +57,30 @@
  */
 // 背景
 @property (nonatomic, retain, readonly) UIImage * navibarBackgroundImage;
+// 返回
+@property (nonatomic, retain, readonly) UIImage * navibarBackButtonColdImage;
+@property (nonatomic, retain, readonly) UIImage * navibarBackButtonHotImage;
+// 设置
+@property (nonatomic, retain, readonly) UIImage * navibarSettingButtonColdImage;
+@property (nonatomic, retain, readonly) UIImage * navibarSettingButtonHotImage;
+// 编辑
+@property (nonatomic, retain, readonly) UIImage * navibarEditButtonColdImage;
+@property (nonatomic, retain, readonly) UIImage * navibarEditButtonHotImage;
+// 目录
+@property (nonatomic, retain, readonly) UIImage * navibarMenuButtonColdImage;
+@property (nonatomic, retain, readonly) UIImage * navibarMenuButtonHotImage;
+
+
+/*
+ *
+ * 工具条资源
+ *
+ */
+// 背景
+@property (nonatomic, retain, readonly) UIImage * toolbarBackgroundImage;
+// 关注
+@property (nonatomic, retain, readonly) UIImage * toolbarFaverateColdImage;
+@property (nonatomic, retain, readonly) UIImage * toolbarFaverateHotImage;
 
 /*
  * 侧边栏目录资源

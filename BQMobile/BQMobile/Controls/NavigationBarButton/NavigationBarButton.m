@@ -119,6 +119,11 @@
         rectangleBottomPath.lineWidth = 1;
         [rectangleBottomPath stroke];
     }
+    else if ([self navigationBarButtonType] == NavigationBarButtonTypeImage)
+    {
+        [[self backgroundImageForState:self.state] drawInRect:rect];
+        
+    }
 }
 
 #pragma mark - Getting and setting properties

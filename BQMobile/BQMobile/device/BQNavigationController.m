@@ -58,4 +58,41 @@
     return [[self.viewControllers lastObject] preferredInterfaceOrientationForPresentation];
 }
 
+#pragma mark - 重载父类进行改写
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    //先进入子Controller
+    [super pushViewController:viewController animated:animated];
+    
+    //替换掉leftBarButtonItem
+    if (viewController.navigationItem.leftBarButtonItem== nil && [self.viewControllers count] > 1) {
+        viewController.navigationItem.leftBarButtonItem =[self customLeftBackButton];
+    }
+}
+
+#pragma mark - 自定义返回按钮图片
+- (UIBarButtonItem*) customLeftBackButton{
+    
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    CGSize imageSize = [BQMobileResource sharedManager].navibarBackButtonColdImage.size;
+    backButton.frame = CGRectMake(12, 0, imageSize.width / 2, imageSize.height / 2);
+    
+    [backButton setBackgroundImage:[BQMobileResource sharedManager].navibarBackButtonColdImage
+                          forState:UIControlStateNormal];
+    [backButton setBackgroundImage:[BQMobileResource sharedManager].navibarBackButtonHotImage
+                          forState:UIControlStateSelected];
+    
+    
+    [backButton addTarget:self action:@selector(popself) forControlEvents:UIControlEventTouchUpInside];
+
+    
+    return [[UIBarButtonItem alloc] initWithCustomView:backButton];
+}
+
+- (void) popself
+{
+    [self popViewControllerAnimated:YES];
+}
+
+
 @end

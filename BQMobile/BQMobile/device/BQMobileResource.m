@@ -73,6 +73,25 @@ static BQMobileResource * gBQMobileResource = nil;
     // 背景
     _navibarBackgroundImage = [self imageFromResource:@"navigationbar/navi-background@2x"];
     _navibarBackgroundImage = [self reSizeImage:_navibarBackgroundImage toSize:CGSizeMake(_navibarBackgroundImage.size.width/2, _navibarBackgroundImage.size.height/2)];
+    // 返回
+    _navibarBackButtonColdImage    = [self imageFromResource:@"navigationbar/navi_back@2x"];
+    _navibarBackButtonHotImage     = [self imageFromResource:@"navigationbar/navi_back_selected@2x"];
+    // 设置
+    _navibarSettingButtonColdImage = [self imageFromResource:@"navigationbar/navi-setting@2x"];
+    _navibarSettingButtonHotImage  = [self imageFromResource:@"navigationbar/navi-setting-selected@2x"];
+    // 编辑
+    _navibarEditButtonColdImage    = [self imageFromResource:@"navigationbar/navi-edit@2x"];
+    _navibarEditButtonHotImage     = [self imageFromResource:@"navigationbar/navi-edit-selected@2x"];
+    // 目录
+    _navibarMenuButtonColdImage    = [self imageFromResource:@"navigationbar/navi-menu@2x"];
+    _navibarMenuButtonHotImage     = [self imageFromResource:@"navigationbar/navi-menu-selected@2x"];
+    
+    // 工具条
+    // 关注
+    _toolbarBackgroundImage        = [self imageFromResource:@"toolbar/toolbar-background"];
+    _toolbarFaverateColdImage      = [self imageFromResource:@"toolbar/toolbar-fav@2x"];
+    _toolbarFaverateHotImage       = [self imageFromResource:@"toolbar/toolbar-fav-selected@2x"];
+
     /*
      * 侧边栏目录资源
      *
