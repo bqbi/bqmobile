@@ -65,6 +65,7 @@
 		76B0E2FD18C2DEAA00C5C219 /* UFExpress.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 76B0E2FB18C2DEAA00C5C219 /* UFExpress.bundle */; };
 		76B0E30618C2F24400C5C219 /* BQNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B0E30518C2F24400C5C219 /* BQNavigationController.m */; };
 		76B0F8FD18EE1DE3001FB42D /* Demo.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 76B0F8FC18EE1DE3001FB42D /* Demo.bundle */; };
+		76B8A60518FDF295001AE9B8 /* BQComponentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B8A60418FDF295001AE9B8 /* BQComponentType.m */; };
 		76CD375018EF82AE0028F425 /* BQComponentPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CD374F18EF82AE0028F425 /* BQComponentPlugin.m */; };
 		76D99E7418B33643004A9055 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D99E7318B33643004A9055 /* Foundation.framework */; };
 		76D99E7618B33643004A9055 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D99E7518B33643004A9055 /* CoreGraphics.framework */; };
@@ -213,6 +214,8 @@
 		76B0E30418C2F24400C5C219 /* BQNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQNavigationController.h; sourceTree = "<group>"; };
 		76B0E30518C2F24400C5C219 /* BQNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQNavigationController.m; sourceTree = "<group>"; };
 		76B0F8FC18EE1DE3001FB42D /* Demo.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Demo.bundle; path = Bundles/Demo.bundle; sourceTree = SOURCE_ROOT; };
+		76B8A60318FDF295001AE9B8 /* BQComponentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQComponentType.h; sourceTree = "<group>"; };
+		76B8A60418FDF295001AE9B8 /* BQComponentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQComponentType.m; sourceTree = "<group>"; };
 		76CD374E18EF82AE0028F425 /* BQComponentPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQComponentPlugin.h; sourceTree = "<group>"; };
 		76CD374F18EF82AE0028F425 /* BQComponentPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQComponentPlugin.m; sourceTree = "<group>"; };
 		76D99E7018B33643004A9055 /* BQMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BQMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -602,6 +605,8 @@
 				76CD374F18EF82AE0028F425 /* BQComponentPlugin.m */,
 				762C6D1E18FD14CC006DCA09 /* BQComponent.h */,
 				762C6D1F18FD14CC006DCA09 /* BQComponent.m */,
+				76B8A60318FDF295001AE9B8 /* BQComponentType.h */,
+				76B8A60418FDF295001AE9B8 /* BQComponentType.m */,
 			);
 			name = components;
 			path = BQMobile/components;
@@ -737,6 +742,7 @@
 				762C6D2318FD1551006DCA09 /* BQCOMComposition.m in Sources */,
 				762D153E18EA597100A00570 /* BQIpadLeftSideMenuController.m in Sources */,
 				0401B31218EE486200049C05 /* BQSplashWindowController.m in Sources */,
+				76B8A60518FDF295001AE9B8 /* BQComponentType.m in Sources */,
 				76B07C3F18D92C30000FA58B /* BQCommonUI.m in Sources */,
 				04952E5F18EAB52B0068436C /* BQIphoneAnalysisTopicView.m in Sources */,
 				045B373818F7D87A00640C92 /* BQMobileResource.m in Sources */,

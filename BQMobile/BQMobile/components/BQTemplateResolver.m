@@ -12,6 +12,7 @@
 #import "XMLUtils.h"
 #import "BQComponentFactory.h"
 #import "BQComponentPlugin.h"
+#import "BQComponentType.h"
 #import "BQComponent.h"
 
 #define COMPONENT_TYPE_BQ_PREFIX @"bq:"
