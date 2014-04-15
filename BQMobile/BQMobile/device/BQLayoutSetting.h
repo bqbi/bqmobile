@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_OPTIONS(NSUInteger, BQLoginPageLayout)
+typedef NS_OPTIONS(NSUInteger, BQPageLayout)
 {
     Layout_Control_Height = 44,
     Layout_LeftOffset = 12,
@@ -22,3 +22,9 @@ typedef NS_OPTIONS(NSUInteger, BQSplitterLineLayout)
     Layout_SpltLineWidth_4 = 4,
     Layout_SpltLineWidth_12 = 12,
 };
+
+// 缩放矩形区域
+CGRect inflectRect (CGRect rect, float offsetX, float offsetY);
+
+// 偏移矩形区域
+CGRect offsetRect (CGRect rect, float offsetX, float offsetY);

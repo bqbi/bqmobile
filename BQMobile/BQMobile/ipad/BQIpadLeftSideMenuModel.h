@@ -14,5 +14,5 @@
 @interface BQIpadLeftSideMenuModel : NSObject<BQTableViewDataSourceDelegate>
 
 
-- (id) initWithFuncDelegate:(id<BQLeftSidePanelFunctionDelegate>) delg;
+- (id) initWithFuncDelegate:(id<BQLeftMenuFunctionDelegate>) delg;
 @end

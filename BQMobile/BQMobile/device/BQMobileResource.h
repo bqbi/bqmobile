@@ -71,7 +71,18 @@
  * 设置页面资源
  *
  */
+// 全透明透明图片
+@property (nonatomic,retain,readonly) UIImage * alphaImage;
+// 通用背景图片
+@property (nonatomic, retain, readonly) UIImage * commonBackgroundImage;
 
+/*
+ * 服务器地址设置
+ *
+ */
+@property (nonatomic, retain, readonly) UIImage * serverSettingSaveButtonColdImage;
+//
+@property (nonatomic, retain, readonly) UIImage * serverSettingSaveButtonHotImage;
 
 
 @end

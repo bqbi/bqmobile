@@ -13,14 +13,14 @@
 @interface BQIpadLeftSideMenuModel()
 
 // 功能代理
-@property (nonatomic,assign) id<BQLeftSidePanelFunctionDelegate> delegate;
+@property (nonatomic,assign) id<BQLeftMenuFunctionDelegate> delegate;
 @end
 
 @implementation BQIpadLeftSideMenuModel
 
 
 
-- (id) initWithFuncDelegate:(id<BQLeftSidePanelFunctionDelegate>) delg
+- (id) initWithFuncDelegate:(id<BQLeftMenuFunctionDelegate>) delg
 {
     self = [super init];
     if (self) {

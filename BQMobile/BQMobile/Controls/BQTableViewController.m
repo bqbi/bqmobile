@@ -71,7 +71,7 @@
     [tableView setDelegate:self];
     [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:[self.dataSource tableCellIdentifier]];
     [tableView setTableFooterView:[[UIView alloc] init]];
-    [tableView setBackgroundColor:[UIColor menuBackgroundColor]];
+    [tableView setBackgroundColor:[UIColor whiteColor]];
     [tableView setSeparatorColor:[UIColor menuTableViewSeparatorsColor]];
     [tableView setAutoresizingMask:(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight)];
     

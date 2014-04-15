@@ -17,7 +17,7 @@
 #import "BQIpadFunctionController.h"
 #import "BQIpadCommonPanelController.h"
 
-@interface BQIpadHomeController ()<BQLeftSidePanelFunctionDelegate>
+@interface BQIpadHomeController ()<BQLeftMenuFunctionDelegate>
 /**
  *  The left button of the navigation bar.
  */

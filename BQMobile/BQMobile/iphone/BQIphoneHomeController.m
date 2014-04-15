@@ -10,6 +10,8 @@
 // 与侧边栏功能实现相关类文件
 #import "NavigationBarButton.h"
 #import "MSViewControllerSlidingPanel.h"
+//
+#import "BQMobileResource.h"
 
 @interface BQIphoneHomeController ()
 /**
@@ -35,19 +37,24 @@
     [[self sideMenuButton] setTarget:self];
     [[self sideMenuButton] setAction:@selector(openMenuPanel)];
     
-    // 导航栏右侧设置按钮
-//    UIButton * deleteButton = [[UIButton alloc] init];
-//    [self setDeleteButton:[NavigationBarButton buttonWithType:NavigationBarButtonTypeMenu]];
-//    [[self deleteButton] setTarget:self];
-//    [[self deleteButton] setAction:@selector(onDeleteContent)];
-//    
-    //
     self.navigationItem.title = @"BI 首页";
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:[self sideMenuButton]];
-//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:[self deleteButton]];
+    // 工具条
+    UIBarButtonItem *flexItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    self.toolbarItems = @[
+                          flexItem,
+                          [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:nil],
+                          flexItem,
+                          [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:nil],
+                          flexItem,
+                          [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:nil],
+                          flexItem,
+                          [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemReply target:self action:nil],
+                          flexItem];
     
-    self.navigationItem.backBarButtonItem = nil;
-    
+    [self.navigationController  setToolbarHidden:NO animated:YES];
+    [self.navigationController.toolbar setTranslucent:YES];
+    [self.navigationController.toolbar setBackgroundImage:[BQMobileResource sharedManager].alphaImage forToolbarPosition:UIBarPositionBottom barMetrics:UIBarMetricsDefault];
 }
 
 /**

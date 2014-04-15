@@ -62,12 +62,13 @@
     item = [self itemAtIndexPath:indexPath];
     
     [[cell textLabel] setText:[item name]];
+    [cell textLabel].font = [UIFont systemFontOfSize:12];
     
-    [cell setBackgroundColor:[UIColor menuTableViewCellBackgroundColor]];
-    [[cell textLabel] setTextColor:[UIColor menuTableViewCellTextColor]];
+    [cell setBackgroundColor:[UIColor whiteColor]];
+    [[cell textLabel] setTextColor:[UIColor blackColor]];
     [cell setSelectedBackgroundView:[[UIView alloc] initWithFrame:CGRectMake(0, 0, [cell frame].size.width, [cell frame].size.height)]];
     //    [[cell selectedBackgroundView] setBackgroundColor:[UIColor menuTableViewCellBackgroundSelectedColor]];
-    [[cell selectedBackgroundView] setBackgroundColor:[UIColor menuTableViewCellBackgroundSelectedColor]];
+    [[cell selectedBackgroundView] setBackgroundColor:[UIColor purpleColor]];
     
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
 

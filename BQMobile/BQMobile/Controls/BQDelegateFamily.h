@@ -46,10 +46,18 @@ typedef NS_ENUM(NSUInteger, BQEventSelectedMode)
      *  侧边栏-收藏夹-功能选择.
      */
     BQEventSelectedModeCollection     =   2,
+    /**
+     *  侧边栏-收藏夹-功能选择.
+     */
+    BQEventSelectedModeUserInfo       =   3,
+    /**
+     *  侧边栏-收藏夹-功能选择.
+     */
+    BQEventSelectedModeSystemSetting  =   4,
     
 };
 
-@protocol BQLeftSidePanelFunctionDelegate <NSObject>
+@protocol BQLeftMenuFunctionDelegate <NSObject>
 
 @optional
 - (void) openPanelViewController:(BQEventSelectedMode) eventSelectedMode;

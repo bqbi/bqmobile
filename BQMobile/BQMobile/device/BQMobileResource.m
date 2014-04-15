@@ -78,6 +78,14 @@ static BQMobileResource * gBQMobileResource = nil;
      *
      */
     _leftMenuBackgroundImage= [self imageFromResource:@"leftmenu-page/leftmenu-background"];
+    
+    // alpha image
+    _alphaImage             = [self imageFromResource:@"alpha.jpg"];
+    
+    
+    // 服务器地址设置资源
+    _serverSettingSaveButtonColdImage = [self imageFromResource:@"serversetting-page/serversetting-savebutton-cold"];
+    _serverSettingSaveButtonHotImage = [self imageFromResource:@"serversetting-page/serversetting-savebutton-hot"];
 
 }
 
@@ -93,6 +101,18 @@ static BQMobileResource * gBQMobileResource = nil;
     
 }
 
+- (UIImage *)scaleImage:(UIImage *)image toScale:(float)scaleSize
+{
+    UIGraphicsBeginImageContext(CGSizeMake(image.size.width * scaleSize, image.size.height * scaleSize));
+    [image drawInRect:CGRectMake(0, 0, image.size.width * scaleSize, image.size.height * scaleSize)];
+    UIImage *scaledImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return scaledImage;
+    
+}
+    
+                                
 
 
 

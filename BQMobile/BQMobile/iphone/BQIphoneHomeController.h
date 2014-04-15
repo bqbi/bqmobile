@@ -10,7 +10,7 @@
 #import "MSSlidingPanelController.h"
 #import "BQDelegateFamily.h"
 
-@interface BQIphoneHomeController : UIViewController<MSSlidingPanelControllerDelegate, BQLeftSidePanelFunctionDelegate>
+@interface BQIphoneHomeController : UIViewController<MSSlidingPanelControllerDelegate, BQLeftMenuFunctionDelegate>
 
 
 @end

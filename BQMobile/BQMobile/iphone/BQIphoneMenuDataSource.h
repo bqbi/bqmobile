@@ -12,6 +12,6 @@
 @interface BQIphoneMenuDataSource : NSObject<BQTableViewDataSourceDelegate>
 
 
-- (id) initWithFuncDelegate:(id<BQLeftSidePanelFunctionDelegate>) delg;
+- (id) initWithFuncDelegate:(id<BQLeftMenuFunctionDelegate>) delg;
 
 @end

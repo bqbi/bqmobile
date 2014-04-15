@@ -10,6 +10,7 @@
 #import "BQView.h"
 #import "BQCore.h"
 #import "BQMobileResource.h"
+#import "ElUtils.h"
 
 @interface BQSplashWindowController ()
 
@@ -43,6 +44,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    ExpressionResult * res = [ElUtils El:@"1+2"];
+    if (res.returnValue != 0) {
+        NSLog(@"Error!");
+    }
 }
 
 

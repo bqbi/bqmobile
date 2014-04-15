@@ -11,6 +11,6 @@
 #import "BQDelegateFamily.h"
 
 
-@interface BQIpadHomeController : UIViewController<MSSlidingPanelControllerDelegate, BQLeftSidePanelFunctionDelegate>
+@interface BQIpadHomeController : UIViewController<MSSlidingPanelControllerDelegate, BQLeftMenuFunctionDelegate>
 
 @end

@@ -46,7 +46,7 @@
 //    [tableView setTableFooterView:[[UIView alloc] init]];
     [tableView setBackgroundColor:[UIColor whiteColor]];
     [tableView setSeparatorColor:[UIColor orangeColor]];
-
+    [tableView setAutoresizingMask:(UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight)];
     [self addSubview:tableView];
     
 }
