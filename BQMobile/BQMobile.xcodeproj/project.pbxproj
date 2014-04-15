@@ -58,7 +58,6 @@
 		764B7E9F18F4E36E00696A5F /* NavigationBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 764B7E9918F4E36E00696A5F /* NavigationBarButton.m */; };
 		764B7EA018F4E36E00696A5F /* MSSlidingPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 764B7E9C18F4E36E00696A5F /* MSSlidingPanelController.m */; };
 		764B7EA118F4E36E00696A5F /* MSViewControllerSlidingPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 764B7E9E18F4E36E00696A5F /* MSViewControllerSlidingPanel.m */; };
-		764B7EAE18F4E48B00696A5F /* BQCOMCompositionResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = 764B7EAD18F4E48B00696A5F /* BQCOMCompositionResolver.m */; };
 		768DD41218F038A900A8AE61 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 76315D5C18E002AD00199AFD /* libxml2.dylib */; };
 		76AC1E2218C279980063ED32 /* BQLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76AC1E2118C279980063ED32 /* BQLoginController.m */; };
 		76B07C3F18D92C30000FA58B /* BQCommonUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B07C3E18D92C30000FA58B /* BQCommonUI.m */; };
@@ -206,8 +205,6 @@
 		764B7E9C18F4E36E00696A5F /* MSSlidingPanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSSlidingPanelController.m; sourceTree = "<group>"; };
 		764B7E9D18F4E36E00696A5F /* MSViewControllerSlidingPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSViewControllerSlidingPanel.h; sourceTree = "<group>"; };
 		764B7E9E18F4E36E00696A5F /* MSViewControllerSlidingPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSViewControllerSlidingPanel.m; sourceTree = "<group>"; };
-		764B7EAC18F4E48B00696A5F /* BQCOMCompositionResolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQCOMCompositionResolver.h; sourceTree = "<group>"; };
-		764B7EAD18F4E48B00696A5F /* BQCOMCompositionResolver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQCOMCompositionResolver.m; sourceTree = "<group>"; };
 		76AC1E2018C279980063ED32 /* BQLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQLoginController.h; sourceTree = "<group>"; };
 		76AC1E2118C279980063ED32 /* BQLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQLoginController.m; sourceTree = "<group>"; };
 		76B07C3D18D92C30000FA58B /* BQCommonUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQCommonUI.h; sourceTree = "<group>"; };
@@ -365,8 +362,6 @@
 		764B7EA318F4E42700696A5F /* BQComposition */ = {
 			isa = PBXGroup;
 			children = (
-				764B7EAC18F4E48B00696A5F /* BQCOMCompositionResolver.h */,
-				764B7EAD18F4E48B00696A5F /* BQCOMCompositionResolver.m */,
 				762C6D2118FD1551006DCA09 /* BQCOMComposition.h */,
 				762C6D2218FD1551006DCA09 /* BQCOMComposition.m */,
 			);
@@ -725,7 +720,6 @@
 				76F284ED18E7F67400976CF6 /* BQTemplateResolver.m in Sources */,
 				04952E4118EA8B180068436C /* BQIpadSystemSettingView.m in Sources */,
 				045B373518F7BE6800640C92 /* BQIphoneMenuDataSource.m in Sources */,
-				764B7EAE18F4E48B00696A5F /* BQCOMCompositionResolver.m in Sources */,
 				764B7EA018F4E36E00696A5F /* MSSlidingPanelController.m in Sources */,
 				0476D80E18F6B4D60038A4FD /* BQIphoneLoadingController.m in Sources */,
 				042D214218E31E3100E4354C /* BQTableViewController.m in Sources */,
