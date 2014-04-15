@@ -10,6 +10,8 @@
 #import "BQCore.h"
 #import "BQIphoneSystemSettingController.h"
 #import "BQIphoneFrameController.h"
+#import "BQIphoneServerSettingController.h"
+#import "BQMobileResource.h"
 
 @interface BQIphoneLoginController ()
 
@@ -33,12 +35,13 @@
     // 导航栏设置
     self.navigationItem.title = @"用户登录";
     // 设置按钮
-//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(onIphonePressedSetting)];
-    UIImage * settingImage = [UIImage imageNamed:@"IphoneResource.bundle/sys-skin/navigationbar/navi-setting"];
+    UIImage * settingColdImage = [BQMobileResource sharedManager].navibarSettingButtonColdImage;
+    UIImage * settingHotImage  = [BQMobileResource sharedManager].navibarSettingButtonHotImage;
     
     UIButton * settingButton = [[UIButton alloc] init];
-    [settingButton setBackgroundImage:settingImage forState:UIControlStateNormal];
-    settingButton.frame = CGRectMake(-10, 0, settingImage.size.width, settingImage.size.height);
+    [settingButton setBackgroundImage:settingColdImage forState:UIControlStateNormal];
+    [settingButton setBackgroundImage:settingHotImage forState:UIControlStateSelected];
+    settingButton.frame = CGRectMake(-10, 0, settingColdImage.size.width/2, settingColdImage.size.height/2);
     [settingButton addTarget:self action:@selector(onIphonePressedSetting) forControlEvents:UIControlEventTouchUpInside];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:settingButton];
@@ -125,7 +128,7 @@
 
 - (void) onIphonePressedSetting
 {
-    [self.navigationController pushViewController:[[BQIphoneSystemSettingController alloc] init] animated:YES];
+    [self.navigationController pushViewController:[[BQIphoneServerSettingController alloc] init] animated:YES];
 }
 
 - (void)onIphoneEditingDidBeginTextField:(NSInteger)index {

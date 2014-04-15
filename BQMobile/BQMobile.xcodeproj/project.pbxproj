@@ -40,6 +40,7 @@
 		76234A6418C3851900FE3894 /* application.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 76234A6318C3851900FE3894 /* application.cfg */; };
 		762C6D2018FD14CC006DCA09 /* BQComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 762C6D1F18FD14CC006DCA09 /* BQComponent.m */; };
 		762C6D2318FD1551006DCA09 /* BQCOMComposition.m in Sources */ = {isa = PBXBuildFile; fileRef = 762C6D2218FD1551006DCA09 /* BQCOMComposition.m */; };
+		762C6D2618FD2BDE006DCA09 /* BQComponentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 762C6D2518FD2BDE006DCA09 /* BQComponentView.m */; };
 		762D153518EA597100A00570 /* BQIpadAnalysisTopicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 762D151E18EA597100A00570 /* BQIpadAnalysisTopicController.m */; };
 		762D153618EA597100A00570 /* BQIpadAnalysisTopicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 762D152018EA597100A00570 /* BQIpadAnalysisTopicView.m */; };
 		762D153718EA597100A00570 /* BQIpadCommonPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 762D152218EA597100A00570 /* BQIpadCommonPanelController.m */; };
@@ -173,6 +174,8 @@
 		762C6D1F18FD14CC006DCA09 /* BQComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQComponent.m; sourceTree = "<group>"; };
 		762C6D2118FD1551006DCA09 /* BQCOMComposition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQCOMComposition.h; sourceTree = "<group>"; };
 		762C6D2218FD1551006DCA09 /* BQCOMComposition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQCOMComposition.m; sourceTree = "<group>"; };
+		762C6D2418FD2BDE006DCA09 /* BQComponentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQComponentView.h; sourceTree = "<group>"; };
+		762C6D2518FD2BDE006DCA09 /* BQComponentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQComponentView.m; sourceTree = "<group>"; };
 		762D151D18EA597100A00570 /* BQIpadAnalysisTopicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQIpadAnalysisTopicController.h; sourceTree = "<group>"; };
 		762D151E18EA597100A00570 /* BQIpadAnalysisTopicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQIpadAnalysisTopicController.m; sourceTree = "<group>"; };
 		762D151F18EA597100A00570 /* BQIpadAnalysisTopicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQIpadAnalysisTopicView.h; sourceTree = "<group>"; };
@@ -612,6 +615,8 @@
 				76CD374F18EF82AE0028F425 /* BQComponentPlugin.m */,
 				762C6D1E18FD14CC006DCA09 /* BQComponent.h */,
 				762C6D1F18FD14CC006DCA09 /* BQComponent.m */,
+				762C6D2418FD2BDE006DCA09 /* BQComponentView.h */,
+				762C6D2518FD2BDE006DCA09 /* BQComponentView.m */,
 			);
 			name = components;
 			path = BQMobile/components;
@@ -741,6 +746,7 @@
 				762D153818EA597100A00570 /* BQIpadFunctionController.m in Sources */,
 				04B39B3C18F58072002C3934 /* BQIphoneSystemSettingItem.m in Sources */,
 				04952E5618EAB3A40068436C /* BQIphoneHomeController.m in Sources */,
+				762C6D2618FD2BDE006DCA09 /* BQComponentView.m in Sources */,
 				04952E6518EAB5DE0068436C /* BQIphoneSystemSettingView.m in Sources */,
 				0407F76D18FBD41F001DE7C3 /* BQLayoutSetting.m in Sources */,
 				042D214818E31EC200E4354C /* TableViewItem.m in Sources */,

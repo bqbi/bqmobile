@@ -8,6 +8,7 @@
 
 #import "BQIphoneServerSettingController.h"
 #import "BQIphoneServerSettingView.h"
+#import "BQMobileResource.h"
 
 @interface BQIphoneServerSettingController ()
 
@@ -26,30 +27,45 @@
 
 - (void) loadView
 {
-    self.view = [[BQIphoneServerSettingView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
+    // 自定义导航按钮
+//    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//    
+//    backButton.frame = CGRectMake(4, 4, 32, 32);
+//    
+//    [backButton setBackgroundImage:[BQMobileResource sharedManager].navibarBackButtonColdImage
+//                          forState:UIControlStateNormal];
+//    [backButton setBackgroundImage:[BQMobileResource sharedManager].navibarBackButtonHotImage
+//                          forState:UIControlStateSelected];
+//    
+//    
+//    [backButton addTarget:self action:@selector(onBackClick) forControlEvents:UIControlEventTouchUpInside];
+//    
+//    
+//    self.navigationItem.leftBarButtonItem   = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+    // 创建内容视图
+    BQIphoneServerSettingView * contentView = [[BQIphoneServerSettingView alloc] initWithFrame:[[UIScreen mainScreen] applicationFrame]];
+    // 设置代理
+    [contentView setDelegate:self];
+    // 加载
+    [contentView loadRootView];
+    self.view = contentView;
+    // 布局
+    [contentView adjustPositionWithPortrait];
 }
 
-- (void)viewDidLoad
+- (void) onButtonClick:(id)sender
 {
-    [super viewDidLoad];
-    // 1. 加载视图
+    BQIphoneServerSettingView * contentView = (BQIphoneServerSettingView*)sender;
+    NSString * serverAddress = contentView.server.text;
+    NSInteger  nPort         = [contentView.port.text intValue];
+    
+    NSLog(@"保存服务器设置，地址：%@, 端口：%d", serverAddress, nPort);
 }
 
-- (void)didReceiveMemoryWarning
+- (void) onBackClick
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

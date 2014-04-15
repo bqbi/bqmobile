@@ -18,7 +18,7 @@
  *  The left button of the navigation bar.
  */
 
-@property (nonatomic, strong)   NavigationBarButton *sideMenuButton;
+@property (nonatomic, strong)   UIButton *sideMenuButton;
 
 @end
 
@@ -33,12 +33,13 @@
     [self resetDefaultPanelValuesForSide:MSSPSideDisplayedLeft];
     
     // 侧边栏菜单按钮
-    [self setSideMenuButton:[NavigationBarButton buttonWithType:NavigationBarButtonTypeMenu]];
-    [[self sideMenuButton] setTarget:self];
-    [[self sideMenuButton] setAction:@selector(openMenuPanel)];
-    
-    self.navigationItem.title = @"BI 首页";
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:[self sideMenuButton]];
+    _sideMenuButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    _sideMenuButton.frame = CGRectMake(8, 0, 40, 40);
+    [_sideMenuButton setBackgroundImage:[BQMobileResource sharedManager].navibarMenuButtonColdImage forState:UIControlStateNormal];
+    [_sideMenuButton setBackgroundImage:[BQMobileResource sharedManager].navibarMenuButtonHotImage forState:UIControlStateSelected];
+    [_sideMenuButton addTarget:self action:@selector(openMenuPanel) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.title = @"我的关注";
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_sideMenuButton];
     // 工具条
     UIBarButtonItem *flexItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     self.toolbarItems = @[
@@ -77,7 +78,9 @@
 - (void)slidingPanelController:(MSSlidingPanelController *)panelController hasOpenedSide:(MSSPSideDisplayed)side
 {
     if (side == MSSPSideDisplayedLeft)
-        [[self sideMenuButton] setAction:@selector(closePanel)];
+    {
+        [_sideMenuButton addTarget:self action:@selector(closePanel) forControlEvents:UIControlEventTouchUpInside];
+    }
     
 }
 
@@ -85,7 +88,7 @@
 {
     if (side == MSSPSideDisplayedLeft)
     {
-        [[self slidingPanelController] setLeftPanelMaximumWidth:260];
+        [[self slidingPanelController] setLeftPanelMaximumWidth:200];
         [[self slidingPanelController] setLeftPanelOpenGestureMode:MSSPOpenGestureModeAll];
         [[self slidingPanelController] setLeftPanelCloseGestureMode:MSSPCloseGestureModeAll];
         [[self slidingPanelController] setLeftPanelCenterViewInteractionMode:MSSPCenterViewInteractionNavBar];
@@ -108,7 +111,6 @@
 #pragma mark - navigation bar button click function implementation
 - (void) openMenuPanel
 {
-    DLog(@"菜单...");
     if ([[self slidingPanelController] sideDisplayed] == MSSPSideDisplayedLeft) {
         [[self slidingPanelController] closePanel];
     } else {

@@ -33,16 +33,22 @@
     
     // 服务器地址
     _server = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+    _server.tag = ServerInfoCtrlTag_Address;
     _server.borderStyle = UITextBorderStyleRoundedRect;
     _server.placeholder = @"服务器地址";
     _server.clearsOnBeginEditing = YES;
+    _server.keyboardType = UIKeyboardTypeDecimalPad;
+    _server.font = [UIFont systemFontOfSize:12];
     [self addSubview:_server];
     
     // 端口
     _port = [[UITextField alloc] initWithFrame:CGRectMake(rect.origin.x + rect.size.width * 2 / 3.0, rect.origin.y, rect.size.width / 3.0, Layout_Control_Height)];
+    _port.tag = ServerInfoCtrlTag_Port;
     _port.borderStyle = UITextBorderStyleRoundedRect;
     _port.placeholder = @"端口";
     _port.clearsOnBeginEditing = YES;
+    _port.keyboardType = UIKeyboardTypeNumberPad;
+    _port.font = [UIFont systemFontOfSize:12];
     [self addSubview:_port];
     
     // 保存按钮
@@ -59,16 +65,17 @@
     CGRect saveButtonFrame = inflectRect(rect, Layout_LeftOffset, Layout_RightOffset);
     
     float fPosition = Layout_Control_Height + Layout_SpltLineWidth_12;
-    _server.frame = CGRectMake(rect.origin.x, fPosition, rect.size.width*2/3.0-30, Layout_Control_Height);
+    _server.frame = CGRectMake(rect.origin.x, fPosition, rect.size.width*2/3.0-30, 30);
     //
-    _port.frame = CGRectMake(rect.origin.x + rect.size.width * 2 / 3.0, fPosition, rect.size.width / 3.0, Layout_Control_Height);
+    _port.frame = CGRectMake(rect.origin.x + rect.size.width * 2 / 3.0, fPosition, rect.size.width / 3.0, 30);
     // 按钮
-    _saveButton.frame = CGRectMake(saveButtonFrame.origin.x, fPosition + Layout_SpltLineWidth_12 + Layout_Control_Height, saveButtonFrame.size.width, Layout_Control_Height);
+    _saveButton.frame = CGRectMake(saveButtonFrame.origin.x, fPosition + Layout_SpltLineWidth_12 + Layout_Control_Height, saveButtonFrame.size.width, 36);
 }
 
 - (void) onSaveSetting
 {
-    NSLog(@"保存服务器设置");
+//    NSLog(@"保存服务器设置");
+    [_delegate onButtonClick:self];
 }
 /*
 // Only override drawRect: if you perform custom drawing.
