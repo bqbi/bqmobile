@@ -10,6 +10,9 @@
 
 #import "GDataXMLNode.h"
 #import "XMLUtils.h"
+#import "BQCore.h"
+
+#import "BQComponentView.h"
 
 @implementation BQComponentPlugin
 
@@ -19,9 +22,6 @@
 @synthesize category;
 @synthesize categorydesc;
 
-@synthesize tooltip;
-@synthesize iconfile;
-@synthesize ignoreInDesigner;
 @synthesize container;
 
 @synthesize attributes;
@@ -45,6 +45,12 @@
     if (self = [self init]) {
         if (node) {
             name = [XMLUtils getAttributeValue:node withAttributeName:@"id"];
+            description = [XMLUtils getTagValue:node withTagName:@"description"];
+            classname = [XMLUtils getTagValue:node withTagName:@"iosClassname"];
+            category = [XMLUtils getTagValue:node withTagName:@"category"];
+            categorydesc = [XMLUtils getTagValue:node withTagName:@"categorydesc"];
+            container = [Common stringToBOOL:[XMLUtils getTagValue:node withTagName:@"container"] withDefault:NO];
+            DLog(@"%@--%@--%@--%@--%@--%@",name,description,classname,category,categorydesc,(container?@"YES":@"NO"));
         }
     }
     

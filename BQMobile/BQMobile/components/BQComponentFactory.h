@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@class BQComponentView;
-@class GDataXMLNode;
+#import "GDataXMLNode.h"
+
+#import "BQCOMCompositionResolver.h"
 
 @interface BQComponentFactory : NSObject
 
@@ -17,7 +18,5 @@
 @property (nonatomic, readonly) NSMutableDictionary* plugins;
 
 + (BQComponentFactory*) sharedComponents;
-
-- (BQComponentView*) createComponent:(GDataXMLNode*)node withRelativePath:(NSString*)relPath;
 
 @end

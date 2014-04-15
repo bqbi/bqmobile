@@ -38,6 +38,8 @@
 		7606CEE818E918BF0087EC33 /* Component.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7606CEE718E918BF0087EC33 /* Component.bundle */; };
 		7615ECB518B346FF00F1E344 /* libBQDashboard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7615ECB418B346FF00F1E344 /* libBQDashboard.a */; };
 		76234A6418C3851900FE3894 /* application.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 76234A6318C3851900FE3894 /* application.cfg */; };
+		762C6D2018FD14CC006DCA09 /* BQComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 762C6D1F18FD14CC006DCA09 /* BQComponent.m */; };
+		762C6D2318FD1551006DCA09 /* BQCOMComposition.m in Sources */ = {isa = PBXBuildFile; fileRef = 762C6D2218FD1551006DCA09 /* BQCOMComposition.m */; };
 		762D153518EA597100A00570 /* BQIpadAnalysisTopicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 762D151E18EA597100A00570 /* BQIpadAnalysisTopicController.m */; };
 		762D153618EA597100A00570 /* BQIpadAnalysisTopicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 762D152018EA597100A00570 /* BQIpadAnalysisTopicView.m */; };
 		762D153718EA597100A00570 /* BQIpadCommonPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 762D152218EA597100A00570 /* BQIpadCommonPanelController.m */; };
@@ -57,7 +59,6 @@
 		764B7EA018F4E36E00696A5F /* MSSlidingPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 764B7E9C18F4E36E00696A5F /* MSSlidingPanelController.m */; };
 		764B7EA118F4E36E00696A5F /* MSViewControllerSlidingPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 764B7E9E18F4E36E00696A5F /* MSViewControllerSlidingPanel.m */; };
 		764B7EAE18F4E48B00696A5F /* BQCOMCompositionResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = 764B7EAD18F4E48B00696A5F /* BQCOMCompositionResolver.m */; };
-		764B7EB718F54CBB00696A5F /* BQComponentResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = 764B7EB618F54CBB00696A5F /* BQComponentResolver.m */; };
 		768DD41218F038A900A8AE61 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 76315D5C18E002AD00199AFD /* libxml2.dylib */; };
 		76AC1E2218C279980063ED32 /* BQLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76AC1E2118C279980063ED32 /* BQLoginController.m */; };
 		76B07C3F18D92C30000FA58B /* BQCommonUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 76B07C3E18D92C30000FA58B /* BQCommonUI.m */; };
@@ -80,7 +81,6 @@
 		76D99E9718B33644004A9055 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76D99E9518B33644004A9055 /* InfoPlist.strings */; };
 		76D99E9918B33644004A9055 /* BQMobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76D99E9818B33644004A9055 /* BQMobileTests.m */; };
 		76D99F1018B33757004A9055 /* libBQCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D99F0F18B33757004A9055 /* libBQCore.a */; };
-		76F284CF18E666BF00976CF6 /* BQComponentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F284CE18E666BF00976CF6 /* BQComponentView.m */; };
 		76F284ED18E7F67400976CF6 /* BQTemplateResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F284EC18E7F67400976CF6 /* BQTemplateResolver.m */; };
 		76FDF71918E3C0DF004598D3 /* BQAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76FDF71818E3C0DF004598D3 /* BQAlertView.m */; };
 		76FDF71F18E40A58004598D3 /* BQView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76FDF71E18E40A58004598D3 /* BQView.m */; };
@@ -169,6 +169,10 @@
 		7606CEE718E918BF0087EC33 /* Component.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Component.bundle; path = Bundles/Component.bundle; sourceTree = SOURCE_ROOT; };
 		7615ECB418B346FF00F1E344 /* libBQDashboard.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBQDashboard.a; path = "../Bin/BQMobile/Build/Products/Debug-iphoneos/libBQDashboard.a"; sourceTree = "<group>"; };
 		76234A6318C3851900FE3894 /* application.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = application.cfg; path = Bundles/application.cfg; sourceTree = SOURCE_ROOT; };
+		762C6D1E18FD14CC006DCA09 /* BQComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQComponent.h; sourceTree = "<group>"; };
+		762C6D1F18FD14CC006DCA09 /* BQComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQComponent.m; sourceTree = "<group>"; };
+		762C6D2118FD1551006DCA09 /* BQCOMComposition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQCOMComposition.h; sourceTree = "<group>"; };
+		762C6D2218FD1551006DCA09 /* BQCOMComposition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQCOMComposition.m; sourceTree = "<group>"; };
 		762D151D18EA597100A00570 /* BQIpadAnalysisTopicController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQIpadAnalysisTopicController.h; sourceTree = "<group>"; };
 		762D151E18EA597100A00570 /* BQIpadAnalysisTopicController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQIpadAnalysisTopicController.m; sourceTree = "<group>"; };
 		762D151F18EA597100A00570 /* BQIpadAnalysisTopicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQIpadAnalysisTopicView.h; sourceTree = "<group>"; };
@@ -204,8 +208,6 @@
 		764B7E9E18F4E36E00696A5F /* MSViewControllerSlidingPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSViewControllerSlidingPanel.m; sourceTree = "<group>"; };
 		764B7EAC18F4E48B00696A5F /* BQCOMCompositionResolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQCOMCompositionResolver.h; sourceTree = "<group>"; };
 		764B7EAD18F4E48B00696A5F /* BQCOMCompositionResolver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQCOMCompositionResolver.m; sourceTree = "<group>"; };
-		764B7EB518F54CBB00696A5F /* BQComponentResolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQComponentResolver.h; sourceTree = "<group>"; };
-		764B7EB618F54CBB00696A5F /* BQComponentResolver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQComponentResolver.m; sourceTree = "<group>"; };
 		76AC1E2018C279980063ED32 /* BQLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQLoginController.h; sourceTree = "<group>"; };
 		76AC1E2118C279980063ED32 /* BQLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQLoginController.m; sourceTree = "<group>"; };
 		76B07C3D18D92C30000FA58B /* BQCommonUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQCommonUI.h; sourceTree = "<group>"; };
@@ -236,8 +238,6 @@
 		76D99E9618B33644004A9055 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		76D99E9818B33644004A9055 /* BQMobileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BQMobileTests.m; sourceTree = "<group>"; };
 		76D99F0F18B33757004A9055 /* libBQCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBQCore.a; path = "../Bin/BQMobile/Build/Products/Debug-iphoneos/libBQCore.a"; sourceTree = "<group>"; };
-		76F284CD18E666BF00976CF6 /* BQComponentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQComponentView.h; sourceTree = "<group>"; };
-		76F284CE18E666BF00976CF6 /* BQComponentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQComponentView.m; sourceTree = "<group>"; };
 		76F284EB18E7F67400976CF6 /* BQTemplateResolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQTemplateResolver.h; sourceTree = "<group>"; };
 		76F284EC18E7F67400976CF6 /* BQTemplateResolver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQTemplateResolver.m; sourceTree = "<group>"; };
 		76FDF71718E3C0DF004598D3 /* BQAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQAlertView.h; sourceTree = "<group>"; };
@@ -367,6 +367,8 @@
 			children = (
 				764B7EAC18F4E48B00696A5F /* BQCOMCompositionResolver.h */,
 				764B7EAD18F4E48B00696A5F /* BQCOMCompositionResolver.m */,
+				762C6D2118FD1551006DCA09 /* BQCOMComposition.h */,
+				762C6D2218FD1551006DCA09 /* BQCOMComposition.m */,
 			);
 			path = BQComposition;
 			sourceTree = "<group>";
@@ -602,16 +604,14 @@
 				764B7EA618F4E42800696A5F /* BQLabelObject */,
 				764B7EA718F4E42800696A5F /* BQLinkButton */,
 				764B7EA818F4E42800696A5F /* BQPushButton */,
-				76F284CD18E666BF00976CF6 /* BQComponentView.h */,
-				76F284CE18E666BF00976CF6 /* BQComponentView.m */,
 				76F284EB18E7F67400976CF6 /* BQTemplateResolver.h */,
 				76F284EC18E7F67400976CF6 /* BQTemplateResolver.m */,
 				7606CEE218E90B150087EC33 /* BQComponentFactory.h */,
 				7606CEE318E90B150087EC33 /* BQComponentFactory.m */,
 				76CD374E18EF82AE0028F425 /* BQComponentPlugin.h */,
 				76CD374F18EF82AE0028F425 /* BQComponentPlugin.m */,
-				764B7EB518F54CBB00696A5F /* BQComponentResolver.h */,
-				764B7EB618F54CBB00696A5F /* BQComponentResolver.m */,
+				762C6D1E18FD14CC006DCA09 /* BQComponent.h */,
+				762C6D1F18FD14CC006DCA09 /* BQComponent.m */,
 			);
 			name = components;
 			path = BQMobile/components;
@@ -726,11 +726,9 @@
 				04952E4118EA8B180068436C /* BQIpadSystemSettingView.m in Sources */,
 				045B373518F7BE6800640C92 /* BQIphoneMenuDataSource.m in Sources */,
 				764B7EAE18F4E48B00696A5F /* BQCOMCompositionResolver.m in Sources */,
-				76F284CF18E666BF00976CF6 /* BQComponentView.m in Sources */,
 				764B7EA018F4E36E00696A5F /* MSSlidingPanelController.m in Sources */,
 				0476D80E18F6B4D60038A4FD /* BQIphoneLoadingController.m in Sources */,
 				042D214218E31E3100E4354C /* BQTableViewController.m in Sources */,
-				764B7EB718F54CBB00696A5F /* BQComponentResolver.m in Sources */,
 				76B0E30618C2F24400C5C219 /* BQNavigationController.m in Sources */,
 				76AC1E2218C279980063ED32 /* BQLoginController.m in Sources */,
 				7606CEE418E90B150087EC33 /* BQComponentFactory.m in Sources */,
@@ -747,6 +745,8 @@
 				0407F76D18FBD41F001DE7C3 /* BQLayoutSetting.m in Sources */,
 				042D214818E31EC200E4354C /* TableViewItem.m in Sources */,
 				043DF85818F38DA200297627 /* BQButtonSwitch.m in Sources */,
+				762C6D2018FD14CC006DCA09 /* BQComponent.m in Sources */,
+				762C6D2318FD1551006DCA09 /* BQCOMComposition.m in Sources */,
 				762D153E18EA597100A00570 /* BQIpadLeftSideMenuController.m in Sources */,
 				0401B31218EE486200049C05 /* BQSplashWindowController.m in Sources */,
 				76B07C3F18D92C30000FA58B /* BQCommonUI.m in Sources */,

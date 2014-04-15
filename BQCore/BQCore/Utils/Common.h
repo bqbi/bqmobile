@@ -108,7 +108,21 @@
  */
 + (int) findString:(NSString*) string findWhat: (NSString*) findWhat startPos: (int) startPos;
 
+/*
+ *  字符串转布尔值
+ *  string
+ *  def
+ *
+ */
++ (BOOL) stringToBOOL:(NSString*)string withDefault:(BOOL)def;
 
+/*
+ *  字符串转整型值
+ *  string
+ *  def
+ *
+ */
++ (int) stringToInt:(NSString*)string withDefault:(int)def;
 
 
 @end

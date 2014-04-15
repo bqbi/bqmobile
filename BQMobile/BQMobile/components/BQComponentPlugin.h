@@ -17,9 +17,6 @@
 @property (nonatomic, readonly) NSString* classname;
 @property (nonatomic, readonly) NSString* category;
 @property (nonatomic, readonly) NSString* categorydesc;
-@property (nonatomic, readonly) NSString* tooltip;
-@property (nonatomic, readonly) NSString* iconfile;
-@property (nonatomic, readonly) BOOL ignoreInDesigner;
 @property (nonatomic, readonly) BOOL container;
 
 @property (nonatomic, readonly) NSArray* attributes;

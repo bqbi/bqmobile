@@ -32,7 +32,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [BQCOMCompositionResolver createComponentView:nil withParentView:self.view];
+    
     
     // 加载组件集合
     [self loadComponentViews];
@@ -52,7 +52,7 @@
     GDataXMLDocument* doc = [XMLUtils loadXMLFile:filePath];
     
     // 解析xml，创建组件视图集合
-    BQComponentFactory* factory = [BQComponentFactory sharedComponents];
+    
     self.rootView = [factory createComponent:[doc rootElement] withRelativePath:filePath];
     
     [self.view addSubview:self.rootView];

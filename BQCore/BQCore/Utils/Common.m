@@ -251,4 +251,36 @@
     return -1;
 }
 
+/*
+ *  字符串转布尔值
+ *  string
+ *  def
+ *
+ */
++ (BOOL) stringToBOOL:(NSString*)string withDefault:(BOOL)def {
+    if (string != nil && ![@"" isEqualToString:string]) {
+        if ([@"true" caseInsensitiveCompare:string] || [@"yes" caseInsensitiveCompare:string] || [@"y" caseInsensitiveCompare:string] || [@"1" isEqualToString:string]) {
+            return YES;
+        }
+        
+        else if ([@"false" caseInsensitiveCompare:string] || [@"no" caseInsensitiveCompare:string] || [@"n" caseInsensitiveCompare:string] || [@"0" isEqualToString:string]) {
+            return NO;
+        }
+    }
+    return def;
+}
+
+/*
+ *  字符串转整型值
+ *  string
+ *  def
+ *
+ */
++ (int) stringToInt:(NSString*)string withDefault:(int)def {
+    if (string != nil && ![@"" isEqualToString:string]) {
+        return [string intValue];
+    }
+    return def;
+}
+
 @end
