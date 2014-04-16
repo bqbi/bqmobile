@@ -27,7 +27,7 @@
         return nil;
     }
     
-    view = [view initWithNode:node];
+    view = [view initWithNode:node withType:plugin];
     
     [ReflectionUtils getPropertyList:[BQCOMComposition class]];
     

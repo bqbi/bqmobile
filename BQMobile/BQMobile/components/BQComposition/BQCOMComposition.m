@@ -10,9 +10,9 @@
 
 @implementation BQCOMComposition
 
-- (id)initWithNode:(GDataXMLNode*)node {
+- (id)initWithNode:(GDataXMLNode*)node withType:(BQComponentPlugin*)plugin {
     
-    if (self = [super initWithNode:node]) {
+    if (self = [super initWithNode:node withType:plugin]) {
         self.contentView = [[UIScrollView alloc] init];
         self.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
     }

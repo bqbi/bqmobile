@@ -101,6 +101,10 @@
         return COMPONENT_ATTRIBUTE_TYPE_Integer;
     } else if([Common isEqualIgnoreCaseToString:typeString withSecondString:@"Double"]) {
         return COMPONENT_ATTRIBUTE_TYPE_DOUBLE;
+    } else if([Common isEqualIgnoreCaseToString:typeString withSecondString:@"RECT"]) {
+        return COMPONENT_ATTRIBUTE_TYPE_RECT;
+    } else if([Common isEqualIgnoreCaseToString:typeString withSecondString:@"Object"]) {
+        return COMPONENT_ATTRIBUTE_TYPE_OBJECT;
     }
     return COMPONENT_ATTRIBUTE_TYPE_STRING;
 }

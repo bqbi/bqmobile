@@ -13,18 +13,25 @@
 @synthesize contentView;
 @synthesize subViews;
 
+@synthesize pluginType;
+
 @synthesize properties;
 
-- (id)initWithNode:(GDataXMLNode*)node {
+- (id)initWithNode:(GDataXMLNode*)node withType:(BQComponentPlugin*)plugin {
     if (self = [self init]) {
         subViews = [[NSMutableArray alloc] init];
+        
+        pluginType = plugin.name;
+        
+        // 抽取属性
+        // 1.来着默认皮肤的属性
     }
     return self;
 }
 
 - (void)addSubview:(BQComponent*)subView {
     
-    [self.subViews addObject:subViews];
+    [self.subViews addObject:subView];
     
     if (contentView) {
         [contentView addSubview:subView.contentView];

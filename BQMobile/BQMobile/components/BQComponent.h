@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #import "GDataXMLNode.h"
+#import "BQComponentPlugin.h"
 
 
 @interface BQComponent : NSObject
@@ -16,10 +17,12 @@
 @property (nonatomic, strong) UIView* contentView;
 @property (nonatomic, strong) NSMutableArray* subViews;
 
+@property (nonatomic, strong) NSString* pluginType;
+
 @property (nonatomic, strong) NSMutableDictionary* properties;
 
 // 通过节点创建组件
-- (id)initWithNode:(GDataXMLNode*)node;
+- (id)initWithNode:(GDataXMLNode*)node withType:(BQComponentPlugin*)plugin;
 
 // 添加子节点
 - (void)addSubview:(BQComponent*)subView;
