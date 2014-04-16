@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component id="bq:PushButton">
-	<iosClassname>BQCOMPushButtonResolver</iosClassname>
+	<iosClassname>BQCOMPushButton</iosClassname>
 	<category>Buttons</category>
 	
 	<attributes>

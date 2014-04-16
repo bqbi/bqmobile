@@ -95,6 +95,8 @@
 		76AC1E1918C243E40063ED32 /* BQContext.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 76AC1E1618C243CF0063ED32 /* BQContext.h */; };
 		76AC1E1F18C268190063ED32 /* FSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 76AC1E1E18C268190063ED32 /* FSUtils.m */; };
 		76AC1E2418C27CBB0063ED32 /* FSUtils.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 76AC1E1D18C268190063ED32 /* FSUtils.h */; };
+		76EF606618FE14440013F3AE /* ReflectionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 76EF606518FE14440013F3AE /* ReflectionUtils.m */; };
+		76EF606718FE1AFB0013F3AE /* ReflectionUtils.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 76EF606418FE14440013F3AE /* ReflectionUtils.h */; };
 		76F284D118E6765B00976CF6 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76F284D018E6765B00976CF6 /* JavaScriptCore.framework */; };
 		76F284DB18E70DAC00976CF6 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F284DA18E70DAC00976CF6 /* GDataXMLNode.m */; };
 		76F284DC18E792EC00976CF6 /* GDataXMLNode.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 76F284D918E70DAC00976CF6 /* GDataXMLNode.h */; };
@@ -118,6 +120,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				76EF606718FE1AFB0013F3AE /* ReflectionUtils.h in Copy Files */,
 				7694D65118F0541B00195CEC /* BQFileReader.h in Copy Files */,
 				048AC37818E8F59C00820A42 /* XMLUtils.h in Copy Files */,
 				76F284DC18E792EC00976CF6 /* GDataXMLNode.h in Copy Files */,
@@ -276,6 +279,8 @@
 		76AC1E1718C243CF0063ED32 /* BQContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQContext.m; sourceTree = "<group>"; };
 		76AC1E1D18C268190063ED32 /* FSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSUtils.h; sourceTree = "<group>"; };
 		76AC1E1E18C268190063ED32 /* FSUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSUtils.m; sourceTree = "<group>"; };
+		76EF606418FE14440013F3AE /* ReflectionUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReflectionUtils.h; sourceTree = "<group>"; };
+		76EF606518FE14440013F3AE /* ReflectionUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReflectionUtils.m; sourceTree = "<group>"; };
 		76F284D018E6765B00976CF6 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		76F284D918E70DAC00976CF6 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
 		76F284DA18E70DAC00976CF6 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
@@ -516,6 +521,8 @@
 				76315D6518E032A800199AFD /* WebUtils.m */,
 				76F284E818E7970E00976CF6 /* XMLUtils.h */,
 				76F284E918E7970E00976CF6 /* XMLUtils.m */,
+				76EF606418FE14440013F3AE /* ReflectionUtils.h */,
+				76EF606518FE14440013F3AE /* ReflectionUtils.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -761,6 +768,7 @@
 				042D35E618E3AEF200E4354C /* pcre_ord2utf8.c in Sources */,
 				042D35EF18E3AEF200E4354C /* pcre_xclass.c in Sources */,
 				76AC1E1F18C268190063ED32 /* FSUtils.m in Sources */,
+				76EF606618FE14440013F3AE /* ReflectionUtils.m in Sources */,
 				76234A6218C3747F00FE3894 /* PropertyUtils.m in Sources */,
 				042D35EE18E3AEF200E4354C /* pcre_version.c in Sources */,
 				042D35EB18E3AEF200E4354C /* pcre_tables.c in Sources */,

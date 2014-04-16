@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component id="bq:InputText">
-	<iosClassname>BQCOMInputTextResolver</iosClassname>
+	<iosClassname>BQCOMInputText</iosClassname>
 	<category>Input</category>
 	
 	<attributes>
