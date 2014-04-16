@@ -58,7 +58,7 @@
     [self addSubview:_passwordImage];
     // 密码
     _password = [[UITextField alloc] init];
-    _password.backgroundColor = [UIColor colorWithPatternImage:[BQMobileResource sharedManager].loginPasswordImage];
+//    _password.backgroundColor = [UIColor colorWithPatternImage:[BQMobileResource sharedManager].loginPasswordImage];
     _password.font = Iphone_TextFont;
     _password.placeholder = @"请输入密码";
     _password.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
@@ -71,7 +71,7 @@
     // 登录
     _loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [_loginButton setImage:[BQMobileResource sharedManager].loginButtonColdImage forState:UIControlStateNormal];
-    [_loginButton setImage:[BQMobileResource sharedManager].loginButtonHotImage forState:UIControlStateSelected];
+    [_loginButton setImage:[BQMobileResource sharedManager].loginButtonHotImage forState:UIControlStateHighlighted];
     [_loginButton addTarget:self action:@selector(onClickButton:) forControlEvents:UIControlEventTouchUpInside];
     _loginButton.tag = 1;
     [self addSubview:_loginButton];

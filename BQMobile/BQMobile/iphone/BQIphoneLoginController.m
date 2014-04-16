@@ -40,8 +40,8 @@
     
     UIButton * settingButton = [[UIButton alloc] init];
     [settingButton setBackgroundImage:settingColdImage forState:UIControlStateNormal];
-    [settingButton setBackgroundImage:settingHotImage forState:UIControlStateSelected];
-    settingButton.frame = CGRectMake(-10, 0, settingColdImage.size.width/2, settingColdImage.size.height/2);
+    [settingButton setBackgroundImage:settingHotImage forState:UIControlStateHighlighted];
+    settingButton.frame = CGRectMake(-10, 0, settingColdImage.size.width, settingColdImage.size.height);
     [settingButton addTarget:self action:@selector(onIphonePressedSetting) forControlEvents:UIControlEventTouchUpInside];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:settingButton];

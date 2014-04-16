@@ -30,7 +30,12 @@ static BQMobileResource * gBQMobileResource = nil;
 
 - (UIImage*) imageFromResource:(NSString*)resourceName
 {
-    return [UIImage imageNamed:[NSString stringWithFormat:@"%@/%@", self.skinPath, resourceName]];
+    UIImage * image = [UIImage imageNamed:[NSString stringWithFormat:@"%@/%@", self.skinPath, resourceName]];
+    NSString * endWith2x = [resourceName substringFromIndex:resourceName.length-3];
+    if ([endWith2x compare:@"@2x"] == 0) {
+        image = [self reSizeImage:image toSize:CGSizeMake(image.size.width / 2.0, image.size.height / 2.0)];
+    }
+    return image;
 }
 
 - (void) loadResource
@@ -88,7 +93,7 @@ static BQMobileResource * gBQMobileResource = nil;
     
     // 工具条
     // 关注
-    _toolbarBackgroundImage        = [self imageFromResource:@"toolbar/toolbar-background"];
+    _toolbarBackgroundImage        = [self imageFromResource:@"toolbar/toolbar-background@2x"];
     _toolbarFaverateColdImage      = [self imageFromResource:@"toolbar/toolbar-fav@2x"];
     _toolbarFaverateHotImage       = [self imageFromResource:@"toolbar/toolbar-fav-selected@2x"];
 
@@ -109,7 +114,6 @@ static BQMobileResource * gBQMobileResource = nil;
 }
 
 - (UIImage *)reSizeImage:(UIImage *)image toSize:(CGSize)reSize
-
 {
     UIGraphicsBeginImageContext(CGSizeMake(reSize.width, reSize.height));
     [image drawInRect:CGRectMake(0, 0, reSize.width, reSize.height)];

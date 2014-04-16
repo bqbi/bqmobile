@@ -75,7 +75,7 @@
     
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     CGSize imageSize = [BQMobileResource sharedManager].navibarBackButtonColdImage.size;
-    backButton.frame = CGRectMake(12, 0, imageSize.width / 2, imageSize.height / 2);
+    backButton.frame = CGRectMake(12, 0, imageSize.width, imageSize.height);
     
     [backButton setBackgroundImage:[BQMobileResource sharedManager].navibarBackButtonColdImage
                           forState:UIControlStateNormal];
