@@ -44,6 +44,18 @@
  */
 + (NSString*) getGlobalParameter:(NSString*) name;
 
+/*  
+ *  获取全局风格
+ */
++ (NSString*) getGlobalStyle;
+
+/*  
+ *  设置全局风格
+ *  style - 样式
+ *
+ */
++ (void) setGlobalStyle:(NSString*) style;
+
 /*
  *  判断字符串是否为空
  *  string - 字符串

@@ -123,7 +123,7 @@
  *
  */
 + (UIImage*) loadImage:(NSString*) name {
-    NSString* style = [BQContext getGlobalStyle];
+    NSString* style = [Common getGlobalStyle];
     
     UIImage* image = nil;
     if (style) {

@@ -83,6 +83,29 @@
     return result;
 }
 
+//  获取全局风格
++ (NSString*) getGlobalStyle {
+    NSString* style = nil;
+    if ([Common isStringEmpty:style]) {
+        style = [Common getGlobalParameter:PARAMETER_LAST_UI_STYLE];
+    }
+    if ([Common isStringEmpty:style]) {
+        style = [Common getGlobalParameter:GLOBAL_UI_STYLE];
+        
+    }
+    return style;
+}
+
+//  设置全局风格
++ (void) setGlobalStyle:(NSString*) style {
+    if ([Common isStringEmpty:style]) {
+        style = [Common getGlobalParameter:GLOBAL_UI_STYLE];
+    }
+    
+    // 保持文件
+    [self setCustomParameter:style forName:PARAMETER_LAST_UI_STYLE];
+}
+
 /*
  *  判断字符串是否为空
  *  string - 字符串

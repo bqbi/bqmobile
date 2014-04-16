@@ -15,6 +15,9 @@
 // 组件插件集合
 @property (nonatomic, readonly) NSMutableDictionary* plugins;
 
+// 组件样式的默认属性设置
+@property (nonatomic, readonly) NSMutableDictionary* styles;
+
 + (BQComponentFactory*) sharedComponents;
 
 @end

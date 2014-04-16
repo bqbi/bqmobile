@@ -18,6 +18,7 @@
 @implementation BQComponentFactory
 
 @synthesize plugins;
+@synthesize styles;
 
 // 单例：组件配置工厂
 static BQComponentFactory* _sharedComponents = nil;
@@ -45,10 +46,16 @@ static BQComponentFactory* _sharedComponents = nil;
 - (id) init {
     if (self = [super init]) {
         plugins = [[NSMutableDictionary alloc] init];
-        
         [self initComponents];
+        
+        styles = [[NSMutableDictionary alloc] init];
+        [self initComponentStyle:[Common getGlobalStyle]];
     }
     return self;
+}
+
+- (void) initComponentStyle:(NSString*)style{
+    // TODO
 }
 
 - (void) initComponents {
