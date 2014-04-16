@@ -56,6 +56,11 @@ static BQComponentFactory* _sharedComponents = nil;
 
 - (void) initComponentStyle:(NSString*)style{
     // TODO
+    
+    NSMutableDictionary* components = [[NSMutableDictionary alloc] init];
+    
+    
+    [styles setObject:components forKey:style];
 }
 
 - (void) initComponents {

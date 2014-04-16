@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<components>
+    <component id="bq:LabelObject">
+        <attribute name="text" value="testttt" />
+    </component>
+</components>
