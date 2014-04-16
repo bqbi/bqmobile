@@ -80,6 +80,9 @@
 		76D99E9718B33644004A9055 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76D99E9518B33644004A9055 /* InfoPlist.strings */; };
 		76D99E9918B33644004A9055 /* BQMobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76D99E9818B33644004A9055 /* BQMobileTests.m */; };
 		76D99F1018B33757004A9055 /* libBQCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D99F0F18B33757004A9055 /* libBQCore.a */; };
+		76EF607818FE6F2A0013F3AE /* BQCOMInputText.m in Sources */ = {isa = PBXBuildFile; fileRef = 76EF607718FE6F2A0013F3AE /* BQCOMInputText.m */; };
+		76EF607B18FE6F4E0013F3AE /* BQCOMLabelObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 76EF607A18FE6F4E0013F3AE /* BQCOMLabelObject.m */; };
+		76EF607E18FE6F5F0013F3AE /* BQCOMChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 76EF607D18FE6F5F0013F3AE /* BQCOMChart.m */; };
 		76F284ED18E7F67400976CF6 /* BQTemplateResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F284EC18E7F67400976CF6 /* BQTemplateResolver.m */; };
 		76FDF71918E3C0DF004598D3 /* BQAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76FDF71818E3C0DF004598D3 /* BQAlertView.m */; };
 		76FDF71F18E40A58004598D3 /* BQView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76FDF71E18E40A58004598D3 /* BQView.m */; };
@@ -251,6 +254,12 @@
 		76EF607318FE1BD00013F3AE /* ReflectionUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReflectionUtils.h; sourceTree = "<group>"; };
 		76EF607418FE1BD00013F3AE /* WebUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebUtils.h; sourceTree = "<group>"; };
 		76EF607518FE1BD00013F3AE /* XMLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLUtils.h; sourceTree = "<group>"; };
+		76EF607618FE6F2A0013F3AE /* BQCOMInputText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQCOMInputText.h; sourceTree = "<group>"; };
+		76EF607718FE6F2A0013F3AE /* BQCOMInputText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQCOMInputText.m; sourceTree = "<group>"; };
+		76EF607918FE6F4E0013F3AE /* BQCOMLabelObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQCOMLabelObject.h; sourceTree = "<group>"; };
+		76EF607A18FE6F4E0013F3AE /* BQCOMLabelObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQCOMLabelObject.m; sourceTree = "<group>"; };
+		76EF607C18FE6F5F0013F3AE /* BQCOMChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQCOMChart.h; sourceTree = "<group>"; };
+		76EF607D18FE6F5F0013F3AE /* BQCOMChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQCOMChart.m; sourceTree = "<group>"; };
 		76F284EB18E7F67400976CF6 /* BQTemplateResolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQTemplateResolver.h; sourceTree = "<group>"; };
 		76F284EC18E7F67400976CF6 /* BQTemplateResolver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQTemplateResolver.m; sourceTree = "<group>"; };
 		76FDF71718E3C0DF004598D3 /* BQAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQAlertView.h; sourceTree = "<group>"; };
@@ -391,6 +400,8 @@
 		764B7EA218F4E42700696A5F /* BQChart */ = {
 			isa = PBXGroup;
 			children = (
+				76EF607C18FE6F5F0013F3AE /* BQCOMChart.h */,
+				76EF607D18FE6F5F0013F3AE /* BQCOMChart.m */,
 			);
 			path = BQChart;
 			sourceTree = "<group>";
@@ -414,6 +425,8 @@
 		764B7EA518F4E42700696A5F /* BQInputText */ = {
 			isa = PBXGroup;
 			children = (
+				76EF607618FE6F2A0013F3AE /* BQCOMInputText.h */,
+				76EF607718FE6F2A0013F3AE /* BQCOMInputText.m */,
 			);
 			path = BQInputText;
 			sourceTree = "<group>";
@@ -421,6 +434,8 @@
 		764B7EA618F4E42800696A5F /* BQLabelObject */ = {
 			isa = PBXGroup;
 			children = (
+				76EF607918FE6F4E0013F3AE /* BQCOMLabelObject.h */,
+				76EF607A18FE6F4E0013F3AE /* BQCOMLabelObject.m */,
 			);
 			path = BQLabelObject;
 			sourceTree = "<group>";
@@ -773,6 +788,7 @@
 				043DF86018F4B7A000297627 /* BQIphoneSystemSettingDataSource.m in Sources */,
 				042D214918E31EC200E4354C /* TableViewSection.m in Sources */,
 				042D214C18E31EEC00E4354C /* Color.m in Sources */,
+				76EF607E18FE6F5F0013F3AE /* BQCOMChart.m in Sources */,
 				76F284ED18E7F67400976CF6 /* BQTemplateResolver.m in Sources */,
 				04952E4118EA8B180068436C /* BQIpadSystemSettingView.m in Sources */,
 				045B373518F7BE6800640C92 /* BQIphoneMenuDataSource.m in Sources */,
@@ -801,6 +817,7 @@
 				76B8A60518FDF295001AE9B8 /* BQComponentType.m in Sources */,
 				76B07C3F18D92C30000FA58B /* BQCommonUI.m in Sources */,
 				04952E5F18EAB52B0068436C /* BQIphoneAnalysisTopicView.m in Sources */,
+				76EF607B18FE6F4E0013F3AE /* BQCOMLabelObject.m in Sources */,
 				045B373818F7D87A00640C92 /* BQMobileResource.m in Sources */,
 				76B07C4218D93EA4000FA58B /* BQLoadView.m in Sources */,
 				04952E4718EA99F80068436C /* BQTableViewDataModel.m in Sources */,
@@ -818,6 +835,7 @@
 				764B7E9F18F4E36E00696A5F /* NavigationBarButton.m in Sources */,
 				76D99E8418B33643004A9055 /* BQAppDelegate.m in Sources */,
 				762D153B18EA597100A00570 /* BQIpadLeftSideMenuModel.m in Sources */,
+				76EF607818FE6F2A0013F3AE /* BQCOMInputText.m in Sources */,
 				762D153718EA597100A00570 /* BQIpadCommonPanelController.m in Sources */,
 				76FDF71F18E40A58004598D3 /* BQView.m in Sources */,
 				043DF85D18F3CF1D00297627 /* BQImageTextView.m in Sources */,

@@ -4,10 +4,18 @@
 	<category>Display</category>
 	
 	<attributes>
-		&bq-m-attribute-object-name
+		&bq-m-attribute-id
 		&bq-m-attribute-enabled
 		
 		&bq-m-attribute-buddy
+        
+        &bq-m-attribute-position
+        
+        <attribute>
+            <name>text</name>
+            <required>false</required>
+            <type>String</type>
+        </attribute>
 	</attributes>
 	
 </component>

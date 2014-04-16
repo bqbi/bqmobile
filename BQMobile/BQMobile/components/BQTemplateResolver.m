@@ -20,8 +20,14 @@
 @implementation BQTemplateResolver
 
 + (BQComponent*) resolverNode:(BQComponentPlugin*)plugin withNode:(GDataXMLNode*)node withRelativePath:(NSString*)relPath {
-    BQComponent* view = nil; // TODO
-    NSLog(@"-------%@",plugin.classname);
+    
+    BQComponent* view = (BQComponent*)[ReflectionUtils allocWithClassName:plugin.classname];
+    
+    if ([Common isObjectNull:view]) {
+        return nil;
+    }
+    
+    view = [view initWithNode:node];
     
     [ReflectionUtils getPropertyList:[BQCOMComposition class]];
     
@@ -34,7 +40,9 @@
             for (int i = 0; i < [subNodes count]; i++) {
                 subNode = [subNodes objectAtIndex:i];
                 subView = [self resolver:subNode withRelativePath:relPath];
-                [view addSubview:subView];
+                if (subView) {
+                    [view addSubview:subView];
+                }
             }
         }
     }

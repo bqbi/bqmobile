@@ -1,0 +1,5 @@
+<attribute>
+	<name>position</name>
+	<required>false</required>
+	<type>Rect</type>
+</attribute>

@@ -13,6 +13,8 @@
 @synthesize contentView;
 @synthesize subViews;
 
+@synthesize properties;
+
 - (id)initWithNode:(GDataXMLNode*)node {
     if (self = [self init]) {
         subViews = [[NSMutableArray alloc] init];
@@ -30,9 +32,7 @@
 }
 
 - (void)rerender:(CGRect)frame {
-    if (contentView) {
-        contentView.frame = frame;
-    }
+    
 }
 
 @end

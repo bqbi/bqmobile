@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component id="bq:PushButton">
-	<iosClassname>BQCOMPushButton</iosClassname>
-	<category>Buttons</category>
+	<iosClassname>BQCOMChart</iosClassname>
+	<category>Display</category>
 	
 	<attributes>
 		&bq-m-attribute-id
 		&bq-m-attribute-enabled
         
         &bq-m-attribute-position
+        
+        &bq-m-attribute-type
 	</attributes>
 </component>

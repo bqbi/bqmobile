@@ -2,4 +2,11 @@
 <component id="bq:Image">
 	<iosClassname>BQCOMImage</iosClassname>
 	<category>Display</category>
+    
+    <attributes>
+		&bq-m-attribute-id
+		&bq-m-attribute-enabled
+        
+        &bq-m-attribute-position
+    </attributes>
 </component>

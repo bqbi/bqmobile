@@ -92,6 +92,15 @@
 }
 
 /*
+ *  判断对象是否为空
+ *  obj - 对象
+ *
+ */
++ (BOOL) isObjectNull:(id)obj {
+    return obj == nil || [obj isKindOfClass:[NSNull class]];
+}
+
+/*
  *  判断是否一个字符被认为是空白
  *  本系统中认为空格、制表符、换行、回车都认为是空白
  *  c - 字符
@@ -251,6 +260,31 @@
     return -1;
 }
 
+
+
+/*
+ *  字符串NVL
+ *  string
+ *  def
+ *
+ */
++ (NSString*) NVL:(NSString*)string withDefault:(NSString*)def {
+    if (![self isStringEmpty:string]) {
+        return string;
+    }
+    return def;
+}
+
+/*
+ *  忽略大小写比较
+ *  str1
+ *  str2
+ *
+ */
++ (BOOL) isEqualIgnoreCaseToString:(NSString*)str1 withSecondString:(NSString*)str2 {
+    return [str1 caseInsensitiveCompare:str2] == NSOrderedSame;
+}
+
 /*
  *  字符串转布尔值
  *  string
@@ -258,14 +292,15 @@
  *
  */
 + (BOOL) stringToBOOL:(NSString*)string withDefault:(BOOL)def {
-    if (string != nil && ![@"" isEqualToString:string]) {
-        if ([@"true" caseInsensitiveCompare:string] || [@"yes" caseInsensitiveCompare:string] || [@"y" caseInsensitiveCompare:string] || [@"1" isEqualToString:string]) {
+    if (![self isStringEmpty:string]) {
+        if ([self isEqualIgnoreCaseToString:string withSecondString:@"true"] || [self isEqualIgnoreCaseToString:string withSecondString:@"yes"] || [self isEqualIgnoreCaseToString:string withSecondString:@"y"] || [self isEqualIgnoreCaseToString:string withSecondString:@"1"]) {
             return YES;
         }
         
-        else if ([@"false" caseInsensitiveCompare:string] || [@"no" caseInsensitiveCompare:string] || [@"n" caseInsensitiveCompare:string] || [@"0" isEqualToString:string]) {
+        else if ([self isEqualIgnoreCaseToString:string withSecondString:@"false"] || [self isEqualIgnoreCaseToString:string withSecondString:@"no"] || [self isEqualIgnoreCaseToString:string withSecondString:@"n"] || [self isEqualIgnoreCaseToString:string withSecondString:@"0"]) {
             return NO;
         }
+        
     }
     return def;
 }
@@ -277,8 +312,22 @@
  *
  */
 + (int) stringToInt:(NSString*)string withDefault:(int)def {
-    if (string != nil && ![@"" isEqualToString:string]) {
+    if (![self isStringEmpty:string]) {
         return [string intValue];
+    }
+    return def;
+}
+
++ (float) stringToFloat:(NSString *)string withDefault:(float)def {
+    if (![self isStringEmpty:string]) {
+        return [string floatValue];
+    }
+    return def;
+}
+
++ (double) stringToDouble:(NSString *)string withDefault:(double)def {
+    if (![self isStringEmpty:string]) {
+        return [string doubleValue];
     }
     return def;
 }

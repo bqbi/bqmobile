@@ -2,4 +2,11 @@
 <component id="bq:LinkButton">
 	<iosClassname>BQCOMLinkButton</iosClassname>
 	<category>Buttons</category>
+    
+    <attributes>
+		&bq-m-attribute-id
+		&bq-m-attribute-enabled
+        
+        &bq-m-attribute-position
+    </attributes>
 </component>

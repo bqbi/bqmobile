@@ -21,9 +21,15 @@
 }
 
 - (void)rerender:(CGRect)frame {
-    self.contentView.frame = frame;
+    if (self.contentView) {
+        self.contentView.frame = frame;
+    }
     
-    // 渲染子组件 TODO
+    if (self.subViews) {
+        for (BQComponent* com in self.subViews) {
+            [com rerender:frame];
+        }
+    }
 }
 
 @end

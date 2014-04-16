@@ -16,6 +16,8 @@
 @property (nonatomic, strong) UIView* contentView;
 @property (nonatomic, strong) NSMutableArray* subViews;
 
+@property (nonatomic, strong) NSMutableDictionary* properties;
+
 // 通过节点创建组件
 - (id)initWithNode:(GDataXMLNode*)node;
 

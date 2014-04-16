@@ -25,8 +25,6 @@
     for (int i = 0; i < count; i++) {
         const char* propertyName = property_getName(properties[i]);
         [propertyArray addObject:[NSString stringWithUTF8String:propertyName]];
-        
-        NSLog(@"propertyName-----%@",[NSString stringWithUTF8String:propertyName]);
     }
     free(properties);
     return propertyArray;
@@ -86,7 +84,7 @@
  *  通过类名实例化一个对象
  *
  */
-+ (id)alloc:(NSString*)className {
++ (id)allocWithClassName:(NSString*)className {
     Class clazz = [self getClass:className];
     return [clazz alloc];
 }

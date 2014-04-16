@@ -51,6 +51,13 @@
 + (BOOL) isStringEmpty:(NSString*)string;
 
 /*
+ *  判断对象是否为空
+ *  obj - 对象
+ *
+ */
++ (BOOL) isObjectNull:(id)obj;
+
+/*
  *  判断是否一个字符被认为是空白
  *  本系统中认为空格、制表符、换行、回车都认为是空白
  *  c - 字符
@@ -109,6 +116,22 @@
 + (int) findString:(NSString*) string findWhat: (NSString*) findWhat startPos: (int) startPos;
 
 /*
+ *  字符串NVL
+ *  string
+ *  def
+ *
+ */
++ (NSString*) NVL:(NSString*)string withDefault:(NSString*)def;
+
+/*
+ *  忽略大小写比较
+ *  str1
+ *  str2
+ *
+ */
++ (BOOL) isEqualIgnoreCaseToString:(NSString*)str1 withSecondString:(NSString*)str2;
+
+/*
  *  字符串转布尔值
  *  string
  *  def
@@ -124,5 +147,8 @@
  */
 + (int) stringToInt:(NSString*)string withDefault:(int)def;
 
++ (float) stringToFloat:(NSString *)string withDefault:(float)def;
+
++ (double) stringToDouble:(NSString *)string withDefault:(double)def;
 
 @end
