@@ -98,6 +98,9 @@
 /* Begin PBXFileReference section */
 		0401B31018EE486200049C05 /* BQSplashWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BQSplashWindowController.h; path = ../device/BQSplashWindowController.h; sourceTree = "<group>"; };
 		0401B31118EE486200049C05 /* BQSplashWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BQSplashWindowController.m; path = ../device/BQSplashWindowController.m; sourceTree = "<group>"; };
+
+		0407F76518FBB9D0001DE7C3 /* BQDashboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQDashboard.h; sourceTree = "<group>"; };
+
 		0407F76618FBBFBC001DE7C3 /* BQIphoneServerSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQIphoneServerSettingController.h; sourceTree = "<group>"; };
 		0407F76718FBBFBC001DE7C3 /* BQIphoneServerSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQIphoneServerSettingController.m; sourceTree = "<group>"; };
 		0407F76918FBBFDD001DE7C3 /* BQIphoneServerSettingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQIphoneServerSettingView.h; sourceTree = "<group>"; };
@@ -235,6 +238,19 @@
 		76D99E9618B33644004A9055 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		76D99E9818B33644004A9055 /* BQMobileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BQMobileTests.m; sourceTree = "<group>"; };
 		76D99F0F18B33757004A9055 /* libBQCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBQCore.a; path = "../Bin/BQMobile/Build/Products/Debug-iphoneos/libBQCore.a"; sourceTree = "<group>"; };
+		76EF606918FE1BD00013F3AE /* BQContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQContext.h; sourceTree = "<group>"; };
+		76EF606A18FE1BD00013F3AE /* BQCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQCore.h; sourceTree = "<group>"; };
+		76EF606B18FE1BD00013F3AE /* BQFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQFileReader.h; sourceTree = "<group>"; };
+		76EF606C18FE1BD00013F3AE /* BQServerAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQServerAccess.h; sourceTree = "<group>"; };
+		76EF606D18FE1BD00013F3AE /* BQViewOperateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQViewOperateModel.h; sourceTree = "<group>"; };
+		76EF606E18FE1BD00013F3AE /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		76EF606F18FE1BD00013F3AE /* ElUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElUtils.h; sourceTree = "<group>"; };
+		76EF607018FE1BD00013F3AE /* FSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSUtils.h; sourceTree = "<group>"; };
+		76EF607118FE1BD00013F3AE /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		76EF607218FE1BD00013F3AE /* PropertyUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyUtils.h; sourceTree = "<group>"; };
+		76EF607318FE1BD00013F3AE /* ReflectionUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReflectionUtils.h; sourceTree = "<group>"; };
+		76EF607418FE1BD00013F3AE /* WebUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebUtils.h; sourceTree = "<group>"; };
+		76EF607518FE1BD00013F3AE /* XMLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLUtils.h; sourceTree = "<group>"; };
 		76F284EB18E7F67400976CF6 /* BQTemplateResolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQTemplateResolver.h; sourceTree = "<group>"; };
 		76F284EC18E7F67400976CF6 /* BQTemplateResolver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQTemplateResolver.m; sourceTree = "<group>"; };
 		76FDF71718E3C0DF004598D3 /* BQAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQAlertView.h; sourceTree = "<group>"; };
@@ -274,6 +290,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+
+		0407F75518FBB9D0001DE7C3 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				76EF606818FE1BD00013F3AE /* BQCore */,
+				0407F76418FBB9D0001DE7C3 /* BQDashboard */,
+			);
+			name = include;
+			path = "../../Bin/BQMobile/Build/Products/Debug-iphoneos/include";
+			sourceTree = "<group>";
+		};
+		0407F76418FBB9D0001DE7C3 /* BQDashboard */ = {
+			isa = PBXGroup;
+			children = (
+				0407F76518FBB9D0001DE7C3 /* BQDashboard.h */,
+			);
+			path = BQDashboard;
+			sourceTree = "<group>";
+		};
+
 		042D213018E2CFC000E4354C /* controls */ = {
 			isa = PBXGroup;
 			children = (
@@ -585,6 +621,26 @@
 				76D99E9518B33644004A9055 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		76EF606818FE1BD00013F3AE /* BQCore */ = {
+			isa = PBXGroup;
+			children = (
+				76EF606918FE1BD00013F3AE /* BQContext.h */,
+				76EF606A18FE1BD00013F3AE /* BQCore.h */,
+				76EF606B18FE1BD00013F3AE /* BQFileReader.h */,
+				76EF606C18FE1BD00013F3AE /* BQServerAccess.h */,
+				76EF606D18FE1BD00013F3AE /* BQViewOperateModel.h */,
+				76EF606E18FE1BD00013F3AE /* Common.h */,
+				76EF606F18FE1BD00013F3AE /* ElUtils.h */,
+				76EF607018FE1BD00013F3AE /* FSUtils.h */,
+				76EF607118FE1BD00013F3AE /* GDataXMLNode.h */,
+				76EF607218FE1BD00013F3AE /* PropertyUtils.h */,
+				76EF607318FE1BD00013F3AE /* ReflectionUtils.h */,
+				76EF607418FE1BD00013F3AE /* WebUtils.h */,
+				76EF607518FE1BD00013F3AE /* XMLUtils.h */,
+			);
+			path = BQCore;
 			sourceTree = "<group>";
 		};
 		76F284CC18E6660900976CF6 /* components */ = {

@@ -9,7 +9,7 @@
 #import "BQTemplateResolver.h"
 
 #import "GDataXMLNode.h"
-#import "XMLUtils.h"
+#import "BQCore.h"
 #import "BQComponentFactory.h"
 #import "BQComponentPlugin.h"
 #import "BQComponentType.h"
@@ -21,8 +21,9 @@
 
 + (BQComponent*) resolverNode:(BQComponentPlugin*)plugin withNode:(GDataXMLNode*)node withRelativePath:(NSString*)relPath {
     BQComponent* view = nil; // TODO
+    NSLog(@"-------%@",plugin.classname);
     
-    
+    [ReflectionUtils getPropertyList:[BQCOMComposition class]];
     
     if (plugin.container) {
         NSArray* subNodes = [node children];

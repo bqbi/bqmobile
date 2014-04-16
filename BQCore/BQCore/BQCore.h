@@ -12,6 +12,7 @@
 #import "BQContext.h"
 #import "FSUtils.h"
 #import "PropertyUtils.h"
+#import "ReflectionUtils.h"
 #import "WebUtils.h"
 #import "XMLUtils.h"
 
