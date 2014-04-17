@@ -13,5 +13,7 @@
     <!-- display widgets -->
 	<component>bq-m-labelobject.xml</component>
 	<component>bq-m-image.xml</component>
+    <component>bq-m-chart.xml</component>
+    
 
 </components>

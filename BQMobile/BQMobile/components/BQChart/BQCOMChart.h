@@ -8,6 +8,8 @@
 
 #import "BQComponent.h"
 
+#import "BQUIChart.h"
+
 @interface BQCOMChart : BQComponent
 
 @end
