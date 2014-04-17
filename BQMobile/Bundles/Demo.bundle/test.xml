@@ -1,7 +1,7 @@
 <bq:composition>
     
-    <bq:labelObject buddy="desc" text="选择省份${param1}" position="100,50,100,30" />
-    <bq:inputText id="desc" value="" position="250,50,100,30" />
+    <bq:labelObject buddy="desc" text="选择省份${param1}" position="100,50,100,50" />
+    <bq:inputText id="desc" value="北京" borderStyle="1" position="250,50,200,50" />
     <bq:chart type="MSColumn3D" position="30,100,500,500">
         <chart caption="Category wise Sales for 1996" XAxisName="Month" palette="2" animation="1" formatNumberScale="0" numberPrefix="$" showValues="0" numDivLines="4" legendPosition="BOTTOM">
             <categories>

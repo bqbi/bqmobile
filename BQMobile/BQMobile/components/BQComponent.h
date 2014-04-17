@@ -13,7 +13,10 @@
 
 // 组件属性集合
 #define COMPONENT_ATTRIBUTE_TEXT @"text"
+#define COMPONENT_ATTRIBUTE_VALUE @"value"
 #define COMPONENT_ATTRIBUTE_POSITION @"position"
+
+#define COMPONENT_ATTRIBUTE_BORDER_STYLE @"borderStyle"
 
 
 @interface BQComponent : NSObject

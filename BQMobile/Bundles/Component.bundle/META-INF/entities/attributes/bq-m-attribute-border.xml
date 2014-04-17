@@ -1,5 +1,5 @@
 <attribute>
-	<name>value</name>
+	<name>borderStyle</name>
 	<required>false</required>
-	<type>String</type>
+	<type>Integer</type>
 </attribute>

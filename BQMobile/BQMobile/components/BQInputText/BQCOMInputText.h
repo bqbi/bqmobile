@@ -8,6 +8,8 @@
 
 #import "BQComponent.h"
 
+#import "BQUITextField.h"
+
 @interface BQCOMInputText : BQComponent
 
 @end
