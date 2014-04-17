@@ -14,9 +14,10 @@
 enum COMPONENT_ATTRIBUTE_TYPE {
     COMPONENT_ATTRIBUTE_TYPE_STRING = 0,    // String
     COMPONENT_ATTRIBUTE_TYPE_BOOLEAN = 1,   // Boolean
-    COMPONENT_ATTRIBUTE_TYPE_Integer = 2,   // Integer
+    COMPONENT_ATTRIBUTE_TYPE_INTEGER = 2,   // Integer
     COMPONENT_ATTRIBUTE_TYPE_DOUBLE = 3,    // Double
     COMPONENT_ATTRIBUTE_TYPE_RECT = 10,     // RECT
+    COMPONENT_ATTRIBUTE_TYPE_POINT = 11,    // POINT
     COMPONENT_ATTRIBUTE_TYPE_OBJECT = 99,   // Object
 };
 
@@ -44,9 +45,13 @@ enum COMPONENT_ATTRIBUTE_TYPE {
 
 @property (nonatomic, readonly) NSString* name;
 @property (nonatomic, readonly) BOOL required;
-@property (nonatomic, readonly) int type;
+@property (nonatomic, readonly) enum COMPONENT_ATTRIBUTE_TYPE type;
 @property (nonatomic, readonly) NSString* defaultString;
 
 - (id) initWithNode:(GDataXMLElement*)node;
+
+- (id) getAttributeValue:(NSString*)valueString;
+
++ (id) getUndefinedAttributeValue:(NSString*)valueString;
 
 @end

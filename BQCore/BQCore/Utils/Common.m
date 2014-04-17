@@ -314,6 +314,10 @@
  *  def
  *
  */
++ (BOOL) stringToBOOL:(NSString*)string {
+    return [self stringToBOOL:string withDefault:NO];
+}
+
 + (BOOL) stringToBOOL:(NSString*)string withDefault:(BOOL)def {
     if (![self isStringEmpty:string]) {
         if ([self isEqualIgnoreCaseToString:string withSecondString:@"true"] || [self isEqualIgnoreCaseToString:string withSecondString:@"yes"] || [self isEqualIgnoreCaseToString:string withSecondString:@"y"] || [self isEqualIgnoreCaseToString:string withSecondString:@"1"]) {
@@ -334,25 +338,120 @@
  *  def
  *
  */
++ (int) stringToInt:(NSString*)string {
+    return [self stringToInt:string withDefault:0];
+}
+
 + (int) stringToInt:(NSString*)string withDefault:(int)def {
+    string = [self trim:string];
     if (![self isStringEmpty:string]) {
         return [string intValue];
     }
     return def;
 }
 
++ (float) stringToFloat:(NSString*)string {
+    return [self stringToFloat:string withDefault:0];
+}
+
 + (float) stringToFloat:(NSString *)string withDefault:(float)def {
+    string = [self trim:string];
     if (![self isStringEmpty:string]) {
         return [string floatValue];
     }
     return def;
 }
 
++ (double) stringToDouble:(NSString*)string {
+    return [self stringToDouble:string withDefault:0];
+}
+
 + (double) stringToDouble:(NSString *)string withDefault:(double)def {
+    string = [self trim:string];
     if (![self isStringEmpty:string]) {
         return [string doubleValue];
     }
     return def;
 }
+
++ (CGRect) stringToCGRect:(NSString*)string {
+    return [self stringToCGRect:string withDefault:CGRectMake(0, 0, 0, 0)];
+}
+
++ (CGRect) stringToCGRect:(NSString*)string withDefault:(CGRect)def {
+    string = [self trim:string];
+    NSArray* rectArr = [string componentsSeparatedByString:@","];
+    
+    if ([rectArr count]>=4) {
+        return CGRectMake([Common stringToFloat:(NSString*)rectArr[0] withDefault:0], [Common stringToFloat:(NSString*)rectArr[1] withDefault:0], [Common stringToFloat:(NSString*)rectArr[2] withDefault:0], [Common stringToFloat:(NSString*)rectArr[3] withDefault:0]);
+    }
+    
+    return def;
+}
+
++ (CGPoint) stringToCGPoint:(NSString*)string {
+    return [self stringToCGPoint:string withDefault:CGPointMake(0, 0)];
+}
+
++ (CGPoint) stringToCGPoint:(NSString*)string withDefault:(CGPoint)def{
+    string = [self trim:string];
+    NSArray* rectArr = [string componentsSeparatedByString:@","];
+    
+    if ([rectArr count]>=2) {
+        return CGPointMake([Common stringToFloat:(NSString*)rectArr[0] withDefault:0], [Common stringToFloat:(NSString*)rectArr[1] withDefault:0]);
+    }
+    
+    return def;
+}
+
+// 基本类型的装包和拆包操作
++ (NSNumber*) wrapBOOL:(BOOL)val {
+    return [NSNumber numberWithBool:val];
+}
+
++ (BOOL) unwrapBOOL:(NSNumber*)val {
+    return [val boolValue];
+}
+
++ (NSNumber*) wrapInt:(int)val {
+    return [NSNumber numberWithInt:val];
+}
+
++ (int) unwrapInt:(NSNumber*)val {
+    return [val floatValue];
+}
+
++ (NSNumber*) wrapFloat:(float)val {
+    return [NSNumber numberWithFloat:val];
+}
+
++ (float) unwrapFloat:(NSNumber*)val {
+    return [val floatValue];
+}
+
++ (NSNumber*) wrapDouble:(double)val {
+    return [NSNumber numberWithDouble:val];
+}
+
++ (double) unwrapDouble:(NSNumber*)val {
+    return [val doubleValue];
+}
+
++ (NSValue*) wrapCGRect:(CGRect)val {
+    return [NSValue valueWithCGRect:val];
+}
+
++ (CGRect) unwrapCGRect:(NSValue*)val {
+    return [val CGRectValue];
+}
+
++ (NSValue*) wrapCGPoint:(CGPoint)val {
+    return [NSValue valueWithCGPoint:val];
+}
+
++ (CGPoint) unwrapCGPoint:(NSValue*)val{
+    return [val CGPointValue];
+}
+
 
 @end

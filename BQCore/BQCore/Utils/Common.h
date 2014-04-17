@@ -149,6 +149,7 @@
  *  def
  *
  */
++ (BOOL) stringToBOOL:(NSString*)string;
 + (BOOL) stringToBOOL:(NSString*)string withDefault:(BOOL)def;
 
 /*
@@ -157,10 +158,38 @@
  *  def
  *
  */
++ (int) stringToInt:(NSString*)string;
 + (int) stringToInt:(NSString*)string withDefault:(int)def;
 
++ (float) stringToFloat:(NSString*)string;
 + (float) stringToFloat:(NSString *)string withDefault:(float)def;
 
++ (double) stringToDouble:(NSString*)string;
 + (double) stringToDouble:(NSString *)string withDefault:(double)def;
+
++ (CGRect) stringToCGRect:(NSString*)string;
++ (CGRect) stringToCGRect:(NSString*)string withDefault:(CGRect)def;
+
++ (CGPoint) stringToCGPoint:(NSString*)string;
++ (CGPoint) stringToCGPoint:(NSString*)string withDefault:(CGPoint)def;
+
+// 基本类型的装包和拆包操作
++ (NSNumber*) wrapBOOL:(BOOL)val;
++ (BOOL) unwrapBOOL:(NSNumber*)val;
+
++ (NSNumber*) wrapInt:(int)val;
++ (int) unwrapInt:(NSNumber*)val;
+
++ (NSNumber*) wrapFloat:(float)val;
++ (float) unwrapFloat:(NSNumber*)val;
+
++ (NSNumber*) wrapDouble:(double)val;
++ (double) unwrapDouble:(NSNumber*)val;
+
++ (NSValue*) wrapCGRect:(CGRect)val;
++ (CGRect) unwrapCGRect:(NSValue*)val;
+
++ (NSValue*) wrapCGPoint:(CGPoint)val;
++ (CGPoint) unwrapCGPoint:(NSValue*)val;
 
 @end

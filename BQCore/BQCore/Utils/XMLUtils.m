@@ -173,18 +173,18 @@
  *  @param node
  *
  */
-+ (NSArray*)getAttributesValue:(GDataXMLElement*)node {
++ (NSDictionary*)getAttributesValue:(GDataXMLElement*)node {
     if (!node) {
         return nil;
     }
     
-    NSMutableArray* attrsValue = [[NSMutableArray alloc] init];
+    NSMutableDictionary* attrsValue = [[NSMutableDictionary alloc] init];
     NSArray* attrsNode = [node attributes];
     GDataXMLNode* attrNode;
     
     for (int i = 0; i < [attrsNode count]; i++) {
         attrNode = [attrsNode objectAtIndex:i];
-        [attrsValue addObject:[attrNode stringValue]];
+        [attrsValue setObject:[attrNode stringValue] forKey:[attrNode name]];
     }
     
     return attrsValue;

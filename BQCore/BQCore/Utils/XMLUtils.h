@@ -78,7 +78,7 @@
  *  @param node
  *
  */
-+ (NSArray*)getAttributesValue:(GDataXMLElement*)node;
++ (NSDictionary*)getAttributesValue:(GDataXMLElement*)node;
 
 /*
  *  通过标签名称，获得命名子节点或者命名属性的字符值

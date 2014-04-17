@@ -90,7 +90,7 @@
     return self;
 }
 
-- (int) getTypeValue:(NSString*)typeString {
+- (enum COMPONENT_ATTRIBUTE_TYPE) getTypeValue:(NSString*)typeString {
     if ([Common isStringEmpty:typeString]) {
         return COMPONENT_ATTRIBUTE_TYPE_STRING;
     } else if([Common isEqualIgnoreCaseToString:typeString withSecondString:@"String"]) {
@@ -98,15 +98,70 @@
     } else if([Common isEqualIgnoreCaseToString:typeString withSecondString:@"Boolean"]) {
         return COMPONENT_ATTRIBUTE_TYPE_BOOLEAN;
     } else if([Common isEqualIgnoreCaseToString:typeString withSecondString:@"Integer"]) {
-        return COMPONENT_ATTRIBUTE_TYPE_Integer;
+        return COMPONENT_ATTRIBUTE_TYPE_INTEGER;
     } else if([Common isEqualIgnoreCaseToString:typeString withSecondString:@"Double"]) {
         return COMPONENT_ATTRIBUTE_TYPE_DOUBLE;
     } else if([Common isEqualIgnoreCaseToString:typeString withSecondString:@"RECT"]) {
         return COMPONENT_ATTRIBUTE_TYPE_RECT;
+    } else if([Common isEqualIgnoreCaseToString:typeString withSecondString:@"POINT"]) {
+        return COMPONENT_ATTRIBUTE_TYPE_POINT;
     } else if([Common isEqualIgnoreCaseToString:typeString withSecondString:@"Object"]) {
         return COMPONENT_ATTRIBUTE_TYPE_OBJECT;
     }
     return COMPONENT_ATTRIBUTE_TYPE_STRING;
+}
+
++ (id) getUndefinedAttributeValue:(NSString*)valueString {
+    id val = nil;
+    
+    if ([Common isStringEmpty:valueString]) {
+        return val;
+    }
+    
+    // 直接从上下文中返回对象 TODO
+    
+    return [valueString copy];
+}
+
+- (id) getAttributeValue:(NSString*)valueString {
+    
+    id val = nil;
+    
+    // 如果为空直接返回nil
+    if ([Common isStringEmpty:valueString]) {
+        return val;
+    }
+    
+    // 输入是对象类型，直接从上下文中返回对象 TODO
+    if (type == COMPONENT_ATTRIBUTE_TYPE_OBJECT) {
+        return nil;
+    }
+    
+    switch (type) {
+        case COMPONENT_ATTRIBUTE_TYPE_STRING:
+            val = [valueString copy];
+            break;
+        case COMPONENT_ATTRIBUTE_TYPE_BOOLEAN:
+            val = [[Common wrapBOOL:[Common stringToBOOL:valueString]] copy];
+            break;
+        case COMPONENT_ATTRIBUTE_TYPE_INTEGER:
+            val = [[Common wrapInt:[Common stringToInt:valueString]] copy];
+            break;
+        case COMPONENT_ATTRIBUTE_TYPE_DOUBLE:
+            val = [[Common wrapDouble:[Common stringToDouble:valueString]] copy];
+            break;
+        case COMPONENT_ATTRIBUTE_TYPE_RECT:
+            val = [[Common wrapCGRect:[Common stringToCGRect:valueString]] copy];
+            break;
+        case COMPONENT_ATTRIBUTE_TYPE_POINT:
+            val = [[Common wrapCGPoint:[Common stringToCGPoint:valueString]] copy];
+            break;
+        default:
+            val = [valueString copy];
+    }
+    
+    
+    return val;
 }
 
 @end

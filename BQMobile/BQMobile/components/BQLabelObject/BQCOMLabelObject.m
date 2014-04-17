@@ -13,15 +13,23 @@
 - (id)initWithNode:(GDataXMLNode*)node withType:(BQComponentPlugin*)plugin {
     
     if (self = [super initWithNode:node withType:plugin]) {
-        BQUILabelObject* obj = [[BQUILabelObject alloc] init];
-        
-        obj.frame = CGRectMake(0, 0, 10000, 40);
-        obj.text = @"testtttttesttttttesttttttesttttttesttttttesttttttesttttttesttttttesttttttesttttttesttttttesttttttesttttttesttttttesttttttesttttttesttttttesttttttesttttttesttttttesttttttesttttttesttttttesttttttesttttttesttttttesttttttesttttttesttttttesttttttesttttttesttttttesttttttesttttttesttttttesttttt";
-        
-        self.contentView = obj;
+        self.contentView = [self createLabelObject];
     }
     
     return self;
+}
+
+- (BQUILabelObject*)createLabelObject{
+    
+    BQUILabelObject* obj = [[BQUILabelObject alloc] init];
+    
+    obj.frame = CGRectMake(0, 0, 10000, 40);
+    
+    if ([self.attributes objectForKey:@"text"]) {
+        obj.text = [self.attributes objectForKey:@"text"];
+    }
+    
+    return obj;
 }
 
 @end

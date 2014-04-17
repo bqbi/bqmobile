@@ -20,4 +20,8 @@
 
 + (BQComponentFactory*) sharedComponents;
 
++ (NSDictionary*) getGlabelStyleComponents;
+
++ (NSDictionary*) getStyleComponents:(NSString*)style;
+
 @end

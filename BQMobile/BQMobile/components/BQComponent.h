@@ -19,7 +19,7 @@
 
 @property (nonatomic, strong) NSString* pluginType;
 
-@property (nonatomic, strong) NSMutableDictionary* properties;
+@property (nonatomic, strong) NSMutableDictionary* attributes;
 
 // 通过节点创建组件
 - (id)initWithNode:(GDataXMLNode*)node withType:(BQComponentPlugin*)plugin;
