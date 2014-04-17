@@ -8,6 +8,8 @@
 
 #import "BQCOMLabelObject.h"
 
+#import "BQCore.h"
+
 @implementation BQCOMLabelObject
 
 - (id)initWithNode:(GDataXMLNode*)node withType:(BQComponentPlugin*)plugin withContext:(NSMutableDictionary*)context{
@@ -23,13 +25,20 @@
     
     BQUILabelObject* obj = [[BQUILabelObject alloc] init];
     
-    obj.frame = CGRectMake(0, 0, 10000, 40);
-    
-    if ([self.attributes objectForKey:@"text"]) {
-        obj.text = [self.attributes objectForKey:@"text"];
+    if ([self.attributes objectForKey:COMPONENT_ATTRIBUTE_TEXT]) {
+        obj.text = [self.attributes objectForKey:COMPONENT_ATTRIBUTE_TEXT];
     }
     
+    if ([self.attributes objectForKey:COMPONENT_ATTRIBUTE_POSITION]) {
+        obj.frame = [Common unwrapCGRect:[self.attributes objectForKey:COMPONENT_ATTRIBUTE_POSITION]];
+    }
+    
+    
     return obj;
+}
+
+- (void)rerender:(CGRect)frame {
+    
 }
 
 @end

@@ -1,8 +1,8 @@
 <bq:composition>
     
-    <bq:labelObject buddy="desc" text="选择省份${param1}" position="10,10,100,30" />
-    <bq:inputText id="desc" value="" position="150,10,100,30" />
-    <bq:chart type="MSColumn3D" position="210,10,100,300">
+    <bq:labelObject buddy="desc" text="选择省份${param1}" position="100,50,100,30" />
+    <bq:inputText id="desc" value="" position="250,50,100,30" />
+    <bq:chart type="MSColumn3D" position="30,100,500,500">
         <chart caption="Category wise Sales for 1996" XAxisName="Month" palette="2" animation="1" formatNumberScale="0" numberPrefix="$" showValues="0" numDivLines="4" legendPosition="BOTTOM">
             <categories>
                 <category label="Jan" />

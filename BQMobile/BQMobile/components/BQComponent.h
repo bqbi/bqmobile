@@ -11,6 +11,10 @@
 #import "GDataXMLNode.h"
 #import "BQComponentPlugin.h"
 
+// 组件属性集合
+#define COMPONENT_ATTRIBUTE_TEXT @"text"
+#define COMPONENT_ATTRIBUTE_POSITION @"position"
+
 
 @interface BQComponent : NSObject
 
