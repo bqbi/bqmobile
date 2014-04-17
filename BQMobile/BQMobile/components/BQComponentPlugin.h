@@ -50,8 +50,8 @@ enum COMPONENT_ATTRIBUTE_TYPE {
 
 - (id) initWithNode:(GDataXMLElement*)node;
 
-- (id) getAttributeValue:(NSString*)valueString;
+- (id) getAttributeValue:(NSString*)valueString withContext:(NSMutableDictionary*)context;
 
-+ (id) getUndefinedAttributeValue:(NSString*)valueString;
++ (id) getUndefinedAttributeValue:(NSString*)valueString withContext:(NSMutableDictionary*)context;
 
 @end

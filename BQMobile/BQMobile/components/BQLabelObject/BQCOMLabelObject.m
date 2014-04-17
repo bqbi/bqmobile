@@ -10,9 +10,9 @@
 
 @implementation BQCOMLabelObject
 
-- (id)initWithNode:(GDataXMLNode*)node withType:(BQComponentPlugin*)plugin {
+- (id)initWithNode:(GDataXMLNode*)node withType:(BQComponentPlugin*)plugin withContext:(NSMutableDictionary*)context{
     
-    if (self = [super initWithNode:node withType:plugin]) {
+    if (self = [super initWithNode:node withType:plugin withContext:context]) {
         self.contentView = [self createLabelObject];
     }
     

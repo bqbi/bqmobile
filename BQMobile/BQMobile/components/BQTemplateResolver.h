@@ -13,6 +13,19 @@
 
 @interface BQTemplateResolver : NSObject
 
-+ (BQComponent*)resolver:(GDataXMLNode*)node withRelativePath:(NSString*)relPath;
+/*
+ *  解析模板
+ *  node - 模板根节点
+ *  relPath - 相对路径
+ *  context - 上下文
+ *
+ */
++ (BQComponent*)resolver:(GDataXMLNode*)node withRelativePath:(NSString*)relPath withContext:(NSMutableDictionary*)context;
+
+// 获得字符串型表达式解析结果
++ (NSString*)getExpressionValue:(NSString*)string withContext:(NSDictionary*)context;
+
+// 获得对象型表达式解析结果
++ (id)getExpressionObjectValue:(NSString*)string withContext:(NSDictionary*)context;
 
 @end

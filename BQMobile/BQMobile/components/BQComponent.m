@@ -22,7 +22,7 @@
 
 @synthesize attributes;
 
-- (id)initWithNode:(GDataXMLNode*)node withType:(BQComponentPlugin*)plugin {
+- (id)initWithNode:(GDataXMLNode*)node withType:(BQComponentPlugin*)plugin withContext:(NSMutableDictionary*)context {
     if (self = [self init]) {
         subViews = [[NSMutableArray alloc] init];
         
@@ -32,38 +32,55 @@
         
         // 抽取属性
         // 1.来着默认皮肤的属性
-        [self setDefaultAttribute:plugin];
+        [self setDefaultAttribute:plugin withContext:context];
         
         // 2.来着节点设置的属性
-        [self setNodeAttribute:node withType:plugin];
+        [self setNodeAttribute:node withType:plugin withContext:context];
         
     }
     return self;
 }
 
-- (void)setNodeAttribute:(GDataXMLNode*)node withType:(BQComponentPlugin*)plugin {
+- (void)setNodeAttribute:(GDataXMLNode*)node withType:(BQComponentPlugin*)plugin withContext:(NSMutableDictionary*)context {
     NSDictionary* attrDic = [XMLUtils getAttributesValue:(GDataXMLElement*)node];
+    NSString* val;
+    BQComponentAttribute* attr;
     
     for (NSString* key in [attrDic allKeys]) {
-        BQComponentAttribute* attr = [plugin.attributesMap objectForKey:key];
-        if (attr) {
-            [attributes setObject:[attr getAttributeValue:[attrDic objectForKey:key]] forKey:key];
+        attr = [plugin.attributesMap objectForKey:key];
+        val = [attrDic objectForKey:key];
+        
+        if (![Common isStringEmpty:val]) {
+            if (attr) {
+                [attributes setObject:[attr getAttributeValue:val withContext:context] forKey:key];
+            } else {
+                [attributes setObject:[BQComponentAttribute getUndefinedAttributeValue:val withContext:context] forKey:key];
+            }
         } else {
-            [attributes setObject:[BQComponentAttribute getUndefinedAttributeValue:[attrDic objectForKey:key]] forKey:key];
+            [attributes removeObjectForKey:key];
         }
     }
 }
 
-- (void)setDefaultAttribute:(BQComponentPlugin*)plugin {
+- (void)setDefaultAttribute:(BQComponentPlugin*)plugin withContext:(NSMutableDictionary*)context {
     NSDictionary* dic = [BQComponentFactory getGlabelStyleComponents];
     NSDictionary* com = [dic objectForKey:[plugin.name lowercaseString]];
     
+    NSString* val;
+    BQComponentAttribute* attr;
+    
     for (NSString* key in [com allKeys]) {
-        BQComponentAttribute* attr = [plugin.attributesMap objectForKey:key];
-        if (attr) {
-            [attributes setObject:[attr getAttributeValue:[com objectForKey:key]] forKey:key];
+        attr = [plugin.attributesMap objectForKey:key];
+        val = [com objectForKey:key];
+        
+        if (![Common isStringEmpty:val]) {
+            if (attr) {
+                [attributes setObject:[attr getAttributeValue:val withContext:context] forKey:key];
+            } else {
+                [attributes setObject:[BQComponentAttribute getUndefinedAttributeValue:val withContext:context] forKey:key];
+            }
         } else {
-            [attributes setObject:[BQComponentAttribute getUndefinedAttributeValue:[com objectForKey:key]] forKey:key];
+            [attributes removeObjectForKey:key];
         }
         
     }

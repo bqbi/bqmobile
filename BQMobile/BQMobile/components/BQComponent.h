@@ -22,7 +22,7 @@
 @property (nonatomic, strong) NSMutableDictionary* attributes;
 
 // 通过节点创建组件
-- (id)initWithNode:(GDataXMLNode*)node withType:(BQComponentPlugin*)plugin;
+- (id)initWithNode:(GDataXMLNode*)node withType:(BQComponentPlugin*)plugin withContext:(NSMutableDictionary*)context;
 
 // 添加子节点
 - (void)addSubview:(BQComponent*)subView;

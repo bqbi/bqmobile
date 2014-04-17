@@ -40,10 +40,22 @@
     NSString* filePath = resourceBundleAndRelative(@"Demo", @"test.xml");
     GDataXMLDocument* doc = [XMLUtils loadXMLFile:filePath];
     
+    // 创建上下文
+    NSMutableDictionary* context = [self createContext];
+    
     // 解析xml，创建组件视图集合
-    self.rootView = [BQTemplateResolver resolver:[doc rootElement] withRelativePath:filePath];
+    self.rootView = [BQTemplateResolver resolver:[doc rootElement] withRelativePath:filePath withContext:context];
     [self.rootView rerender:self.view.frame];
     [self.view addSubview:self.rootView.contentView];
+}
+
+// 创建上下文
+- (NSMutableDictionary*)createContext {
+    NSMutableDictionary* context = [[NSMutableDictionary alloc] init];
+    
+    // TODO 添加系统属性、上下文传入等
+    
+    return context;
 }
 
 - (void)viewWillAppear:(BOOL)animated {

@@ -7,7 +7,7 @@
 //
 
 #import "BQComponentPlugin.h"
-
+#import "BQTemplateResolver.h"
 #import "GDataXMLNode.h"
 #import "XMLUtils.h"
 #import "BQCore.h"
@@ -111,19 +111,15 @@
     return COMPONENT_ATTRIBUTE_TYPE_STRING;
 }
 
-+ (id) getUndefinedAttributeValue:(NSString*)valueString {
-    id val = nil;
-    
++ (id) getUndefinedAttributeValue:(NSString*)valueString withContext:(NSMutableDictionary*)context {
     if ([Common isStringEmpty:valueString]) {
-        return val;
+        return nil;
     }
-    
-    // 直接从上下文中返回对象 TODO
-    
-    return [valueString copy];
+    // 对于未定义的属性，一律认为是String型
+    return [BQTemplateResolver getExpressionValue:valueString withContext:context];
 }
 
-- (id) getAttributeValue:(NSString*)valueString {
+- (id) getAttributeValue:(NSString*)valueString withContext:(NSMutableDictionary*)context {
     
     id val = nil;
     
@@ -134,30 +130,32 @@
     
     // 输入是对象类型，直接从上下文中返回对象 TODO
     if (type == COMPONENT_ATTRIBUTE_TYPE_OBJECT) {
-        return nil;
+        return [BQTemplateResolver getExpressionObjectValue:valueString withContext:context];
     }
+    
+    valueString = [BQTemplateResolver getExpressionValue:valueString withContext:context];
     
     switch (type) {
         case COMPONENT_ATTRIBUTE_TYPE_STRING:
-            val = [valueString copy];
+            val = valueString;
             break;
         case COMPONENT_ATTRIBUTE_TYPE_BOOLEAN:
-            val = [[Common wrapBOOL:[Common stringToBOOL:valueString]] copy];
+            val = [Common wrapBOOL:[Common stringToBOOL:valueString]];
             break;
         case COMPONENT_ATTRIBUTE_TYPE_INTEGER:
-            val = [[Common wrapInt:[Common stringToInt:valueString]] copy];
+            val = [Common wrapInt:[Common stringToInt:valueString]];
             break;
         case COMPONENT_ATTRIBUTE_TYPE_DOUBLE:
-            val = [[Common wrapDouble:[Common stringToDouble:valueString]] copy];
+            val = [Common wrapDouble:[Common stringToDouble:valueString]];
             break;
         case COMPONENT_ATTRIBUTE_TYPE_RECT:
-            val = [[Common wrapCGRect:[Common stringToCGRect:valueString]] copy];
+            val = [Common wrapCGRect:[Common stringToCGRect:valueString]];
             break;
         case COMPONENT_ATTRIBUTE_TYPE_POINT:
-            val = [[Common wrapCGPoint:[Common stringToCGPoint:valueString]] copy];
+            val = [Common wrapCGPoint:[Common stringToCGPoint:valueString]];
             break;
         default:
-            val = [valueString copy];
+            val = valueString;
     }
     
     
