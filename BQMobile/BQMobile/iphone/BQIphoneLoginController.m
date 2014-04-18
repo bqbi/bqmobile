@@ -117,7 +117,7 @@
         case 2:
             DLog(@"设置自动登录......");
             [BQContext sharedContext].autoLogin = @"YES";
-            loginView.rememberCheckBox.on = !loginView.rememberCheckBox.on;
+
             break;
             
         default:

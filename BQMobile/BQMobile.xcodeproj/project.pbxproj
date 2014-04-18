@@ -33,7 +33,6 @@
 		04952E6218EAB5BC0068436C /* BQIphoneSystemSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04952E6118EAB5BC0068436C /* BQIphoneSystemSettingController.m */; };
 		04952E6518EAB5DE0068436C /* BQIphoneSystemSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04952E6418EAB5DE0068436C /* BQIphoneSystemSettingView.m */; };
 		04B39B3C18F58072002C3934 /* BQIphoneSystemSettingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B39B3B18F58072002C3934 /* BQIphoneSystemSettingItem.m */; };
-		04B39B3F18F66FB2002C3934 /* IphoneResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04B39B3E18F66FB2002C3934 /* IphoneResource.bundle */; };
 		7606CEE418E90B150087EC33 /* BQComponentFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7606CEE318E90B150087EC33 /* BQComponentFactory.m */; };
 		7606CEE818E918BF0087EC33 /* Component.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7606CEE718E918BF0087EC33 /* Component.bundle */; };
 		7615ECB518B346FF00F1E344 /* libBQDashboard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7615ECB418B346FF00F1E344 /* libBQDashboard.a */; };
@@ -155,20 +154,19 @@
 		04952E6418EAB5DE0068436C /* BQIphoneSystemSettingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQIphoneSystemSettingView.m; sourceTree = "<group>"; };
 		04B39B3A18F58072002C3934 /* BQIphoneSystemSettingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQIphoneSystemSettingItem.h; sourceTree = "<group>"; };
 		04B39B3B18F58072002C3934 /* BQIphoneSystemSettingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQIphoneSystemSettingItem.m; sourceTree = "<group>"; };
-		04B39B3E18F66FB2002C3934 /* IphoneResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = IphoneResource.bundle; path = Bundles/IphoneResource.bundle; sourceTree = SOURCE_ROOT; };
-		04F9BF0E18FE0BCB0058943B /* BQContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQContext.h; sourceTree = "<group>"; };
-		04F9BF0F18FE0BCB0058943B /* BQCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQCore.h; sourceTree = "<group>"; };
-		04F9BF1018FE0BCB0058943B /* BQFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQFileReader.h; sourceTree = "<group>"; };
-		04F9BF1118FE0BCB0058943B /* BQServerAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQServerAccess.h; sourceTree = "<group>"; };
-		04F9BF1218FE0BCB0058943B /* BQViewOperateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQViewOperateModel.h; sourceTree = "<group>"; };
-		04F9BF1318FE0BCB0058943B /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
-		04F9BF1418FE0BCB0058943B /* ElUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElUtils.h; sourceTree = "<group>"; };
-		04F9BF1518FE0BCB0058943B /* FSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSUtils.h; sourceTree = "<group>"; };
-		04F9BF1618FE0BCB0058943B /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
-		04F9BF1718FE0BCB0058943B /* PropertyUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyUtils.h; sourceTree = "<group>"; };
-		04F9BF1818FE0BCB0058943B /* WebUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebUtils.h; sourceTree = "<group>"; };
-		04F9BF1918FE0BCB0058943B /* XMLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLUtils.h; sourceTree = "<group>"; };
-		04F9BF1B18FE0BCB0058943B /* BQDashboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQDashboard.h; sourceTree = "<group>"; };
+		04F9BF681900C0870058943B /* BQContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQContext.h; sourceTree = "<group>"; };
+		04F9BF691900C0870058943B /* BQCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQCore.h; sourceTree = "<group>"; };
+		04F9BF6A1900C0870058943B /* BQFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQFileReader.h; sourceTree = "<group>"; };
+		04F9BF6B1900C0870058943B /* BQServerAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQServerAccess.h; sourceTree = "<group>"; };
+		04F9BF6C1900C0870058943B /* BQViewOperateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQViewOperateModel.h; sourceTree = "<group>"; };
+		04F9BF6D1900C0870058943B /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		04F9BF6E1900C0870058943B /* ElUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElUtils.h; sourceTree = "<group>"; };
+		04F9BF6F1900C0870058943B /* FSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSUtils.h; sourceTree = "<group>"; };
+		04F9BF701900C0870058943B /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		04F9BF711900C0870058943B /* PropertyUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyUtils.h; sourceTree = "<group>"; };
+		04F9BF721900C0870058943B /* ReflectionUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReflectionUtils.h; sourceTree = "<group>"; };
+		04F9BF731900C0870058943B /* WebUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebUtils.h; sourceTree = "<group>"; };
+		04F9BF741900C0870058943B /* XMLUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLUtils.h; sourceTree = "<group>"; };
 		7606CEE218E90B150087EC33 /* BQComponentFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQComponentFactory.h; sourceTree = "<group>"; };
 		7606CEE318E90B150087EC33 /* BQComponentFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQComponentFactory.m; sourceTree = "<group>"; };
 		7606CEE718E918BF0087EC33 /* Component.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Component.bundle; path = Bundles/Component.bundle; sourceTree = SOURCE_ROOT; };
@@ -313,41 +311,33 @@
 			path = Controls;
 			sourceTree = "<group>";
 		};
-		04F9BF0C18FE0BCB0058943B /* include */ = {
+		04F9BF661900C0870058943B /* include */ = {
 			isa = PBXGroup;
 			children = (
-				04F9BF0D18FE0BCB0058943B /* BQCore */,
-				04F9BF1A18FE0BCB0058943B /* BQDashboard */,
+				04F9BF671900C0870058943B /* BQCore */,
 			);
 			name = include;
 			path = "../../Bin/BQMobile/Build/Products/Debug-iphoneos/include";
 			sourceTree = "<group>";
 		};
-		04F9BF0D18FE0BCB0058943B /* BQCore */ = {
+		04F9BF671900C0870058943B /* BQCore */ = {
 			isa = PBXGroup;
 			children = (
-				04F9BF0E18FE0BCB0058943B /* BQContext.h */,
-				04F9BF0F18FE0BCB0058943B /* BQCore.h */,
-				04F9BF1018FE0BCB0058943B /* BQFileReader.h */,
-				04F9BF1118FE0BCB0058943B /* BQServerAccess.h */,
-				04F9BF1218FE0BCB0058943B /* BQViewOperateModel.h */,
-				04F9BF1318FE0BCB0058943B /* Common.h */,
-				04F9BF1418FE0BCB0058943B /* ElUtils.h */,
-				04F9BF1518FE0BCB0058943B /* FSUtils.h */,
-				04F9BF1618FE0BCB0058943B /* GDataXMLNode.h */,
-				04F9BF1718FE0BCB0058943B /* PropertyUtils.h */,
-				04F9BF1818FE0BCB0058943B /* WebUtils.h */,
-				04F9BF1918FE0BCB0058943B /* XMLUtils.h */,
+				04F9BF681900C0870058943B /* BQContext.h */,
+				04F9BF691900C0870058943B /* BQCore.h */,
+				04F9BF6A1900C0870058943B /* BQFileReader.h */,
+				04F9BF6B1900C0870058943B /* BQServerAccess.h */,
+				04F9BF6C1900C0870058943B /* BQViewOperateModel.h */,
+				04F9BF6D1900C0870058943B /* Common.h */,
+				04F9BF6E1900C0870058943B /* ElUtils.h */,
+				04F9BF6F1900C0870058943B /* FSUtils.h */,
+				04F9BF701900C0870058943B /* GDataXMLNode.h */,
+				04F9BF711900C0870058943B /* PropertyUtils.h */,
+				04F9BF721900C0870058943B /* ReflectionUtils.h */,
+				04F9BF731900C0870058943B /* WebUtils.h */,
+				04F9BF741900C0870058943B /* XMLUtils.h */,
 			);
 			path = BQCore;
-			sourceTree = "<group>";
-		};
-		04F9BF1A18FE0BCB0058943B /* BQDashboard */ = {
-			isa = PBXGroup;
-			children = (
-				04F9BF1B18FE0BCB0058943B /* BQDashboard.h */,
-			);
-			path = BQDashboard;
 			sourceTree = "<group>";
 		};
 		764B7E9718F4E36E00696A5F /* NavigationBarButton */ = {
@@ -568,7 +558,7 @@
 		76D99E7918B33643004A9055 /* BQMobile */ = {
 			isa = PBXGroup;
 			children = (
-				04F9BF0C18FE0BCB0058943B /* include */,
+				04F9BF661900C0870058943B /* include */,
 				042D213018E2CFC000E4354C /* controls */,
 				76AC1E0D18C23B2A0063ED32 /* device */,
 				76F284CC18E6660900976CF6 /* components */,
@@ -586,7 +576,6 @@
 			isa = PBXGroup;
 			children = (
 				76B0E2FA18C2DEAA00C5C219 /* Style.bundle */,
-				04B39B3E18F66FB2002C3934 /* IphoneResource.bundle */,
 				76B0F8FC18EE1DE3001FB42D /* Demo.bundle */,
 				7606CEE718E918BF0087EC33 /* Component.bundle */,
 				76B0E2FB18C2DEAA00C5C219 /* UFExpress.bundle */,
@@ -718,7 +707,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04B39B3F18F66FB2002C3934 /* IphoneResource.bundle in Resources */,
 				76D99E7E18B33643004A9055 /* InfoPlist.strings in Resources */,
 				76B0F8FD18EE1DE3001FB42D /* Demo.bundle in Resources */,
 				7606CEE818E918BF0087EC33 /* Component.bundle in Resources */,

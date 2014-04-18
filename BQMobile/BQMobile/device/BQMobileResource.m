@@ -7,6 +7,7 @@
 //
 
 #import "BQMobileResource.h"
+#import "BQCore.h"
 
 static BQMobileResource * gBQMobileResource = nil;
 @interface BQMobileResource()
@@ -17,7 +18,7 @@ static BQMobileResource * gBQMobileResource = nil;
 {
     if (!gBQMobileResource) {
         gBQMobileResource = [[[self class] alloc] init];
-        [gBQMobileResource setResourcePath:@"IphoneResource.bundle/sys-skin"];
+        [gBQMobileResource setResourcePath:@"iphone"];
         [gBQMobileResource loadResource];
     }
     return gBQMobileResource;
@@ -30,7 +31,7 @@ static BQMobileResource * gBQMobileResource = nil;
 
 - (UIImage*) imageFromResource:(NSString*)resourceName
 {
-    UIImage * image = [UIImage imageNamed:[NSString stringWithFormat:@"%@/%@", self.skinPath, resourceName]];
+    UIImage * image = [FSUtils loadImage:[NSString stringWithFormat:@"%@/%@", self.skinPath, resourceName]];
     NSString * endWith2x = [resourceName substringFromIndex:resourceName.length-3];
     if ([endWith2x compare:@"@2x"] == 0) {
         image = [self reSizeImage:image toSize:CGSizeMake(image.size.width / 2.0, image.size.height / 2.0)];
@@ -41,75 +42,74 @@ static BQMobileResource * gBQMobileResource = nil;
 - (void) loadResource
 {
     // 闪屏背景
-    _splashBackgroundImage = [self imageFromResource:@"splashing-page/splash-background"];
+    _splashBackgroundImage = [self imageFromResource:@"splash_background"];
     // 闪屏中间logo
-    _splashCenterLogoImage = [self imageFromResource:@"splashing-page/splash-logo-center"];
+    _splashCenterLogoImage = [self imageFromResource:@"splash_logo_center"];
     // 闪屏底部logo
-    _splashFooterLogoImage = [self imageFromResource:@"splashing-page/splash-logo-bottom"];
+    _splashFooterLogoImage = [self imageFromResource:@"splash_logo_bottom"];
     /*
      * 页面加载等候页面资源
      * 包括：背景、中间logo、底部logo
      */
     // 加载页面 背景
-    _loadingBackgroundImage = [self imageFromResource:@"loading-page/loading-background"];
+    _loadingBackgroundImage = [self imageFromResource:@"loading_background"];
     // 加载页面 中间logo
-    _loadingCenterLogoImage = [self imageFromResource:@"loading-page/loading-logo-bottom"];
+    _loadingCenterLogoImage = [self imageFromResource:@"loading_logo_bottom"];
     // 加载页面 底部logo
-    _loadingFooterLogoImage = [self imageFromResource:@"loading-page/loading-logo-bottom"];
+    _loadingFooterLogoImage = [self imageFromResource:@"loading_logo_bottom"];
     /*
      * 登录页面资源
      *
      */
     // 背景
-    _loginBackgroundImage   = [self imageFromResource:/*@"login-page/login-background"*/@"loading-page/loading-background"];
+    _loginBackgroundImage   = [self imageFromResource:/*@"login-page/login-background"*/@"loading_background"];
     // 用户输入背景图片
-    _loginUserImage         = [self imageFromResource:@"login-page/login-user@2x"];
+    _loginUserImage         = [self imageFromResource:@"user_background@2x"];
     // 用户密码框背景图片
-    _loginPasswordImage     = [self imageFromResource:@"login-page/login-password@2x"];
+    _loginPasswordImage     = [self imageFromResource:@"password_background@2x"];
     // 登录按钮图片
-    _loginButtonColdImage   = [self imageFromResource:@"login-page/login-button-cold@2x"];
+    _loginButtonColdImage   = [self imageFromResource:@"button_login@2x"];
     // 登录按钮热点图片
-    _loginButtonHotImage    = [self imageFromResource:@"login-page/login-button-hot@2x"];
+    _loginButtonHotImage    = [self imageFromResource:@"button_login_touched@2x"];
     /*
      *
      * 导航栏资源
      *
      */
     // 背景
-    _navibarBackgroundImage = [self imageFromResource:@"navigationbar/navi-background@2x"];
-    _navibarBackgroundImage = [self reSizeImage:_navibarBackgroundImage toSize:CGSizeMake(_navibarBackgroundImage.size.width/2, _navibarBackgroundImage.size.height/2)];
+    _navibarBackgroundImage = [self imageFromResource:@"navi_background@2x"];
     // 返回
-    _navibarBackButtonColdImage    = [self imageFromResource:@"navigationbar/navi_back@2x"];
-    _navibarBackButtonHotImage     = [self imageFromResource:@"navigationbar/navi_back_selected@2x"];
+    _navibarBackButtonColdImage    = [self imageFromResource:@"button_back@2x"];
+    _navibarBackButtonHotImage     = [self imageFromResource:@"button_back_touched@2x"];
     // 设置
-    _navibarSettingButtonColdImage = [self imageFromResource:@"navigationbar/navi-setting@2x"];
-    _navibarSettingButtonHotImage  = [self imageFromResource:@"navigationbar/navi-setting-selected@2x"];
+    _navibarSettingButtonColdImage = [self imageFromResource:@"button_setting@2x"];
+    _navibarSettingButtonHotImage  = [self imageFromResource:@"button_setting_touched@2x"];
     // 编辑
-    _navibarEditButtonColdImage    = [self imageFromResource:@"navigationbar/navi-edit@2x"];
-    _navibarEditButtonHotImage     = [self imageFromResource:@"navigationbar/navi-edit-selected@2x"];
+    _navibarEditButtonColdImage    = [self imageFromResource:@"button_edit@2x"];
+    _navibarEditButtonHotImage     = [self imageFromResource:@"button_edit-touched@2x"];
     // 目录
-    _navibarMenuButtonColdImage    = [self imageFromResource:@"navigationbar/navi-menu@2x"];
-    _navibarMenuButtonHotImage     = [self imageFromResource:@"navigationbar/navi-menu-selected@2x"];
+    _navibarMenuButtonColdImage    = [self imageFromResource:@"button_menu@2x"];
+    _navibarMenuButtonHotImage     = [self imageFromResource:@"button_menu_touched@2x"];
     
     // 工具条
     // 关注
-    _toolbarBackgroundImage        = [self imageFromResource:@"toolbar/toolbar-background@2x"];
-    _toolbarFaverateColdImage      = [self imageFromResource:@"toolbar/toolbar-fav@2x"];
-    _toolbarFaverateHotImage       = [self imageFromResource:@"toolbar/toolbar-fav-selected@2x"];
+    _toolbarBackgroundImage        = [self imageFromResource:@"toolbar_background@2x"];
+    _toolbarFaverateColdImage      = [self imageFromResource:@"button_faverate@2x"];
+    _toolbarFaverateHotImage       = [self imageFromResource:@"button_faverate_touched@2x"];
 
     /*
      * 侧边栏目录资源
      *
      */
-    _leftMenuBackgroundImage= [self imageFromResource:@"leftmenu-page/leftmenu-background"];
+    _leftMenuBackgroundImage= [self imageFromResource:@"menu-background@2x"];
     
     // alpha image
-    _alphaImage             = [self imageFromResource:@"alpha.jpg"];
+    _alphaImage             = [self imageFromResource:@"alpha_background@2x.jpg"];
     
     
     // 服务器地址设置资源
-    _serverSettingSaveButtonColdImage = [self imageFromResource:@"serversetting-page/serversetting-savebutton-cold"];
-    _serverSettingSaveButtonHotImage = [self imageFromResource:@"serversetting-page/serversetting-savebutton-hot"];
+    _serverSettingSaveButtonColdImage = [self imageFromResource:@"button_save@2x"];
+    _serverSettingSaveButtonHotImage = [self imageFromResource:@"button_save_touched@2x"];
 
 }
 
