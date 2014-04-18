@@ -6,19 +6,26 @@
 //  Copyright (c) 2014年 yonyou. All rights reserved.
 //
 
-#import "BQMobileResource.h"
+#import "BQResource.h"
 #import "BQCore.h"
 
-static BQMobileResource * gBQMobileResource = nil;
-@interface BQMobileResource()
-@property (nonatomic, retain) NSString * skinPath;
+static BQResource * gBQMobileResource = nil;
+
+
+@interface BQResource()
+
+@property (nonatomic, retain) NSString * devicePath;
+
 @end
-@implementation BQMobileResource
-+ (BQMobileResource*) sharedManager
+
+
+@implementation BQResource
+
++ (BQResource*) sharedManager
 {
     if (!gBQMobileResource) {
         gBQMobileResource = [[[self class] alloc] init];
-        [gBQMobileResource setResourcePath:@"iphone"];
+        [gBQMobileResource setResourcePath:(isPad?@"ipad":@"iphone")];
         [gBQMobileResource loadResource];
     }
     return gBQMobileResource;
@@ -26,12 +33,21 @@ static BQMobileResource * gBQMobileResource = nil;
 
 - (void) setResourcePath:(NSString*) path
 {
-    self.skinPath = path;
+    self.devicePath = path;
 }
 
 - (UIImage*) imageFromResource:(NSString*)resourceName
 {
-    UIImage * image = [FSUtils loadImage:[NSString stringWithFormat:@"%@/%@", self.skinPath, resourceName]];
+    UIImage * image = [FSUtils loadImage:[NSString stringWithFormat:@"%@/%@", self.devicePath, resourceName]];
+    
+    if (image == nil) {
+        image = [FSUtils loadImage:[NSString stringWithFormat:@"device/%@", resourceName]];
+    }
+    
+    if (image == nil) {
+        return nil;
+    }
+    
     NSString * endWith2x = [resourceName substringFromIndex:resourceName.length-3];
     if ([endWith2x compare:@"@2x"] == 0) {
         image = [self reSizeImage:image toSize:CGSizeMake(image.size.width / 2.0, image.size.height / 2.0)];

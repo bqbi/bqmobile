@@ -2,23 +2,21 @@
 //  BQAnalysisTopicController.m
 //  BQMobile
 //
-//  Created by 潘 巍 on 14-3-27.
+//  Created by 潘 巍 on 14-4-18.
 //  Copyright (c) 2014年 yonyou. All rights reserved.
 //
 
-#import "BQIpadAnalysisTopicController.h"
+#import "BQAnalysisTopicController.h"
 
 #import "BQCore.h"
 #import "BQTemplateResolver.h"
 #import "BQComponent.h"
 
-
-@interface BQIpadAnalysisTopicController ()
+@interface BQAnalysisTopicController ()
 
 @end
 
-
-@implementation BQIpadAnalysisTopicController
+@implementation BQAnalysisTopicController
 
 - (id)initWithTemplate:(NSString*)templatePath {
     if (self = [super init]) {
@@ -73,7 +71,7 @@
     if (UIInterfaceOrientationIsPortrait(self.orientation)) {
         // TODO
     } else {
-    
+        
     }
 }
 
@@ -87,6 +85,5 @@
 - (NSUInteger)supportedInterfaceOrientations {
     return UIInterfaceOrientationMaskAll;
 }
-
 
 @end

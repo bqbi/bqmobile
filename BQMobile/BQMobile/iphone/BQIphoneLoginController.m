@@ -11,7 +11,7 @@
 #import "BQIphoneSystemSettingController.h"
 #import "BQIphoneFrameController.h"
 #import "BQIphoneServerSettingController.h"
-#import "BQMobileResource.h"
+#import "BQResource.h"
 
 @interface BQIphoneLoginController ()
 
@@ -35,8 +35,8 @@
     // 导航栏设置
     self.navigationItem.title = @"用户登录";
     // 设置按钮
-    UIImage * settingColdImage = [BQMobileResource sharedManager].navibarSettingButtonColdImage;
-    UIImage * settingHotImage  = [BQMobileResource sharedManager].navibarSettingButtonHotImage;
+    UIImage * settingColdImage = [BQResource sharedManager].navibarSettingButtonColdImage;
+    UIImage * settingHotImage  = [BQResource sharedManager].navibarSettingButtonHotImage;
     
     UIButton * settingButton = [[UIButton alloc] init];
     [settingButton setBackgroundImage:settingColdImage forState:UIControlStateNormal];

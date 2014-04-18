@@ -8,7 +8,7 @@
 
 #import "BQIphoneServerSettingController.h"
 #import "BQIphoneServerSettingView.h"
-#import "BQMobileResource.h"
+#import "BQResource.h"
 
 @interface BQIphoneServerSettingController ()
 

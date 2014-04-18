@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BQMobileResource : NSObject
-// 静态获取对象方法 （单例模式）
-+ (BQMobileResource*) sharedManager;
+@interface BQResource : NSObject
 
-- (void) setSkinPath:(NSString*) skinPath;
+// 静态获取对象方法 （单例模式）
++ (BQResource*) sharedManager;
+
 /*
  * 闪屏图片资源
  * 包括：背景、中间logo、底部logo

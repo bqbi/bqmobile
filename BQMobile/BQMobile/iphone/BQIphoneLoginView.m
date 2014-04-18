@@ -8,7 +8,7 @@
 
 #import "BQIphoneLoginView.h"
 #import "BQCore.h"
-#import "BQMobileResource.h"
+#import "BQResource.h"
 
 
 // ipad字号大小
@@ -37,10 +37,10 @@
     }
     
     // 添加背景
-    UIImageView * bkImageView = [[UIImageView alloc]initWithImage:[BQMobileResource sharedManager].loginBackgroundImage];
+    UIImageView * bkImageView = [[UIImageView alloc]initWithImage:[BQResource sharedManager].loginBackgroundImage];
     [self addSubview:bkImageView];
     // 用户图片
-    _userImage = [[UIImageView alloc] initWithImage:[BQMobileResource sharedManager].loginUserImage];
+    _userImage = [[UIImageView alloc] initWithImage:[BQResource sharedManager].loginUserImage];
     [self addSubview:_userImage];
     // 用户名
     _userName = [[UITextField alloc] init];
@@ -54,7 +54,7 @@
     [self addSubview:_userName];
     
     // 用户图片
-    _passwordImage = [[UIImageView alloc] initWithImage:[BQMobileResource sharedManager].loginPasswordImage];
+    _passwordImage = [[UIImageView alloc] initWithImage:[BQResource sharedManager].loginPasswordImage];
     [self addSubview:_passwordImage];
     // 密码
     _password = [[UITextField alloc] init];
@@ -70,8 +70,8 @@
     
     // 登录
     _loginButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_loginButton setImage:[BQMobileResource sharedManager].loginButtonColdImage forState:UIControlStateNormal];
-    [_loginButton setImage:[BQMobileResource sharedManager].loginButtonHotImage forState:UIControlStateHighlighted];
+    [_loginButton setImage:[BQResource sharedManager].loginButtonColdImage forState:UIControlStateNormal];
+    [_loginButton setImage:[BQResource sharedManager].loginButtonHotImage forState:UIControlStateHighlighted];
     [_loginButton addTarget:self action:@selector(onClickButton:) forControlEvents:UIControlEventTouchUpInside];
     _loginButton.tag = 1;
     [self addSubview:_loginButton];

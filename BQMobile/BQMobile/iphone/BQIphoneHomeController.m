@@ -11,7 +11,7 @@
 #import "NavigationBarButton.h"
 #import "MSViewControllerSlidingPanel.h"
 //
-#import "BQMobileResource.h"
+#import "BQResource.h"
 
 @interface BQIphoneHomeController ()
 /**
@@ -35,17 +35,17 @@
     // 侧边栏菜单按钮
     _sideMenuButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _sideMenuButton.frame = CGRectMake(8, 0, 40, 40);
-    [_sideMenuButton setBackgroundImage:[BQMobileResource sharedManager].navibarMenuButtonColdImage forState:UIControlStateNormal];
-    [_sideMenuButton setBackgroundImage:[BQMobileResource sharedManager].navibarMenuButtonHotImage forState:UIControlStateHighlighted];
+    [_sideMenuButton setBackgroundImage:[BQResource sharedManager].navibarMenuButtonColdImage forState:UIControlStateNormal];
+    [_sideMenuButton setBackgroundImage:[BQResource sharedManager].navibarMenuButtonHotImage forState:UIControlStateHighlighted];
     [_sideMenuButton addTarget:self action:@selector(openMenuPanel) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.title = @"我的关注";
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_sideMenuButton];
     // 工具条
     UIBarButtonItem *flexItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     UIButton * faverateButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    faverateButton.frame = CGRectMake(0, 0, [BQMobileResource sharedManager].toolbarFaverateColdImage.size.width, [BQMobileResource sharedManager].toolbarFaverateColdImage.size.height);
-    [faverateButton setBackgroundImage:[BQMobileResource sharedManager].toolbarFaverateColdImage forState:UIControlStateNormal];
-    [faverateButton setBackgroundImage:[BQMobileResource sharedManager].toolbarFaverateHotImage forState:UIControlStateHighlighted];
+    faverateButton.frame = CGRectMake(0, 0, [BQResource sharedManager].toolbarFaverateColdImage.size.width, [BQResource sharedManager].toolbarFaverateColdImage.size.height);
+    [faverateButton setBackgroundImage:[BQResource sharedManager].toolbarFaverateColdImage forState:UIControlStateNormal];
+    [faverateButton setBackgroundImage:[BQResource sharedManager].toolbarFaverateHotImage forState:UIControlStateHighlighted];
 
     [faverateButton addTarget:self action:nil forControlEvents:UIControlEventTouchUpInside];
     self.toolbarItems = @[
@@ -61,7 +61,7 @@
     
     [self.navigationController  setToolbarHidden:NO animated:YES];
     [self.navigationController.toolbar setTranslucent:YES];
-    [self.navigationController.toolbar setBackgroundImage:[BQMobileResource sharedManager].toolbarBackgroundImage forToolbarPosition:UIBarPositionBottom barMetrics:UIBarMetricsDefault];
+    [self.navigationController.toolbar setBackgroundImage:[BQResource sharedManager].toolbarBackgroundImage forToolbarPosition:UIBarPositionBottom barMetrics:UIBarMetricsDefault];
 }
 
 /**

@@ -7,7 +7,7 @@
 //
 
 #import "BQNavigationController.h"
-#import "BQMobileResource.h"
+#import "BQResource.h"
 
 @implementation BQNavigationController
 
@@ -25,7 +25,7 @@
     [super viewDidLoad];
     CGRect rect  = self.navigationBar.frame;
     // 加载背景图片
-    UIImage * alphaImage = [[BQMobileResource sharedManager].navibarBackgroundImage resizableImageWithCapInsets:UIEdgeInsetsMake(rect.origin.y, rect.origin.x, rect.origin.y+rect.size.height, rect.origin.x+rect.size.width)];
+    UIImage * alphaImage = [[BQResource sharedManager].navibarBackgroundImage resizableImageWithCapInsets:UIEdgeInsetsMake(rect.origin.y, rect.origin.x, rect.origin.y+rect.size.height, rect.origin.x+rect.size.width)];
     [self.navigationBar setBackgroundImage:alphaImage forBarMetrics:UIBarMetricsDefault];
     self.navigationBar.translucent = YES;
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackTranslucent];
@@ -74,12 +74,12 @@
 - (UIBarButtonItem*) customLeftBackButton{
     
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    CGSize imageSize = [BQMobileResource sharedManager].navibarBackButtonColdImage.size;
+    CGSize imageSize = [BQResource sharedManager].navibarBackButtonColdImage.size;
     backButton.frame = CGRectMake(12, 0, imageSize.width, imageSize.height);
     
-    [backButton setBackgroundImage:[BQMobileResource sharedManager].navibarBackButtonColdImage
+    [backButton setBackgroundImage:[BQResource sharedManager].navibarBackButtonColdImage
                           forState:UIControlStateNormal];
-    [backButton setBackgroundImage:[BQMobileResource sharedManager].navibarBackButtonHotImage
+    [backButton setBackgroundImage:[BQResource sharedManager].navibarBackButtonHotImage
                           forState:UIControlStateSelected];
     
     

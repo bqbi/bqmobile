@@ -8,7 +8,7 @@
 
 #import "BQIphoneServerSettingView.h"
 #import "BQLayoutSetting.h"
-#import "BQMobileResource.h"
+#import "BQResource.h"
 
 @implementation BQIphoneServerSettingView
 
@@ -27,7 +27,7 @@
     // 客户区大小
     CGRect rect = inflectRect(self.frame, Layout_LeftOffset, Layout_RightOffset);
     // 背景色
-    UIImageView * bkImageView = [[UIImageView alloc] initWithImage:[BQMobileResource sharedManager].loginBackgroundImage];
+    UIImageView * bkImageView = [[UIImageView alloc] initWithImage:[BQResource sharedManager].loginBackgroundImage];
     bkImageView.frame = self.frame;
     [self addSubview:bkImageView];
     
@@ -53,8 +53,8 @@
     
     // 保存按钮
     _saveButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_saveButton setBackgroundImage:[BQMobileResource sharedManager].serverSettingSaveButtonColdImage forState:UIControlStateNormal];
-    [_saveButton setBackgroundImage:[BQMobileResource sharedManager].serverSettingSaveButtonHotImage forState:UIControlStateSelected];
+    [_saveButton setBackgroundImage:[BQResource sharedManager].serverSettingSaveButtonColdImage forState:UIControlStateNormal];
+    [_saveButton setBackgroundImage:[BQResource sharedManager].serverSettingSaveButtonHotImage forState:UIControlStateSelected];
     [_saveButton addTarget:self action:@selector(onSaveSetting) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_saveButton];
 }
