@@ -13,6 +13,8 @@
 // 静态获取对象方法 （单例模式）
 + (BQResource*) sharedManager;
 
+- (UIImage*) imageFromResource:(NSString*)resourceName;
+
 /*
  * 闪屏图片资源
  * 包括：背景、中间logo、底部logo

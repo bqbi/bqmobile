@@ -10,6 +10,8 @@
 
 #import "BQCore.h"
 
+#import "BQResource.h"
+
 
 // ipad字号大小
 #define Ipad_TextFont [UIFont systemFontOfSize:16.0f]
@@ -81,13 +83,11 @@
     
     [self addSubview:serverUrl];
     
-    
-    
-    UIImage* loginBtnImg = [FSUtils loadImage:@"Pad_Login_button.png"];
-    UIImage* offlineBtnImg = [FSUtils loadImage:@"Pad_Offline_button.png"];
-    UIImage* logoutBtnImg = [FSUtils loadImage:@"Pad_Logout_button.png"];
-    UIImage* unselectCheckBoxImg = [FSUtils loadImage:@"Pad_checkBox_unselect.png"];
-    UIImage* selectCheckBoxImg = [FSUtils loadImage:@"Pad_checkBox_select.png"];
+    UIImage* loginBtnImg = [[BQResource sharedManager] imageFromResource:@"Pad_Login_button.png"];
+    UIImage* offlineBtnImg = [[BQResource sharedManager] imageFromResource:@"Pad_Offline_button.png"];
+    UIImage* logoutBtnImg = [[BQResource sharedManager] imageFromResource:@"Pad_Logout_button.png"];
+    UIImage* unselectCheckBoxImg = [[BQResource sharedManager] imageFromResource:@"Pad_checkBox_unselect.png"];
+    UIImage* selectCheckBoxImg = [[BQResource sharedManager] imageFromResource:@"Pad_checkBox_select.png"];
     
     
     // 登录
@@ -142,7 +142,7 @@
 // 调整组件位置-纵向
 - (void)adjustPositionWithPortrait {
 
-    backImageView.image = [FSUtils loadImage:@"Pad_Login_portrait.png"];
+    backImageView.image = [[BQResource sharedManager] imageFromResource:@"Pad_Login_portrait.png"];
     backImageView.frame = CGRectMake(0, 0, 768, 1024);
     
     userName.frame = CGRectMake(239, 337, 420, 41);
@@ -159,7 +159,7 @@
 // 调整组件位置-横向
 - (void)adjustPositionWithLandscape {
     
-    backImageView.image = [FSUtils loadImage:@"Pad_Login_landscape.png"];
+    backImageView.image = [[BQResource sharedManager] imageFromResource:@"Pad_Login_landscape.png"];
     backImageView.frame = CGRectMake(0, 0, 1024, 768);
     
     userName.frame = CGRectMake(370, 256, 420, 41);
