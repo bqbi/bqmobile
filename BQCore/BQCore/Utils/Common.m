@@ -220,8 +220,7 @@
  */
 + (BOOL) endWith:(NSString*)string prefix:(NSString*)prefix
 {
-    NSString * ret = [Common subString:string start:(int)([string length] - [prefix length]) stop:(int)([string length]-1)];
-    return ![Common isObjectNull:ret] && ![Common isStringEmpty:ret];
+    return [string hasSuffix:prefix];
 }
 
 /*
@@ -231,8 +230,9 @@
  */
 + (BOOL) beginWith:(NSString*)string prefix:(NSString*)prefix
 {
-    NSString * ret = [Common subString:string start:0 stop:(int)([prefix length]-1)];
-    return ![Common isObjectNull:ret] && ![Common isStringEmpty:ret];
+//    NSString * ret = [Common subString:string start:0 stop:(int)([prefix length])];
+    return[string hasPrefix:prefix];
+//    return ![Common isObjectNull:ret] && ![Common isStringEmpty:ret];
 }
 
 /*

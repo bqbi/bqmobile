@@ -29,15 +29,31 @@
 
 + (ExpressionResult*) El :(NSString*) expression andContext:(NSDictionary*)context
 {
-    if (![Common isObjectNull:expression] && [Common isStringEmpty:expression])
+    if (![Common isObjectNull:expression] && ![Common isStringEmpty:expression])
     {
-        if ([Common beginWith:expression prefix:@"${"] && [Common endWith:expression prefix:@"}"])
+        if ([expression hasPrefix:@"${"] && [expression hasSuffix:@"}"])
         {
-            NSString * realExpression = [Common subString:expression start:2 stop:(int)([expression length]-2)];
+            NSString * realExpression = [Common subString:expression start:2 stop:(int)([expression length]-1)];
             // 是否为方法调用
-            if ([Common beginWith:realExpression prefix:@"fun:"]) {
+            int nPos = 0;
+            while (-1 != (nPos = [Common findString:realExpression findWhat:@"@{" startPos:nPos]))
+            {
                 
+                int nEnd = [Common findString:realExpression findWhat:@"}" startPos:nPos];
+                if (-1 != nEnd) {
+                    NSString * var = [Common subString:realExpression start:nPos+2 stop:nEnd];
+                    NSString * parameter = [Common subString:realExpression start:nPos stop:nEnd+1];
+                    
+                    id value = [context objectForKey:var];
+                    // 字符串替换
+                    if ([value isKindOfClass:[NSString class]]) {
+                        realExpression = [realExpression stringByReplacingOccurrencesOfString:parameter withString:value];
+                    }
+                }
             }
+            // 求值表达式
+            return [ElUtils El:realExpression];
+            
         }
     }
     return nil;

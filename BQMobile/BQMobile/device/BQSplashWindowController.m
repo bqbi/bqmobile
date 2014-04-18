@@ -44,7 +44,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    ExpressionResult * res = [ElUtils El:@"1+2"];
+    NSDictionary * dic = [[NSDictionary alloc] initWithObjectsAndKeys:@"3",@"p1",@"10",@"p2",nil];
+    ExpressionResult * res = [ElUtils El:@"${10 + min(2,3) + @{p1} + @{p2} + 25}" andContext:dic];
+//    ExpressionResult * res = [ElUtils El:@"1+2"];
     if (res.returnValue != 0) {
         NSLog(@"Error!");
     }
