@@ -104,6 +104,20 @@
 + (NSString*) trimString:(NSString*)string;
 
 /*
+ *  是否以指定字符结尾
+ *  string - 字符串
+ *  prefix - 后缀字符串
+ */
++ (BOOL) endWith:(NSString*)string prefix:(NSString*)prefix;
+
+/*
+ *  是否以指定字符开头
+ *  string - 字符串
+ *  prefix - 前缀字符串
+ */
++ (BOOL) beginWith:(NSString*)string prefix:(NSString*)prefix;
+
+/*
  *  查找字符位置
  *  string - 被查找的字符串
  *  start - 字符串开始位置

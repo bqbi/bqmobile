@@ -39,6 +39,7 @@
 		042D361218E3AFDC00E4354C /* ElUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D360918E3AFDC00E4354C /* ElUtils.m */; };
 		042D361318E3BEBB00E4354C /* ElUtils.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 042D360818E3AFDC00E4354C /* ElUtils.h */; };
 		048AC37818E8F59C00820A42 /* XMLUtils.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 76F284E818E7970E00976CF6 /* XMLUtils.h */; };
+		04F9BF771900F9410058943B /* exprtool.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F9BF761900F9410058943B /* exprtool.m */; };
 		7615EC8F18B346C800F1E344 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7615EC8E18B346C800F1E344 /* Foundation.framework */; };
 		7615EC9D18B346C800F1E344 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7615EC9C18B346C800F1E344 /* XCTest.framework */; };
 		7615EC9E18B346C800F1E344 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7615EC8E18B346C800F1E344 /* Foundation.framework */; };
@@ -194,6 +195,8 @@
 		042D360718E3AFDC00E4354C /* typecheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = typecheck.h; sourceTree = "<group>"; };
 		042D360818E3AFDC00E4354C /* ElUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElUtils.h; sourceTree = "<group>"; };
 		042D360918E3AFDC00E4354C /* ElUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ElUtils.m; sourceTree = "<group>"; };
+		04F9BF751900F92F0058943B /* exprtool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exprtool.h; sourceTree = "<group>"; };
+		04F9BF761900F9410058943B /* exprtool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = exprtool.m; sourceTree = "<group>"; };
 		7615EC8B18B346C800F1E344 /* libBQCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBQCore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7615EC8E18B346C800F1E344 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7615EC9218B346C800F1E344 /* BQCore-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BQCore-Prefix.pch"; sourceTree = "<group>"; };
@@ -379,6 +382,8 @@
 				042D360518E3AFDC00E4354C /* tokenizer.h */,
 				042D360618E3AFDC00E4354C /* typecheck.c */,
 				042D360718E3AFDC00E4354C /* typecheck.h */,
+				04F9BF751900F92F0058943B /* exprtool.h */,
+				04F9BF761900F9410058943B /* exprtool.m */,
 				042D360818E3AFDC00E4354C /* ElUtils.h */,
 				042D360918E3AFDC00E4354C /* ElUtils.m */,
 			);
@@ -750,6 +755,7 @@
 				042D35DC18E3AEF200E4354C /* pcre_config.c in Sources */,
 				042D35E018E3AEF200E4354C /* pcre_get.c in Sources */,
 				042D35E118E3AEF200E4354C /* pcre_globals.c in Sources */,
+				04F9BF771900F9410058943B /* exprtool.m in Sources */,
 				042D35DD18E3AEF200E4354C /* pcre_dfa_exec.c in Sources */,
 				042D361218E3AFDC00E4354C /* ElUtils.m in Sources */,
 				042D35DB18E3AEF200E4354C /* pcre_compile.c in Sources */,

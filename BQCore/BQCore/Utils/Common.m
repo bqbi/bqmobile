@@ -214,6 +214,28 @@
 }
 
 /*
+ *  是否以指定字符结尾
+ *  string - 字符串
+ *  prefix - 后缀字符串
+ */
++ (BOOL) endWith:(NSString*)string prefix:(NSString*)prefix
+{
+    NSString * ret = [Common subString:string start:(int)([string length] - [prefix length]) stop:(int)([string length]-1)];
+    return ![Common isObjectNull:ret] && ![Common isStringEmpty:ret];
+}
+
+/*
+ *  是否以指定字符开头
+ *  string - 字符串
+ *  prefix - 前缀字符串
+ */
++ (BOOL) beginWith:(NSString*)string prefix:(NSString*)prefix
+{
+    NSString * ret = [Common subString:string start:0 stop:(int)([prefix length]-1)];
+    return ![Common isObjectNull:ret] && ![Common isStringEmpty:ret];
+}
+
+/*
  *  查找字符位置
  *  string - 被查找的字符串
  *  start - 字符串开始位置
